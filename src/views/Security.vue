@@ -1,12 +1,12 @@
 <template>
-  <div class="topic">
-    <h1>This is the Topic page</h1>
+  <div class="security">
+    <h1>This is the Security page</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Topic"
+  name: "Security"
 };
 </script>
 
