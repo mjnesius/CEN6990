@@ -26,12 +26,8 @@
       </div>
     </div>
     <div class="jumbotron mt-3">
-      <h1 class="display-5">Software Development in a Nutshell</h1>
-      <p
-        class="lead"
-      >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos.</p>
-      <hr class="my-4">
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!</p>
+      <h1 class="display-5">{{courseTitle}}</h1>
+      <p class="lead">{{courseDescription}}</p>
     </div>
   </div>
 </template>
@@ -42,6 +38,9 @@ export default {
   data() {
     return {
       currentVideo: "fBNz5xF-Kx4",
+      courseTitle: "Software Development in a Nutshell",
+      courseDescription:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos.",
       lectures: [
         {
           title: "lecture1",
