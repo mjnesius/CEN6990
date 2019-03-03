@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row my-5 overflow-auto">
+    <div class="row my-5">
       <div class="col-md-6">
         <div class="embed-responsive embed-responsive-16by9">
           <iframe
@@ -10,7 +10,7 @@
           ></iframe>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="lecture-list col-md-6 overflow-auto">
         <div class="list-group list-group-item-action">
           <button
             type="button"
@@ -26,8 +26,8 @@
       </div>
     </div>
     <div class="jumbotron mt-3">
-      <h1 class="display-5">{{courseTitle}}</h1>
-      <p class="lead">{{courseDescription}}</p>
+      <h1 class="display-5">{{ courseTitle }}</h1>
+      <p class="lead">{{ courseDescription }}</p>
     </div>
   </div>
 </template>
@@ -99,7 +99,7 @@ export default {
 </script>
 
 <style scoped>
-.row {
-  height: 300px;
+.lecture-list {
+  height: 270px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="development">
+  <div class="it">
     <div class="jumbotron mt-3">
       <h1 class="display-3">Information Technology</h1>
       <p
@@ -14,7 +14,10 @@
         :key="course.id"
         :to="{ name: 'course', params: { id: course.id }}"
         class="list-group-item list-group-item-action mb-3"
-      >{{ course.title }} <span class="ml-5">{{ course.shortDescription }}</span></router-link>
+      >
+        {{ course.title }}
+        <span class="ml-5">{{ course.shortDescription }}</span>
+      </router-link>
     </div>
   </div>
 </template>
@@ -25,14 +28,39 @@ export default {
   data() {
     return {
       courses: [
-        { title: "course1", shortDescription: "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos", id: "1" },
-        { title: "course2", shortDescription: "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos", id: "2" },
-        { title: "course3", shortDescription: "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos", id: "3" },
-        { title: "course4", shortDescription: "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos", id: "4" },
-        { title: "course5", shortDescription: "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos", id: "5" }
+        {
+          title: "course1",
+          shortDescription:
+            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
+          id: "1"
+        },
+        {
+          title: "course2",
+          shortDescription:
+            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
+          id: "2"
+        },
+        {
+          title: "course3",
+          shortDescription:
+            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
+          id: "3"
+        },
+        {
+          title: "course4",
+          shortDescription:
+            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
+          id: "4"
+        },
+        {
+          title: "course5",
+          shortDescription:
+            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
+          id: "5"
+        }
       ]
-    }
-  },
+    };
+  }
 };
 </script>
 
