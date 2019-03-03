@@ -1,13 +1,17 @@
 <template>
   <div class="container">
-    <div class="row my-5 vh-20">
+    <div class="row my-5 overflow-auto">
       <div class="col-md-6">
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fBNz5xF-Kx4?rel=0" allowfullscreen></iframe>
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/fBNz5xF-Kx4?rel=0"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
-      <div class="col-md-6 overflow-auto">
-        <div class="list-group list-group-item-action overflow-auto">
+      <div class="col-md-6">
+        <div class="list-group list-group-item-action">
           <button
             type="button"
             v-for="(lecture, index) in lectures"
@@ -41,33 +45,43 @@ export default {
       lectures: [
         {
           title: "lecture1",
-          shortDescription:
-            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
+          shortDescription: "Dolores consequatur aliquam saepe qui.",
           id: "fBNz5xF-Kx4"
         },
         {
           title: "lecture2",
-          shortDescription:
-            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
+          shortDescription: "Dolores consequatur aliquam saepe qui.",
           id: "Wy9q22isx3U"
         },
         {
           title: "lecture3",
-          shortDescription:
-            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
+          shortDescription: "Dolores consequatur aliquam saepe qui.",
           id: "j55fHUJqtyw"
         },
         {
           title: "lecture4",
-          shortDescription:
-            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
+          shortDescription: "Dolores consequatur aliquam saepe qui",
           id: "r-yxNNO1EI8"
         },
         {
           title: "lecture5",
-          shortDescription:
-            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
+          shortDescription: "Dolores consequatur aliquam saepe qui.",
           id: "sYNjEzcOTOs"
+        },
+        {
+          title: "lecture6",
+          shortDescription: "Dolores consequatur aliquam saepe qui.",
+          id: "r-yxNNO1EI8"
+        },
+        {
+          title: "lecture7",
+          shortDescription: "Dolores consequatur aliquam saepe qui.",
+          id: "r-yxNNO1EI8"
+        },
+        {
+          title: "lecture8",
+          shortDescription: "Dolores consequatur aliquam saepe qui.",
+          id: "r-yxNNO1EI8"
         }
       ],
       computed: {
@@ -86,4 +100,7 @@ export default {
 </script>
 
 <style scoped>
+.row {
+  height: 300px;
+}
 </style>
