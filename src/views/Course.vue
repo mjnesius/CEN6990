@@ -3,16 +3,13 @@
     <div class="row my-5 vh-20">
       <div class="col-md-6">
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe
-            class="embed-responsive-item"
-            src="https://www.youtube.com/embed/fBNz5xF-Kx4?rel=0"
-            allowfullscreen
-          ></iframe>
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fBNz5xF-Kx4?rel=0" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="list-group overflow-auto">
-          <button  
+      <div class="col-md-6 overflow-auto">
+        <div class="list-group list-group-item-action overflow-auto">
+          <button
+            type="button"
             v-for="(lecture, index) in lectures"
             :key="index"
             @click="loadVideo(lecture.id)"
@@ -73,6 +70,11 @@ export default {
           id: "sYNjEzcOTOs"
         }
       ],
+      computed: {
+        newVideo() {
+          return "https://www.youtube.com/embed/fBNz5xF-Kx4?rel=0";
+        }
+      },
       methods: {
         loadVideo(id) {
           this.currentVideo = id;
