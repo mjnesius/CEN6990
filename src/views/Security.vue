@@ -6,13 +6,13 @@
         class="lead"
       >From firewalls to malware, you will quickly gain the knowledge and skills to be a security pro!</p>
       <hr class="my-4">
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui.</p>
     </div>
     <div class="list-group">
       <router-link
         v-for="course in courses"
         :key="course.id"
-        :to="{ name: 'course', params: { id: course.id }}"
+        :to="{ name: 'course', params: { id: course.id } }"
         class="list-group-item list-group-item-action mb-3"
       >
         {{ course.title }}
@@ -64,5 +64,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

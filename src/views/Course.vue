@@ -3,11 +3,7 @@
     <div class="row my-5">
       <div class="col-md-6">
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe
-            class="embed-responsive-item"
-            src="https://www.youtube.com/embed/fBNz5xF-Kx4?rel=0"
-            allowfullscreen
-          ></iframe>
+          <iframe class="embed-responsive-item" :src="newVideo" allowfullscreen></iframe>
         </div>
       </div>
       <div class="lecture-list col-md-6 overflow-auto">
@@ -35,6 +31,16 @@
 <script>
 export default {
   name: "Course",
+  computed: {
+    newVideo() {
+      return "https://www.youtube.com/embed/fBNz5xF-Kx4?rel=0";
+    }
+  },
+  methods: {
+    loadVideo: function(id) {
+      this.currentVideo = id;
+    }
+  },
   data() {
     return {
       currentVideo: "fBNz5xF-Kx4",
@@ -82,17 +88,7 @@ export default {
           shortDescription: "Dolores consequatur aliquam saepe qui.",
           id: "r-yxNNO1EI8"
         }
-      ],
-      computed: {
-        newVideo() {
-          return "https://www.youtube.com/embed/fBNz5xF-Kx4?rel=0";
-        }
-      },
-      methods: {
-        loadVideo(id) {
-          this.currentVideo = id;
-        }
-      }
+      ]
     };
   }
 };
