@@ -1,5 +1,5 @@
 <template>
-  <div class="it">
+  <div class="it container">
     <div class="jumbotron mt-3">
       <h1 class="display-3">Information Technology</h1>
       <p
