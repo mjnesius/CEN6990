@@ -76,17 +76,17 @@ export default {
         {
           title: "lecture6",
           shortDescription: "Dolores consequatur aliquam saepe qui.",
-          id: "r-yxNNO1EI8"
+          id: "pWbMrx5rVBE"
         },
         {
           title: "lecture7",
           shortDescription: "Dolores consequatur aliquam saepe qui.",
-          id: "r-yxNNO1EI8"
+          id: "UB1O30fR-EE"
         },
         {
           title: "lecture8",
           shortDescription: "Dolores consequatur aliquam saepe qui.",
-          id: "r-yxNNO1EI8"
+          id: "sBws8MSXN7A"
         }
       ]
     };
