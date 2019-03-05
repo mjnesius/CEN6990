@@ -96,6 +96,6 @@ export default {
 
 <style scoped>
 .lecture-list {
-  height: 270px;
+  height: 310px;
 }
 </style>
