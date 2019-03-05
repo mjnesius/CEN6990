@@ -33,7 +33,7 @@ export default {
   name: "Course",
   computed: {
     newVideo() {
-      return "https://www.youtube.com/embed/fBNz5xF-Kx4?rel=0";
+      return `https://www.youtube.com/embed/${this.currentVideo}?rel=0`;
     }
   },
   methods: {
