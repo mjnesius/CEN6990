@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import db from "@/firebase/init";
 export default {
   name: "Course",
   computed: {
@@ -43,53 +44,25 @@ export default {
   },
   data() {
     return {
-      currentVideo: "fBNz5xF-Kx4",
-      courseTitle: "Software Development in a Nutshell",
-      courseDescription:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos.",
-      lectures: [
-        {
-          title: "lecture1",
-          shortDescription: "Dolores consequatur aliquam saepe qui.",
-          id: "fBNz5xF-Kx4"
-        },
-        {
-          title: "lecture2",
-          shortDescription: "Dolores consequatur aliquam saepe qui.",
-          id: "Wy9q22isx3U"
-        },
-        {
-          title: "lecture3",
-          shortDescription: "Dolores consequatur aliquam saepe qui.",
-          id: "j55fHUJqtyw"
-        },
-        {
-          title: "lecture4",
-          shortDescription: "Dolores consequatur aliquam saepe qui",
-          id: "r-yxNNO1EI8"
-        },
-        {
-          title: "lecture5",
-          shortDescription: "Dolores consequatur aliquam saepe qui.",
-          id: "sYNjEzcOTOs"
-        },
-        {
-          title: "lecture6",
-          shortDescription: "Dolores consequatur aliquam saepe qui.",
-          id: "pWbMrx5rVBE"
-        },
-        {
-          title: "lecture7",
-          shortDescription: "Dolores consequatur aliquam saepe qui.",
-          id: "UB1O30fR-EE"
-        },
-        {
-          title: "lecture8",
-          shortDescription: "Dolores consequatur aliquam saepe qui.",
-          id: "sBws8MSXN7A"
-        }
-      ]
+      currentVideo: "",
+      courseTitle: "",
+      courseDescription: "",
+      lectures: []
     };
+  },
+  created() {
+    db.collection("courses")
+      .doc(this.$route.params.id)
+      .get()
+      .then(doc => {
+          let course = doc.data();
+          course.id = doc.id;
+          this.currentVideo = course.lectures[0].id;
+          console.log(this.currentVideo);
+          this.courseTitle = course.title;
+          this.courseDescription = course.longDescription;
+          this.lectures = course.lectures;
+        });
   }
 };
 </script>

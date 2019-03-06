@@ -14,25 +14,36 @@
         :key="course.id"
         :to="{ name: 'course', params: { id: course.id }}"
         class="list-group-item list-group-item-action mb-3"
-      >{{ course.title }} <span class="ml-5">{{ course.shortDescription }}</span></router-link>
+      >
+        {{ course.title }}
+        <span class="ml-5">{{ course.shortDescription }}</span>
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
+import db from "@/firebase/init";
 export default {
   name: "Development",
   data() {
     return {
-      courses: [
-        { title: "course1", shortDescription: "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos", id: "1" },
-        { title: "course2", shortDescription: "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos", id: "2" },
-        { title: "course3", shortDescription: "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos", id: "3" },
-        { title: "course4", shortDescription: "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos", id: "4" },
-        { title: "course5", shortDescription: "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos", id: "5" }
-      ]
-    }
+      courses: []
+    };
   },
+  created() {
+    db.collection("courses")
+    .where("topic", "==", "development")
+      .orderBy("date", "desc")
+      .get()
+      .then(snapshot => {
+        snapshot.forEach(doc => {
+          let course = doc.data();
+          course.id = doc.id;
+          this.courses.push(course);
+        });
+      });
+  }
 };
 </script>
 

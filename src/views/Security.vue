@@ -1,7 +1,7 @@
 <template>
   <div class="security container">
     <div class="jumbotron mt-3">
-      <h1 class="display-3">Sofware Development</h1>
+      <h1 class="display-3">Security</h1>
       <p
         class="lead"
       >From firewalls to malware, you will quickly gain the knowledge and skills to be a security pro!</p>
@@ -23,43 +23,26 @@
 </template>
 
 <script>
+import db from "@/firebase/init";
 export default {
   name: "Security",
   data() {
     return {
-      courses: [
-        {
-          title: "course1",
-          shortDescription:
-            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
-          id: "1"
-        },
-        {
-          title: "course2",
-          shortDescription:
-            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
-          id: "2"
-        },
-        {
-          title: "course3",
-          shortDescription:
-            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
-          id: "3"
-        },
-        {
-          title: "course4",
-          shortDescription:
-            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
-          id: "4"
-        },
-        {
-          title: "course5",
-          shortDescription:
-            "Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos",
-          id: "5"
-        }
-      ]
+      courses: []
     };
+  },
+  created() {
+    db.collection("courses")
+      .where("topic", "==", "security")
+      .orderBy("date", "desc")
+      .get()
+      .then(snapshot => {
+        snapshot.forEach(doc => {
+          let course = doc.data();
+          course.id = doc.id;
+          this.courses.push(course);
+        });
+      });
   }
 };
 </script>
