@@ -8,28 +8,41 @@
       <hr class="my-4">
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui.</p>
     </div>
-    <div class="list-group">
-      <router-link
-        v-for="course in courses"
-        :key="course.id"
-        :to="{ name: 'course', params: { id: course.id } }"
-        class="list-group-item list-group-item-action mb-3"
-      >
-        {{ course.title }}
-        <span class="ml-5">{{ course.shortDescription }}</span>
-      </router-link>
-    </div>
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Instructor</th>
+          <th scope="col">Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr @click="pushToCoursePage(course.id)" v-for="course in courses" :key="course.id">
+          <td>{{ course.title }}</td>
+          <td>{{ course.shortDescription }}</td>
+          <td>{{ course.instructor }}</td>
+          <td>{{ course.timestamp }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
 import db from "@/firebase/init";
+import moment from "moment";
 export default {
   name: "Security",
   data() {
     return {
       courses: []
     };
+  },
+  methods: {
+    pushToCoursePage(id) {
+      this.$router.push({ name: "course", params: { id: id } });
+    }
   },
   created() {
     db.collection("courses")
@@ -40,6 +53,7 @@ export default {
         snapshot.forEach(doc => {
           let course = doc.data();
           course.id = doc.id;
+          course.timestamp = moment(doc.data().timestamp).format("ll");
           this.courses.push(course);
         });
       });
@@ -47,4 +61,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+tbody tr{
+  cursor: pointer
+}
+</style>

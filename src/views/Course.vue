@@ -24,6 +24,8 @@
     <div class="jumbotron mt-3">
       <h1 class="display-5">{{ courseTitle }}</h1>
       <p class="lead">{{ courseDescription }}</p>
+      <p>Instructor:  {{courseInstructor}}</p>
+      <p>Biography:  {{courseInstructorBio}}</p>
     </div>
   </div>
 </template>
@@ -47,6 +49,8 @@ export default {
       currentVideo: "",
       courseTitle: "",
       courseDescription: "",
+      courseInstructor: "",
+      courseInstructorBio: "",
       lectures: []
     };
   },
@@ -55,14 +59,16 @@ export default {
       .doc(this.$route.params.id)
       .get()
       .then(doc => {
-          let course = doc.data();
-          course.id = doc.id;
-          this.currentVideo = course.lectures[0].id;
-          console.log(this.currentVideo);
-          this.courseTitle = course.title;
-          this.courseDescription = course.longDescription;
-          this.lectures = course.lectures;
-        });
+        let course = doc.data();
+        course.id = doc.id;
+        this.currentVideo = course.lectures[0].id;
+        console.log(this.currentVideo);
+        this.courseTitle = course.title;
+        this.courseDescription = course.longDescription;
+        this.lectures = course.lectures;
+        this.courseInstructor = course.instructor;
+        this.courseInstructorBio = course.instructorBio;
+      });
   }
 };
 </script>
