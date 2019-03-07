@@ -1,10 +1,5 @@
 <template>
   <div class="about container">
-    <h1>This is the About page ...</h1>
-    <div class="jumbotron">
-      <h1 class="display-3">Trending Courses</h1>
-      <hr class="my-4" />
-    </div>
     <div class="jumbotron">
       <h1 class="display-3">UWF Empowers!</h1>
       <h2 class="display-4">Your Dream, Our Mission</h2>
