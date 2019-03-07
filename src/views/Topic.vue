@@ -77,6 +77,20 @@ export default {
       this.topic = currentTopic.topic;
       this.phrase = currentTopic.phrase;
       this.description = currentTopic.description;
+      this.courses= [];
+      let search = currentTopic.search;
+      db.collection("courses")
+      .where("topic", "==", search)
+      .orderBy("date", "desc")
+      .get()
+      .then(snapshot => {
+        snapshot.forEach(doc => {
+          let course = doc.data();
+          course.id = doc.id;
+          course.timestamp = moment(doc.data().date.toDate()).format("ll");
+          this.courses.push(course);
+        });
+      });
     }
   },
   watch: {
