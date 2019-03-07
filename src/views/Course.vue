@@ -1,22 +1,24 @@
 <template>
   <div class="container">
     <div class="row my-5">
-      <div class="col-md-6">
+      <div class="col-md-9">
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" :src="newVideo" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="lecture-list col-md-6 overflow-auto">
-        <div class="list-group list-group-item-action">
+      <div class="lecture-list col-md-3 overflow-auto">
+        <div class="list-group list-group-item-action border border-primary">
           <button
             type="button"
             v-for="(lecture, index) in lectures"
             :key="index"
             @click="loadVideo(lecture.id)"
-            class="list-group-item mb-2"
+            class="list-group-item mb-2 text-primary"
           >
+          <div class="d-flex align-item-start">
+            <i class="fas fa-play-circle mr-5 text-primary h2"></i>
             {{ lecture.title }}
-            <span class="ml-5">{{ lecture.shortDescription }}</span>
+            </div>
           </button>
         </div>
       </div>
@@ -24,8 +26,8 @@
     <div class="jumbotron mt-3">
       <h1 class="display-5">{{ courseTitle }}</h1>
       <p class="lead">{{ courseDescription }}</p>
-      <p>Instructor:  {{courseInstructor}}</p>
-      <p>Biography:  {{courseInstructorBio}}</p>
+      <p>Instructor: {{courseInstructor}}</p>
+      <p>Biography: {{courseInstructorBio}}</p>
     </div>
   </div>
 </template>
@@ -75,6 +77,6 @@ export default {
 
 <style scoped>
 .lecture-list {
-  height: 310px;
+  height: 465px;
 }
 </style>
