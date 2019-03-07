@@ -2,9 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
-import Development from "./views/Development.vue";
-import IT from "./views/IT.vue";
-import Security from "./views/Security.vue";
+import Topic from "./views/Topic.vue";
 import Course from "./views/Course.vue";
 
 Vue.use(Router);
@@ -24,19 +22,9 @@ export default new Router({
       component: About
     },
     {
-      path: "/development",
-      name: "development",
-      component: Development
-    },
-    {
-      path: "/it",
-      name: "it",
-      component: IT
-    },
-    {
-      path: "/security",
-      name: "security",
-      component: Security
+      path: "/topic/:id",
+      name: "topic",
+      component: Topic
     },
     {
       path: "/course/:id",
