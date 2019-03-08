@@ -289,7 +289,7 @@
         <div class="col-md-3">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Course 2</h5>
+              <h5 class="card-title">Course 4</h5>
               <p class="card-text">Supporting text for topic description.</p>
               <button class="btn btn-link">Link</button>
             </div>
