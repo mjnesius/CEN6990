@@ -64,7 +64,6 @@ export default {
         let course = doc.data();
         course.id = doc.id;
         this.currentVideo = course.lectures[0].id;
-        console.log(this.currentVideo);
         this.courseTitle = course.title;
         this.courseDescription = course.longDescription;
         this.lectures = course.lectures;
