@@ -215,7 +215,7 @@ export default {
           id: 3,
           heading: "q3",
           target: "#a3",
-          card: "32"
+          card: "a3"
         },
         {
           question: "How do I become an instructor for a course?",
