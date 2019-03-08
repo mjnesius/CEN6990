@@ -24,17 +24,17 @@
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{ name: 'development'}"
+              :to="{ name: 'topic', params: {id: 0}}"
               exact
             >Development</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'it'}" exact>IT</router-link>
+            <router-link class="nav-link" :to="{ name: 'topic', params: {id: 1}}" exact>IT</router-link>
           </li>
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{ name: 'security'}"
+              :to="{ name: 'topic', params: {id: 2}}"
               exact
             >Security</router-link>
           </li>
