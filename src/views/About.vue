@@ -72,18 +72,15 @@
           </div>
           <div class="tile-container">
             <img
-              src="../assets/students.jpg"
+              src="../assets/inspiring-3.jpg"
               alt="portrait"
               style="width:100%"
               target="_self"
             />
-            <a
-              href="https://uwf.edu/go/connection/alumni-profiles/"
-              alt="Meet our notable alumni"
-            >
+            <a href="/topic/1" alt="Meet our notable alumni">
               <div class="overlay">
                 <div class="overlay-text">
-                  Meet our notable alumni
+                  Become and IT Professional
                 </div>
               </div></a
             >
@@ -133,7 +130,7 @@
               />
               <div class="overlay">
                 <div class="overlay-text">
-                  Cybersecurity Track
+                  Become A Cybersecurity Expert
                 </div>
               </div></a
             >
@@ -143,7 +140,7 @@
               <img src="../assets/se.jpg" alt="Software" style="width:100%" />
               <div class="overlay">
                 <div class="overlay-text">
-                  Software Engineering Track
+                  Develop Software
                 </div>
               </div></a
             >
