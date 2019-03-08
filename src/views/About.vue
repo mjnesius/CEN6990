@@ -2,12 +2,53 @@
   <div class="about container">
     <div class="jumbotron">
       <h1 class="display-3">UWF Empowers!</h1>
-      <h2 class="display-4">Your Dream, Our Mission</h2>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button"
-          >Start your journey!</a
-        >
-      </p>
+      <div
+        id="inspirationCarousel"
+        class="carousel slide"
+        data-ride="carousel"
+        data-interval="5000"
+      >
+        <div class="carousel-inner mh-150">
+          <div class="carousel-item item active" width="auto">
+            <div class="carousel-content">
+              <h2 class="caro-h2">Your Dream, Our Mission</h2>
+            </div>
+            <img
+              class="d-block w-100 img-fluid img-responsive"
+              src="../assets/areyourready.jpg"
+              alt="First slide"
+            />
+          </div>
+          <div class="carousel-item item">
+            <div class="carousel-content">
+              <h2 class="caro-h2">Take Charge, Reimagine</h2>
+            </div>
+            <img
+              class="d-block w-100 img-fluid img-responsive"
+              src="../assets/inspiring-1.jpg"
+              alt="Second slide"
+            />
+          </div>
+          <div class="carousel-item item">
+            <div class="carousel-content">
+              <h2 class="caro-h2">Your Future, Starts Today</h2>
+            </div>
+            <img
+              class="d-block w-100 img-fluid img-responsive"
+              src="../assets/inspiring-4.jpg"
+              alt="Third slide"
+            />
+          </div>
+        </div>
+        <div class="col-md-12 carousel-button">
+          <a
+            class=" btn btn-light btn-lg btn-outline-primary"
+            href="Home"
+            role="button"
+            >Start your journey!</a
+          >
+        </div>
+      </div>
     </div>
     <div class="jumbotron">
       <h1 class="display-3">Start your IT journey!</h1>
@@ -92,10 +133,43 @@ export default {
         {
           question: "Why do you have so many questions?",
           answer: "We are a very inquisitive people",
-          id: 4,
+          id: 5,
           heading: "q5",
           target: "#a5",
           card: "a5"
+        }
+      ],
+      testimonials: [
+        {
+          id: 0,
+          name: "Joselle",
+          specialty: "Cybersecurity",
+          blurb:
+            "Musice wasn't paying the bills, so I skilled up and got an entry level developer position with a tier-1 defense contactor. Thanks Empower!",
+          img: "../src/assets/testimonials-6.jpg"
+        },
+        {
+          id: 1,
+          name: "Joe",
+          specialty: "Database Systems",
+          blurb:
+            "UWF Empower helped me kickstart my career change. With the mobil app development skills I learned, I was able to launch my Hat Hailing service and we just reached Unicorn status!",
+          img: "../src/assets/testimonials-4.jpg"
+        },
+        {
+          id: 2,
+          name: "Professor Gabe McMasters",
+          specialty: "Cybersecurity",
+          blurb: "Come learn with me!",
+          img: "../src/assets/testimonials-1.jpg"
+        },
+        {
+          id: 3,
+          name: "Professor Raul Gomez",
+          specialty: "UX Design",
+          blurb:
+            "I have over 15 years developing software in the defense industry!",
+          img: "../assets/testimonials-3.jpg"
         }
       ]
     };
@@ -103,4 +177,69 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.carousel {
+  max-height: 370px;
+  min-height: 250px;
+  overflow: hidden;
+}
+.item img {
+  width: auto;
+  height: auto;
+  min-height: 250px;
+  overflow: hidden;
+}
+
+@media (max-width: 368px) {
+  .carousel {
+    max-height: 150px;
+    min-height: 150px;
+    overflow: hidden;
+  }
+  .item img {
+    width: auto;
+    height: auto;
+    max-height: 150px;
+    min-height: 150px;
+    overflow: hidden;
+  }
+}
+.carousel-content {
+  position: absolute;
+  font-weight: bolder;
+  top: 5%;
+  left: 5%;
+  z-index: 20;
+  color: white;
+  text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);
+}
+.carousel-button {
+  position: absolute;
+  bottom: 5%;
+  z-index: 22;
+}
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 8vw;
+  }
+  h2 {
+    font-size: 7vw;
+  }
+  .caro-h2 {
+    font-size: 4vw;
+  }
+  h3 {
+    font-size: 6vw;
+  }
+  h4 {
+    font-size: 5vw;
+  }
+}
+.btn-light,
+.btn-primary:hover {
+  color: #009cde;
+  background-color: #009cde;
+  border-color: #97c800;
+  fill: #8dc8e8;
+}
+</style>
