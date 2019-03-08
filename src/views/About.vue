@@ -148,7 +148,7 @@
         </div>
       </div>
     </div>
-    <h3>Commonly Asked Questions</h3>
+    <h3 class="mt-5 display-4">Commonly Asked Questions</h3>
     <div class="accordion" id="accordionExample">
       <div class="card" v-for="qa in qas" :key="qa.id">
         <div class="card-header" :id="qa.heading">
@@ -174,6 +174,35 @@
         >
           <div class="card-body">
             <p>{{ qa.answer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron test mt-5 mb-5">
+      <h3 class="display-4">Testimonials</h3>
+      <div
+        id="inspirationCarousel"
+        class="carousel slide"
+        data-ride="carousel"
+        data-interval="5000"
+      >
+        <div class="carousel-inner ">
+          <div
+            class="carousel-item item"
+            v-for="(test, idx) in testimonials"
+            :key="test.id"
+            :class="{ active: idx == 0 }"
+            width="auto"
+          >
+            <img
+              class="d-block w-100 img-fluid img-responsive"
+              :src="test.img"
+              :alt="test.name"
+              z-index="24"
+            />
+            <div class="carousel-content">
+              <h2 class="caro-h2">{{ test.blurb }}</h2>
+            </div>
           </div>
         </div>
       </div>
@@ -238,31 +267,31 @@ export default {
           name: "Joselle",
           specialty: "Cybersecurity",
           blurb:
-            "Musice wasn't paying the bills, so I skilled up and got an entry level developer position with a tier-1 defense contactor. Thanks Empower!",
-          img: "../src/assets/testimonials-6.jpg"
+            "Music wasn't paying the bills, so I skilled up and got an entry level developer position with a tier-1 defense contactor. Thanks Empower!",
+          img: require("../assets/testimonials-6.jpg")
         },
         {
           id: 1,
           name: "Joe",
           specialty: "Database Systems",
           blurb:
-            "UWF Empower helped me kickstart my career change. With the mobil app development skills I learned, I was able to launch my Hat Hailing service and we just reached Unicorn status!",
-          img: "../src/assets/testimonials-4.jpg"
+            "UWF Empower helped me kickstart my career change. With the mobile app development skills I learned, I was able to launch my Hat Hailing service and we just reached Unicorn status!",
+          img: require("../assets/testimonials-4.jpg")
         },
         {
           id: 2,
-          name: "Professor Gabe McMasters",
-          specialty: "Cybersecurity",
-          blurb: "Come learn with me!",
-          img: "../src/assets/testimonials-1.jpg"
+          name: "DJ Sneezey",
+          specialty: "Software engineering",
+          blurb:
+            "I wrote my on mixing software. Now, no one can copy my sound!",
+          img: require("../assets/security.jpg")
         },
         {
           id: 3,
-          name: "Professor Raul Gomez",
+          name: "@guiGuy",
           specialty: "UX Design",
-          blurb:
-            "I have over 15 years developing software in the defense industry!",
-          img: "../assets/testimonials-3.jpg"
+          blurb: "Empower gave me the skills I needed, on my schedule!",
+          img: require("../assets/testimonials-3.jpg")
         }
       ]
     };
@@ -298,6 +327,15 @@ export default {
   }
 }
 .carousel-content {
+  position: absolute;
+  font-weight: bolder;
+  top: 5%;
+  left: 5%;
+  z-index: 20;
+  color: white;
+  text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);
+}
+.carousel2-content {
   position: absolute;
   font-weight: bolder;
   top: 5%;
