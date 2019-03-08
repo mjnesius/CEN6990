@@ -54,6 +54,102 @@
       <h1 class="display-3">Start your IT journey!</h1>
       <p class="lead">Access world class coursework for free!</p>
       <hr class="my-4" />
+      <div class="rowImg">
+        <div class="columnImg ">
+          <div class="tile-container">
+            <img
+              src="../assets/skills.jpg"
+              alt="Books_03"
+              style="width:100%"
+              display="block"
+              target="_self"
+            />
+            <a href="Home" alt="Search the stacks at UWF Libraries">
+              <div class="overlay">
+                <div class="overlay-text">Search our course library</div>
+              </div>
+            </a>
+          </div>
+          <div class="tile-container">
+            <img
+              src="../assets/students.jpg"
+              alt="portrait"
+              style="width:100%"
+              target="_self"
+            />
+            <a
+              href="https://uwf.edu/go/connection/alumni-profiles/"
+              alt="Meet our notable alumni"
+            >
+              <div class="overlay">
+                <div class="overlay-text">
+                  Meet our notable alumni
+                </div>
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="columnImg">
+          <div class="tile-container">
+            <a href="https://uwf.edu/ihire/" alt="iHire UWF" target="_self">
+              <img
+                src="../assets/employer1.jpg"
+                alt="ihire project"
+                style="width:100%"
+              />
+              <div class="overlay">
+                <div class="overlay-text">
+                  iHire UWF
+                </div>
+              </div></a
+            >
+          </div>
+          <div class="tile-container">
+            <a
+              href="https://uwf.edu/topscholars"
+              alt="Get to Know UWF's Top&nbsp;Scholars"
+              target="_self"
+            >
+              <img
+                src="../assets/testimonials-7.jpg"
+                alt="Top Scholars"
+                style="width:100%"
+              />
+              <div class="overlay">
+                <div class="overlay-text">
+                  Get to Know UWF's Top&nbsp;Scholars
+                </div>
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="columnImg">
+          <div class="tile-container">
+            <a href="../topic/2" alt="Security" target="_self">
+              <img
+                src="../assets/security-3.jpg"
+                alt="Security"
+                style="width:100%"
+              />
+              <div class="overlay">
+                <div class="overlay-text">
+                  Cybersecurity Track
+                </div>
+              </div></a
+            >
+          </div>
+          <div class="tile-container">
+            <a href="../topic/0" alt="Software" target="_self">
+              <img src="../assets/se.jpg" alt="Software" style="width:100%" />
+              <div class="overlay">
+                <div class="overlay-text">
+                  Software Engineering Track
+                </div>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
     </div>
     <h3>Commonly Asked Questions</h3>
     <div class="accordion" id="accordionExample">
@@ -241,5 +337,72 @@ export default {
   background-color: #009cde;
   border-color: #97c800;
   fill: #8dc8e8;
+}
+
+.rowImg {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.columnImg {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 5px;
+}
+
+.columnImg img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .columnImg {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columnImg {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #004c97;
+  z-index: 23;
+}
+.overlay-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 24;
+}
+.tile-container:hover .overlay {
+  opacity: 0.9;
+}
+.tile-container {
+  position: relative;
+  width: 100%;
+  z-index: 22;
 }
 </style>
