@@ -148,7 +148,54 @@
         </div>
       </div>
     </div>
-    <h3>Commonly Asked Questions</h3>
+    <div class="card" style="background-color:#009CDE !important">
+      <div class="row  mt-3" style="margin-left:1px; margin-right:1px; ">
+        <div class="col-sm-6">
+          <div class="card mb-3">
+            <div class="row  mt-3" style="margin-left:1px; margin-right:1px; ">
+              <div class="col-sm-6">
+                <div class="card mb-3">
+                  <div style="height: 190px">
+                    <img
+                      class="img-fluid"
+                      alt="Responsive image"
+                      style="height: auto; width: auto; display: block;"
+                      src="../assets/team_03.jpg"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card mb-3">
+                  <h4
+                    class="card-header"
+                    style="background-color:#8DC8E8 !important"
+                  >
+                    alumni
+                  </h4>
+                  <div class="card-body">
+                    <h5 class="card-title">alumni</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      alumni
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card mb-12">
+            <h4 class="card-header" style="background-color:#8DC8E8 !important">
+              alumni
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="mt-5 display-4">Commonly Asked Questions</h3>
     <div class="accordion" id="accordionExample">
       <div class="card" v-for="qa in qas" :key="qa.id">
         <div class="card-header" :id="qa.heading">
@@ -174,6 +221,54 @@
         >
           <div class="card-body">
             <p>{{ qa.answer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron2 mt-5 mb-5">
+      <div class="jumbotron2-inside">
+        <h3
+          class="display-4"
+          style="color: white; text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);"
+        >
+          Testimonials
+        </h3>
+      </div>
+      <div
+        id="inspirationCarousel"
+        class="carousel2 slide mb-1 mt-1"
+        data-ride="carousel"
+        data-interval="6000"
+        style="max-height: 550px; !important"
+      >
+        <div class="carousel2-inner">
+          <div
+            class="carousel-item item "
+            v-for="(test, idx) in testimonials"
+            :key="test.id"
+            :class="{ active: idx == 0 }"
+            width="auto"
+          >
+            <img
+              class="d-block h-100 img-fluid img-responsive fill"
+              :src="test.img"
+              :alt="test.name"
+              z-index="24"
+              style=" box-shadow: 0px 0px 10px 5px rgba(255, 184, 28, .4);border-radius: 25% 10%; !important;"
+            />
+            <!--<div class="carousel2-content" style="background-color: #003865; opacity:0.9; min-height:100px; display: flex; text-align: center; justify-content: center; 
+                    align-items: center;">
+                <h2 class="caro-h2" >{{ test.blurb }}</h2>
+              </div>-->
+
+            <div
+              class=" carousel-caption d-none d-md-block rounded border-left"
+              style="box-sizing: border-box;padding: 15px; max-width: 550px; background-color: rgba(0, 76, 151, 0.7);!important"
+            >
+              <h4>{{ test.blurb }}</h4>
+              <h5>-{{ test.name }}</h5>
+              <h6>{{ test.specialty }}</h6>
+            </div>
           </div>
         </div>
       </div>
@@ -236,33 +331,33 @@ export default {
         {
           id: 0,
           name: "Joselle",
-          specialty: "Cybersecurity",
+          specialty: "Cybersecurity 2019",
           blurb:
-            "Musice wasn't paying the bills, so I skilled up and got an entry level developer position with a tier-1 defense contactor. Thanks Empower!",
-          img: "../src/assets/testimonials-6.jpg"
+            "Music wasn't paying the bills, so I skilled up and got an entry level developer position with a tier-1 defense contactor. Thanks Empower!",
+          img: require("../assets/testimonials-6.jpg")
         },
         {
           id: 1,
           name: "Joe",
-          specialty: "Database Systems",
+          specialty: "Database Systems 2019",
           blurb:
-            "UWF Empower helped me kickstart my career change. With the mobil app development skills I learned, I was able to launch my Hat Hailing service and we just reached Unicorn status!",
-          img: "../src/assets/testimonials-4.jpg"
+            "UWF Empower helped me kickstart my career change. With the mobile app development skills I learned, I was able to launch my Hat Hailing service and we just reached Unicorn status!",
+          img: require("../assets/testimonials-4.jpg")
         },
         {
           id: 2,
-          name: "Professor Gabe McMasters",
-          specialty: "Cybersecurity",
-          blurb: "Come learn with me!",
-          img: "../src/assets/testimonials-1.jpg"
+          name: "DJ Sneezey",
+          specialty: "Software engineering 2019",
+          blurb:
+            "I wrote my own mixing software. Now, no one can copy my sound!",
+          img: require("../assets/security.jpg")
         },
         {
           id: 3,
-          name: "Professor Raul Gomez",
-          specialty: "UX Design",
-          blurb:
-            "I have over 15 years developing software in the defense industry!",
-          img: "../assets/testimonials-3.jpg"
+          name: "@guiGal",
+          specialty: "UX Design 2019",
+          blurb: "Empower gave me the skills I needed, on my schedule!",
+          img: require("../assets/testimonials-3.jpg")
         }
       ]
     };
@@ -271,11 +366,60 @@ export default {
 </script>
 
 <style scoped>
+.jumbotron2 {
+  position: relative;
+}
+.jumbotron2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/making_waves_image.jpg");
+  background-size: cover;
+  image-rendering: pixelated;
+
+  filter: sepia(20%) hue-rotate(190deg) saturate(8) opacity(0.6) grayscale(0.8)
+    contrast(4) blur(1px);
+}
+.jumbotron2-inside {
+  /* This will make it stack on top of the ::before */
+  position: relative;
+}
+.carousel-caption {
+  left: 43%;
+  bottom: 35%;
+  transform: translateX(10%);
+  transform: translatey(-80%);
+  color: white;
+  text-shadow: 0 3px 3.5px rgba(0, 0, 0, 0.8);
+}
 .carousel {
   max-height: 370px;
   min-height: 250px;
   overflow: hidden;
 }
+.carousel2,
+.item,
+.active {
+  height: 50%;
+  overflow: hidden;
+}
+.carousel2-inner {
+  height: 50%;
+  overflow: hidden;
+}
+.fill {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
 .item img {
   width: auto;
   height: auto;
@@ -302,6 +446,17 @@ export default {
   font-weight: bolder;
   top: 5%;
   left: 5%;
+  z-index: 20;
+  color: white;
+  text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);
+}
+.carousel2-content {
+  position: absolute;
+  font-weight: bolder;
+  top: 0%;
+  left: 5%;
+  right: 5%;
+  margin: 0 auto;
   z-index: 20;
   color: white;
   text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);

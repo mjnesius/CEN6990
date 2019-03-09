@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col text-center py-2 text-white">
-          <h4>UWF Empowers</h4>
+          <h4>UWFd Empowers</h4>
           <p>Copyright &copy; 2019</p>
         </div>
       </div>
@@ -17,5 +17,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

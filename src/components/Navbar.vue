@@ -1,7 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <div class="container">
-      <router-link class="navbar-brand" :to="{ name: 'home'}">UWF Empowers</router-link>
+      <img src="../assets/uwf logo2.png" alt="" width="450" height="80" />
+      <router-link class="navbar-brand" :to="{ name: 'home' }"
+        >UWF Empowers</router-link
+      >
       <button
         class="navbar-toggler"
         type="button"
@@ -16,27 +19,38 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'home'}" exact>Home</router-link>
+            <router-link class="nav-link" :to="{ name: 'home' }" exact
+              >Home</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'about'}" exact>About</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link
-              class="nav-link"
-              :to="{ name: 'topic', params: {id: 0}}"
-              exact
-            >Development</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'topic', params: {id: 1}}" exact>IT</router-link>
+            <router-link class="nav-link" :to="{ name: 'about' }" exact
+              >About</router-link
+            >
           </li>
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{ name: 'topic', params: {id: 2}}"
+              :to="{ name: 'topic', params: { id: 0 } }"
               exact
-            >Security</router-link>
+              >Development</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link
+              class="nav-link"
+              :to="{ name: 'topic', params: { id: 1 } }"
+              exact
+              >IT</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link
+              class="nav-link"
+              :to="{ name: 'topic', params: { id: 2 } }"
+              exact
+              >Security</router-link
+            >
           </li>
         </ul>
       </div>
@@ -50,5 +64,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
