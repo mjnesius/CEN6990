@@ -148,6 +148,53 @@
         </div>
       </div>
     </div>
+    <div class="card" style="background-color:#009CDE !important">
+      <div class="row  mt-3" style="margin-left:1px; margin-right:1px; ">
+        <div class="col-sm-6">
+          <div class="card mb-3">
+            <div class="row  mt-3" style="margin-left:1px; margin-right:1px; ">
+              <div class="col-sm-6">
+                <div class="card mb-3">
+                  <div style="height: 190px">
+                    <img
+                      class="img-fluid"
+                      alt="Responsive image"
+                      style="height: auto; width: auto; display: block;"
+                      src="../assets/team_03.jpg"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card mb-3">
+                  <h4
+                    class="card-header"
+                    style="background-color:#8DC8E8 !important"
+                  >
+                    alumni
+                  </h4>
+                  <div class="card-body">
+                    <h5 class="card-title">alumni</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      alumni
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card mb-12">
+            <h4 class="card-header" style="background-color:#8DC8E8 !important">
+              alumni
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
     <h3 class="mt-5 display-4">Commonly Asked Questions</h3>
     <div class="accordion" id="accordionExample">
       <div class="card" v-for="qa in qas" :key="qa.id">
@@ -178,8 +225,8 @@
         </div>
       </div>
     </div>
-    <div class="jumbotron mt-5 mb-5">
-      <div class="jumbotron-inside">
+    <div class="jumbotron2 mt-5 mb-5">
+      <div class="jumbotron2-inside">
         <h3
           class="display-4"
           style="color: white; text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);"
@@ -302,7 +349,7 @@ export default {
           name: "DJ Sneezey",
           specialty: "Software engineering 2019",
           blurb:
-            "I wrote my on mixing software. Now, no one can copy my sound!",
+            "I wrote my own mixing software. Now, no one can copy my sound!",
           img: require("../assets/security.jpg")
         },
         {
@@ -319,10 +366,10 @@ export default {
 </script>
 
 <style scoped>
-.jumbotron {
+.jumbotron2 {
   position: relative;
 }
-.jumbotron::before {
+.jumbotron2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -331,10 +378,12 @@ export default {
   height: 100%;
   background-image: url("../assets/making_waves_image.jpg");
   background-size: cover;
-  filter: sepia(100%) hue-rotate(190deg) saturate(500%) blur(3px) opacity(0.6)
-    grayscale(0.2);
+  image-rendering: pixelated;
+
+  filter: sepia(20%) hue-rotate(190deg) saturate(8) opacity(0.6) grayscale(0.8)
+    contrast(4) blur(1px);
 }
-.jumbotron-inside {
+.jumbotron2-inside {
   /* This will make it stack on top of the ::before */
   position: relative;
 }
