@@ -14,136 +14,172 @@
         consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti
         accusamus quos!
       </p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
     <hr />
-    <div class="Home container2">
+
+    <div class="Container mt-5">
+      <h2 class="mb-5 text-left">Featured Topics</h2>
+      <div class="card-deck">
+        <div class="card cardSet1 text">
+          <div class="card-body">
+            <img
+              src="../assets/employer3.jpg"
+              class="img-fluid"
+              alt="Area for Topic1"
+            />
+            <h3 class="card-title mt-2">Topic 1</h3>
+            <h5 class="card-subtitle">Description of Topic1</h5>
+            <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
+          </div>
+        </div>
+        <div class="card cardSet1 text">
+          <div class="card-body">
+            <img
+              src="../assets/workplace.jpg"
+              class="img-fluid"
+              alt="Area for Topic2"
+            />
+            <h3 class="card-title mt-2">Topic 2</h3>
+            <p class="card-text mt-3">Supporting text for topic description.</p>
+            <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
+          </div>
+        </div>
+        <div class="card cardSet1 text">
+          <div class="card-body">
+            <img
+              src="../assets/employer3.jpg"
+              class="img-fluid"
+              alt="Area for Topic3"
+            />
+            <h3 class="card-title mt-2">Topic 3</h3>
+            <p class="card-text mt-3">Supporting text for topic description.</p>
+            <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="Container mt-5">
+      <h2 class="mb-5 text-left">New Courses</h2>
       <div class="row">
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Topic 1</h5>
-              <p class="card-text">Supporting text for topic description.</p>
-              <a href="#" class="btn btn-primary">Go to Topic 1</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Topic 2</h5>
-              <p class="card-text">Supporting text for topic description.</p>
-              <a href="#" class="btn btn-primary">Go to Topic 2</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Topic 3</h5>
-              <p class="card-text">Supporting text for topic description.</p>
-              <a href="#" class="btn btn-primary">Go to Topic 3</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr />
-
-    <br />
-
-    <div class="jumbotron">
-      <h1 class="display-3">New Courses!</h1>
-      <div class="Home container3">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card">
-              <img src="../assets/bubbles.jpg" class="img-fluid" />
-              <div class="card-body">
+        <div class="col-md-3">
+          <div class="card-deck">
+            <div class="card bg-primary">
+              <div class="card-body text-center">
                 <h5 class="card-title">Course 1</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-primary">Go to Topic 1</a>
+                <a href="#" class="btn btn-dark btn-sm float-right"
+                  >Learn more..</a
+                >
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="../assets/bubbles.jpg" class="img-fluid" />
-              <div class="card-body">
+        </div>
+        <div class="col-md-3">
+          <div class="card-deck">
+            <div class="card bg-warning">
+              <div class="card-body text-center">
                 <h5 class="card-title">Course 2</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-primary">Go to Topic 2</a>
+                <a href="#" class="btn btn-dark btn-sm float-right"
+                  >Learn more..</a
+                >
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="../assets/bubbles.jpg" class="img-fluid" />
-              <div class="card-body">
+        </div>
+        <div class="col-md-3">
+          <div class="card-deck">
+            <div class="card bg-primary">
+              <div class="card-body text-center">
                 <h5 class="card-title">Course 3</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <button class="btn btn-link">Link</button>
+                <a href="#" class="btn btn-dark btn-sm float-right"
+                  >Learn more..</a
+                >
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="../assets/bubbles.jpg" class="img-fluid" />
-              <div class="card-body">
-                <h5 class="card-title">Course 2</h5>
+        </div>
+        <div class="col-md-3">
+          <div class="card-deck">
+            <div class="card bg-warning">
+              <div class="card-body text-center">
+                <h5 class="card-title">Course 4</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <button class="btn btn-link">Link</button>
+                <a href="#" class="btn btn-dark btn-sm float-right"
+                  >Learn more..</a
+                >
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <hr />
     <br />
 
-    <div class="Home container4">
-      <div class="jumbotron">
-        <h1 class="display-3">Trending Courses!</h1>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card">
+    <div class="Container mt-5">
+      <h2 class="mb-5 text-left">Trending Courses</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-deck">
+            <div class="card bg-primary">
               <div class="card-body">
                 <h5 class="card-title">Course 1</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-primary">Go to Topic 1</a>
+                <a href="#" class="btn btn-dark btn-sm float-right"
+                  >Learn more..</a
+                >
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card">
+        </div>
+        <div class="col-md-3">
+          <div class="card-deck">
+            <div class="card bg-warning">
               <div class="card-body">
                 <h5 class="card-title">Course 2</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-primary">Go to Topic 2</a>
+                <a href="#" class="btn btn-dark btn-sm float-right"
+                  >Learn more..</a
+                >
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card">
+        </div>
+        <div class="col-md-3">
+          <div class="card-deck">
+            <div class="card bg-success">
               <div class="card-body">
                 <h5 class="card-title">Course 3</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <button class="btn btn-link">Link</button>
+                <a href="#" class="btn btn-dark btn-sm float-right"
+                  >Learn more..</a
+                >
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card">
+        </div>
+        <div class="col-md-3">
+          <div class="card-deck">
+            <div class="card bg-danger">
               <div class="card-body">
                 <h5 class="card-title">Course 4</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <button class="btn btn-link">Link</button>
+                <a href="#" class="btn btn-dark btn-sm float-right"
+                  >Learn more..</a
+                >
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <br />
   </div>
 </template>
@@ -158,5 +194,11 @@ export default {
 .jumbotron1 {
   background-image: url(../assets/areyourready.jpg);
   background-size: cover;
+}
+
+.card:hover {
+  -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
 }
 </style>
