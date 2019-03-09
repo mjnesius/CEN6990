@@ -53,7 +53,7 @@ export default {
             "From Java to Javascript, you will quickly gain the knowledge and skills to code like a pro!",
           description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
-          image: "{background: url(@/assets/areyourready.jpg)}"
+          image: "url(../assets/areyourready.jpg)"
         },
         {
           search: "it",
@@ -62,7 +62,7 @@ export default {
             "From workstations to networks, you will quickly gain the knowledge and skills to work with the pros!",
           description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
-          image: "{background: url(@/assets/informationsecurity.jpg)}"
+          image: "url(../assets/informationsecurity.jpg)"
         },
         {
           search: "security",
@@ -71,7 +71,7 @@ export default {
             "From firewalls to malware, you will quickly gain the knowledge and skills to be a security pro!",
           description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
-          image: "{background: url(@/assets/computerscreen2.jpg)}"
+          image: "url(../assets/computerscreen2.jpg)"
         }
       ]
     };
@@ -137,7 +137,7 @@ tbody tr {
 #home-heading {
   position: relative;
   min-height: 200px;
-  background: url(../assets/informationsecurity.jpg);
+  background: url(../assets/areyourready.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   text-align: center;
@@ -146,7 +146,7 @@ tbody tr {
 
 .dark-overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   top: 0;
   left: 0;
   width: 100%;

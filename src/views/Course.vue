@@ -13,21 +13,21 @@
             v-for="(lecture, index) in lectures"
             :key="index"
             @click="loadVideo(lecture.id)"
-            class="list-group-item mb-2 text-primary"
+            class="list-group-item mb-2 btn btn-outline-primary"
           >
-          <div class="d-flex align-item-start">
-            <i class="fas fa-play-circle mr-5 text-primary h2"></i>
-            {{ lecture.title }}
+            <div class="d-flex align-item-start">
+              <i class="fas fa-play-circle mr-3 text-primary h2"></i>
+              <strong class="text-left">{{ lecture.title }}</strong>
             </div>
           </button>
         </div>
       </div>
     </div>
-    <div class="jumbotron mt-3">
+    <div class="jumbotron bg-secondary border border-primary mt-3 text-primary">
       <h1 class="display-5">{{ courseTitle }}</h1>
       <p class="lead">{{ courseDescription }}</p>
-      <p>Instructor: {{courseInstructor}}</p>
-      <p>Biography: {{courseInstructorBio}}</p>
+      <p class="text-muted">Instructor: {{courseInstructor}}</p>
+      <p class="text-muted">Biography: {{courseInstructorBio}}</p>
     </div>
   </div>
 </template>
