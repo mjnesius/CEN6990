@@ -3,7 +3,9 @@
     <div class="h-100">
       <div class="row p-5 h-100 justify-content-center align-items-center">
         <div class="col-md-6">
-          <img src="../assets/undraw_programmer_imem.svg" alt width="400">
+          <img v-if="topic == 'Software Development'" src="../assets/undraw_programmer_imem.svg" alt width="400">
+          <img v-else-if="topic == 'Information Technology'" src="../assets/undraw_dashboard_nklg.svg" alt width="400">
+          <img v-else src="../assets/undraw_security_o890.svg" alt width="400">
         </div>
         <div class="col-md-6">
           <h1 class="dispay-3">{{topic}}</h1>
@@ -172,22 +174,5 @@ export default {
 tbody tr {
   cursor: pointer;
 }
-#home-heading {
-  position: relative;
-  min-height: 200px;
-  background: url(../assets/areyourready.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  text-align: center;
-  color: #fff;
-}
 
-.dark-overlay {
-  position: absolute;
-  background-color: rgba(53, 81, 133, 0.7);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 </style>
