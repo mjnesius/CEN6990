@@ -26,6 +26,7 @@
     <div class="jumbotron bg-secondary border border-primary mt-3 text-primary">
       <h1 class="display-5">{{ courseTitle }}</h1>
       <p class="lead">{{ courseDescription }}</p>
+      <hr>
       <p class="text-muted">Instructor: {{courseInstructor}}</p>
       <p class="text-muted">Biography: {{courseInstructorBio}}</p>
     </div>
@@ -34,6 +35,7 @@
 
 <script>
 import db from "@/firebase/init";
+
 export default {
   name: "Course",
   computed: {
@@ -42,7 +44,7 @@ export default {
     }
   },
   methods: {
-    loadVideo: function(id) {
+    loadVideo (id) {
       this.currentVideo = id;
     }
   },

@@ -28,6 +28,9 @@
           </tr>
         </tbody>
       </table>
+      <div class="d-flex justify-content-center mb-3">
+        <button type="button" @click="loadMore" class="btn btn-primary" v-show="more">Load More</button>
+      </div>
     </div>
   </section>
 </template>
@@ -39,6 +42,7 @@ export default {
   name: "Topic",
   data() {
     return {
+      more: true,
       id: "",
       topic: "",
       phrase: "",
@@ -77,10 +81,8 @@ export default {
     };
   },
   methods: {
-    pushToCoursePage(id) {
-      this.$router.push({ name: "course", params: { id: id } });
-    },
-    updateId() {
+    loadMore() {
+      this.more = false;
       this.id = this.$route.params.id;
       let currentTopic = this.topics[this.id];
       this.topic = currentTopic.topic;
@@ -92,6 +94,34 @@ export default {
       db.collection("courses")
         .where("topic", "==", search)
         .orderBy("date", "desc")
+        .limit(20)
+        .get()
+        .then(snapshot => {
+          snapshot.forEach(doc => {
+            let course = doc.data();
+            course.id = doc.id;
+            course.timestamp = moment(doc.data().date.toDate()).format("ll");
+            this.courses.push(course);
+          });
+        });
+    },
+    pushToCoursePage(id) {
+      this.$router.push({ name: "course", params: { id: id } });
+    },
+    updateId() {
+      this.more = true;
+      this.id = this.$route.params.id;
+      let currentTopic = this.topics[this.id];
+      this.topic = currentTopic.topic;
+      this.phrase = currentTopic.phrase;
+      this.description = currentTopic.description;
+      this.image = currentTopic.image;
+      this.courses = [];
+      let search = currentTopic.search;
+      db.collection("courses")
+        .where("topic", "==", search)
+        .orderBy("date", "desc")
+        .limit(10)
         .get()
         .then(snapshot => {
           snapshot.forEach(doc => {
@@ -117,6 +147,7 @@ export default {
     db.collection("courses")
       .where("topic", "==", search)
       .orderBy("date", "desc")
+      .limit(10)
       .get()
       .then(snapshot => {
         snapshot.forEach(doc => {
