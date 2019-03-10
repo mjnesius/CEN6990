@@ -16,7 +16,7 @@
             class="list-group-item mb-2 btn btn-outline-primary"
           >
             <div class="d-flex align-item-start">
-              <i class="fas fa-play-circle mr-3 text-primary h2"></i>
+              <i class="far fa-play-circle mr-3 text-primary h2"></i>
               <strong class="text-left">{{ lecture.title }}</strong>
             </div>
           </button>
