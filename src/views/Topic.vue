@@ -57,7 +57,7 @@ export default {
             "From Java to Javascript, you will quickly gain the knowledge and skills to code like a pro!",
           description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
-          image: "url(../assets/areyourready.jpg)"
+          image: "../assets/areyourready.jpg"
         },
         {
           search: "it",
