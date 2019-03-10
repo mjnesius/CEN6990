@@ -91,11 +91,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title">Course 1</h5>
                 <p class="card-text">
-                  Computer security, cybersecurity[1] or information technology
-                  security (IT security) is the protection of computer systems
-                  from theft or damage to their hardware, software or electronic
-                  data, as well as from disruption or misdirection of the
-                  services they provide.
+                  Supporting text for topic description.
                 </p>
                 <a href="#" class="btn btn-dark btn-sm float-right"
                   >Learn more..</a
