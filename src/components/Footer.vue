@@ -3,7 +3,8 @@
     <div class="container">
       <div class="row">
         <div class="col text-center py-2 text-white">
-          <h4>UWFd Empowers</h4>
+          <img src="../assets/uwf logo2.png" alt="" width="450" height="80" />
+          <h4>UWF Empowers</h4>
           <p>Copyright &copy; 2019</p>
         </div>
       </div>

@@ -12,7 +12,7 @@
       </section>
       <table class="table table-hover table-striped">
         <thead>
-          <tr>
+          <tr class="table-primary text-bold">
             <th scope="col">Title</th>
             <th scope="col">Description</th>
             <th scope="col">Instructor</th>
@@ -146,7 +146,7 @@ tbody tr {
 
 .dark-overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(53, 81, 133, 0.7);
   top: 0;
   left: 0;
   width: 100%;

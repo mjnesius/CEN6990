@@ -1,7 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <div class="container">
-      <img src="../assets/uwf logo2.png" alt="" width="450" height="80" />
       <router-link class="navbar-brand" :to="{ name: 'home' }"
         >UWF Empowers</router-link
       >
@@ -49,7 +48,7 @@
               class="nav-link"
               :to="{ name: 'topic', params: { id: 2 } }"
               exact
-              >Security</router-link
+              >CyberSecurity</router-link
             >
           </li>
         </ul>
