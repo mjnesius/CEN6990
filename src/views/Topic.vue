@@ -1,38 +1,40 @@
 <template>
-  <section>
-    <div class="container">
-      <section>
-        <div id="home-heading" class="jumbotron">
-          <section class="dark-overlay">
-            <h1 class="display-3 mt-3">{{topic}}</h1>
-            <p class="lead">{{phrase}}</p>
-            <p class="mb-5">{{description}}</p>
-          </section>
+  <div class="container">
+    <div class="h-100">
+      <div class="row p-5 h-100 justify-content-center align-items-center">
+        <div class="col-md-6">
+          <img src="../assets/undraw_programmer_imem.svg" alt width="400">
         </div>
-      </section>
-      <table class="table table-hover table-striped">
-        <thead>
-          <tr class="table-primary text-bold">
-            <th scope="col">Title</th>
-            <th scope="col">Description</th>
-            <th scope="col">Instructor</th>
-            <th scope="col">Update</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr @click="pushToCoursePage(course.id)" v-for="course in courses" :key="course.id">
-            <td>{{ course.title }}</td>
-            <td>{{ course.shortDescription }}</td>
-            <td>{{ course.instructor }}</td>
-            <td>{{ course.timestamp }}</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="d-flex justify-content-center mb-3">
-        <button type="button" @click="loadMore" class="btn btn-primary" v-show="more">Load More</button>
+        <div class="col-md-6">
+          <h1 class="dispay-3">{{topic}}</h1>
+          <p class="lead">{{phrase}}</p>
+          <p>{{description}}</p>
+        </div>
       </div>
     </div>
-  </section>
+
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr class="table-primary text-bold">
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Instructor</th>
+          <th scope="col">Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr @click="pushToCoursePage(course.id)" v-for="course in courses" :key="course.id">
+          <td>{{ course.title }}</td>
+          <td>{{ course.shortDescription }}</td>
+          <td>{{ course.instructor }}</td>
+          <td>{{ course.timestamp }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="d-flex justify-content-center mb-3">
+      <button type="button" @click="loadMore" class="btn btn-primary" v-show="more">Load More</button>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -57,7 +59,7 @@ export default {
             "From Java to Javascript, you will quickly gain the knowledge and skills to code like a pro!",
           description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
-          image: "../assets/areyourready.jpg"
+          image: "../assets/undraw_programmer_imem.svg"
         },
         {
           search: "it",
@@ -66,7 +68,7 @@ export default {
             "From workstations to networks, you will quickly gain the knowledge and skills to work with the pros!",
           description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
-          image: "url(../assets/informationsecurity.jpg)"
+          image: "../assets/undraw_dashboard_nklg.svg"
         },
         {
           search: "security",
@@ -75,7 +77,7 @@ export default {
             "From firewalls to malware, you will quickly gain the knowledge and skills to be a security pro!",
           description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
-          image: "url(../assets/computerscreen2.jpg)"
+          image: "../assets/undraw_security_o890.svg"
         }
       ]
     };
@@ -135,6 +137,11 @@ export default {
   },
   watch: {
     $route: "updateId"
+  },
+  computed: {
+    newImage() {
+      return this.image; 
+    }
   },
   created() {
     this.id = this.$route.params.id;
