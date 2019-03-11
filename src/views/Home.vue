@@ -1,21 +1,15 @@
 <template>
-  <div class="home container">
-    <div class="jumbotron">
-      <h1 class="display-3">Home Page</h1>
-      <img
-        class="d-block w-100 img-fluid img-responsive"
-        src="../assets/students.jpg"
-        alt="First slide"
-      />
-      <p class="lead">This is the home page!</p>
-      <hr class="my-4" />
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores
-        consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti
-        accusamus quos!
-      </p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </div>
+  <div class="container">
+    <section>
+      <div id="home-heading" class="jumbotron">
+        <section class="dark-overlay">
+          <h1 class="display-3 mt-3">{{ topic }}</h1>
+          <p class="lead">{{ phrase }}</p>
+          <p class="mb-5">{{ description }}</p>
+        </section>
+      </div>
+    </section>
+
     <hr />
 
     <div class="Container mt-5">
@@ -186,19 +180,58 @@
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+  data() {
+    return {
+      id: "",
+      topic: "",
+      phrase: "",
+      description: "",
+      image: "",
+      courses: [],
+      topics: [
+        {
+          search: "development",
+          topic: "Software Development",
+          phrase:
+            "From Java to Javascript, you will quickly gain the knowledge and skills to code like a pro!",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
+          image: "url(../assets/areyourready.jpg)"
+        }
+      ]
+    };
+  }
 };
 </script>
 
 <style scoped>
-.jumbotron1 {
-  background-image: url(../assets/areyourready.jpg);
-  background-size: cover;
+tbody tr {
+  cursor: pointer;
 }
 
 .card:hover {
   -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+}
+
+#home-heading {
+  position: relative;
+  min-height: 200px;
+  background: url(../assets/students.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #fff;
+}
+
+.dark-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>
