@@ -22,8 +22,16 @@
               class="img-fluid"
               alt="Area for Topic1"
             />
-            <h3 class="card-title mt-2">Topic 1</h3>
-            <h5 class="card-subtitle">Description of Topic1</h5>
+            <h3 class="card-title mt-2">Web Design</h3>
+            <p class="card-text mt-3">
+              >Web design encompasses many different skills and disciplines in
+              the production and maintenance of websites. The different areas of
+              web design include web graphic design; interface design;
+              authoring, including standardised code and proprietary software;
+              user experience design; and search engine optimization. Often many
+              individuals will work in teams covering different aspects of the
+              design process, although some designers will cover them all.
+            </p>
             <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
           </div>
         </div>
@@ -34,8 +42,15 @@
               class="img-fluid"
               alt="Area for Topic2"
             />
-            <h3 class="card-title mt-2">Topic 2</h3>
-            <p class="card-text mt-3">Supporting text for topic description.</p>
+            <h3 class="card-title mt-2">Network Administration</h3>
+            <p class="card-text mt-3">
+              A network administrator is the person designated in an
+              organization whose responsibility includes maintaining computer
+              infrastructures with emphasis on networking. Responsibilities may
+              vary between organizations, but on-site servers, software-network
+              interactions as well as network integrity/resilience are the key
+              areas of focus.
+            </p>
             <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
           </div>
         </div>
@@ -46,8 +61,14 @@
               class="img-fluid"
               alt="Area for Topic3"
             />
-            <h3 class="card-title mt-2">Topic 3</h3>
-            <p class="card-text mt-3">Supporting text for topic description.</p>
+            <h3 class="card-title mt-2">Cyber Security</h3>
+            <p class="card-text mt-3">
+              Computer security, cybersecurity[1] or information technology
+              security (IT security) is the protection of computer systems from
+              theft or damage to their hardware, software or electronic data, as
+              well as from disruption or misdirection of the services they
+              provide.
+            </p>
             <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
           </div>
         </div>
@@ -63,7 +84,9 @@
             <div class="card bg-primary">
               <div class="card-body text-center">
                 <h5 class="card-title">Course 1</h5>
-                <p class="card-text">Supporting text for topic description.</p>
+                <p class="card-text">
+                  Supporting text for topic description.
+                </p>
                 <a href="#" class="btn btn-dark btn-sm float-right"
                   >Learn more..</a
                 >
