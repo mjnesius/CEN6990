@@ -1,30 +1,32 @@
 <template>
   <div class="container">
-    <div class="h-100">
-      <div class="row p-5 h-100 justify-content-center align-items-center">
-        <div class="col-md-6">
-          <img
-            v-if="currentTopic.topic == 'Software Development'"
-            src="../assets/undraw_programmer_imem.svg"
-            alt
-            width="400"
-          >
-          <img
-            v-else-if="currentTopic.topic == 'Information Technology'"
-            src="../assets/undraw_dashboard_nklg.svg"
-            alt
-            width="400"
-          >
-          <img v-else src="../assets/undraw_security_o890.svg" alt width="400">
-        </div>
-        <div class="col-md-6">
-          <h1 class="dispay-3">{{currentTopic.topic}}</h1>
-          <p class="lead">{{currentTopic.phrase}}</p>
-          <p>{{currentTopic.description}}</p>
-        </div>
+    <div class="row p-5 justify-content-center align-items-center">
+      <div class="col-md-6">
+        <img
+          class="img-fluid"
+          v-if="currentTopic.topic == 'Software Development'"
+          src="../assets/undraw_programmer_imem.svg"
+          alt="software programmer coding"
+        >
+        <img
+          class="img-fluid"
+          v-else-if="currentTopic.topic == 'Information Technology'"
+          src="../assets/undraw_dashboard_nklg.svg"
+          alt="computer screen with gadgets"
+        >
+        <img
+          class="img-fluid"
+          v-else
+          src="../assets/undraw_security_o890.svg"
+          alt="security guard in front of computer screen"
+        >
+      </div>
+      <div class="col-md-6 pt-3">
+        <h1 class="dispay-3">{{currentTopic.topic}}</h1>
+        <p class="lead">{{currentTopic.phrase}}</p>
+        <p>{{currentTopic.description}}</p>
       </div>
     </div>
-
     <table class="table table-hover table-striped">
       <thead>
         <tr class="table-primary text-bold">
@@ -66,25 +68,25 @@ export default {
           phrase:
             "From Java to Javascript, you will quickly gain the knowledge and skills to code like a pro!",
           description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
+            "Courses available in Computer Science, Game Development, Programming Languages, Testing, AI, Agile, and System Architecture.",
           image: "../assets/undraw_programmer_imem.svg"
         },
         {
           search: "it",
           topic: "Information Technology",
           phrase:
-            "From workstations to networks, you will quickly gain the knowledge and skills to work with the pros!",
+            "From workstations to networks, UWF Instructors will teach you current industry best practices with the latest technology.",
           description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
+            "IT course topics include Certifications, Networking, Database Administration, Virtualization, Cloud, Servers, and Dev Ops.",
           image: "../assets/undraw_dashboard_nklg.svg"
         },
         {
           search: "security",
           topic: "CyberSecurity",
           phrase:
-            "From firewalls to malware, you will quickly gain the knowledge and skills to be a security pro!",
+            "From firewalls to malware, we have you covered. Learn from the experts and join the hotest career field in tech.",
           description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
+            "In-depth courses in Operations, Certifications, Governance, Digital Forensics, Application Security, Penetration Testing, Network Security, and Security Engineering.",
           image: "../assets/undraw_security_o890.svg"
         }
       ]
