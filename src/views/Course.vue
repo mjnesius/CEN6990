@@ -16,8 +16,8 @@
             class="list-group-item mb-2 btn btn-outline-primary"
           >
             <div class="d-flex align-item-start">
-              <i v-if="index == currentIndex" class="fas fa-play-circle mr-3 text-primary h2"></i>
-              <i v-else class="far fa-play-circle mr-3 text-primary h2"></i>
+              <i v-if="index == currentIndex" class="fas fa-play-circle mr-3 h2"></i>
+              <i v-else class="far fa-play-circle mr-3 h2"></i>
               <strong class="text-left">{{ lecture.title }}</strong>
             </div>
           </button>
@@ -73,4 +73,5 @@ export default {
 .lecture-list {
   height: 465px;
 }
+
 </style>
