@@ -22,9 +22,9 @@
         >
       </div>
       <div class="col-md-6 pt-3">
-        <h1 class="dispay-3">{{currentTopic.topic}}</h1>
-        <p class="lead">{{currentTopic.phrase}}</p>
-        <p>{{currentTopic.description}}</p>
+        <h1 class="dispay-3">{{ currentTopic.topic }}</h1>
+        <p class="lead">{{ currentTopic.phrase }}</p>
+        <p>{{ currentTopic.description }}</p>
       </div>
     </div>
     <table class="table table-hover table-striped">
