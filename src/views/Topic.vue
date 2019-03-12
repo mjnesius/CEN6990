@@ -3,14 +3,24 @@
     <div class="h-100">
       <div class="row p-5 h-100 justify-content-center align-items-center">
         <div class="col-md-6">
-          <img v-if="topic == 'Software Development'" src="../assets/undraw_programmer_imem.svg" alt width="400">
-          <img v-else-if="topic == 'Information Technology'" src="../assets/undraw_dashboard_nklg.svg" alt width="400">
+          <img
+            v-if="currentTopic.topic == 'Software Development'"
+            src="../assets/undraw_programmer_imem.svg"
+            alt
+            width="400"
+          >
+          <img
+            v-else-if="currentTopic.topic == 'Information Technology'"
+            src="../assets/undraw_dashboard_nklg.svg"
+            alt
+            width="400"
+          >
           <img v-else src="../assets/undraw_security_o890.svg" alt width="400">
         </div>
         <div class="col-md-6">
-          <h1 class="dispay-3">{{topic}}</h1>
-          <p class="lead">{{phrase}}</p>
-          <p>{{description}}</p>
+          <h1 class="dispay-3">{{currentTopic.topic}}</h1>
+          <p class="lead">{{currentTopic.phrase}}</p>
+          <p>{{currentTopic.description}}</p>
         </div>
       </div>
     </div>
@@ -47,11 +57,7 @@ export default {
   data() {
     return {
       more: true,
-      id: "",
-      topic: "",
-      phrase: "",
-      description: "",
-      image: "",
+      currentTopic: null,
       courses: [],
       topics: [
         {
@@ -86,46 +92,21 @@ export default {
   },
   methods: {
     loadMore() {
+      this.updateId(30);
       this.more = false;
-      this.id = this.$route.params.id;
-      let currentTopic = this.topics[this.id];
-      this.topic = currentTopic.topic;
-      this.phrase = currentTopic.phrase;
-      this.description = currentTopic.description;
-      this.image = currentTopic.image;
-      this.courses = [];
-      let search = currentTopic.search;
-      db.collection("courses")
-        .where("topic", "==", search)
-        .orderBy("date", "desc")
-        .limit(20)
-        .get()
-        .then(snapshot => {
-          snapshot.forEach(doc => {
-            let course = doc.data();
-            course.id = doc.id;
-            course.timestamp = moment(doc.data().date.toDate()).format("ll");
-            this.courses.push(course);
-          });
-        });
     },
     pushToCoursePage(id) {
-      this.$router.push({ name: "course", params: { id: id } });
+      this.$router.push({ name: "course", params: { id } });
     },
-    updateId() {
+    updateId(number) {
       this.more = true;
-      this.id = this.$route.params.id;
-      let currentTopic = this.topics[this.id];
-      this.topic = currentTopic.topic;
-      this.phrase = currentTopic.phrase;
-      this.description = currentTopic.description;
-      this.image = currentTopic.image;
+      this.currentTopic = this.topics[this.$route.params.id];
       this.courses = [];
-      let search = currentTopic.search;
+      let search = this.currentTopic.search;
       db.collection("courses")
         .where("topic", "==", search)
         .orderBy("date", "desc")
-        .limit(10)
+        .limit(number)
         .get()
         .then(snapshot => {
           snapshot.forEach(doc => {
@@ -137,35 +118,15 @@ export default {
         });
     }
   },
+
   watch: {
-    $route: "updateId"
-  },
-  computed: {
-    newImage() {
-      return this.image; 
+    $route(to, from) {
+      this.updateId(10);
     }
   },
+
   created() {
-    this.id = this.$route.params.id;
-    let currentTopic = this.topics[this.id];
-    this.topic = currentTopic.topic;
-    this.phrase = currentTopic.phrase;
-    this.description = currentTopic.description;
-    this.image = currentTopic.image;
-    let search = currentTopic.search;
-    db.collection("courses")
-      .where("topic", "==", search)
-      .orderBy("date", "desc")
-      .limit(10)
-      .get()
-      .then(snapshot => {
-        snapshot.forEach(doc => {
-          let course = doc.data();
-          course.id = doc.id;
-          course.timestamp = moment(doc.data().date.toDate()).format("ll");
-          this.courses.push(course);
-        });
-      });
+    this.updateId(10);
   }
 };
 </script>
@@ -174,5 +135,4 @@ export default {
 tbody tr {
   cursor: pointer;
 }
-
 </style>

@@ -10,13 +10,14 @@
         <div class="list-group list-group-item-action border border-primary">
           <button
             type="button"
-            v-for="(lecture, index) in lectures"
+            v-for="(lecture, index) in course.lectures"
             :key="index"
-            @click="loadVideo(lecture.id)"
+            @click="loadVideo(lecture.id, index)"
             class="list-group-item mb-2 btn btn-outline-primary"
           >
             <div class="d-flex align-item-start">
-              <i class="far fa-play-circle mr-3 text-primary h2"></i>
+              <i v-if="index == currentIndex" class="fas fa-play-circle mr-3 text-primary h2"></i>
+              <i v-else class="far fa-play-circle mr-3 text-primary h2"></i>
               <strong class="text-left">{{ lecture.title }}</strong>
             </div>
           </button>
@@ -24,11 +25,11 @@
       </div>
     </div>
     <div class="jumbotron bg-secondary border border-primary mt-3 text-primary">
-      <h1 class="display-5">{{ courseTitle }}</h1>
-      <p class="lead">{{ courseDescription }}</p>
+      <h1 class="display-5">{{ course.title }}</h1>
+      <p class="lead">{{ course.longDescription }}</p>
       <hr>
-      <p class="text-muted">Instructor: {{courseInstructor}}</p>
-      <p class="text-muted">Biography: {{courseInstructorBio}}</p>
+      <p class="text-muted">Instructor: {{course.instructor}}</p>
+      <p class="text-muted">Biography: {{course.instructorBio}}</p>
     </div>
   </div>
 </template>
@@ -44,18 +45,16 @@ export default {
     }
   },
   methods: {
-    loadVideo (id) {
+    loadVideo(id, index) {
       this.currentVideo = id;
+      this.currentIndex = index;
     }
   },
   data() {
     return {
-      currentVideo: "",
-      courseTitle: "",
-      courseDescription: "",
-      courseInstructor: "",
-      courseInstructorBio: "",
-      lectures: []
+      course: null,
+      currentIndex: "",
+      currentVideo: ""
     };
   },
   created() {
@@ -63,14 +62,8 @@ export default {
       .doc(this.$route.params.id)
       .get()
       .then(doc => {
-        let course = doc.data();
-        course.id = doc.id;
-        this.currentVideo = course.lectures[0].id;
-        this.courseTitle = course.title;
-        this.courseDescription = course.longDescription;
-        this.lectures = course.lectures;
-        this.courseInstructor = course.instructor;
-        this.courseInstructorBio = course.instructorBio;
+        this.course = doc.data();
+        this.currentVideo = this.course.lectures[0].id;
       });
   }
 };
