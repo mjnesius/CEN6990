@@ -89,9 +89,14 @@
           <div class="card-deck">
             <div class="card bg-primary">
               <div class="card-body text-center">
-                <h5 class="card-title">Course 1</h5>
+                <img
+                  src="../assets/security-2.jpg"
+                  class="img-fluid"
+                  alt="Area for Course1"
+                />
+                <h5 class="card-title">IT Security</h5>
                 <p class="card-text">
-                  Supporting text for topic description.
+                  protection of computer systems from theft or damage
                 </p>
                 <a href="#" class="btn btn-dark btn-sm float-right"
                   >Learn more..</a
@@ -104,8 +109,16 @@
           <div class="card-deck">
             <div class="card bg-warning">
               <div class="card-body text-center">
-                <h5 class="card-title">Course 2</h5>
-                <p class="card-text">Supporting text for topic description.</p>
+                <img
+                  src="../assets/se.jpg"
+                  class="img-fluid"
+                  alt="Area for Course2"
+                />
+                <h5 class="card-title">Software Engineering</h5>
+                <p class="card-text">
+                  applies the principles of software engineering to computer
+                  software.
+                </p>
                 <a href="#" class="btn btn-dark btn-sm float-right"
                   >Learn more..</a
                 >
@@ -117,8 +130,15 @@
           <div class="card-deck">
             <div class="card bg-primary">
               <div class="card-body text-center">
-                <h5 class="card-title">Course 3</h5>
-                <p class="card-text">Supporting text for topic description.</p>
+                <img
+                  src="../assets/inspiring-3.jpg"
+                  class="img-fluid"
+                  alt="Area for Course3"
+                />
+                <h5 class="card-title">Digital electronics</h5>
+                <p class="card-text">
+                  electronics that operate on digital signals
+                </p>
                 <a href="#" class="btn btn-dark btn-sm float-right"
                   >Learn more..</a
                 >
@@ -130,8 +150,16 @@
           <div class="card-deck">
             <div class="card bg-warning">
               <div class="card-body text-center">
-                <h5 class="card-title">Course 4</h5>
-                <p class="card-text">Supporting text for topic description.</p>
+                <img
+                  src="../assets/inspiring-2.jpg"
+                  class="img-fluid"
+                  alt="Area for Course4"
+                />
+                <h5 class="card-title">Information Security</h5>
+                <p class="card-text">
+                  preventing unauthorized access, use, disclosure of
+                  information.
+                </p>
                 <a href="#" class="btn btn-dark btn-sm float-right"
                   >Learn more..</a
                 >
