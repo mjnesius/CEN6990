@@ -24,12 +24,12 @@
         </div>
       </div>
     </div>
-    <div class="jumbotron bg-secondary border border-primary mt-3 text-primary">
+    <div class="jumbotron bg-secondary border border-primary mt-3">
       <h1 class="display-5">{{ course.title }}</h1>
       <p class="lead">{{ course.longDescription }}</p>
       <hr>
-      <p class="text-muted">Instructor: {{course.instructor}}</p>
-      <p class="text-muted">Biography: {{course.instructorBio}}</p>
+      <h5 class="text-muted">Instructor: {{course.instructor}}</h5>
+      <p class="text-muted lead">{{course.instructorBio}}</p>
     </div>
   </div>
 </template>
