@@ -52,7 +52,7 @@ export default {
   },
   data() {
     return {
-      course: '',
+      course: "",
       currentIndex: "",
       currentVideo: ""
     };
@@ -70,13 +70,19 @@ export default {
 </script>
 
 <style scoped>
-@media (min-width: 576px) { .lecture-list {
-  max-height: 300px;
-} }
-@media (min-width: 992px) { .lecture-list {
-  max-height: 390px;
-} }
-@media (min-width: 1200px) { .lecture-list {
-  max-height: 465px;
-} }
+@media (min-width: 576px) {
+  .lecture-list {
+    max-height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .lecture-list {
+    max-height: 390px;
+  }
+}
+@media (min-width: 1200px) {
+  .lecture-list {
+    max-height: 465px;
+  }
+}
 </style>
