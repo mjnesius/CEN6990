@@ -24,16 +24,16 @@
         </div>
       </div>
     </div>
-      <div class="row my-3 p-3">
-        <div class="col-md-10 mx-auto">
-          <h1 class="display-5">{{ course.title }}</h1>
-          <p class="lead">{{ course.longDescription }}</p>
-          <hr>
-          <h4 class="text-muted">Instructor: {{ course.instructor }}</h4>
-          <p class="text-muted lead">{{ course.instructorBio }}</p>
-        </div>
+    <div class="row my-3 p-3">
+      <div class="col-md-10 mx-auto">
+        <h1 class="display-5">{{ course.title }}</h1>
+        <p class="lead">{{ course.longDescription }}</p>
+        <hr>
+        <h4 class="text-muted">Instructor: {{ course.instructor }}</h4>
+        <p class="text-muted lead">{{ course.instructorBio }}</p>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
