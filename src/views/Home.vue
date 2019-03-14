@@ -13,14 +13,18 @@
       </div>
     </section>
 
-    <hr>
+    <hr />
 
     <div class="Container mt-5">
       <h2 class="mb-5 text-left">Browse By Topic</h2>
       <div class="card-deck">
         <div class="card cardSet1 text">
           <div class="card-body">
-            <img src="../assets/employer3.jpg" class="img-fluid" alt="Area for Topic1">
+            <img
+              src="../assets/employer3.jpg"
+              class="img-fluid"
+              alt="Area for Topic1"
+            />
             <h3 class="card-title mt-2">Web Design</h3>
             <p class="card-text mt-3">
               >Web design encompasses many different skills and disciplines in
@@ -31,12 +35,18 @@
               individuals will work in teams covering different aspects of the
               design process, although some designers will cover them all.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right">Find A Course</a>
+            <a href="#" class="btn btn-dark btn-sm float-right"
+              >Find A Course</a
+            >
           </div>
         </div>
         <div class="card cardSet1 text">
           <div class="card-body">
-            <img src="../assets/workplace.jpg" class="img-fluid" alt="Area for Topic2">
+            <img
+              src="../assets/workplace.jpg"
+              class="img-fluid"
+              alt="Area for Topic2"
+            />
             <h3 class="card-title mt-2">Network Administration</h3>
             <p class="card-text mt-3">
               A network administrator is the person designated in an
@@ -46,12 +56,18 @@
               interactions as well as network integrity/resilience are the key
               areas of focus.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right">Find A Course</a>
+            <a href="#" class="btn btn-dark btn-sm float-right"
+              >Find A Course</a
+            >
           </div>
         </div>
         <div class="card cardSet1 text">
           <div class="card-body">
-            <img src="../assets/employer3.jpg" class="img-fluid" alt="Area for Topic3">
+            <img
+              src="../assets/employer3.jpg"
+              class="img-fluid"
+              alt="Area for Topic3"
+            />
             <h3 class="card-title mt-2">Cyber Security</h3>
             <p class="card-text mt-3">
               Computer security, cybersecurity[1] or information technology
@@ -60,104 +76,326 @@
               well as from disruption or misdirection of the services they
               provide.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right">Find A Course</a>
+            <a href="#" class="btn btn-dark btn-sm float-right"
+              >Find A Course</a
+            >
           </div>
         </div>
       </div>
     </div>
-    <br>
+    <br />
 
-    <br>
+    <br />
 
-    <div class="Container">
+    <div class="container">
       <h2 class="mb-5 text-left">New Courses</h2>
-      <div class="row">
-        <div class="col-sm-12">
-          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-            <section class="dark-overlay">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-              </ol>
-            </section>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="../assets/blurred-background-coffee-cup-computer-908284.jpg"
-                  class="d-block w-50"
-                  alt="..."
-                >
-                <div class="carousel-caption d-none d-md-block">
-                  <h8>Web Development</h8>
-                  <p>
-                    Learn how to design and create a website with our web design
-                    tutorials. From hundreds of video courses, choose the right
-                    one to help you embed video, format text, design in CSS,
-                    create a content strategy, and analyze user experience
-                    design.
-                  </p>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card-deck">
+              <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img
+                      src="../assets/adults-business-coffee-1323592.jpg"
+                      class="card-img"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Web Development</h5>
+                      <p class="card-text">
+                        Learn how to design and create a website with our web
+                        design tutorials. From hundreds of video courses, choose
+                        the right one to help you embed video, format text,
+                        design in CSS, create a content strategy, and analyze
+                        user experience design.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          >Last updated 3 mins ago</small
+                        >
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="carousel-item">
-                <img
-                  src="../assets/achievement-agreement-arms-1068523.jpg"
-                  class="d-block w-50"
-                  alt="..."
-                >
-                <div class="carousel-caption d-none d-md-block">
-                  <h8>Business</h8>
-                  <p>
-                    Explore a wide range of business skills from project
-                    management and negotiation to leadership skills and online
-                    marketing strategy. Our professional development tutorials
-                    can help you learn SEO, spreadsheets, word processing, and
-                    more.
-                  </p>
+              <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img
+                      src="../assets/boss-brainstorming-business-1093913.jpg"
+                      class="card-img"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Become a Digital Marketer</h5>
+                      <p class="card-text">
+                        Use your analytical and tactical skills to help grow and
+                        develop new opportunities for businesses as a digital
+                        marketer. From marketing plans and content strategy to
+                        lead generation and SEO, we through the best practices
+                        and principles of digital marketing.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          >Last updated 3 mins ago</small
+                        >
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="carousel-item">
-                <img
-                  src="../assets/creative-creativity-design-1266012.jpg"
-                  class="d-block w-50"
-                  alt="..."
-                >
-                <div class="carousel-caption d-none d-md-block">
-                  <h8>Design</h8>
-                  <p>
-                    Whether you want to design a logo, create ebooks, or just
-                    learn how to use a Pen tool, our in-depth design tutorials
-                    can help. Get to know Illustrator and InDesign, explore
-                    typography, and learn the nuances of designing for print.
-                  </p>
+              <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img
+                      src="../assets/adult-analyzing-boss-1080865.jpg"
+                      class="card-img"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Business</h5>
+                      <p class="card-text">
+                        Explore a wide range of business skills from project
+                        management and negotiation to leadership skills and
+                        online marketing strategy. Our professional development
+                        tutorials can help you learn SEO, spreadsheets, word
+                        processing, and more.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          >Last updated 3 mins ago</small
+                        >
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <a
-              class="carousel-control-prev"
-              href="#carouselExampleCaptions"
-              role="button"
-              data-slide="prev"
-            >
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a
-              class="carousel-control-next"
-              href="#carouselExampleCaptions"
-              role="button"
-              data-slide="next"
-            >
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+          </div>
+          <div class="carousel-item">
+            <div class="card-deck">
+              <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img
+                      src="../assets/blurred-background-coffee-cup-computer-908284.jpg"
+                      class="card-img"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Become a Manager</h5>
+                      <p class="card-text">
+                        As a manager, success is predicated on your ability to
+                        achieve goals working with your team. The good news is
+                        that management is a skill that can be learned. This
+                        path is designed to provide you with the key
+                        considerations, skills and competencies to help you
+                        become and succeed as a manager.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          >Last updated 3 mins ago</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img
+                      src="../assets/apple-class-conference-7102.jpg"
+                      class="card-img"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Master 2D Animation</h5>
+                      <p class="card-text">
+                        2D animators create the illusion of motion and change
+                        via analog and digital media. Beginning with the
+                        foundations of animation, learn everything you need to
+                        know to get started in 2D animation.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          >Last updated 3 mins ago</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img
+                      src="../assets/book-business-business-woman-68761.jpg"
+                      class="card-img"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Design</h5>
+                      <p class="card-text">
+                        Whether you want to design a logo, create ebooks, or
+                        just learn how to use a Pen tool, our in-depth design
+                        tutorials can help. Get to know Illustrator and
+                        InDesign, explore typography, and learn the nuances of
+                        designing for print.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          >Last updated 3 mins ago</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card-deck">
+              <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img
+                      src="../assets/achievement-adult-agreement-1153213.jpg"
+                      class="card-img"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Become an Agile Project Manager
+                      </h5>
+                      <p class="card-text">
+                        Deliver projects with the highest level of performance
+                        and quality as an agile project manager. This path will
+                        help you build a solid foundation in leading and
+                        motivating agile project teams, from developing user
+                        stories and agile charts to driving productive meetings.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          >Last updated 3 mins ago</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img
+                      src="../assets/accounts-applications-apps-267350.jpg"
+                      class="card-img"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Become an IT Security Specialist
+                      </h5>
+                      <p class="card-text">
+                        Learn the core concepts needed to secure your
+                        organization's network as an IT security specialist.
+                        Learn all the foundations of IT security: from practical
+                        skills for securing hardware and network data to the
+                        basics of cryptography and cybercrime investigation and
+                        response.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          >Last updated 3 mins ago</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img
+                      src="../assets/adults-analysis-banking-1451447.jpg"
+                      class="card-img"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Developer Training</h5>
+                      <p class="card-text">
+                        Our developer tutorials can help you learn to develop
+                        and create mobile apps, work with PHP and MySQL
+                        databases, get started with the statistical processing
+                        language R, and much more.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted"
+                          >Last updated 3 mins ago</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
 
-    <hr>
-    <br>
+    <hr />
+    <br />
 
     <div class="Container mt-5">
       <h2 class="mb-5 text-left">Trending Courses</h2>
@@ -168,7 +406,9 @@
               <div class="card-body">
                 <h5 class="card-title">Course 1</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
+                <a href="#" class="btn btn-dark btn-sm float-right"
+                  >Learn more..</a
+                >
               </div>
             </div>
           </div>
@@ -179,7 +419,9 @@
               <div class="card-body">
                 <h5 class="card-title">Course 2</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
+                <a href="#" class="btn btn-dark btn-sm float-right"
+                  >Learn more..</a
+                >
               </div>
             </div>
           </div>
@@ -190,7 +432,9 @@
               <div class="card-body">
                 <h5 class="card-title">Course 3</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
+                <a href="#" class="btn btn-dark btn-sm float-right"
+                  >Learn more..</a
+                >
               </div>
             </div>
           </div>
@@ -201,7 +445,9 @@
               <div class="card-body">
                 <h5 class="card-title">Course 4</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
+                <a href="#" class="btn btn-dark btn-sm float-right"
+                  >Learn more..</a
+                >
               </div>
             </div>
           </div>
@@ -209,7 +455,8 @@
       </div>
     </div>
 
-    <br>
+    <br />
+    <br />
   </div>
 </template>
 
@@ -283,5 +530,25 @@ button {
 
 button:hover {
   background: rgb(209, 203, 203);
+}
+
+.item img {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+#instructor .container-fluid {
+  padding: 100px;
+  background-color: #c0c0ba;
+}
+
+.carousel-inner .carousel-item .img-box {
+  width: 135px;
+  height: 135px;
+}
+
+.carousel-indicator {
+  bottom: 40px;
 }
 </style>
