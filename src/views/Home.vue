@@ -10,18 +10,14 @@
       </div>
     </section>
 
-    <hr />
+    <hr>
 
     <div class="Container mt-5">
       <h2 class="mb-5 text-left">Featured Topics</h2>
       <div class="card-deck">
         <div class="card cardSet1 text">
           <div class="card-body">
-            <img
-              src="../assets/employer3.jpg"
-              class="img-fluid"
-              alt="Area for Topic1"
-            />
+            <img src="../assets/employer3.jpg" class="img-fluid" alt="Area for Topic1">
             <h3 class="card-title mt-2">Web Design</h3>
             <p class="card-text mt-3">
               >Web design encompasses many different skills and disciplines in
@@ -37,11 +33,7 @@
         </div>
         <div class="card cardSet1 text">
           <div class="card-body">
-            <img
-              src="../assets/workplace.jpg"
-              class="img-fluid"
-              alt="Area for Topic2"
-            />
+            <img src="../assets/workplace.jpg" class="img-fluid" alt="Area for Topic2">
             <h3 class="card-title mt-2">Network Administration</h3>
             <p class="card-text mt-3">
               A network administrator is the person designated in an
@@ -56,11 +48,7 @@
         </div>
         <div class="card cardSet1 text">
           <div class="card-body">
-            <img
-              src="../assets/employer3.jpg"
-              class="img-fluid"
-              alt="Area for Topic3"
-            />
+            <img src="../assets/employer3.jpg" class="img-fluid" alt="Area for Topic3">
             <h3 class="card-title mt-2">Cyber Security</h3>
             <p class="card-text mt-3">
               Computer security, cybersecurity[1] or information technology
@@ -74,7 +62,7 @@
         </div>
       </div>
     </div>
-    <br />
+    <br>
 
     <div class="Container mt-5">
       <h2 class="mb-5 text-left">New Courses</h2>
@@ -84,12 +72,8 @@
             <div class="card bg-primary">
               <div class="card-body text-center">
                 <h5 class="card-title">Course 1</h5>
-                <p class="card-text">
-                  Supporting text for topic description.
-                </p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
+                <p class="card-text">Supporting text for topic description.</p>
+                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
               </div>
             </div>
           </div>
@@ -100,9 +84,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title">Course 2</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
+                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
               </div>
             </div>
           </div>
@@ -113,9 +95,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title">Course 3</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
+                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
               </div>
             </div>
           </div>
@@ -126,9 +106,7 @@
               <div class="card-body text-center">
                 <h5 class="card-title">Course 4</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
+                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
               </div>
             </div>
           </div>
@@ -136,8 +114,8 @@
       </div>
     </div>
 
-    <hr />
-    <br />
+    <hr>
+    <br>
 
     <div class="Container mt-5">
       <h2 class="mb-5 text-left">Trending Courses</h2>
@@ -148,9 +126,7 @@
               <div class="card-body">
                 <h5 class="card-title">Course 1</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
+                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
               </div>
             </div>
           </div>
@@ -161,9 +137,7 @@
               <div class="card-body">
                 <h5 class="card-title">Course 2</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
+                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
               </div>
             </div>
           </div>
@@ -174,9 +148,7 @@
               <div class="card-body">
                 <h5 class="card-title">Course 3</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
+                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
               </div>
             </div>
           </div>
@@ -187,9 +159,7 @@
               <div class="card-body">
                 <h5 class="card-title">Course 4</h5>
                 <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
+                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
               </div>
             </div>
           </div>
@@ -197,7 +167,7 @@
       </div>
     </div>
 
-    <br />
+    <br>
   </div>
 </template>
 

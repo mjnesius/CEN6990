@@ -6,14 +6,14 @@
           <iframe class="embed-responsive-item" :src="newVideo" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="lecture-list col-lg-3 overflow-auto pt-sm-2 pt-lg-0">
-        <div class="list-group list-group-item-action border border-primary">
+      <div class="lecture-list col-lg-3 overflow-auto pt-sm-2 pt-lg-0 border">
+        <div class="list-group list-group-item-action">
           <button
             type="button"
             v-for="(lecture, index) in course.lectures"
             :key="index"
             @click="loadVideo(lecture.id, index)"
-            class="list-group-item mb-2 btn btn-outline-primary"
+            class="list-group-item my-2 btn btn-outline-primary"
           >
             <div class="d-flex align-item-start">
               <i v-if="index == currentIndex" class="fas fa-play-circle mr-3 h2"></i>

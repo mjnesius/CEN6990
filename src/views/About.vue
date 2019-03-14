@@ -17,7 +17,7 @@
               class="d-block w-100 img-fluid img-responsive"
               src="../assets/areyourready.jpg"
               alt="First slide"
-            />
+            >
           </div>
           <div class="carousel-item item">
             <div class="carousel-content">
@@ -27,7 +27,7 @@
               class="d-block w-100 img-fluid img-responsive"
               src="../assets/inspiring-1.jpg"
               alt="Second slide"
-            />
+            >
           </div>
           <div class="carousel-item item">
             <div class="carousel-content">
@@ -37,25 +37,24 @@
               class="d-block w-100 img-fluid img-responsive"
               src="../assets/inspiring-4.jpg"
               alt="Third slide"
-            />
+            >
           </div>
         </div>
         <div class="col-md-12 carousel-button">
           <a
-            class=" btn btn-light btn-lg btn-outline-primary"
+            class="btn btn-light btn-lg btn-outline-primary"
             href="Home"
             role="button"
-            >Start your journey!</a
-          >
+          >Start your journey!</a>
         </div>
       </div>
     </div>
     <div class="jumbotron">
       <h1 class="display-3">Start your IT journey!</h1>
       <p class="lead">Access world class coursework for free!</p>
-      <hr class="my-4" />
+      <hr class="my-4">
       <div class="rowImg">
-        <div class="columnImg ">
+        <div class="columnImg">
           <div class="tile-container">
             <img
               src="../assets/skills.jpg"
@@ -63,7 +62,7 @@
               style="width:100%"
               display="block"
               target="_self"
-            />
+            >
             <a href="Home" alt="Search the stacks at UWF Libraries">
               <div class="overlay">
                 <div class="overlay-text">Search our course library</div>
@@ -71,35 +70,22 @@
             </a>
           </div>
           <div class="tile-container">
-            <img
-              src="../assets/inspiring-3.jpg"
-              alt="portrait"
-              style="width:100%"
-              target="_self"
-            />
+            <img src="../assets/inspiring-3.jpg" alt="portrait" style="width:100%" target="_self">
             <a href="/topic/1" alt="Meet our notable alumni">
               <div class="overlay">
-                <div class="overlay-text">
-                  Become and IT Professional
-                </div>
-              </div></a
-            >
+                <div class="overlay-text">Become and IT Professional</div>
+              </div>
+            </a>
           </div>
         </div>
         <div class="columnImg">
           <div class="tile-container">
             <a href="https://uwf.edu/ihire/" alt="iHire UWF" target="_self">
-              <img
-                src="../assets/employer1.jpg"
-                alt="ihire project"
-                style="width:100%"
-              />
+              <img src="../assets/employer1.jpg" alt="ihire project" style="width:100%">
               <div class="overlay">
-                <div class="overlay-text">
-                  iHire UWF
-                </div>
-              </div></a
-            >
+                <div class="overlay-text">iHire UWF</div>
+              </div>
+            </a>
           </div>
           <div class="tile-container">
             <a
@@ -107,52 +93,38 @@
               alt="Get to Know UWF's Top&nbsp;Scholars"
               target="_self"
             >
-              <img
-                src="../assets/testimonials-7.jpg"
-                alt="Top Scholars"
-                style="width:100%"
-              />
+              <img src="../assets/testimonials-7.jpg" alt="Top Scholars" style="width:100%">
               <div class="overlay">
-                <div class="overlay-text">
-                  Get to Know UWF's Top&nbsp;Scholars
-                </div>
-              </div></a
-            >
+                <div class="overlay-text">Get to Know UWF's Top&nbsp;Scholars</div>
+              </div>
+            </a>
           </div>
         </div>
         <div class="columnImg">
           <div class="tile-container">
             <a href="../topic/2" alt="Security" target="_self">
-              <img
-                src="../assets/security-3.jpg"
-                alt="Security"
-                style="width:100%"
-              />
+              <img src="../assets/security-3.jpg" alt="Security" style="width:100%">
               <div class="overlay">
-                <div class="overlay-text">
-                  Become A Cybersecurity Expert
-                </div>
-              </div></a
-            >
+                <div class="overlay-text">Become A Cybersecurity Expert</div>
+              </div>
+            </a>
           </div>
           <div class="tile-container">
             <a href="../topic/0" alt="Software" target="_self">
-              <img src="../assets/se.jpg" alt="Software" style="width:100%" />
+              <img src="../assets/se.jpg" alt="Software" style="width:100%">
               <div class="overlay">
-                <div class="overlay-text">
-                  Develop Software
-                </div>
-              </div></a
-            >
+                <div class="overlay-text">Develop Software</div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
     <div class="card" style="background-color:#009CDE !important">
-      <div class="row  mt-3" style="margin-left:1px; margin-right:1px; ">
+      <div class="row mt-3" style="margin-left:1px; margin-right:1px; ">
         <div class="col-sm-6">
           <div class="card mb-3">
-            <div class="row  mt-3" style="margin-left:1px; margin-right:1px; ">
+            <div class="row mt-3" style="margin-left:1px; margin-right:1px; ">
               <div class="col-sm-6">
                 <div class="card mb-3">
                   <div style="height: 190px">
@@ -161,25 +133,18 @@
                       alt="Responsive image"
                       style="height: auto; width: auto; display: block;"
                       src="../assets/team_03.jpg"
-                    />
+                    >
                   </div>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="card mb-3">
-                  <h4
-                    class="card-header"
-                    style="background-color:#8DC8E8 !important"
-                  >
-                    alumni
-                  </h4>
+                  <h4 class="card-header" style="background-color:#8DC8E8 !important">alumni</h4>
                   <div class="card-body">
                     <h5 class="card-title">alumni</h5>
                   </div>
                   <div class="card-body">
-                    <p class="card-text">
-                      alumni
-                    </p>
+                    <p class="card-text">alumni</p>
                   </div>
                 </div>
               </div>
@@ -188,9 +153,7 @@
         </div>
         <div class="col-sm-6">
           <div class="card mb-12">
-            <h4 class="card-header" style="background-color:#8DC8E8 !important">
-              alumni
-            </h4>
+            <h4 class="card-header" style="background-color:#8DC8E8 !important">alumni</h4>
           </div>
         </div>
       </div>
@@ -207,9 +170,7 @@
               data-toggle="collapse"
               :data-target="qa.target"
               :aria-controls="qa.card"
-            >
-              {{ qa.question }}
-            </button>
+            >{{ qa.question }}</button>
           </h5>
         </div>
 
@@ -230,9 +191,7 @@
         <h3
           class="display-4"
           style="color: white; text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);"
-        >
-          Testimonials
-        </h3>
+        >Testimonials</h3>
       </div>
       <div
         id="inspirationCarousel"
@@ -243,7 +202,7 @@
       >
         <div class="carousel2-inner">
           <div
-            class="carousel-item item "
+            class="carousel-item item"
             v-for="(test, idx) in testimonials"
             :key="test.id"
             :class="{ active: idx == 0 }"
@@ -255,14 +214,13 @@
               :alt="test.name"
               z-index="24"
               style=" box-shadow: 0px 0px 10px 5px rgba(255, 184, 28, .4);border-radius: 25% 10%; !important;"
-            />
+            >
             <!--<div class="carousel2-content" style="background-color: #003865; opacity:0.9; min-height:100px; display: flex; text-align: center; justify-content: center; 
                     align-items: center;">
                 <h2 class="caro-h2" >{{ test.blurb }}</h2>
-              </div>-->
-
+            </div>-->
             <div
-              class=" carousel-caption d-none d-md-block rounded border-left"
+              class="carousel-caption d-none d-md-block rounded border-left"
               style="box-sizing: border-box;padding: 15px; max-width: 550px; background-color: rgba(0, 76, 151, 0.7);!important"
             >
               <h4>{{ test.blurb }}</h4>
