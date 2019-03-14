@@ -1,7 +1,12 @@
 <template>
   <div class="about container">
-    <div class="jumbotron">
-      <h1 class="display-3">UWF Empowers!</h1>
+    <div class="jumbotron" style="background-color:transparent !important;">
+      <h1
+        class="display-3"
+        style="text-align: center; justify-content: center;"
+      >
+        UWF Empowers!
+      </h1>
       <div
         id="inspirationCarousel"
         class="carousel slide"
@@ -41,16 +46,27 @@
           </div>
         </div>
         <div class="col-md-12 carousel-button">
+<<<<<<< HEAD
           <a
             class="btn btn-light btn-lg btn-outline-primary"
             href="Home"
             role="button"
           >Start your journey!</a>
+=======
+          <a class=" btn btn-light btn-lg btn-primary" href="Home" role="button"
+            >Start your journey!</a
+          >
+>>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
         </div>
       </div>
     </div>
-    <div class="jumbotron">
-      <h1 class="display-3">Start your IT journey!</h1>
+    <div class="jumbotron" style="background-color:transparent !important;">
+      <h1
+        class="display-3"
+        style="text-align: center; justify-content: center;"
+      >
+        Start your IT journey!
+      </h1>
       <p class="lead">Access world class coursework for free!</p>
       <hr class="my-4">
       <div class="rowImg">
@@ -120,6 +136,7 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
     <div class="card" style="background-color:#009CDE !important">
       <div class="row mt-3" style="margin-left:1px; margin-right:1px; ">
         <div class="col-sm-6">
@@ -147,18 +164,103 @@
                     <p class="card-text">alumni</p>
                   </div>
                 </div>
+=======
+    <div class="jumbotron" style="background-color:transparent !important;">
+      <h1
+        class="display-3"
+        style="text-align: center; justify-content: center;"
+      >
+        UWF Alumni Association
+      </h1>
+      <div class="card" style="background-color:white !important">
+        <h2
+          class="card-header"
+          style="background-color:#004C97 color: #B6ADA5 !important"
+        >
+          Fostering a spirit of fellowship with and loyalty to the University
+        </h2>
+        <div class="row  mt-3 mb-3" style="margin-left:1px; margin-right:1px; ">
+          <div class="col-sm-6">
+            <div style="height: 100">
+              <img
+                class="img-fluid"
+                alt="Responsive image"
+                style="height: auto; width: auto; display: block;"
+                src="../assets/team_03.jpg"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card mb-12" style="height: 100%;  display: block;">
+              <h4
+                class="card-header"
+                style="background-color:#8DC8E8 !important"
+              >
+                80,000 Members Strong
+              </h4>
+              <div class="card-body">
+                <h6 class="card-text">
+                  The mission of the University of West Florida’s Alumni
+                  Association is to create a lifelong and worldwide community of
+                  alumni through increased opportunities for meaningful
+                  engagement in order to increase awareness, pride,
+                  participation, volunteer involvement, and philanthropic
+                  commitment to the University of West Florida.
+                </h6>
+                <h6>
+                  Membership is free and open to all graduates of the
+                  university. Alumni Relations is pleased to provide networking
+                  opportunities, affinity program discounts and rewards, alumni
+                  chapter gatherings and special events to all our members of
+                  the UWF Alumni Association.
+                </h6>
+>>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="col-sm-6">
           <div class="card mb-12">
             <h4 class="card-header" style="background-color:#8DC8E8 !important">alumni</h4>
           </div>
+=======
+      </div>
+      <div
+        class="row mt-6"
+        style="margin-left:1px; margin-right:1px;margin-top:40px;"
+      >
+        <div
+          class="btn-group btn-group-lg btn-group-justified mt-6"
+          role="group"
+          aria-label="..."
+          style="box-sizing:border-box; width: 100%"
+        >
+          <a
+            class="btn btn-primary"
+            href="https://uwf.edu/alumni/get-involved/events-calendar/"
+            >Alumni Events</a
+          >
+          <a
+            class="btn btn-primary"
+            href="https://uwf.edu/university-advancement/departments/development/give-now/donate/"
+            >Make a Gift
+          </a>
+          <a
+            class="btn btn-primary"
+            href="https://issuu.com/universityofwestflorida/docs/connection_fall2018_issuu"
+            >Read Connection Magazine
+          </a>
+>>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
         </div>
       </div>
     </div>
-    <h3 class="mt-5 display-4">Commonly Asked Questions</h3>
+    <h3
+      class="mt-5 display-4"
+      style="text-align: center; justify-content: center;"
+    >
+      Frequently Asked Questions
+    </h3>
     <div class="accordion" id="accordionExample">
       <div class="card" v-for="qa in qas" :key="qa.id">
         <div class="card-header" :id="qa.heading">
@@ -190,8 +292,15 @@
       <div class="jumbotron2-inside">
         <h3
           class="display-4"
+<<<<<<< HEAD
           style="color: white; text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);"
         >Testimonials</h3>
+=======
+          style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center;"
+        >
+          Testimonials
+        </h3>
+>>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
       </div>
       <div
         id="inspirationCarousel"
@@ -200,7 +309,7 @@
         data-interval="6000"
         style="max-height: 550px; !important"
       >
-        <div class="carousel2-inner">
+        <div class="carousel2-inner ">
           <div
             class="carousel-item item"
             v-for="(test, idx) in testimonials"
@@ -209,23 +318,35 @@
             width="auto"
           >
             <img
-              class="d-block h-100 img-fluid img-responsive fill"
+              class="d-md-block img-fluid img-responsive"
               :src="test.img"
               :alt="test.name"
               z-index="24"
+<<<<<<< HEAD
               style=" box-shadow: 0px 0px 10px 5px rgba(255, 184, 28, .4);border-radius: 25% 10%; !important;"
             >
+=======
+              style=" box-shadow: 0px 0px 10px 5px rgba(141, 200, 232, .4);border-radius: 60% 60%; display: block; margin-left: auto;margin-right: auto; width: 50%;!important;"
+            />
+>>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
             <!--<div class="carousel2-content" style="background-color: #003865; opacity:0.9; min-height:100px; display: flex; text-align: center; justify-content: center; 
                     align-items: center;">
                 <h2 class="caro-h2" >{{ test.blurb }}</h2>
             </div>-->
             <div
+<<<<<<< HEAD
               class="carousel-caption d-none d-md-block rounded border-left"
               style="box-sizing: border-box;padding: 15px; max-width: 550px; background-color: rgba(0, 76, 151, 0.7);!important"
+=======
+              class="row  carousel-caption d-md-block rounded"
+              style="box-sizing: border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: flex; text-align: center; justify-content: center;!important"
+>>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
             >
-              <h4>{{ test.blurb }}</h4>
-              <h5>-{{ test.name }}</h5>
-              <h6>{{ test.specialty }}</h6>
+              <div class="col-sm-12">
+                <h4>{{ test.blurb }}</h4>
+                <h5>-{{ test.name }}</h5>
+                <h6>{{ test.specialty }}</h6>
+              </div>
             </div>
           </div>
         </div>
@@ -288,33 +409,25 @@ export default {
       testimonials: [
         {
           id: 0,
-          name: "Joselle",
+          name: "Joselle S.",
           specialty: "Cybersecurity 2019",
-          blurb:
-            "Music wasn't paying the bills, so I skilled up and got an entry level developer position with a tier-1 defense contactor. Thanks Empower!",
-          img: require("../assets/testimonials-6.jpg")
+          blurb: "I aced the interview. Thanks Empower!",
+          img: require("../assets/testimonials-1.jpg")
         },
         {
           id: 1,
-          name: "Joe",
+          name: "Joe R.",
           specialty: "Database Systems 2019",
           blurb:
-            "UWF Empower helped me kickstart my career change. With the mobile app development skills I learned, I was able to launch my Hat Hailing service and we just reached Unicorn status!",
-          img: require("../assets/testimonials-4.jpg")
+            "UWF Empower helped me kickstart my career change, all on my schedule!",
+          img: require("../assets/testimonials-2.jpg")
         },
         {
           id: 2,
-          name: "DJ Sneezey",
+          name: "Jane C.",
           specialty: "Software engineering 2019",
           blurb:
-            "I wrote my own mixing software. Now, no one can copy my sound!",
-          img: require("../assets/security.jpg")
-        },
-        {
-          id: 3,
-          name: "@guiGal",
-          specialty: "UX Design 2019",
-          blurb: "Empower gave me the skills I needed, on my schedule!",
+            "My employer is reluctant to pay for training. Thanks to UWF Empowers free resource, I can learn anything!",
           img: require("../assets/testimonials-3.jpg")
         }
       ]
@@ -334,25 +447,16 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../assets/making_waves_image.jpg");
+  /*background-color: #8DC8E8 ;*/
   background-size: cover;
   image-rendering: pixelated;
-
-  filter: sepia(20%) hue-rotate(190deg) saturate(8) opacity(0.6) grayscale(0.8)
-    contrast(4) blur(1px);
+  filter: opacity(0.6);
 }
 .jumbotron2-inside {
   /* This will make it stack on top of the ::before */
   position: relative;
 }
-.carousel-caption {
-  left: 43%;
-  bottom: 35%;
-  transform: translateX(10%);
-  transform: translatey(-80%);
-  color: white;
-  text-shadow: 0 3px 3.5px rgba(0, 0, 0, 0.8);
-}
+
 .carousel {
   max-height: 370px;
   min-height: 250px;
@@ -361,7 +465,7 @@ export default {
 .carousel2,
 .item,
 .active {
-  height: 50%;
+  /*height: 50%;*/
   overflow: hidden;
 }
 .carousel2-inner {
@@ -381,51 +485,12 @@ export default {
 .item img {
   width: auto;
   height: auto;
-  min-height: 250px;
   overflow: hidden;
 }
 
-@media (max-width: 368px) {
-  .carousel {
-    max-height: 150px;
-    min-height: 150px;
-    overflow: hidden;
-  }
-  .item img {
-    width: auto;
-    height: auto;
-    max-height: 150px;
-    min-height: 150px;
-    overflow: hidden;
-  }
-}
-.carousel-content {
-  position: absolute;
-  font-weight: bolder;
-  top: 5%;
-  left: 5%;
-  z-index: 20;
-  color: white;
-  text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);
-}
-.carousel2-content {
-  position: absolute;
-  font-weight: bolder;
-  top: 0%;
-  left: 5%;
-  right: 5%;
-  margin: 0 auto;
-  z-index: 20;
-  color: white;
-  text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);
-}
-.carousel-button {
-  position: absolute;
-  bottom: 5%;
-  z-index: 22;
-}
-@media screen and (max-width: 850px) {
-  h1 {
+@media screen and (max-width: 768) {
+  h1,
+  .display-3 {
     font-size: 8vw;
   }
   h2 {
@@ -440,13 +505,89 @@ export default {
   h4 {
     font-size: 5vw;
   }
+  .columnImg {
+    flex: 50%;
+    max-width: 50%;
+  }
 }
-.btn-light,
-.btn-primary:hover {
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 576px) {
+  .columnImg {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 368px) {
+  .carousel {
+    max-height: 150px;
+    min-height: 150px;
+    overflow: hidden;
+  }
+  .item img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 150px;
+    min-height: 150px;
+    overflow: hidden;
+  }
+  h1,
+  .display-3 {
+    font-size: 6vw;
+  }
+  h2 {
+    font-size: 5vw;
+  }
+  .caro-h2 {
+    font-size: 3vw;
+  }
+  h4,
+  h3 {
+    font-size: 2vw;
+  }
+  h5 {
+    font-size: 2vw;
+  }
+  h6 {
+    font-size: 2vw;
+  }
+
+  .carousel-caption {
+    font-size: 2vw;
+  }
+}
+
+.carousel-content {
+  position: absolute;
+  font-weight: bolder;
+  top: 5%;
+  left: 5%;
+  z-index: 20;
+  color: white;
+  text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-button {
+  position: absolute;
+  bottom: 5%;
+  z-index: 22;
+}
+
+.btn-light {
   color: #009cde;
   background-color: #009cde;
   border-color: #97c800;
   fill: #8dc8e8;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  color: #97c800;
+  background-color: #003865;
+  border-color: #00abc8;
+  fill: #009cde;
 }
 
 .rowImg {
@@ -455,7 +596,7 @@ export default {
   padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
+/* Create 2 equal columns that sits next to each other */
 .columnImg {
   flex: 33%;
   max-width: 33%;
@@ -467,21 +608,6 @@ export default {
   vertical-align: middle;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .columnImg {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .columnImg {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
 .overlay {
   position: absolute;
   top: 0;
