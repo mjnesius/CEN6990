@@ -147,6 +147,91 @@
         </div>
       </div>
     </div>
+
+    <h3
+      class="mt-5 display-4"
+      style="text-align: center; justify-content: center;"
+    >
+      Frequently Asked Questions
+    </h3>
+    <div class="accordion mt-4" id="accordionExample">
+      <div class="card" v-for="qa in qas" :key="qa.id">
+        <div class="card-header" :id="qa.heading">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link"
+              aria-expanded="false"
+              type="button"
+              data-toggle="collapse"
+              :data-target="qa.target"
+              :aria-controls="qa.card"
+            >
+              {{ qa.question }}
+            </button>
+          </h5>
+        </div>
+
+        <div
+          :id="qa.card"
+          class="collapse"
+          :aria-labelledby="qa.heading"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <p style="margin-left: 35px">{{ qa.answer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron2 mt-5 mb-5">
+      <div class="jumbotron2-inside">
+        <h3
+          class="display-4"
+          style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center;"
+        >
+          Testimonials
+        </h3>
+      </div>
+      <div
+        id="inspirationCarousel"
+        class="carousel2 slide mb-1 mt-1"
+        data-ride="carousel"
+        data-interval="6000"
+        style="max-height: 550px; !important"
+      >
+        <div class="carousel2-inner">
+          <div
+            class="carousel-item item"
+            v-for="(test, idx) in testimonials"
+            :key="test.id"
+            :class="{ active: idx == 0 }"
+            width="auto"
+          >
+            <img
+              class="d-md-block img-fluid img-responsive"
+              :src="test.img"
+              :alt="test.name"
+              z-index="24"
+              style=" box-shadow: 0px 0px 10px 5px rgba(141, 200, 232, .4);border-radius: 60% 60%; display: block; margin-left: auto;margin-right: auto; width: 50%;!important;"
+            />
+            <!--<div class="carousel2-content" style="background-color: #003865; opacity:0.9; min-height:100px; display: flex; text-align: center; justify-content: center; 
+                    align-items: center;">
+                <h2 class="caro-h2" >{{ test.blurb }}</h2>
+            </div>-->
+            <div
+              class="row carousel-caption d-md-block rounded"
+              style="box-sizing: border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: flex; text-align: center; justify-content: center;!important"
+            >
+              <div class="col-sm-12">
+                <h4>{{ test.blurb }}</h4>
+                <h5>-{{ test.name }}</h5>
+                <h6>{{ test.specialty }}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="jumbotron" style="background-color:transparent !important;">
       <h1
         class="display-3"
@@ -269,90 +354,6 @@
             class="btn btn-primary"
             href="https://issuu.com/universityofwestflorida/docs/connection_fall2018_issuu"
           >Read Connection Magazine</a> -->
-      </div>
-    </div>
-    <h3
-      class="mt-5 display-4"
-      style="text-align: center; justify-content: center;"
-    >
-      Frequently Asked Questions
-    </h3>
-    <div class="accordion mt-4" id="accordionExample">
-      <div class="card" v-for="qa in qas" :key="qa.id">
-        <div class="card-header" :id="qa.heading">
-          <h5 class="mb-0">
-            <button
-              class="btn btn-link"
-              aria-expanded="false"
-              type="button"
-              data-toggle="collapse"
-              :data-target="qa.target"
-              :aria-controls="qa.card"
-            >
-              {{ qa.question }}
-            </button>
-          </h5>
-        </div>
-
-        <div
-          :id="qa.card"
-          class="collapse"
-          :aria-labelledby="qa.heading"
-          data-parent="#accordionExample"
-        >
-          <div class="card-body">
-            <p style="margin-left: 35px">{{ qa.answer }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="jumbotron2 mt-5 mb-5">
-      <div class="jumbotron2-inside">
-        <h3
-          class="display-4"
-          style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center;"
-        >
-          Testimonials
-        </h3>
-      </div>
-      <div
-        id="inspirationCarousel"
-        class="carousel2 slide mb-1 mt-1"
-        data-ride="carousel"
-        data-interval="6000"
-        style="max-height: 550px; !important"
-      >
-        <div class="carousel2-inner">
-          <div
-            class="carousel-item item"
-            v-for="(test, idx) in testimonials"
-            :key="test.id"
-            :class="{ active: idx == 0 }"
-            width="auto"
-          >
-            <img
-              class="d-md-block img-fluid img-responsive"
-              :src="test.img"
-              :alt="test.name"
-              z-index="24"
-              style=" box-shadow: 0px 0px 10px 5px rgba(141, 200, 232, .4);border-radius: 60% 60%; display: block; margin-left: auto;margin-right: auto; width: 50%;!important;"
-            />
-            <!--<div class="carousel2-content" style="background-color: #003865; opacity:0.9; min-height:100px; display: flex; text-align: center; justify-content: center; 
-                    align-items: center;">
-                <h2 class="caro-h2" >{{ test.blurb }}</h2>
-            </div>-->
-            <div
-              class="row carousel-caption d-md-block rounded"
-              style="box-sizing: border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: flex; text-align: center; justify-content: center;!important"
-            >
-              <div class="col-sm-12">
-                <h4>{{ test.blurb }}</h4>
-                <h5>-{{ test.name }}</h5>
-                <h6>{{ test.specialty }}</h6>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
