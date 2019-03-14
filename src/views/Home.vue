@@ -237,7 +237,7 @@ export default {
 .jumbotron {
   position: absolute;
   top: 80%;
-  left: 10%;
+  left: 0%;
   color: white;
 }
 
@@ -281,15 +281,6 @@ tbody tr {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.carousel-caption {
-  left: 43%;
-  bottom: 35%;
-  transform: translateX(10%);
-  transform: translatey(-80%);
-  color: white;
-  text-shadow: 0 3px 3.5px rgba(0, 0, 0, 0.8);
 }
 
 button {
