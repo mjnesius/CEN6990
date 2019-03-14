@@ -1,12 +1,7 @@
 <template>
   <div class="about container">
     <div class="jumbotron" style="background-color:transparent !important;">
-      <h1
-        class="display-3"
-        style="text-align: center; justify-content: center;"
-      >
-        UWF Empowers!
-      </h1>
+      <h1 class="display-3" style="text-align: center; justify-content: center;">UWF Empowers!</h1>
       <div
         id="inspirationCarousel"
         class="carousel slide"
@@ -46,17 +41,7 @@
           </div>
         </div>
         <div class="col-md-12 carousel-button">
-<<<<<<< HEAD
-          <a
-            class="btn btn-light btn-lg btn-outline-primary"
-            href="Home"
-            role="button"
-          >Start your journey!</a>
-=======
-          <a class=" btn btn-light btn-lg btn-primary" href="Home" role="button"
-            >Start your journey!</a
-          >
->>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
+          <a class="btn btn-light btn-lg btn-primary" href="Home" role="button">Start your journey!</a>
         </div>
       </div>
     </div>
@@ -64,9 +49,7 @@
       <h1
         class="display-3"
         style="text-align: center; justify-content: center;"
-      >
-        Start your IT journey!
-      </h1>
+      >Start your IT journey!</h1>
       <p class="lead">Access world class coursework for free!</p>
       <hr class="my-4">
       <div class="rowImg">
@@ -136,50 +119,17 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-    <div class="card" style="background-color:#009CDE !important">
-      <div class="row mt-3" style="margin-left:1px; margin-right:1px; ">
-        <div class="col-sm-6">
-          <div class="card mb-3">
-            <div class="row mt-3" style="margin-left:1px; margin-right:1px; ">
-              <div class="col-sm-6">
-                <div class="card mb-3">
-                  <div style="height: 190px">
-                    <img
-                      class="img-fluid"
-                      alt="Responsive image"
-                      style="height: auto; width: auto; display: block;"
-                      src="../assets/team_03.jpg"
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="card mb-3">
-                  <h4 class="card-header" style="background-color:#8DC8E8 !important">alumni</h4>
-                  <div class="card-body">
-                    <h5 class="card-title">alumni</h5>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">alumni</p>
-                  </div>
-                </div>
-=======
     <div class="jumbotron" style="background-color:transparent !important;">
       <h1
         class="display-3"
         style="text-align: center; justify-content: center;"
-      >
-        UWF Alumni Association
-      </h1>
+      >UWF Alumni Association</h1>
       <div class="card" style="background-color:white !important">
         <h2
           class="card-header"
           style="background-color:#004C97 color: #B6ADA5 !important"
-        >
-          Fostering a spirit of fellowship with and loyalty to the University
-        </h2>
-        <div class="row  mt-3 mb-3" style="margin-left:1px; margin-right:1px; ">
+        >Fostering a spirit of fellowship with and loyalty to the University</h2>
+        <div class="row mt-3 mb-3" style="margin-left:1px; margin-right:1px; ">
           <div class="col-sm-6">
             <div style="height: 100">
               <img
@@ -187,7 +137,7 @@
                 alt="Responsive image"
                 style="height: auto; width: auto; display: block;"
                 src="../assets/team_03.jpg"
-              />
+              >
             </div>
           </div>
           <div class="col-sm-6">
@@ -195,9 +145,7 @@
               <h4
                 class="card-header"
                 style="background-color:#8DC8E8 !important"
-              >
-                80,000 Members Strong
-              </h4>
+              >80,000 Members Strong</h4>
               <div class="card-body">
                 <h6 class="card-text">
                   The mission of the University of West Florida’s Alumni
@@ -214,22 +162,12 @@
                   chapter gatherings and special events to all our members of
                   the UWF Alumni Association.
                 </h6>
->>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div class="col-sm-6">
-          <div class="card mb-12">
-            <h4 class="card-header" style="background-color:#8DC8E8 !important">alumni</h4>
-          </div>
-=======
       </div>
-      <div
-        class="row mt-6"
-        style="margin-left:1px; margin-right:1px;margin-top:40px;"
-      >
+      <div class="row mt-6" style="margin-left:1px; margin-right:1px;margin-top:40px;">
         <div
           class="btn-group btn-group-lg btn-group-justified mt-6"
           role="group"
@@ -239,28 +177,22 @@
           <a
             class="btn btn-primary"
             href="https://uwf.edu/alumni/get-involved/events-calendar/"
-            >Alumni Events</a
-          >
+          >Alumni Events</a>
           <a
             class="btn btn-primary"
             href="https://uwf.edu/university-advancement/departments/development/give-now/donate/"
-            >Make a Gift
-          </a>
+          >Make a Gift</a>
           <a
             class="btn btn-primary"
             href="https://issuu.com/universityofwestflorida/docs/connection_fall2018_issuu"
-            >Read Connection Magazine
-          </a>
->>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
+          >Read Connection Magazine</a>
         </div>
       </div>
     </div>
     <h3
       class="mt-5 display-4"
       style="text-align: center; justify-content: center;"
-    >
-      Frequently Asked Questions
-    </h3>
+    >Frequently Asked Questions</h3>
     <div class="accordion" id="accordionExample">
       <div class="card" v-for="qa in qas" :key="qa.id">
         <div class="card-header" :id="qa.heading">
@@ -292,15 +224,8 @@
       <div class="jumbotron2-inside">
         <h3
           class="display-4"
-<<<<<<< HEAD
-          style="color: white; text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);"
-        >Testimonials</h3>
-=======
           style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center;"
-        >
-          Testimonials
-        </h3>
->>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
+        >Testimonials</h3>
       </div>
       <div
         id="inspirationCarousel"
@@ -309,7 +234,7 @@
         data-interval="6000"
         style="max-height: 550px; !important"
       >
-        <div class="carousel2-inner ">
+        <div class="carousel2-inner">
           <div
             class="carousel-item item"
             v-for="(test, idx) in testimonials"
@@ -322,25 +247,15 @@
               :src="test.img"
               :alt="test.name"
               z-index="24"
-<<<<<<< HEAD
-              style=" box-shadow: 0px 0px 10px 5px rgba(255, 184, 28, .4);border-radius: 25% 10%; !important;"
-            >
-=======
               style=" box-shadow: 0px 0px 10px 5px rgba(141, 200, 232, .4);border-radius: 60% 60%; display: block; margin-left: auto;margin-right: auto; width: 50%;!important;"
-            />
->>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
+            >
             <!--<div class="carousel2-content" style="background-color: #003865; opacity:0.9; min-height:100px; display: flex; text-align: center; justify-content: center; 
                     align-items: center;">
                 <h2 class="caro-h2" >{{ test.blurb }}</h2>
             </div>-->
             <div
-<<<<<<< HEAD
-              class="carousel-caption d-none d-md-block rounded border-left"
-              style="box-sizing: border-box;padding: 15px; max-width: 550px; background-color: rgba(0, 76, 151, 0.7);!important"
-=======
-              class="row  carousel-caption d-md-block rounded"
+              class="row carousel-caption d-md-block rounded"
               style="box-sizing: border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: flex; text-align: center; justify-content: center;!important"
->>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
             >
               <div class="col-sm-12">
                 <h4>{{ test.blurb }}</h4>

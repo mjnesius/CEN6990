@@ -31,9 +31,7 @@
               individuals will work in teams covering different aspects of the
               design process, although some designers will cover them all.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
-              >Find A Course</a
-            >
+            <a href="#" class="btn btn-dark btn-sm float-right">Find A Course</a>
           </div>
         </div>
         <div class="card cardSet1 text">
@@ -48,9 +46,7 @@
               interactions as well as network integrity/resilience are the key
               areas of focus.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
-              >Find A Course</a
-            >
+            <a href="#" class="btn btn-dark btn-sm float-right">Find A Course</a>
           </div>
         </div>
         <div class="card cardSet1 text">
@@ -64,83 +60,25 @@
               well as from disruption or misdirection of the services they
               provide.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
-              >Find A Course</a
-            >
+            <a href="#" class="btn btn-dark btn-sm float-right">Find A Course</a>
           </div>
         </div>
       </div>
     </div>
     <br>
 
-    <br />
+    <br>
 
     <div class="Container">
       <h2 class="mb-5 text-left">New Courses</h2>
       <div class="row">
-<<<<<<< HEAD
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-primary">
-              <div class="card-body text-center">
-                <h5 class="card-title">Course 1</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-warning">
-              <div class="card-body text-center">
-                <h5 class="card-title">Course 2</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-primary">
-              <div class="card-body text-center">
-                <h5 class="card-title">Course 3</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-warning">
-              <div class="card-body text-center">
-                <h5 class="card-title">Course 4</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
-=======
         <div class="col-sm-12">
-          <div
-            id="carouselExampleCaptions"
-            class="carousel slide"
-            data-ride="carousel"
-          >
+          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <section class="dark-overlay">
               <ol class="carousel-indicators">
-                <li
-                  data-target="#carouselExampleCaptions"
-                  data-slide-to="0"
-                  class="active"
-                ></li>
-                <li
-                  data-target="#carouselExampleCaptions"
-                  data-slide-to="1"
-                ></li>
-                <li
-                  data-target="#carouselExampleCaptions"
-                  data-slide-to="2"
-                ></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
               </ol>
             </section>
             <div class="carousel-inner">
@@ -149,7 +87,7 @@
                   src="../assets/blurred-background-coffee-cup-computer-908284.jpg"
                   class="d-block w-50"
                   alt="..."
-                />
+                >
                 <div class="carousel-caption d-none d-md-block">
                   <h8>Web Development</h8>
                   <p>
@@ -166,7 +104,7 @@
                   src="../assets/achievement-agreement-arms-1068523.jpg"
                   class="d-block w-50"
                   alt="..."
-                />
+                >
                 <div class="carousel-caption d-none d-md-block">
                   <h8>Business</h8>
                   <p>
@@ -183,7 +121,7 @@
                   src="../assets/creative-creativity-design-1266012.jpg"
                   class="d-block w-50"
                   alt="..."
-                />
+                >
                 <div class="carousel-caption d-none d-md-block">
                   <h8>Design</h8>
                   <p>
@@ -193,7 +131,6 @@
                     typography, and learn the nuances of designing for print.
                   </p>
                 </div>
->>>>>>> c7df4603dd0cbb2f76dfa5b28c0ec23c5ae5ae6f
               </div>
             </div>
             <a
@@ -202,10 +139,7 @@
               role="button"
               data-slide="prev"
             >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
             <a
@@ -214,10 +148,7 @@
               role="button"
               data-slide="next"
             >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
           </div>
