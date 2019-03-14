@@ -30,13 +30,16 @@
             />
             <h3 class="card-title mt-2">Web Design</h3>
             <p class="card-text mt-3">
-              >Web design encompasses many different skills and disciplines in
-              the production and maintenance of websites. The different areas of
-              web design include web graphic design; interface design;
-              authoring, including standardised code and proprietary software;
-              user experience design; and search engine optimization. Often many
-              individuals will work in teams covering different aspects of the
-              design process, although some designers will cover them all.
+              web graphic design
+            </p>
+            <p class="card-text mt-3">
+              interface design
+            </p>
+            <p class="card-text mt-3">
+              standardised code and proprietary software
+            </p>
+            <p class="card-text mt-3">
+              user experience design
             </p>
             <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
           </div>
@@ -50,13 +53,13 @@
             />
             <h3 class="card-title mt-2">Network Administration</h3>
             <p class="card-text mt-3">
-              A network administrator is the person designated in an
-              organization whose responsibility includes maintaining computer
-              infrastructures with emphasis on networking. Responsibilities may
-              vary between organizations, but on-site servers, software-network
-              interactions as well as network integrity/resilience are the key
-              areas of focus.
+              maintaining computer
             </p>
+            <p class="card-text mt-3">
+              infrastructures with emphasis on networking
+            </p>
+            <p class="card-text mt-3">software-network</p>
+            <p class="card-text mt-3">network integrity/resilience</p>
             <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
           </div>
         </div>
@@ -69,11 +72,13 @@
             />
             <h3 class="card-title mt-2">Cyber Security</h3>
             <p class="card-text mt-3">
-              Computer security, cybersecurity[1] or information technology
-              security (IT security) is the protection of computer systems from
-              theft or damage to their hardware, software or electronic data, as
-              well as from disruption or misdirection of the services they
-              provide.
+              the protection of computer systems from theft
+            </p>
+            <p class="card-text mt-3">
+              the protection of computer damage to their hardwares
+            </p>
+            <p class="card-text mt-3">
+              the protection of computer from disruption
             </p>
             <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
           </div>
