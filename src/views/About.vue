@@ -1,7 +1,12 @@
 <template>
   <div class="about container">
     <div class="jumbotron" style="background-color:transparent !important;">
-      <h1 class="display-3" style="text-align: center; justify-content: center;">UWF Empowers!</h1>
+      <h1
+        class="display-3"
+        style="text-align: center; justify-content: center;"
+      >
+        UWF Empowers!
+      </h1>
       <div
         id="inspirationCarousel"
         class="carousel slide"
@@ -17,7 +22,7 @@
               class="d-block w-100 img-fluid img-responsive"
               src="../assets/areyourready.jpg"
               alt="First slide"
-            >
+            />
           </div>
           <div class="carousel-item item">
             <div class="carousel-content">
@@ -27,7 +32,7 @@
               class="d-block w-100 img-fluid img-responsive"
               src="../assets/inspiring-1.jpg"
               alt="Second slide"
-            >
+            />
           </div>
           <div class="carousel-item item">
             <div class="carousel-content">
@@ -37,11 +42,13 @@
               class="d-block w-100 img-fluid img-responsive"
               src="../assets/inspiring-4.jpg"
               alt="Third slide"
-            >
+            />
           </div>
         </div>
         <div class="col-md-12 carousel-button">
-          <a class="btn btn-light btn-lg btn-primary" href="Home" role="button">Start your journey!</a>
+          <a class="btn btn-light btn-lg btn-primary" href="Home" role="button"
+            >Start your journey!</a
+          >
         </div>
       </div>
     </div>
@@ -49,9 +56,11 @@
       <h1
         class="display-3"
         style="text-align: center; justify-content: center;"
-      >Start your IT journey!</h1>
+      >
+        Start your IT journey!
+      </h1>
       <p class="lead">Access world class coursework for free!</p>
-      <hr class="my-4">
+      <hr class="my-4" />
       <div class="rowImg">
         <div class="columnImg">
           <div class="tile-container">
@@ -61,7 +70,7 @@
               style="width:100%"
               display="block"
               target="_self"
-            >
+            />
             <a href="Home" alt="Search the stacks at UWF Libraries">
               <div class="overlay">
                 <div class="overlay-text">Search our course library</div>
@@ -69,7 +78,12 @@
             </a>
           </div>
           <div class="tile-container">
-            <img src="../assets/inspiring-3.jpg" alt="portrait" style="width:100%" target="_self">
+            <img
+              src="../assets/inspiring-3.jpg"
+              alt="portrait"
+              style="width:100%"
+              target="_self"
+            />
             <a href="/topic/1" alt="Meet our notable alumni">
               <div class="overlay">
                 <div class="overlay-text">Become and IT Professional</div>
@@ -80,7 +94,11 @@
         <div class="columnImg">
           <div class="tile-container">
             <a href="https://uwf.edu/ihire/" alt="iHire UWF" target="_self">
-              <img src="../assets/employer1.jpg" alt="ihire project" style="width:100%">
+              <img
+                src="../assets/employer1.jpg"
+                alt="ihire project"
+                style="width:100%"
+              />
               <div class="overlay">
                 <div class="overlay-text">iHire UWF</div>
               </div>
@@ -92,9 +110,15 @@
               alt="Get to Know UWF's Top&nbsp;Scholars"
               target="_self"
             >
-              <img src="../assets/testimonials-7.jpg" alt="Top Scholars" style="width:100%">
+              <img
+                src="../assets/testimonials-7.jpg"
+                alt="Top Scholars"
+                style="width:100%"
+              />
               <div class="overlay">
-                <div class="overlay-text">Get to Know UWF's Top&nbsp;Scholars</div>
+                <div class="overlay-text">
+                  Get to Know UWF's Top&nbsp;Scholars
+                </div>
               </div>
             </a>
           </div>
@@ -102,7 +126,11 @@
         <div class="columnImg">
           <div class="tile-container">
             <a href="../topic/2" alt="Security" target="_self">
-              <img src="../assets/security-3.jpg" alt="Security" style="width:100%">
+              <img
+                src="../assets/security-3.jpg"
+                alt="Security"
+                style="width:100%"
+              />
               <div class="overlay">
                 <div class="overlay-text">Become A Cybersecurity Expert</div>
               </div>
@@ -110,7 +138,7 @@
           </div>
           <div class="tile-container">
             <a href="../topic/0" alt="Software" target="_self">
-              <img src="../assets/se.jpg" alt="Software" style="width:100%">
+              <img src="../assets/se.jpg" alt="Software" style="width:100%" />
               <div class="overlay">
                 <div class="overlay-text">Develop Software</div>
               </div>
@@ -123,12 +151,16 @@
       <h1
         class="display-3"
         style="text-align: center; justify-content: center;"
-      >UWF Alumni Association</h1>
+      >
+        UWF Alumni Association
+      </h1>
       <div class="card" style="background-color:white !important">
         <h2
           class="card-header"
           style="background-color:#004C97 color: #B6ADA5 !important"
-        >Fostering a spirit of fellowship with and loyalty to the University</h2>
+        >
+          Fostering a spirit of fellowship with and loyalty to the University
+        </h2>
         <div class="row mt-3 mb-3" style="margin-left:1px; margin-right:1px; ">
           <div class="col-sm-6">
             <div style="height: 100">
@@ -137,7 +169,7 @@
                 alt="Responsive image"
                 style="height: auto; width: auto; display: block;"
                 src="../assets/team_03.jpg"
-              >
+              />
             </div>
           </div>
           <div class="col-sm-6">
@@ -145,36 +177,87 @@
               <h4
                 class="card-header"
                 style="background-color:#8DC8E8 !important"
-              >80,000 Members Strong</h4>
+              >
+                80,000 Members Strong
+              </h4>
               <div class="card-body">
-                <h6 class="card-text">
+                <h5 class="card-text">
                   The mission of the University of West Florida’s Alumni
                   Association is to create a lifelong and worldwide community of
                   alumni through increased opportunities for meaningful
                   engagement in order to increase awareness, pride,
                   participation, volunteer involvement, and philanthropic
                   commitment to the University of West Florida.
-                </h6>
-                <h6>
+                </h5>
+                <h5>
                   Membership is free and open to all graduates of the
                   university. Alumni Relations is pleased to provide networking
                   opportunities, affinity program discounts and rewards, alumni
                   chapter gatherings and special events to all our members of
                   the UWF Alumni Association.
-                </h6>
+                </h5>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row mt-6" style="margin-left:1px; margin-right:1px;margin-top:40px;">
-        <div
+      <div
+        class="row mt-6"
+        style="margin-left:1px; margin-right:1px;margin-top:40px;"
+      >
+        <!-- <div
           class="btn-group btn-group-lg btn-group-justified mt-6"
           role="group"
           aria-label="..."
           style="box-sizing:border-box; width: 100%"
+        >-->
+        <div
+          class="col-4 mt-6"
+          style="margin-top:40px; text-align: center; justify-content: center;"
         >
           <a
+            href="https://uwf.edu/alumni/get-involved/events-calendar/"
+            class="icon-block"
+            ><span style="font-size: 3em; color: #004C97; ">
+              <i class="far fa-calendar-alt fa-2x"> </i>
+            </span>
+            <div style="margin-top:20px;">
+              <h4>Alumni Events</h4>
+            </div></a
+          >
+        </div>
+        <div
+          class="col-4 mt-6"
+          style="margin-top:40px; text-align: center; justify-content: center;"
+        >
+          <a
+            href="https://uwf.edu/university-advancement/departments/development/give-now/donate/"
+            class="icon-block"
+            ><span style="font-size: 3em; color: #007A33;">
+              <i class="fas fa-gift fa-2x"></i>
+            </span>
+            <div style="margin-top:20px;">
+              <h4>Make a Gift</h4>
+            </div></a
+          >
+        </div>
+        <div
+          class="col-4 mt-6"
+          style="margin-top:40px; text-align: center; justify-content: center;"
+        >
+          <a
+            href="https://issuu.com/universityofwestflorida/docs/connection_fall2018_issuu"
+            class="icon-block"
+            ><span style="font-size: 3em; color: #004C97;">
+              <i class="fas fa-book-reader fa-2x"></i>
+            </span>
+            <div style="margin-top:20px;">
+              <h4>Read Connection Magazine</h4>
+            </div></a
+          >
+        </div>
+
+        <!-- <a
             class="btn btn-primary"
             href="https://uwf.edu/alumni/get-involved/events-calendar/"
           >Alumni Events</a>
@@ -185,15 +268,16 @@
           <a
             class="btn btn-primary"
             href="https://issuu.com/universityofwestflorida/docs/connection_fall2018_issuu"
-          >Read Connection Magazine</a>
-        </div>
+          >Read Connection Magazine</a> -->
       </div>
     </div>
     <h3
       class="mt-5 display-4"
       style="text-align: center; justify-content: center;"
-    >Frequently Asked Questions</h3>
-    <div class="accordion" id="accordionExample">
+    >
+      Frequently Asked Questions
+    </h3>
+    <div class="accordion mt-4" id="accordionExample">
       <div class="card" v-for="qa in qas" :key="qa.id">
         <div class="card-header" :id="qa.heading">
           <h5 class="mb-0">
@@ -204,7 +288,9 @@
               data-toggle="collapse"
               :data-target="qa.target"
               :aria-controls="qa.card"
-            >{{ qa.question }}</button>
+            >
+              {{ qa.question }}
+            </button>
           </h5>
         </div>
 
@@ -215,7 +301,7 @@
           data-parent="#accordionExample"
         >
           <div class="card-body">
-            <p>{{ qa.answer }}</p>
+            <p style="margin-left: 35px">{{ qa.answer }}</p>
           </div>
         </div>
       </div>
@@ -225,7 +311,9 @@
         <h3
           class="display-4"
           style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center;"
-        >Testimonials</h3>
+        >
+          Testimonials
+        </h3>
       </div>
       <div
         id="inspirationCarousel"
@@ -248,7 +336,7 @@
               :alt="test.name"
               z-index="24"
               style=" box-shadow: 0px 0px 10px 5px rgba(141, 200, 232, .4);border-radius: 60% 60%; display: block; margin-left: auto;margin-right: auto; width: 50%;!important;"
-            >
+            />
             <!--<div class="carousel2-content" style="background-color: #003865; opacity:0.9; min-height:100px; display: flex; text-align: center; justify-content: center; 
                     align-items: center;">
                 <h2 class="caro-h2" >{{ test.blurb }}</h2>
@@ -352,6 +440,11 @@ export default {
 </script>
 
 <style scoped>
+.fas:hover,
+.far:hover,
+.icon-block:hover {
+  color: #ffb81c;
+}
 .jumbotron2 {
   position: relative;
 }
@@ -511,7 +604,7 @@ export default {
   padding: 0 4px;
 }
 
-/* Create 2 equal columns that sits next to each other */
+/* Create 3 equal columns that sits next to each other */
 .columnImg {
   flex: 33%;
   max-width: 33%;
@@ -526,6 +619,9 @@ export default {
 .overlay {
   position: absolute;
   top: 0;
+  padding: 0 5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   bottom: 0;
   left: 0;
   right: 0;
