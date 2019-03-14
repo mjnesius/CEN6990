@@ -7,19 +7,19 @@
           v-if="currentTopic.topic == 'Software Development'"
           src="../assets/undraw_programmer_imem.svg"
           alt="software programmer coding"
-        />
+        >
         <img
           class="img-fluid"
           v-else-if="currentTopic.topic == 'Information Technology'"
           src="../assets/undraw_dashboard_nklg.svg"
           alt="computer screen with gadgets"
-        />
+        >
         <img
           class="img-fluid"
           v-else
           src="../assets/undraw_security_o890.svg"
           alt="security guard in front of computer screen"
-        />
+        >
       </div>
       <div class="col-md-6 pt-3">
         <h1 class="dispay-3">{{ currentTopic.topic }}</h1>
@@ -37,11 +37,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr
-          @click="pushToCoursePage(course.id)"
-          v-for="course in courses"
-          :key="course.id"
-        >
+        <tr @click="pushToCoursePage(course.id)" v-for="course in courses" :key="course.id">
           <td>{{ course.title }}</td>
           <td>{{ course.shortDescription }}</td>
           <td>{{ course.instructor }}</td>
@@ -50,14 +46,7 @@
       </tbody>
     </table>
     <div class="d-flex justify-content-center mb-3">
-      <button
-        type="button"
-        @click="loadMore"
-        class="btn btn-primary"
-        v-show="more"
-      >
-        Load More
-      </button>
+      <button type="button" @click="loadMore" class="btn btn-primary" v-show="more">Load More</button>
     </div>
   </div>
 </template>
@@ -129,6 +118,12 @@ export default {
             this.courses.push(course);
           });
         });
+    }
+  },
+
+  watch: {
+    $route(to, from) {
+      this.updateId(10);
     }
   },
 
