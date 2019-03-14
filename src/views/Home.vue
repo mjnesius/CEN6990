@@ -85,60 +85,95 @@
     </div>
     <br />
 
+    <br />
+
     <div class="Container mt-5">
       <h2 class="mb-5 text-left">New Courses</h2>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-primary">
-              <div class="card-body text-center">
-                <h5 class="card-title">Course 1</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
+      <div class="bd-example">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <section class="dark-overlay">
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleCaptions"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+          </section>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="../assets/blurred-background-coffee-cup-computer-908284.jpg"
+                class="d-block w-50"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h8>Web Development</h8>
+                <p>
+                  Learn how to design and create a website with our web design
+                  tutorials. From hundreds of video courses, choose the right
+                  one to help you embed video, format text, design in CSS,
+                  create a content strategy, and analyze user experience design.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../assets/achievement-agreement-arms-1068523.jpg"
+                class="d-block w-50"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h8>Business</h8>
+                <p>
+                  Explore a wide range of business skills from project
+                  management and negotiation to leadership skills and online
+                  marketing strategy. Our professional development tutorials can
+                  help you learn SEO, spreadsheets, word processing, and more.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../assets/creative-creativity-design-1266012.jpg"
+                class="d-block w-50"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h8>Design</h8>
+                <p>
+                  Whether you want to design a logo, create ebooks, or just
+                  learn how to use a Pen tool, our in-depth design tutorials can
+                  help. Get to know Illustrator and InDesign, explore
+                  typography, and learn the nuances of designing for print.
+                </p>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-warning">
-              <div class="card-body text-center">
-                <h5 class="card-title">Course 2</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-primary">
-              <div class="card-body text-center">
-                <h5 class="card-title">Course 3</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-warning">
-              <div class="card-body text-center">
-                <h5 class="card-title">Course 4</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
-              </div>
-            </div>
-          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
     </div>
@@ -209,28 +244,7 @@
 </template>
 
 <script>
-export default {
-  name: "Home",
-  data() {
-    return {
-      id: "",
-      topic: "",
-      phrase: "",
-      description: "",
-      image: "",
-      courses: [],
-      topics: [
-        {
-          topic: "Home",
-          phrase: "Empower Yourself!",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
-          image: "url(../assets/areyourready.jpg)"
-        }
-      ]
-    };
-  }
-};
+export default {};
 </script>
 
 <style scoped>
