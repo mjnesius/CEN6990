@@ -4,21 +4,8 @@
       <div class="col-md-6">
         <img
           class="img-fluid"
-          v-if="currentTopic.topic == 'Software Development'"
-          src="../assets/undraw_programmer_imem.svg"
-          alt="software programmer coding"
-        >
-        <img
-          class="img-fluid"
-          v-else-if="currentTopic.topic == 'Information Technology'"
-          src="../assets/undraw_dashboard_nklg.svg"
-          alt="computer screen with gadgets"
-        >
-        <img
-          class="img-fluid"
-          v-else
-          src="../assets/undraw_security_o890.svg"
-          alt="security guard in front of computer screen"
+          :src="require(`@/assets/${currentTopic.image}`)"
+          alt=""
         >
       </div>
       <div class="col-md-6 pt-3">
@@ -69,7 +56,7 @@ export default {
             "From Java to Javascript, you will quickly gain the knowledge and skills to code like a pro!",
           description:
             "Courses available in Computer Science, Game Development, Programming Languages, Testing, AI, Agile, and System Architecture.",
-          image: "../assets/undraw_programmer_imem.svg"
+          image: "undraw_programmer_imem.svg"
         },
         {
           search: "it",
@@ -78,7 +65,7 @@ export default {
             "From workstations to networks, UWF Instructors will teach you current industry best practices with the latest technology.",
           description:
             "IT course topics include Certifications, Networking, Database Administration, Virtualization, Cloud, Servers, and Dev Ops.",
-          image: "../assets/undraw_dashboard_nklg.svg"
+          image: "undraw_dashboard_nklg.svg"
         },
         {
           search: "security",
@@ -87,7 +74,7 @@ export default {
             "From firewalls to malware, we have you covered. Learn from the experts and join the hotest career field in tech.",
           description:
             "In-depth courses in Operations, Certifications, Governance, Digital Forensics, Application Security, Penetration Testing, Network Security, and Security Engineering.",
-          image: "../assets/undraw_security_o890.svg"
+          image: "undraw_security_o890.svg"
         }
       ]
     };
