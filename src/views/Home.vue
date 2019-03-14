@@ -87,93 +87,109 @@
 
     <br />
 
-    <div class="Container mt-5">
+    <div class="Container">
       <h2 class="mb-5 text-left">New Courses</h2>
-      <div class="bd-example">
-        <div
-          id="carouselExampleCaptions"
-          class="carousel slide"
-          data-ride="carousel"
-        >
-          <section class="dark-overlay">
-            <ol class="carousel-indicators">
-              <li
-                data-target="#carouselExampleCaptions"
-                data-slide-to="0"
-                class="active"
-              ></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-            </ol>
-          </section>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="../assets/blurred-background-coffee-cup-computer-908284.jpg"
-                class="d-block w-50"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h8>Web Development</h8>
-                <p>
-                  Learn how to design and create a website with our web design
-                  tutorials. From hundreds of video courses, choose the right
-                  one to help you embed video, format text, design in CSS,
-                  create a content strategy, and analyze user experience design.
-                </p>
+      <div class="row">
+        <div class="col-sm-12">
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <section class="dark-overlay">
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="1"
+                ></li>
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="2"
+                ></li>
+              </ol>
+            </section>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="../assets/blurred-background-coffee-cup-computer-908284.jpg"
+                  class="d-block w-50"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h8>Web Development</h8>
+                  <p>
+                    Learn how to design and create a website with our web design
+                    tutorials. From hundreds of video courses, choose the right
+                    one to help you embed video, format text, design in CSS,
+                    create a content strategy, and analyze user experience
+                    design.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../assets/achievement-agreement-arms-1068523.jpg"
+                  class="d-block w-50"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h8>Business</h8>
+                  <p>
+                    Explore a wide range of business skills from project
+                    management and negotiation to leadership skills and online
+                    marketing strategy. Our professional development tutorials
+                    can help you learn SEO, spreadsheets, word processing, and
+                    more.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../assets/creative-creativity-design-1266012.jpg"
+                  class="d-block w-50"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h8>Design</h8>
+                  <p>
+                    Whether you want to design a logo, create ebooks, or just
+                    learn how to use a Pen tool, our in-depth design tutorials
+                    can help. Get to know Illustrator and InDesign, explore
+                    typography, and learn the nuances of designing for print.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <img
-                src="../assets/achievement-agreement-arms-1068523.jpg"
-                class="d-block w-50"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h8>Business</h8>
-                <p>
-                  Explore a wide range of business skills from project
-                  management and negotiation to leadership skills and online
-                  marketing strategy. Our professional development tutorials can
-                  help you learn SEO, spreadsheets, word processing, and more.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="../assets/creative-creativity-design-1266012.jpg"
-                class="d-block w-50"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h8>Design</h8>
-                <p>
-                  Whether you want to design a logo, create ebooks, or just
-                  learn how to use a Pen tool, our in-depth design tutorials can
-                  help. Get to know Illustrator and InDesign, explore
-                  typography, and learn the nuances of designing for print.
-                </p>
-              </div>
-            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleCaptions"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleCaptions"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleCaptions"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleCaptions"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
       </div>
     </div>
