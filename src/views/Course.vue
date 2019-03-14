@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row my-3">
       <div class="col-md-9 mx-auto">
-        <div class="embed-responsive embed-responsive-16by9">
+        <div class="embed-responsive mb-2 embed-responsive-16by9">
           <iframe
             class="embed-responsive-item"
             :src="newVideo"
