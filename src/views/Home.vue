@@ -3,9 +3,12 @@
     <section>
       <div id="home-heading" class="jumbotron">
         <section class="dark-overlay">
-          <h1 class="display-3 mt-3">{{ topic }}</h1>
-          <p class="lead">{{ phrase }}</p>
-          <p class="mb-5">{{ description }}</p>
+          <h1 class="display-4">Get Ready to Learn!</h1>
+
+          <p>Thousands of classes to fuel your creativity and career.</p>
+          <figure>
+            <button type="button">Get Started</button>
+          </figure>
         </section>
       </div>
     </section>
@@ -13,7 +16,7 @@
     <hr />
 
     <div class="Container mt-5">
-      <h2 class="mb-5 text-left">Featured Topics</h2>
+      <h2 class="mb-5 text-left">Browse By Topic</h2>
       <div class="card-deck">
         <div class="card cardSet1 text">
           <div class="card-body">
@@ -32,7 +35,9 @@
               individuals will work in teams covering different aspects of the
               design process, although some designers will cover them all.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
+            <a href="#" class="btn btn-dark btn-sm float-right"
+              >Find A Course</a
+            >
           </div>
         </div>
         <div class="card cardSet1 text">
@@ -51,7 +56,9 @@
               interactions as well as network integrity/resilience are the key
               areas of focus.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
+            <a href="#" class="btn btn-dark btn-sm float-right"
+              >Find A Course</a
+            >
           </div>
         </div>
         <div class="card cardSet1 text">
@@ -69,7 +76,9 @@
               well as from disruption or misdirection of the services they
               provide.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
+            <a href="#" class="btn btn-dark btn-sm float-right"
+              >Find A Course</a
+            >
           </div>
         </div>
       </div>
@@ -84,9 +93,7 @@
             <div class="card bg-primary">
               <div class="card-body text-center">
                 <h5 class="card-title">Course 1</h5>
-                <p class="card-text">
-                  Supporting text for topic description.
-                </p>
+                <p class="card-text">Supporting text for topic description.</p>
                 <a href="#" class="btn btn-dark btn-sm float-right"
                   >Learn more..</a
                 >
@@ -214,10 +221,8 @@ export default {
       courses: [],
       topics: [
         {
-          search: "development",
-          topic: "Software Development",
-          phrase:
-            "From Java to Javascript, you will quickly gain the knowledge and skills to code like a pro!",
+          topic: "Home",
+          phrase: "Empower Yourself!",
           description:
             "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
           image: "url(../assets/areyourready.jpg)"
@@ -229,6 +234,27 @@ export default {
 </script>
 
 <style scoped>
+.jumbotron {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  color: white;
+}
+
+.jumbotron h1 {
+  display: block;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+  padding-left: 40px;
+  padding-top: 300px;
+}
+.jumbotron p {
+  color: white;
+  font-size: 20px;
+  padding-left: 40px;
+}
+
 tbody tr {
   cursor: pointer;
 }
@@ -241,12 +267,11 @@ tbody tr {
 
 #home-heading {
   position: relative;
-  min-height: 200px;
+  height: 700px;
   background: url(../assets/students.jpg);
-  background-attachment: fixed;
   background-repeat: no-repeat;
-  text-align: center;
-  color: #fff;
+  background-size: cover;
+  border-bottom: 1px solid #ff6a00;
 }
 
 .dark-overlay {
@@ -256,5 +281,32 @@ tbody tr {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.carousel-caption {
+  left: 43%;
+  bottom: 35%;
+  transform: translateX(10%);
+  transform: translatey(-80%);
+  color: white;
+  text-shadow: 0 3px 3.5px rgba(0, 0, 0, 0.8);
+}
+
+button {
+  padding: 15px 50px;
+  border: 0;
+  background: rgba(255, 253, 253, 0.767);
+  color: rgb(14, 1, 12);
+  cursor: pointer;
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  -webkit-transform: translate(-10%, -10%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+button:hover {
+  background: rgb(209, 203, 203);
 }
 </style>
