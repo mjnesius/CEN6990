@@ -3,9 +3,12 @@
     <section>
       <div id="home-heading" class="jumbotron">
         <section class="dark-overlay">
-          <h1 class="display-3 mt-3">{{ topic }}</h1>
-          <p class="lead">{{ phrase }}</p>
-          <p class="mb-5">{{ description }}</p>
+          <h1 class="display-4">Get Ready to Learn!</h1>
+
+          <p>Thousands of classes to fuel your creativity and career.</p>
+          <figure>
+            <button type="button">Get Started</button>
+          </figure>
         </section>
       </div>
     </section>
@@ -13,7 +16,7 @@
     <hr />
 
     <div class="Container mt-5">
-      <h2 class="mb-5 text-left">Featured Topics</h2>
+      <h2 class="mb-5 text-left">Browse By Topic</h2>
       <div class="card-deck">
         <div class="card cardSet1 text">
           <div class="card-body">
@@ -32,7 +35,9 @@
               individuals will work in teams covering different aspects of the
               design process, although some designers will cover them all.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
+            <a href="#" class="btn btn-dark btn-sm float-right"
+              >Find A Course</a
+            >
           </div>
         </div>
         <div class="card cardSet1 text">
@@ -51,7 +56,9 @@
               interactions as well as network integrity/resilience are the key
               areas of focus.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
+            <a href="#" class="btn btn-dark btn-sm float-right"
+              >Find A Course</a
+            >
           </div>
         </div>
         <div class="card cardSet1 text">
@@ -69,69 +76,104 @@
               well as from disruption or misdirection of the services they
               provide.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right">Read more..</a>
+            <a href="#" class="btn btn-dark btn-sm float-right"
+              >Find A Course</a
+            >
           </div>
         </div>
       </div>
     </div>
     <br />
 
+    <br />
+
     <div class="Container mt-5">
       <h2 class="mb-5 text-left">New Courses</h2>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-primary">
-              <div class="card-body text-center">
-                <h5 class="card-title">Course 1</h5>
-                <p class="card-text">
-                  Supporting text for topic description.
+      <div class="bd-example">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <section class="dark-overlay">
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleCaptions"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+          </section>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="../assets/blurred-background-coffee-cup-computer-908284.jpg"
+                class="d-block w-50"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h8>Web Development</h8>
+                <p>
+                  Learn how to design and create a website with our web design
+                  tutorials. From hundreds of video courses, choose the right
+                  one to help you embed video, format text, design in CSS,
+                  create a content strategy, and analyze user experience design.
                 </p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../assets/achievement-agreement-arms-1068523.jpg"
+                class="d-block w-50"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h8>Business</h8>
+                <p>
+                  Explore a wide range of business skills from project
+                  management and negotiation to leadership skills and online
+                  marketing strategy. Our professional development tutorials can
+                  help you learn SEO, spreadsheets, word processing, and more.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../assets/creative-creativity-design-1266012.jpg"
+                class="d-block w-50"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h8>Design</h8>
+                <p>
+                  Whether you want to design a logo, create ebooks, or just
+                  learn how to use a Pen tool, our in-depth design tutorials can
+                  help. Get to know Illustrator and InDesign, explore
+                  typography, and learn the nuances of designing for print.
+                </p>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-warning">
-              <div class="card-body text-center">
-                <h5 class="card-title">Course 2</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-primary">
-              <div class="card-body text-center">
-                <h5 class="card-title">Course 3</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-warning">
-              <div class="card-body text-center">
-                <h5 class="card-title">Course 4</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
-              </div>
-            </div>
-          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
     </div>
@@ -202,33 +244,31 @@
 </template>
 
 <script>
-export default {
-  name: "Home",
-  data() {
-    return {
-      id: "",
-      topic: "",
-      phrase: "",
-      description: "",
-      image: "",
-      courses: [],
-      topics: [
-        {
-          search: "development",
-          topic: "Software Development",
-          phrase:
-            "From Java to Javascript, you will quickly gain the knowledge and skills to code like a pro!",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consequatur aliquam saepe qui. Dolor rem corporis pariatur deleniti accusamus quos!",
-          image: "url(../assets/areyourready.jpg)"
-        }
-      ]
-    };
-  }
-};
+export default {};
 </script>
 
 <style scoped>
+.jumbotron {
+  position: absolute;
+  top: 80%;
+  left: 0%;
+  color: white;
+}
+
+.jumbotron h1 {
+  display: block;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+  padding-left: 40px;
+  padding-top: 300px;
+}
+.jumbotron p {
+  color: white;
+  font-size: 20px;
+  padding-left: 40px;
+}
+
 tbody tr {
   cursor: pointer;
 }
@@ -241,12 +281,11 @@ tbody tr {
 
 #home-heading {
   position: relative;
-  min-height: 200px;
+  height: 700px;
   background: url(../assets/students.jpg);
-  background-attachment: fixed;
   background-repeat: no-repeat;
-  text-align: center;
-  color: #fff;
+  background-size: cover;
+  border-bottom: 1px solid #ff6a00;
 }
 
 .dark-overlay {
@@ -256,5 +295,23 @@ tbody tr {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+button {
+  padding: 15px 50px;
+  border: 0;
+  background: rgba(255, 253, 253, 0.767);
+  color: rgb(14, 1, 12);
+  cursor: pointer;
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  -webkit-transform: translate(-10%, -10%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+button:hover {
+  background: rgb(209, 203, 203);
 }
 </style>
