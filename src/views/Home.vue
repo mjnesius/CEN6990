@@ -25,7 +25,7 @@
               class="img-fluid"
               alt="Area for Topic1"
             />
-            <h3 class="card-title mt-2">Web Design</h3>
+            <h3 class="card-title mt-2">Software Development</h3>
             <p class="card-text mt-3">
               >Web design encompasses many different skills and disciplines in
               the production and maintenance of websites. The different areas of
@@ -47,7 +47,7 @@
               class="img-fluid"
               alt="Area for Topic2"
             />
-            <h3 class="card-title mt-2">Network Administration</h3>
+            <h3 class="card-title mt-2">Information Technology</h3>
             <p class="card-text mt-3">
               A network administrator is the person designated in an
               organization whose responsibility includes maintaining computer
@@ -68,7 +68,7 @@
               class="img-fluid"
               alt="Area for Topic3"
             />
-            <h3 class="card-title mt-2">Cyber Security</h3>
+            <h3 class="card-title mt-2">CyberSecurity</h3>
             <p class="card-text mt-3">
               Computer security, cybersecurity[1] or information technology
               security (IT security) is the protection of computer systems from
