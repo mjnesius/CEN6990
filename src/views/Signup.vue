@@ -104,16 +104,9 @@ export default {
 };
 </script>
 
-<style>
-.signup {
-  max-width: 400px;
-  margin-top: 60px;
-}
-.signup h2 {
-  font-size: 2.4em;
-}
-.signup .field {
-  margin-bottom: 16px;
+<style scoped>
+form {
+  min-height: 600px;
 }
 </style>
 
