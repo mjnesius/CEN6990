@@ -32,7 +32,7 @@
           <div class="form-group">
             <label for="exampleInputPassword1">Alias</label>
             <input
-              type="password"
+              type="text"
               v-model="alias"
               class="form-control"
               id="exampleInputPassword1"
