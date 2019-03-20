@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div class="row my-3 p-3">
+    <div class="row mt-3 p-3">
       <div class="col-md-10 mx-auto">
         <h1 class="display-5">{{ course.title }}</h1>
         <p class="lead">{{ course.longDescription }}</p>
@@ -36,9 +36,8 @@
     <div class="row p-3">
       <div class="col-md-10 mx-auto">
         <h2 class="display-5">Comments</h2>
-        <form @submit.prevent="addComment">
+        <form @submit.prevent="addComment" class="mb-4">
           <div class="form-group">
-            <label for="content">Add a comment:</label>
             <input
               type="text"
               v-model="newContent"
@@ -49,13 +48,12 @@
           </div>
           <p v-if="feedback" class="text-danger text-center">{{ feedback }}</p>
         </form>
-        <ul class="">
+        <ul class="comments">
           <li v-for="(comment, index) in comments" :key="index">
-            <p class="mb-2">
-              <span class="mr-5">{{ comment.alias }}</span>
-              <span class="mr-5">{{ comment.date }}</span>
-              <span>{{ comment.content }}</span>
-            </p>
+            <p>
+              <span class="text-muted mr-5">{{ comment.date }}</span>
+              <span class="text-muted lead">{{ comment.alias }}</span>
+              <p class="lead text-muted">{{ comment.content }}</p>
           </li>
         </ul>
       </div>
@@ -147,6 +145,11 @@ export default {
 </script>
 
 <style scoped>
+.comments {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 @media (min-width: 576px) {
   .lecture-list {
     max-height: 300px;

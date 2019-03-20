@@ -2,6 +2,11 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
+import Account from "./views/Account.vue";
+import History from "./views/History.vue";
+import Manage from "./views/Manage.vue";
+import Statistics from "./views/Statistics.vue";
+import Features from "./views/Features.vue";
 import Topic from "./views/Topic.vue";
 import Course from "./views/Course.vue";
 import Signup from "./views/Signup.vue";
@@ -25,12 +30,14 @@ const router = new Router({
       component: About
     },
     {
+      path: "/features",
+      name: "features",
+      component: Features
+    },
+    {
       path: "/topic/:id",
       name: "topic",
-      component: Topic,
-      meta: {
-        requiresAuth: true
-      }
+      component: Topic
     },
     {
       path: "/course/:id",
@@ -49,6 +56,26 @@ const router = new Router({
       path: "/login",
       name: "login",
       component: Login
+    },
+    {
+      path: "/manage",
+      name: "manage",
+      component: Manage
+    },
+    {
+      path: "/statistics",
+      name: "statistics",
+      component: Statistics
+    },
+    {
+      path: "/account",
+      name: "account",
+      component: Account
+    },
+    {
+      path: "/history",
+      name: "history",
+      component: History
     },
     {
       path: "*",
