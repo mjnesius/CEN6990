@@ -22,24 +22,80 @@
             <router-link class="nav-link" :to="{ name: 'about' }" exact>About</router-link>
           </li>
           <li class="nav-item">
-            <router-link
-              class="nav-link"
-              :to="{ name: 'topic', params: { id: 0 } }"
-              exact
-            >Development</router-link>
+            <router-link class="nav-link" :to="{ name: 'about' }" exact>Features</router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'topic', params: { id: 1 } }" exact>IT</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link
-              class="nav-link"
-              :to="{ name: 'topic', params: { id: 2 } }"
-              exact
-            >CyberSecurity</router-link>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >Browse By Topic</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <router-link
+                class="dropdown-item"
+                :to="{ name: 'topic', params: { id: 0 } }"
+                exact
+              >Development</router-link>
+              <router-link class="dropdown-item" :to="{ name: 'topic', params: { id: 1 } }" exact>IT</router-link>
+              <router-link
+                class="dropdown-item"
+                :to="{ name: 'topic', params: { id: 2 } }"
+                exact
+              >CyberSecurity</router-link>
+            </div>
           </li>
         </ul>
         <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >Admin</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <router-link
+                class="dropdown-item"
+                :to="{ name: 'topic', params: { id: 0 } }"
+                exact
+              >Manage Courses</router-link>
+              <router-link
+                class="dropdown-item"
+                :to="{ name: 'topic', params: { id: 1 } }"
+                exact
+              >View Statistics</router-link>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >Account</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <router-link
+                class="dropdown-item"
+                :to="{ name: 'topic', params: { id: 0 } }"
+                exact
+              >Profile</router-link>
+              <router-link
+                class="dropdown-item"
+                :to="{ name: 'topic', params: { id: 1 } }"
+                exact
+              >History</router-link>
+            </div>
+          </li>
           <li v-if="!user" class="nav-item">
             <router-link class="nav-link" :to="{ name: 'signup' }" exact>Signup</router-link>
           </li>
@@ -91,9 +147,8 @@ export default {
 </script>
 
 <style scoped>
-
 li.nav-item {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .navbar-brand {
   font-size: 1.7rem;
@@ -101,5 +156,4 @@ li.nav-item {
 .logout {
   cursor: pointer;
 }
-
 </style>
