@@ -1,5 +1,5 @@
 <template>
-  <div class="container">This is the Account Page</div>
+  <h1 class="container">This is the Profile Page</h1>
 </template>
 
 <script>

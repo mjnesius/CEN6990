@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
-import Account from "./views/Account.vue";
+import Profile from "./views/Profile.vue";
 import History from "./views/History.vue";
 import Manage from "./views/Manage.vue";
 import Statistics from "./views/Statistics.vue";
@@ -68,9 +68,9 @@ const router = new Router({
       component: Statistics
     },
     {
-      path: "/account",
-      name: "account",
-      component: Account
+      path: "/profile",
+      name: "profile",
+      component: Profile
     },
     {
       path: "/history",

@@ -86,12 +86,12 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <router-link
                 class="dropdown-item"
-                :to="{ name: 'topic', params: { id: 0 } }"
+                :to="{ name: 'profile', params: { id: 0 } }"
                 exact
               >Profile</router-link>
               <router-link
                 class="dropdown-item"
-                :to="{ name: 'topic', params: { id: 1 } }"
+                :to="{ name: 'history', params: { id: 1 } }"
                 exact
               >History</router-link>
             </div>
