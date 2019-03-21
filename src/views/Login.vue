@@ -14,10 +14,6 @@
               aria-describedby="emailHelp"
               placeholder="Enter email"
             >
-            <small
-              id="emailHelp"
-              class="form-text text-muted"
-            >We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
@@ -59,7 +55,7 @@ export default {
           .auth()
           .signInWithEmailAndPassword(this.email, this.password)
           .then(cred => {
-            this.$router.push({ name: "home" });
+            this.$router.go(-1);
           })
           .catch(err => {
             this.feedback = err.message;

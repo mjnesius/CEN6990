@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-fixed navbar-expand-md navbar-dark bg-primary">
+  <nav class="navbar navbar-fixed navbar-expand-md navbar-dark">
     <div class="container">
       <router-link class="navbar-brand" :to="{ name: 'home' }">UWF Empowers</router-link>
       <button
@@ -22,7 +22,7 @@
             <router-link class="nav-link" :to="{ name: 'about' }" exact>About</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'about' }" exact>Features</router-link>
+            <router-link class="nav-link" :to="{ name: 'features' }" exact>Features</router-link>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -63,12 +63,12 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <router-link
                 class="dropdown-item"
-                :to="{ name: 'topic', params: { id: 0 } }"
+                :to="{ name: 'manage', params: { id: 0 } }"
                 exact
               >Manage Courses</router-link>
               <router-link
                 class="dropdown-item"
-                :to="{ name: 'topic', params: { id: 1 } }"
+                :to="{ name: 'statistics', params: { id: 1 } }"
                 exact
               >View Statistics</router-link>
             </div>
@@ -86,12 +86,12 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <router-link
                 class="dropdown-item"
-                :to="{ name: 'topic', params: { id: 0 } }"
+                :to="{ name: 'profile', params: { id: 0 } }"
                 exact
               >Profile</router-link>
               <router-link
                 class="dropdown-item"
-                :to="{ name: 'topic', params: { id: 1 } }"
+                :to="{ name: 'history', params: { id: 1 } }"
                 exact
               >History</router-link>
             </div>
@@ -147,6 +147,7 @@ export default {
 </script>
 
 <style scoped>
+
 li.nav-item {
   font-size: 1rem;
 }
@@ -156,4 +157,11 @@ li.nav-item {
 .logout {
   cursor: pointer;
 }
+.dropdown-item{
+  font-size: 1rem;
+}
+nav {
+background-image: linear-gradient(rgb(14, 64, 105),#2196F3);
+}
+
 </style>
