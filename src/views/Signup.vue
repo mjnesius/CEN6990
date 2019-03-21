@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container vh-100">
     <div class="row my-5">
       <div class="col-md-4 mx-auto">
         <form @submit.prevent="signup">
@@ -37,7 +37,7 @@
           </div>
           <p v-if="feedback" class="text-danger text-center">{{ feedback }}</p>
           <div class="text-center">
-            <button class="btn btn-primary">Signup</button>
+            <button class="btn btn-lg btn-primary btn-block">Signup</button>
           </div>
         </form>
       </div>
@@ -85,6 +85,13 @@ export default {
                   .set({
                     alias: this.alias,
                     user_id: cred.user.uid
+                  });
+                cred.user
+                  .updateProfile({
+                    displayName: this.slug
+                  })
+                  .catch(error => {
+                    console.log(error);
                   });
               })
               .then(() => {

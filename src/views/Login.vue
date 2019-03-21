@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container vh-100">
     <div class="row my-5">
       <div class="col-md-4 mx-auto">
         <form @submit.prevent="login">
@@ -25,11 +25,18 @@
               placeholder="Password"
             >
           </div>
-          <p v-if="feedback" class="text-danger text-center">{{ feedback }}</p>
-          <div class="text-center">
-            <button class="btn btn-primary">Login</button>
+          <p v-if="feedbackLogin" class="text-danger text-center">{{ feedbackLogin }}</p>
+          <div class="text-center mb-3">
+            <button class="btn btn-lg btn-primary btn-block">Login</button>
           </div>
         </form>
+        <h5 class="text-center">
+          <a href @click.prevent="resetPassword">Forgot password?</a>
+        </h5>
+        <p
+          v-if="feedbackForgotPassword"
+          class="text-danger text-center"
+        >{{ feedbackForgotPassword }}</p>
       </div>
     </div>
   </div>
@@ -44,13 +51,33 @@ export default {
     return {
       email: null,
       password: null,
-      feedback: null
+      feedbackLogin: null,
+      feedbackForgotPassword: null
     };
   },
   methods: {
+    resetPassword() {
+      if (this.email) {
+        this.feedbackForgotPassword = null;
+        let auth = firebase.auth();
+        auth
+          .sendPasswordResetEmail(this.email)
+          .then(() => {
+            this.feedbackForgotPassword = `A Password Reset Email was sent to ${
+              this.email
+            }`;
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      } else {
+        this.feedbackForgotPassword =
+          "Please fill in email field and then re-select Forgot Password.";
+      }
+    },
     login() {
       if (this.email && this.password) {
-        this.feedback = null;
+        this.feedbackLogin = null;
         firebase
           .auth()
           .signInWithEmailAndPassword(this.email, this.password)
@@ -58,10 +85,10 @@ export default {
             this.$router.go(-1);
           })
           .catch(err => {
-            this.feedback = err.message;
+            this.feedbackLogin = err.message;
           });
       } else {
-        this.feedback = "Please fill in both fields";
+        this.feedbackLogin = "Please fill in both fields";
       }
     }
   }
@@ -69,7 +96,4 @@ export default {
 </script>
 
 <style scoped>
-form {
-  min-height: 600px;
-}
 </style>
