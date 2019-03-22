@@ -111,8 +111,7 @@ export default {
 </script>
 
 <style scoped>
-form {
-  min-height: 600px;
-}
+
+
 </style>
 
