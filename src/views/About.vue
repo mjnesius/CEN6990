@@ -20,7 +20,7 @@
             </div>
             <img
               class="d-block w-100 img-fluid img-responsive"
-              src="../assets/areyourready.jpg"
+              src="../assets/areyouready.svg"
               alt="First slide"
             />
           </div>
@@ -30,7 +30,7 @@
             </div>
             <img
               class="d-block w-100 img-fluid img-responsive"
-              src="../assets/inspiring-1.jpg"
+              src="../assets/inspiring-1.svg"
               alt="Second slide"
             />
           </div>
@@ -40,7 +40,7 @@
             </div>
             <img
               class="d-block w-100 img-fluid img-responsive"
-              src="../assets/inspiring-4.jpg"
+              src="../assets/inspiring-4.svg"
               alt="Third slide"
             />
           </div>
@@ -59,13 +59,15 @@
       >
         Start your IT journey!
       </h1>
-      <p class="lead">Access world class coursework for free!</p>
+      <p class="lead" style="text-align: center; justify-content: center;">
+        Access world class coursework for free!
+      </p>
       <hr class="my-4" />
       <div class="rowImg">
         <div class="columnImg">
           <div class="tile-container">
             <img
-              src="../assets/skills.jpg"
+              src="../assets/skills.svg"
               alt="Books_03"
               style="width:100%"
               display="block"
@@ -79,7 +81,7 @@
           </div>
           <div class="tile-container">
             <img
-              src="../assets/inspiring-3.jpg"
+              src="../assets/inspiring-3.svg"
               alt="portrait"
               style="width:100%"
               target="_self"
@@ -95,7 +97,7 @@
           <div class="tile-container">
             <a href="https://uwf.edu/ihire/" alt="iHire UWF" target="_self">
               <img
-                src="../assets/employer1.jpg"
+                src="../assets/employer1.svg"
                 alt="ihire project"
                 style="width:100%"
               />
@@ -111,7 +113,7 @@
               target="_self"
             >
               <img
-                src="../assets/testimonials-7.jpg"
+                src="../assets/testimonials-7.svg"
                 alt="Top Scholars"
                 style="width:100%"
               />
@@ -127,7 +129,7 @@
           <div class="tile-container">
             <a href="../topic/2" alt="Security" target="_self">
               <img
-                src="../assets/security-3.jpg"
+                src="../assets/security-3.svg"
                 alt="Security"
                 style="width:100%"
               />
@@ -138,7 +140,7 @@
           </div>
           <div class="tile-container">
             <a href="../topic/0" alt="Software" target="_self">
-              <img src="../assets/se.jpg" alt="Software" style="width:100%" />
+              <img src="../assets/se.svg" alt="Software" style="width:100%" />
               <div class="overlay">
                 <div class="overlay-text">Develop Software</div>
               </div>
@@ -196,7 +198,7 @@
         id="inspirationCarousel"
         class="carousel2 slide mb-1 mt-1"
         data-ride="carousel"
-        data-interval="6000"
+        data-interval="4000"
         style="max-height: 550px; !important"
       >
         <div class="carousel2-inner">
@@ -212,12 +214,8 @@
               :src="test.img"
               :alt="test.name"
               z-index="24"
-              style=" box-shadow: 0px 0px 10px 5px rgba(141, 200, 232, .4);border-radius: 60% 60%; display: block; margin-left: auto;margin-right: auto; width: 50%;!important;"
+              style=" display: block; margin-left: auto;margin-right: auto; width: 50%;!important;"
             />
-            <!--<div class="carousel2-content" style="background-color: #003865; opacity:0.9; min-height:100px; display: flex; text-align: center; justify-content: center; 
-                    align-items: center;">
-                <h2 class="caro-h2" >{{ test.blurb }}</h2>
-            </div>-->
             <div
               class="row carousel-caption d-md-block rounded"
               style="box-sizing: border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: flex; text-align: center; justify-content: center;!important"
@@ -416,7 +414,7 @@ export default {
           name: "Joselle S.",
           specialty: "Cybersecurity 2019",
           blurb: "I aced the interview. Thanks Empower!",
-          img: require("../assets/testimonials-1.jpg")
+          img: require("../assets/testimonials-1.svg")
         },
         {
           id: 1,
@@ -424,7 +422,7 @@ export default {
           specialty: "Database Systems 2019",
           blurb:
             "UWF Empower helped me kickstart my career change, all on my schedule!",
-          img: require("../assets/testimonials-2.jpg")
+          img: require("../assets/testimonials-2.svg")
         },
         {
           id: 2,
@@ -432,7 +430,7 @@ export default {
           specialty: "Software engineering 2019",
           blurb:
             "My employer is reluctant to pay for training. Thanks to UWF Empowers free resource, I can learn anything!",
-          img: require("../assets/testimonials-3.jpg")
+          img: require("../assets/testimonials-3.svg")
         }
       ]
     };
