@@ -1,7 +1,7 @@
 <template>
   <div class="container vh-100">
     <div class="row my-5">
-      <div class="col-md-4 mx-auto">
+      <div class="col-md-4 mx-auto my-5">
         <form @submit.prevent="login">
           <h2 class="text-center">Login</h2>
           <div class="form-group">
@@ -9,10 +9,11 @@
             <input
               type="email"
               v-model="email"
-              class="form-control"
+              class="form-control form-control-lg"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Enter email"
+              autofocus
             >
           </div>
           <div class="form-group">
@@ -20,12 +21,12 @@
             <input
               type="password"
               v-model="password"
-              class="form-control"
+              class="form-control form-control-lg"
               id="exampleInputPassword1"
               placeholder="Password"
             >
           </div>
-          <p v-if="feedbackLogin" class="text-danger text-center">{{ feedbackLogin }}</p>
+          <p v-if="feedbackLogin" class="text-danger text-center h5 my-3">{{ feedbackLogin }}</p>
           <div class="text-center mb-3">
             <button class="btn btn-lg btn-primary btn-block">Login</button>
           </div>
@@ -35,7 +36,7 @@
         </h5>
         <p
           v-if="feedbackForgotPassword"
-          class="text-danger text-center"
+          class="text-danger text-center h5 my-3"
         >{{ feedbackForgotPassword }}</p>
       </div>
     </div>
