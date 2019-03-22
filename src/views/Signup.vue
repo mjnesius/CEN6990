@@ -27,19 +27,17 @@
             >
           </div>
           <div class="form-group mb-4">
-            <label for="exampleInputPassword1" class="sr-only">Alias</label>
+            <label for="alias" class="sr-only">Alias</label>
             <input
               type="text"
               v-model="alias"
               class="form-control form-control-lg"
-              id="exampleInputPassword1"
+              id="alias"
               placeholder="Alias"
             >
           </div>
           <p v-if="feedback" class="text-danger text-center h5 my-3">{{ feedback }}</p>
-          <div class="text-center">
-            <button class="btn btn-lg btn-primary btn-block">Signup</button>
-          </div>
+          <button class="btn btn-lg btn-primary btn-block">Signup</button>
         </form>
       </div>
     </div>
@@ -89,7 +87,7 @@ export default {
                   });
                 cred.user
                   .updateProfile({
-                    displayName: this.slug
+                    displayName: this.alias
                   })
                   .catch(error => {
                     console.log(error);
@@ -112,7 +110,4 @@ export default {
 </script>
 
 <style scoped>
-
-
 </style>
-

@@ -147,7 +147,6 @@ export default {
 </script>
 
 <style scoped>
-
 li.nav-item {
   font-size: 1rem;
 }
@@ -157,11 +156,10 @@ li.nav-item {
 .logout {
   cursor: pointer;
 }
-.dropdown-item{
+.dropdown-item {
   font-size: 1rem;
 }
 nav {
-background-image: linear-gradient(rgb(14, 64, 105),#2196F3);
+  background-image: linear-gradient(rgb(14, 64, 105), #2196f3);
 }
-
 </style>

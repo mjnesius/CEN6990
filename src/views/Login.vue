@@ -27,9 +27,7 @@
             >
           </div>
           <p v-if="feedbackLogin" class="text-danger text-center h5 my-3">{{ feedbackLogin }}</p>
-          <div class="text-center mb-3">
-            <button class="btn btn-lg btn-primary btn-block">Login</button>
-          </div>
+          <button class="btn btn-lg btn-primary btn-block mb-3">Login</button>
         </form>
         <h5 class="text-center">
           <a href @click.prevent="resetPassword">Forgot password?</a>
@@ -59,6 +57,7 @@ export default {
   methods: {
     resetPassword() {
       if (this.email) {
+        this.feedbackLogin = null;
         this.feedbackForgotPassword = null;
         let auth = firebase.auth();
         auth
@@ -70,8 +69,10 @@ export default {
           })
           .catch(error => {
             console.log(error);
+            this.feedbackForgotPassword = error;
           });
       } else {
+        this.feedbackLogin = null;
         this.feedbackForgotPassword =
           "Please fill in email field and then re-select Forgot Password.";
       }

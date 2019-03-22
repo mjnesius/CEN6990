@@ -70,12 +70,18 @@ const router = new Router({
     {
       path: "/profile",
       name: "profile",
-      component: Profile
+      component: Profile,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: "/history",
       name: "history",
-      component: History
+      component: History,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: "*",
