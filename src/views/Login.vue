@@ -3,9 +3,9 @@
     <div class="row my-5">
       <div class="col-md-4 mx-auto my-5">
         <form @submit.prevent="login">
-          <h2 class="text-center">Login</h2>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+          <h2 class="text-center mb-4">Login</h2>
+          <div class="form-group mb-4">
+            <label for="exampleInputEmail1" class="sr-only">Email address</label>
             <input
               type="email"
               v-model="email"
@@ -16,8 +16,8 @@
               autofocus
             >
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
+          <div class="form-group mb-4">
+            <label for="exampleInputPassword1" class="sr-only">Password</label>
             <input
               type="password"
               v-model="password"
