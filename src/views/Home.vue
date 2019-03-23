@@ -5,9 +5,16 @@
         <section class="dark-overlay">
           <h1 class="display-4">Get Ready to Learn!</h1>
           <p>Thousands of classes to fuel your creativity and career.</p>
-          <figure>
-            <button type="button">Get Started</button>
-          </figure>
+          <!-- <figure> -->
+          <!-- <button type="button" href="About">Learn More</button> -->
+          <a
+            class="button btn-light btn-lg btn-primary"
+            href="About"
+            role="button"
+            >Learn More</a
+          >
+
+          <!-- </figure> -->
         </section>
       </div>
     </section>
@@ -24,11 +31,11 @@
             />
             <h3 class="card-title mt-2">Computer Network</h3>
             <p class="card-text mt-3">
-              System for connecting hardware, software and resource sharing and
+              System for connecting hardware, software, resource sharing and
               information transmission of network with fully functional network
               software by using communication equipment and lines to connect
               multiple computer systems with different geographical locations
-              and functions independently
+              and functions independently.
             </p>
             <a href="#" class="btn btn-primary btn-sm float-right"
               >Find A Course</a
@@ -67,7 +74,7 @@
               rules. The whole of the token string consisting of tokens
               according to the rules is the language.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
+            <a href="#" class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
           </div>
@@ -517,7 +524,7 @@
               individuals will work in teams covering different aspects of the
               design process, although some designers will cover them all.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
+            <a href="#" class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
           </div>
@@ -538,7 +545,7 @@
               interactions as well as network integrity/resilience are the key
               areas of focus.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
+            <a href="#" class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
           </div>
@@ -558,7 +565,7 @@
               well as from disruption or misdirection of the services they
               provide.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
+            <a href="#" class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
           </div>
@@ -603,7 +610,12 @@ tbody tr {
 .btn {
   min-height: 40px;
   min-width: 150px;
+  position: relative;
 }
+
+/* button.btn {
+  margin-top: auto;
+} */
 
 .card:hover {
   -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
@@ -629,7 +641,7 @@ tbody tr {
   height: 100%;
 }
 
-button {
+.button {
   padding: 15px 50px;
   border: 0;
   background: rgba(255, 253, 253, 0.767);
@@ -637,7 +649,7 @@ button {
   cursor: pointer;
   position: absolute;
   top: 65%;
-  left: 10%;
+  left: 12%;
   -webkit-transform: translate(-10%, -10%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -672,15 +684,8 @@ button:hover {
 }
 
 .card-deck {
-  bottom-margin: 10px;
-  padding: 10px;
-}
-
-@media screen and (min-width: 576px) {
-  .carousel {
-    max-height: 400px;
-    min-height: 150px;
-    overflow: hidden;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 0.5rem;
 }
 </style>
