@@ -202,20 +202,12 @@
         id="carouselExampleIndicators"
         class="carousel slide"
         data-ride="carousel"
+        data-interval="false"
       >
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
+        <div class="carousel-inner bg-primary">
           <div class="carousel-item active">
-            <div class="card-deck">
-              <div class="card mb-3">
+            <div class="card-deck m-1">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -234,16 +226,11 @@
                         design in CSS, create a content strategy, and analyze
                         user experience design.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card mb-3">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -262,16 +249,11 @@
                         lead generation and SEO, we through the best practices
                         and principles of digital marketing.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card mb-3">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -290,11 +272,6 @@
                         tutorials can help you learn SEO, spreadsheets, word
                         processing, and more.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -302,8 +279,8 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="card-deck">
-              <div class="card mb-3">
+            <div class="card-deck m-1">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -323,16 +300,11 @@
                         considerations, skills and competencies to help you
                         become and succeed as a manager.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card mb-3">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -350,16 +322,11 @@
                         foundations of animation, learn everything you need to
                         know to get started in 2D animation.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card mb-3">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -378,11 +345,6 @@
                         InDesign, explore typography, and learn the nuances of
                         designing for print.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -390,8 +352,8 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="card-deck">
-              <div class="card mb-3">
+            <div class="card-deck m-1">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -412,18 +374,13 @@
                         motivating agile project teams, from developing user
                         stories and agile charts to driving productive meetings.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card mb-3">
                 <div class="row no-gutters">
-                  <div class="col-md-4">
+                  <div class="col">
                     <img
                       src="../assets/accounts-applications-apps-267350.jpg"
                       class="card-img"
@@ -443,18 +400,13 @@
                         basics of cryptography and cybercrime investigation and
                         response.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card mb-3">
                 <div class="row no-gutters">
-                  <div class="col-md-4">
+                  <div class="col">
                     <img
                       src="../assets/adults-analysis-banking-1451447.jpg"
                       class="card-img"
@@ -469,11 +421,6 @@
                         and create mobile apps, work with PHP and MySQL
                         databases, get started with the statistical processing
                         language R, and much more.
-                      </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
                       </p>
                     </div>
                   </div>
@@ -524,7 +471,10 @@
               individuals will work in teams covering different aspects of the
               design process, although some designers will cover them all.
             </p>
-            <a href="#" class="btn btn-primary btn-sm float-right"
+            <a
+              href="/topic/0"
+              alt="Development"
+              class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
           </div>
@@ -545,7 +495,10 @@
               interactions as well as network integrity/resilience are the key
               areas of focus.
             </p>
-            <a href="#" class="btn btn-primary btn-sm float-right"
+            <a
+              href="/topic/1"
+              alt="IT"
+              class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
           </div>
@@ -565,7 +518,10 @@
               well as from disruption or misdirection of the services they
               provide.
             </p>
-            <a href="#" class="btn btn-primary btn-sm float-right"
+            <a
+              href="/topic/2"
+              alt="CyberSecurity"
+              class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
           </div>
