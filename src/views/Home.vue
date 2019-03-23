@@ -35,7 +35,7 @@
               individuals will work in teams covering different aspects of the
               design process, although some designers will cover them all.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
+            <a href="#" class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
           </div>
@@ -56,7 +56,7 @@
               interactions as well as network integrity/resilience are the key
               areas of focus.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
+            <a href="#" class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
           </div>
@@ -76,7 +76,7 @@
               well as from disruption or misdirection of the services they
               provide.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
+            <a href="#" class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
           </div>
@@ -490,6 +490,11 @@ tbody tr {
   cursor: pointer;
 }
 
+.btn {
+  min-height: 40px;
+  min-width: 150px;
+}
+
 .card:hover {
   -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
@@ -550,5 +555,22 @@ button:hover {
 
 .carousel-indicator {
   bottom: 40px;
+}
+
+.carousel-control {
+  width: 4%;
+}
+
+.card-deck {
+  bottom-margin: 10px;
+  padding: 10px;
+}
+
+@media screen and (min-width: 576px) {
+  .carousel {
+    max-height: 400px;
+    min-height: 150px;
+    overflow: hidden;
+  }
 }
 </style>
