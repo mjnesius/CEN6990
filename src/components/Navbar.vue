@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-fixed navbar-expand-md navbar-dark">
     <div class="container">
-      <router-link class="navbar-brand" :to="{ name: 'home' }">UWF Empowers</router-link>
+      <router-link class="navbar-brand mb-1" :to="{ name: 'home' }">UWF Empowers</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -103,7 +103,7 @@
             <router-link class="nav-link" :to="{ name: 'login', params: { id: 0 } }" exact>Login</router-link>
           </li>
           <li v-if="user" class="nav-item">
-            <a class="nav-link">{{ user.email }}</a>
+            <a class="nav-link mx-3">{{ user.displayName }}</a>
           </li>
           <li v-if="user" class="nav-item">
             <a class="nav-link logout" @click="logout">Logout</a>

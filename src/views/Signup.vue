@@ -37,8 +37,13 @@
             >
           </div>
           <p v-if="feedback" class="text-danger text-center h5 my-3">{{ feedback }}</p>
-          <button class="btn btn-lg btn-primary btn-block">Signup</button>
+          <button class="btn btn-lg btn-primary btn-block mb-5">Signup</button>
         </form>
+        <div v-if="fetchData" class="d-flex justify-content-center">
+          <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -58,7 +63,8 @@ export default {
       password: null,
       alias: null,
       feedback: null,
-      slug: null
+      slug: null,
+      fetchData: false
     };
   },
   methods: {
@@ -75,6 +81,7 @@ export default {
           if (!result.data.unique) {
             this.feedback = "This alias already exists";
           } else {
+            this.fetchData = true;
             firebase
               .auth()
               .createUserWithEmailAndPassword(this.email, this.password)
