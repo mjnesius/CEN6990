@@ -16,13 +16,10 @@
             >
           </div>
           <p
-            v-if="emailFeedbackSuccess"
-            class="text-center h5 my-3 text-success"
-          >{{ emailFeedbackSuccess }}</p>
-          <p
-            v-if="emailFeedbackError"
-            class="text-center h5 my-3 text-danger"
-          >{{ emailFeedbackError }}</p>
+            v-if="emailFeedback"
+            class="text-center h5 my-3"
+            :class="[isEmailSuccess ? 'text-success' : 'text-danger']"
+          >{{ emailFeedback }}</p>
           <button class="btn btn-lg btn-primary btn-block mb-5">Update Email</button>
         </form>
         <form @submit.prevent="updatePassword">
@@ -36,8 +33,11 @@
               placeholder="Password"
             >
           </div>
-          <p v-if="passwordFeedbackSuccess" class="text-center h5 mb-3 text-success" v:class="messageClass">{{ passwordFeedbackSuccess }}</p>
-          <p v-if="passwordFeedbackError" class="text-center h5 mb-3 text-danger" v:class="messageClass">{{ passwordFeedbackError }}</p>
+          <p
+            v-if="passwordFeedback"
+            class="text-center h5 mb-3"
+            :class="[isPasswordSuccess ? 'text-success' : 'text-danger']"
+          >{{ passwordFeedback }}</p>
           <button class="btn btn-lg btn-primary btn-block mb-5">Update Password</button>
         </form>
         <h3>
@@ -63,45 +63,47 @@ export default {
       email: null,
       password: null,
       alias: null,
-      passwordFeedbackSuccess: null,
-      passwordFeedbackError: null,
-      emailFeedbackSuccess: null,
-      emailFeedbackError: null
+      passwordFeedback: null,
+      emailFeedback: null,
+      isEmailSuccess: true,
+      isPasswordSuccess: true
     };
   },
   methods: {
     updatePassword() {
       if (this.password) {
-        this.passwordFeedbackSuccess = null;
-        this.passwordFeedbackError = null;
+        this.passwordFeedback = null;
         this.user
           .updatePassword(this.password)
           .then(() => {
-            this.passwordFeedbackSuccess = "Password update successful.";
+            this.isPasswordSuccess = true;
+            this.passwordFeedback = "Password update successful.";
           })
           .catch(error => {
-            this.passwordFeedbackError = error;
+            this.isPasswordSuccess = false;
+            this.passwordFeedback = error;
           });
       } else {
-        this.passwordFeedbackSuccess = null;
-        this.passwordFeedbackError = "Please fill in password field";
+        this.isPasswordSuccess = false;
+        this.passwordFeedback = "Please fill in password field";
       }
     },
     updateEmail() {
       if (this.email) {
-        this.emailFeedbackSuccess = null;
-        this.emailFeedbackError = null;
+        this.emailFeedback = null;
         this.user
           .updateEmail(this.email)
           .then(() => {
-            this.emailFeedbackSuccess = "Email update successful";
+            this.isEmailSuccess = true;
+            this.emailFeedback = "Email update successful";
           })
           .catch(error => {
-            this.emailFeedbackError = error;
+            this.isEmailSuccess = false;
+            this.emailFeedback = error;
           });
       } else {
-        this.emailFeedbackSuccess = null;
-        this.emailFeedbackError = "Please fill in email field";
+        this.isEmailSuccess = false;
+        this.emailFeedback = "Please fill in email field";
       }
     }
   },
