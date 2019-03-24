@@ -4,6 +4,8 @@ import Home from "./views/Home.vue";
 import About from "./views/About.vue";
 import Profile from "./views/Profile.vue";
 import History from "./views/History.vue";
+import Add from "./views/Add.vue";
+import Edit from "./views/Edit.vue";
 import Manage from "./views/Manage.vue";
 import Statistics from "./views/Statistics.vue";
 import Features from "./views/Features.vue";
@@ -12,6 +14,7 @@ import Course from "./views/Course.vue";
 import Signup from "./views/Signup.vue";
 import Login from "./views/Login.vue";
 import firebase from "firebase";
+import db from "@/firebase/init";
 
 Vue.use(Router);
 
@@ -60,12 +63,20 @@ const router = new Router({
     {
       path: "/manage",
       name: "manage",
-      component: Manage
+      component: Manage,
+      meta: {
+        requiresAuth: true,
+        requiresInstructor: true
+      }
     },
     {
       path: "/statistics",
       name: "statistics",
-      component: Statistics
+      component: Statistics,
+      meta: {
+        requiresAuth: true,
+        requiresInstructor: true
+      }
     },
     {
       path: "/profile",
@@ -84,6 +95,24 @@ const router = new Router({
       }
     },
     {
+      path: "/add",
+      name: "add",
+      component: Add,
+      meta: {
+        requiresAuth: true,
+        requiresInstructor: true
+      }
+    },
+    {
+      path: "/edity",
+      name: "edit",
+      component: Edit,
+      meta: {
+        requiresAuth: true,
+        requiresInstructor: true
+      }
+    },
+    {
       path: "*",
       redirect: "/"
     }
@@ -95,6 +124,20 @@ router.beforeEach((to, from, next) => {
   if (to.matched.some(rec => rec.meta.requiresAuth)) {
     let user = firebase.auth().currentUser;
     if (user) {
+      if (to.matched.some(rec => rec.meta.requiresInstructor)) {
+        db.collection("admin")
+          .doc(user.uid)
+          .get()
+          .then(doc => {
+            if (doc.exists) {
+              next();
+            } else {
+              next({
+                name: "home"
+              });
+            }
+          });
+      }
       next();
     } else {
       next({

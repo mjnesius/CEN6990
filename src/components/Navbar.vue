@@ -50,7 +50,7 @@
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item dropdown">
+          <li v-if="admin" class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -116,22 +116,44 @@
 
 <script>
 import firebase from "firebase";
+import db from "@/firebase/init";
 
 export default {
   name: "Navbar",
   data() {
     return {
-      user: null
+      user: null,
+      admin: false
     };
   },
   created() {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.user = user;
+        db.collection("admin")
+          .doc(user.uid)
+          .get()
+          .then(doc => {
+            if (doc.exists) {
+              this.admin = true;
+            } else {
+              this.admin = false;
+            }
+          });
       } else {
         this.user = null;
       }
     });
+    db.collection("admin")
+      .doc(this.user.uid)
+      .get()
+      .then(doc => {
+        if (doc.exists) {
+          this.admin = true;
+        } else {
+          this.admin = false;
+        }
+      });
   },
   methods: {
     logout() {
