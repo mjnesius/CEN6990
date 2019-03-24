@@ -37,9 +37,11 @@
               multiple computer systems with different geographical locations
               and functions independently.
             </p>
-            <a href="#" class="btn btn-primary btn-sm float-right"
-              >Find A Course</a
-            >
+            <footer>
+              <a href="#" class="btn btn-primary btn-sm float-right"
+                >Find A Course</a
+              >
+            </footer>
           </div>
         </div>
         <div class="card cardSet1 text">
@@ -55,6 +57,9 @@
               system structure, including the composition of the data flow and
               control flow within the machine and the logic design.
             </p>
+            <br />
+            <br />
+            <p></p>
             <a href="#" class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
@@ -70,13 +75,22 @@
             <h3 class="card-title mt-2">Advanced programming language</h3>
             <p class="card-text mt-3">
               A programming language is a language used to write computer
-              programs. The basis of a language is a set of tokens and a set of
-              rules. The whole of the token string consisting of tokens
-              according to the rules is the language.
+              programs. The basis of alanguage is a set of tokens and a set of
+              rules. The whole of the token string consisting of tokens ac is
+              cording to the rules is the language.
             </p>
-            <a href="#" class="btn btn-primary btn-sm float-right"
-              >Find A Course</a
-            >
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <footer>
+              <a href="#" class="btn btn-primary btn-sm float-right"
+                >Find A Course</a
+              >
+            </footer>
           </div>
         </div>
         <div class="card cardSet1 text">
@@ -93,6 +107,9 @@
               algorithms for computing, processing and displaying graphics using
               computers.
             </p>
+            <br />
+            <br />
+            <br />
             <a href="#" class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
@@ -144,9 +161,9 @@
                 <p class="card-text"> Computer composition refers to the logical realization of 
                         the system structure, including the composition of the data 
                         flow and control flow within the machine and the logic design.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
+                        <br/>
+                        <br/>
+                <a href="#" class="btn btn-dark btn-sm float-right">Learn more..</a>
               </div>
             </div>
           </div>
@@ -545,6 +562,9 @@
               interactions as well as network integrity/resilience are the key
               areas of focus.
             </p>
+            <br />
+            <br />
+            <br />
             <a href="#" class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
@@ -565,6 +585,10 @@
               well as from disruption or misdirection of the services they
               provide.
             </p>
+            <br />
+            <br />
+            <br />
+            <br />
             <a href="#" class="btn btn-primary btn-sm float-right"
               >Find A Course</a
             >
