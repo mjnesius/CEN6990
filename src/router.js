@@ -30,22 +30,26 @@ const router = new Router({
     {
       path: "/about",
       name: "about",
-      component: About
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
       path: "/features",
       name: "features",
-      component: Features
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Features.vue")
     },
     {
       path: "/topic/:id",
       name: "topic",
-      component: Topic
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Topic.vue")
     },
     {
       path: "/course/:id",
       name: "course",
-      component: Course,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Course.vue"),
       meta: {
         requiresAuth: true
       }
@@ -53,17 +57,20 @@ const router = new Router({
     {
       path: "/signup",
       name: "signup",
-      component: Signup
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Signup.vue")
     },
     {
       path: "/login",
       name: "login",
-      component: Login
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Login.vue")
     },
     {
       path: "/manage",
       name: "manage",
-      component: Manage,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Manage.vue"),
       meta: {
         requiresAuth: true,
         requiresInstructor: true
@@ -72,7 +79,8 @@ const router = new Router({
     {
       path: "/statistics",
       name: "statistics",
-      component: Statistics,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Statistics.vue"),
       meta: {
         requiresAuth: true,
         requiresInstructor: true
@@ -81,7 +89,8 @@ const router = new Router({
     {
       path: "/profile",
       name: "profile",
-      component: Profile,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Profile.vue"),
       meta: {
         requiresAuth: true
       }
@@ -89,7 +98,8 @@ const router = new Router({
     {
       path: "/history",
       name: "history",
-      component: History,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/History.vue"),
       meta: {
         requiresAuth: true
       }
@@ -97,7 +107,8 @@ const router = new Router({
     {
       path: "/add",
       name: "add",
-      component: Add,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Add.vue"),
       meta: {
         requiresAuth: true,
         requiresInstructor: true
@@ -106,7 +117,8 @@ const router = new Router({
     {
       path: "/edity",
       name: "edit",
-      component: Edit,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Edit.vue"),
       meta: {
         requiresAuth: true,
         requiresInstructor: true

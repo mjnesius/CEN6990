@@ -144,16 +144,6 @@ export default {
         this.user = null;
       }
     });
-    db.collection("admin")
-      .doc(this.user.uid)
-      .get()
-      .then(doc => {
-        if (doc.exists) {
-          this.admin = true;
-        } else {
-          this.admin = false;
-        }
-      });
   },
   methods: {
     logout() {
