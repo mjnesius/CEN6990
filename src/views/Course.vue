@@ -111,6 +111,32 @@ export default {
   created() {
     let user = firebase.auth().currentUser;
     let paramCourseId = this.$route.params.id;
+    db.collection("courses")
+      .doc(paramCourseId)
+      .get()
+      .then(doc => {
+        this.course = doc.data();
+        this.currentVideo = this.course.lectures[0].id;
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    let ref = db.collection("trending").doc(paramCourseId);
+    ref.get().then(doc => {
+      let newCount = 1;
+      if (doc.exists) {
+        newCount = doc.data().count + 1;
+      }
+      ref
+        .set({
+          title: this.course.title,
+          instructor: this.course.instructor,
+          count: newCount
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    });
     db.collection("users")
       .where("user_id", "==", user.uid)
       .get()
@@ -136,16 +162,6 @@ export default {
               console.log(err);
             });
         });
-      })
-      .catch(err => {
-        console.log(err);
-      });
-    db.collection("courses")
-      .doc(paramCourseId)
-      .get()
-      .then(doc => {
-        this.course = doc.data();
-        this.currentVideo = this.course.lectures[0].id;
       })
       .catch(err => {
         console.log(err);
