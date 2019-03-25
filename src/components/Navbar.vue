@@ -116,34 +116,20 @@
 
 <script>
 import firebase from "firebase";
-import db from "@/firebase/init";
 
 export default {
   name: "Navbar",
   data() {
     return {
-      user: null,
-      admin: false
     };
   },
-  created() {
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        this.user = user;
-        db.collection("admin")
-          .doc(user.uid)
-          .get()
-          .then(doc => {
-            if (doc.exists) {
-              this.admin = true;
-            } else {
-              this.admin = false;
-            }
-          });
-      } else {
-        this.user = null;
-      }
-    });
+  computed: {
+    user () {
+      return this.$store.state.user
+    },
+    admin () {
+      return this.$store.state.admin
+    }
   },
   methods: {
     logout() {

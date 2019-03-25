@@ -26,12 +26,14 @@
         </tr>
       </tbody>
     </table>
-    <h3 v-if = "historyList.length == 0" class="my-5 text-center text-dark">You have no courses in your history. Get started today!</h3>
+    <p
+      v-if="historyList.length == 0"
+      class="my-5 text-center text-muted"
+    >You have no courses in your history. Get started today!</p>
   </div>
 </template>
 
 <script>
-import firebase from "firebase";
 import db from "@/firebase/init";
 
 export default {
@@ -46,28 +48,19 @@ export default {
       this.$router.push({ name: "course", params: { id } });
     }
   },
-
+  computed: {
+    user() {
+      return this.$store.state.user;
+    }
+  },
   created() {
     db.collection("users")
-      .where("user_id", "==", firebase.auth().currentUser.uid)
+      .where("user_id", "==", this.user.uid)
+      .limit(10)
       .get()
       .then(snapshot => {
         snapshot.forEach(doc => {
-          let courseHistory = doc.data().history;
-          this.historyList = [];
-          courseHistory.forEach(nextCourse => {
-            db.collection("courses")
-              .doc(nextCourse)
-              .get()
-              .then(doc => {
-                let course = doc.data();
-                course.id = doc.id;
-                this.historyList.push(course);
-              })
-              .catch(err => {
-                console.log(err);
-              });
-          });
+          this.historyList = doc.data().history;
         });
       })
       .catch(err => {

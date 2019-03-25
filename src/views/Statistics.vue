@@ -6,7 +6,7 @@
       </div>
       <div class="col-md-6 mt-3 text-center">
         <h1 class="dispay-3 mt-5">Statistics</h1>
-        <p class="lead">Visit count by course.</p>
+        <p class="lead">Top Ten Visit Counts by Course.</p>
         <p>Numbers are reset to zero every Sunday at midnight.</p>
       </div>
     </div>
@@ -44,6 +44,7 @@ export default {
   created() {
     db.collection("trending")
       .orderBy("count", "desc")
+      .limit(10)
       .get()
       .then(snapshot => {
         snapshot.forEach(doc => {

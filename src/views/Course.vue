@@ -72,6 +72,9 @@ export default {
   computed: {
     newVideo() {
       return `https://www.youtube.com/embed/${this.currentVideo}?rel=0`;
+    },
+    firebaseUser() {
+      return this.$store.state.user;
     }
   },
   methods: {
@@ -105,11 +108,12 @@ export default {
       newContent: null,
       feedback: null,
       comments: [],
-      user: null
+      user: null,
+      userId: null,
+      historyList: null
     };
   },
   created() {
-    let user = firebase.auth().currentUser;
     let paramCourseId = this.$route.params.id;
     db.collection("courses")
       .doc(paramCourseId)
@@ -138,26 +142,35 @@ export default {
         });
     });
     db.collection("users")
-      .where("user_id", "==", user.uid)
+      .where("user_id", "==", this.firebaseUser.uid)
       .get()
       .then(snapshot => {
         snapshot.forEach(doc => {
           this.user = doc.data();
-          this.user.id = doc.id;
+          this.userId = doc.id;
           let historyList = doc.data().history;
           if (!historyList) {
             historyList = [];
+          } else {
+            historyList = historyList.filter(nextCourse => {
+              return nextCourse.id != paramCourseId;
+            });
           }
-          historyList = historyList.filter(nextCourse => {
-            return nextCourse != paramCourseId;
-          });
           if (historyList.length > 10) {
             historyList.pop();
           }
-          historyList.unshift(paramCourseId);
+          let newEntry = {
+            title: this.course.title,
+            shortDescription: this.course.shortDescription,
+            instructor: this.course.instructor,
+            id: paramCourseId
+          };
+          historyList.unshift(newEntry);
           db.collection("users")
-            .doc(this.user.id)
-            .update({ history: historyList })
+            .doc(this.userId)
+            .update({
+              history: historyList
+            })
             .catch(err => {
               console.log(err);
             });
@@ -179,9 +192,6 @@ export default {
             });
           }
         });
-      })
-      .catch(err => {
-        console.log(err);
       });
   }
 };

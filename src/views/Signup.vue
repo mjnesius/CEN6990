@@ -64,12 +64,14 @@ export default {
       alias: null,
       feedback: null,
       slug: null,
-      fetchData: false
+      fetchData: false,
+      showSuccessMessage: true
     };
   },
   methods: {
     signup() {
       if (this.alias && this.email && this.password) {
+        this.fetchData = true;
         this.feedback = null;
         this.slug = slugify(this.alias, {
           replacement: "-",
@@ -79,9 +81,9 @@ export default {
         let checkAlias = firebase.functions().httpsCallable("checkAlias");
         checkAlias({ slug: this.slug }).then(result => {
           if (!result.data.unique) {
+            this.fetchData = false;
             this.feedback = "This alias already exists";
           } else {
-            this.fetchData = true;
             firebase
               .auth()
               .createUserWithEmailAndPassword(this.email, this.password)
@@ -101,9 +103,11 @@ export default {
                   });
               })
               .then(() => {
+                this.fetchData = false;
                 this.$router.push({ name: "home" });
               })
               .catch(err => {
+                this.fetchData = false;
                 this.feedback = err.message;
               });
           }
