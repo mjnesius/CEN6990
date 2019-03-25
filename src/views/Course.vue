@@ -30,7 +30,7 @@
         <p class="lead">{{ course.longDescription }}</p>
         <hr>
         <h4 class="text-muted">Instructor: {{ course.instructor }}</h4>
-        <p class="text-muted lead">{{ course.instructorBio }}</p>
+        <p class="lead">{{ course.instructorBio }}</p>
       </div>
     </div>
     <div class="row p-3">
@@ -41,7 +41,7 @@
             <input
               type="text"
               v-model="newContent"
-              class="form-control"
+              class="form-control form-control-lg"
               id="content"
               placeholder="New comment..."
             >
@@ -54,7 +54,7 @@
               <span class="text-muted mr-5">{{ comment.date }}</span>
               <span class="text-muted lead">{{ comment.alias }}</span>
             </p>
-            <p class="lead text-muted">{{ comment.content }}</p>
+            <h5>{{ comment.content }}</h5>
           </li>
         </ul>
       </div>
@@ -125,7 +125,9 @@ export default {
           historyList = historyList.filter(nextCourse => {
             return nextCourse != paramCourseId;
           });
-          delete historyList[10];
+          if (historyList.length > 10) {
+            historyList.pop();
+          }
           historyList.unshift(paramCourseId);
           db.collection("users")
             .doc(this.user.id)
@@ -134,6 +136,9 @@ export default {
               console.log(err);
             });
         });
+      })
+      .catch(err => {
+        console.log(err);
       });
     db.collection("courses")
       .doc(paramCourseId)
@@ -141,6 +146,9 @@ export default {
       .then(doc => {
         this.course = doc.data();
         this.currentVideo = this.course.lectures[0].id;
+      })
+      .catch(err => {
+        console.log(err);
       });
     db.collection("comments")
       .where("course", "==", paramCourseId)
@@ -155,6 +163,9 @@ export default {
             });
           }
         });
+      })
+      .catch(err => {
+        console.log(err);
       });
   }
 };

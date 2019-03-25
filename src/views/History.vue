@@ -38,7 +38,7 @@ export default {
   name: "History",
   data() {
     return {
-      historyList: null
+      historyList: []
     };
   },
   methods: {
