@@ -109,30 +109,45 @@ export default {
     };
   },
   created() {
-    db.collection("courses")
-      .doc(this.$route.params.id)
-      .get()
-      .then(doc => {
-        this.course = doc.data();
-        this.currentVideo = this.course.lectures[0].id;
-      });
-    let ref = db.collection("users");
-    ref
-      .where("user_id", "==", firebase.auth().currentUser.uid)
+    let user = firebase.auth().currentUser;
+    let paramCourseId = this.$route.params.id;
+    db.collection("users")
+      .where("user_id", "==", user.uid)
       .get()
       .then(snapshot => {
         snapshot.forEach(doc => {
           this.user = doc.data();
           this.user.id = doc.id;
+          let historyList = doc.data().history;
+          if (!historyList) {
+            historyList = [];
+          }
+          historyList = historyList.filter(nextCourse => {
+            return nextCourse != paramCourseId;
+          });
+          delete historyList[10];
+          historyList.unshift(paramCourseId);
+          db.collection("users")
+            .doc(this.user.id)
+            .update({ history: historyList })
+            .catch(err => {
+              console.log(err);
+            });
         });
       });
+    db.collection("courses")
+      .doc(paramCourseId)
+      .get()
+      .then(doc => {
+        this.course = doc.data();
+        this.currentVideo = this.course.lectures[0].id;
+      });
     db.collection("comments")
-      .where("course", "==", this.$route.params.id)
+      .where("course", "==", paramCourseId)
       .orderBy("date")
       .onSnapshot(snapshot => {
         snapshot.docChanges().forEach(change => {
           if (change.type == "added") {
-            console.log(change.doc.data());
             this.comments.unshift({
               alias: change.doc.data().alias,
               date: moment(change.doc.data().date.toDate()).format("ll"),

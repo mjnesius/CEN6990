@@ -10,7 +10,7 @@
         <p>Select from list and revisit the course.</p>
       </div>
     </div>
-    <table class="table table-hover table-striped">
+    <table class="table table-hover table-striped mb-5">
       <thead>
         <tr class="table-primary text-bold">
           <th scope="col">Title</th>
