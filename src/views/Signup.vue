@@ -104,6 +104,7 @@ export default {
               })
               .then(() => {
                 this.fetchData = false;
+                this.$store.commit('updateUser');
                 this.$router.push({ name: "home" });
               })
               .catch(err => {
