@@ -16,6 +16,7 @@ import Signup from "./views/Signup.vue";
 import Login from "./views/Login.vue";
 import firebase from "firebase";
 import db from "@/firebase/init";
+import store from "./store";
 
 Vue.use(Router);
 
@@ -140,21 +141,17 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(rec => rec.meta.requiresAuth)) {
-    let user = firebase.auth().currentUser;
+    let user = store.state.user;
+    let admin = store.state.admin;
     if (user) {
       if (to.matched.some(rec => rec.meta.requiresInstructor)) {
-        db.collection("admin")
-          .doc(user.uid)
-          .get()
-          .then(doc => {
-            if (doc.exists) {
-              next();
-            } else {
-              next({
-                name: "home"
-              });
-            }
+        if (admin) {
+          next();
+        } else {
+          next({
+            name: "home"
           });
+        }
       }
       next();
     } else {

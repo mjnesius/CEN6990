@@ -42,7 +42,7 @@
         </form>
         <h3>
           Alias:
-          <span class="text-muted ml-2">{{ alias }}</span>
+          <span class="text-muted ml-2">{{ user.displayName }}</span>
         </h3>
         <hr>
         <p class="form-text text-muted">Alias cannot be changed after initial registration.</p>
@@ -59,10 +59,8 @@ export default {
   name: "Profile",
   data() {
     return {
-      user: null,
       email: null,
       password: null,
-      alias: null,
       passwordFeedback: null,
       emailFeedback: null,
       isEmailSuccess: true,
@@ -107,15 +105,10 @@ export default {
       }
     }
   },
-  created() {
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        this.user = user;
-        this.alias = user.displayName;
-      } else {
-        this.user = null;
-      }
-    });
+  computed: {
+    user() {
+      return this.$store.state.user;
+    }
   }
 };
 </script>

@@ -64,8 +64,7 @@ export default {
       alias: null,
       feedback: null,
       slug: null,
-      fetchData: false,
-      showSuccessMessage: true
+      fetchData: false
     };
   },
   methods: {
@@ -104,7 +103,7 @@ export default {
               })
               .then(() => {
                 this.fetchData = false;
-                this.$store.commit('updateUser');
+                this.$store.commit("updateUser");
                 this.$router.push({ name: "home" });
               })
               .catch(err => {
