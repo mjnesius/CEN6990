@@ -30,7 +30,7 @@
         <p class="lead">{{ course.longDescription }}</p>
         <hr>
         <h4 class="text-muted">Instructor: {{ course.instructor }}</h4>
-        <p class="text-muted lead">{{ course.instructorBio }}</p>
+        <p class="lead">{{ course.instructorBio }}</p>
       </div>
     </div>
     <div class="row p-3">
@@ -41,7 +41,7 @@
             <input
               type="text"
               v-model="newContent"
-              class="form-control"
+              class="form-control form-control-lg"
               id="content"
               placeholder="New comment..."
             >
@@ -53,7 +53,8 @@
             <p>
               <span class="text-muted mr-5">{{ comment.date }}</span>
               <span class="text-muted lead">{{ comment.alias }}</span>
-              <p class="lead text-muted">{{ comment.content }}</p>
+            </p>
+            <h5>{{ comment.content }}</h5>
           </li>
         </ul>
       </div>
@@ -71,6 +72,9 @@ export default {
   computed: {
     newVideo() {
       return `https://www.youtube.com/embed/${this.currentVideo}?rel=0`;
+    },
+    firebaseUser() {
+      return this.$store.state.user;
     }
   },
   methods: {
@@ -104,34 +108,83 @@ export default {
       newContent: null,
       feedback: null,
       comments: [],
-      user: null
+      user: null,
+      userId: null,
+      historyList: null
     };
   },
   created() {
+    let paramCourseId = this.$route.params.id;
     db.collection("courses")
-      .doc(this.$route.params.id)
+      .doc(paramCourseId)
       .get()
       .then(doc => {
         this.course = doc.data();
         this.currentVideo = this.course.lectures[0].id;
+      })
+      .catch(err => {
+        console.log(err);
       });
-    let ref = db.collection("users");
-    ref
-      .where("user_id", "==", firebase.auth().currentUser.uid)
+    let ref = db.collection("trending").doc(paramCourseId);
+    ref.get().then(doc => {
+      let newCount = 1;
+      if (doc.exists) {
+        newCount = doc.data().count + 1;
+      }
+      ref
+        .set({
+          title: this.course.title,
+          instructor: this.course.instructor,
+          count: newCount
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    });
+    db.collection("users")
+      .where("user_id", "==", this.firebaseUser.uid)
       .get()
       .then(snapshot => {
         snapshot.forEach(doc => {
           this.user = doc.data();
-          this.user.id = doc.id;
+          this.userId = doc.id;
+          let historyList = doc.data().history;
+          if (!historyList) {
+            historyList = [];
+          } else {
+            historyList = historyList.filter(nextCourse => {
+              return nextCourse.id != paramCourseId;
+            });
+          }
+          if (historyList.length > 10) {
+            historyList.pop();
+          }
+          let newEntry = {
+            title: this.course.title,
+            shortDescription: this.course.shortDescription,
+            instructor: this.course.instructor,
+            id: paramCourseId
+          };
+          historyList.unshift(newEntry);
+          db.collection("users")
+            .doc(this.userId)
+            .update({
+              history: historyList
+            })
+            .catch(err => {
+              console.log(err);
+            });
         });
+      })
+      .catch(err => {
+        console.log(err);
       });
     db.collection("comments")
-      .where("course", "==", this.$route.params.id)
+      .where("course", "==", paramCourseId)
       .orderBy("date")
       .onSnapshot(snapshot => {
         snapshot.docChanges().forEach(change => {
           if (change.type == "added") {
-            console.log(change.doc.data());
             this.comments.unshift({
               alias: change.doc.data().alias,
               date: moment(change.doc.data().date.toDate()).format("ll"),

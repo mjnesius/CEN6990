@@ -5,7 +5,7 @@
         <h2 class="text-center mb-5">Update Profile</h2>
         <form @submit.prevent="updateEmail">
           <div class="form-group mb-3">
-            <label for="exampleInputEmail1" class="sr-only">Email address</label>
+            <label for="exampleInputEmail1">Current Email: {{ user.email }}</label>
             <input
               type="email"
               v-model="email"
@@ -15,7 +15,11 @@
               placeholder="Enter new email"
             >
           </div>
-          <p v-if="emailFeedback" class="text-danger text-center h5 mt-3">{{ emailFeedback }}</p>
+          <p
+            v-if="emailFeedback"
+            class="text-center h5 my-3"
+            :class="[isEmailSuccess ? 'text-success' : 'text-danger']"
+          >{{ emailFeedback }}</p>
           <button class="btn btn-lg btn-primary btn-block mb-5">Update Email</button>
         </form>
         <form @submit.prevent="updatePassword">
@@ -29,13 +33,19 @@
               placeholder="Password"
             >
           </div>
-          <p v-if="passwordFeedback" class="text-danger text-center h5 mb-3">{{ passwordFeedback }}</p>
+          <p
+            v-if="passwordFeedback"
+            class="text-center h5 mb-3"
+            :class="[isPasswordSuccess ? 'text-success' : 'text-danger']"
+          >{{ passwordFeedback }}</p>
           <button class="btn btn-lg btn-primary btn-block mb-5">Update Password</button>
         </form>
-            <h3>Alias:  <span class="text-muted">{{ alias }}</span></h3>
-            <hr>
-            <p class="form-text text-muted"
-            >Alias cannot be changed after initial registration.</p>
+        <h3>
+          Alias:
+          <span class="text-muted ml-2">{{ user.displayName }}</span>
+        </h3>
+        <hr>
+        <p class="form-text text-muted">Alias cannot be changed after initial registration.</p>
       </div>
     </div>
   </div>
@@ -49,12 +59,12 @@ export default {
   name: "Profile",
   data() {
     return {
-      user: null,
       email: null,
       password: null,
-      alias: null,
       passwordFeedback: null,
-      emailFeedback: null
+      emailFeedback: null,
+      isEmailSuccess: true,
+      isPasswordSuccess: true
     };
   },
   methods: {
@@ -64,12 +74,15 @@ export default {
         this.user
           .updatePassword(this.password)
           .then(() => {
+            this.isPasswordSuccess = true;
             this.passwordFeedback = "Password update successful.";
           })
           .catch(error => {
+            this.isPasswordSuccess = false;
             this.passwordFeedback = error;
           });
       } else {
+        this.isPasswordSuccess = false;
         this.passwordFeedback = "Please fill in password field";
       }
     },
@@ -79,25 +92,23 @@ export default {
         this.user
           .updateEmail(this.email)
           .then(() => {
+            this.isEmailSuccess = true;
             this.emailFeedback = "Email update successful";
           })
           .catch(error => {
+            this.isEmailSuccess = false;
             this.emailFeedback = error;
           });
       } else {
+        this.isEmailSuccess = false;
         this.emailFeedback = "Please fill in email field";
       }
     }
   },
-  created() {
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        this.user = user;
-        this.alias = user.displayName;
-      } else {
-        this.user = null;
-      }
-    });
+  computed: {
+    user() {
+      return this.$store.state.user;
+    }
   }
 };
 </script>

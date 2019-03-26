@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-fixed navbar-expand-md navbar-dark">
     <div class="container">
-      <router-link class="navbar-brand" :to="{ name: 'home' }">UWF Empowers</router-link>
+      <router-link class="navbar-brand mb-1" :to="{ name: 'home' }">UWF Empowers</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -23,6 +23,9 @@
           </li>
           <li class="nav-item">
             <router-link class="nav-link" :to="{ name: 'features' }" exact>Features</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'faq' }" exact>FAQs</router-link>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -50,7 +53,7 @@
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item dropdown">
+          <li v-if="admin" class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -103,7 +106,7 @@
             <router-link class="nav-link" :to="{ name: 'login', params: { id: 0 } }" exact>Login</router-link>
           </li>
           <li v-if="user" class="nav-item">
-            <a class="nav-link">{{ user.email }}</a>
+            <a class="nav-link mx-3">{{ user.displayName }}</a>
           </li>
           <li v-if="user" class="nav-item">
             <a class="nav-link logout" @click="logout">Logout</a>
@@ -121,17 +124,15 @@ export default {
   name: "Navbar",
   data() {
     return {
-      user: null
     };
   },
-  created() {
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        this.user = user;
-      } else {
-        this.user = null;
-      }
-    });
+  computed: {
+    user () {
+      return this.$store.state.user
+    },
+    admin () {
+      return this.$store.state.admin
+    }
   },
   methods: {
     logout() {

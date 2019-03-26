@@ -37,8 +37,13 @@
             >
           </div>
           <p v-if="feedback" class="text-danger text-center h5 my-3">{{ feedback }}</p>
-          <button class="btn btn-lg btn-primary btn-block">Signup</button>
+          <button class="btn btn-lg btn-primary btn-block mb-5">Signup</button>
         </form>
+        <div v-if="fetchData" class="d-flex justify-content-center">
+          <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -58,12 +63,14 @@ export default {
       password: null,
       alias: null,
       feedback: null,
-      slug: null
+      slug: null,
+      fetchData: false
     };
   },
   methods: {
     signup() {
       if (this.alias && this.email && this.password) {
+        this.fetchData = true;
         this.feedback = null;
         this.slug = slugify(this.alias, {
           replacement: "-",
@@ -73,6 +80,7 @@ export default {
         let checkAlias = firebase.functions().httpsCallable("checkAlias");
         checkAlias({ slug: this.slug }).then(result => {
           if (!result.data.unique) {
+            this.fetchData = false;
             this.feedback = "This alias already exists";
           } else {
             firebase
@@ -94,9 +102,12 @@ export default {
                   });
               })
               .then(() => {
+                this.fetchData = false;
+                this.$store.commit("updateUser");
                 this.$router.push({ name: "home" });
               })
               .catch(err => {
+                this.fetchData = false;
                 this.feedback = err.message;
               });
           }
