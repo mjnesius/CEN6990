@@ -9,6 +9,7 @@ import Edit from "./views/Edit.vue";
 import Manage from "./views/Manage.vue";
 import Statistics from "./views/Statistics.vue";
 import Features from "./views/Features.vue";
+import Faq from "./views/Faq.vue";
 import Topic from "./views/Topic.vue";
 import Course from "./views/Course.vue";
 import Signup from "./views/Signup.vue";
@@ -38,6 +39,11 @@ const router = new Router({
       name: "features",
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/Features.vue")
+    },
+    {
+      path: "/faq",
+      name: "faq",
+      component: () => import(/* webpackChunkName: "about" */ "./views/Faq.vue")
     },
     {
       path: "/topic/:id",

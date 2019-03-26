@@ -24,6 +24,9 @@
           <li class="nav-item">
             <router-link class="nav-link" :to="{ name: 'features' }" exact>Features</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'faq' }" exact>FAQs</router-link>
+          </li>
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
