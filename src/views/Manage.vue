@@ -14,32 +14,34 @@
           <button @click.prevent="add" type="button" class="btn btn-lg btn-success">Add Course</button>
         </div>
         <div class="d-flex justify-content-center">
-          <form class="form-inline mt-5">
+          <form @submit.prevent="searchForCourse" class="form-inline mt-5">
             <input
               class="form-control form-control-lg mr-sm-2"
               type="search"
               placeholder="Search by Course ID"
               aria-label="Search"
+              v-model="courseIdSearch"
             >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Clear</button>
+            <button @click="searchDb(user.uid)" class="btn btn-outline-primary my-2 my-sm-0">Clear</button>
           </form>
         </div>
         <div class="d-flex justify-content-center">
-          <form class="form-inline mt-4">
+          <form @submit.prevent="searchOwner" class="form-inline mt-4">
             <input
               class="form-control form-control-lg mr-sm-2"
               type="search"
               placeholder="Search by Owner ID"
               aria-label="Search"
+              v-model="ownerIdSearch"
             >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Clear</button>
+            <button @click="searchDb(user.uid)" class="btn btn-outline-primary my-2 my-sm-0">Clear</button>
           </form>
         </div>
       </div>
     </div>
-    <table class="table table-hover table-striped">
+    <table class="table table-hover table-striped mb-5">
       <thead>
         <tr class="table-primary text-bold">
           <th scope="col">Course ID</th>
@@ -50,25 +52,65 @@
         </tr>
       </thead>
       <tbody>
-        <tr @click="pushToCoursePage(course.id)" v-for="course in courses" :key="course.id">
+        <tr v-for="course in courses" :key="course.id">
           <td>{{ course.id }}</td>
           <td>{{ course.title }}</td>
           <td>{{ course.instructor }}</td>
           <td>{{ course.timestamp }}</td>
           <td>
-            <button @click.prevent="edit" type="button" class="btn btn-sm btn-warning">Edit</button>
             <button
-              @click.prevent="deleteCourse"
+              @click.prevent="edit(course.id)"
+              type="button"
+              class="btn btn-sm btn-warning"
+            >Edit</button>
+            <button
+              @click.prevent="setDeleteId(course.id)"
               type="button"
               class="btn ml-1 btn-sm btn-danger"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
             >Delete</button>
           </td>
         </tr>
       </tbody>
     </table>
-    <div class="d-flex justify-content-center mb-3">
-      <button type="button" @click="loadMore" class="btn btn-primary" v-show="more">Load More</button>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex justify-content-center">
+              <i class="fas fa-exclamation-triangle text-danger"></i>
+              <h1
+                class="modal-title text-danger mt-5 ml-5"
+                id="exampleModalCenterTitle"
+              >Confirm Delete</h1>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body h3 text-center">This delete action will be final.</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
+            <button
+              @click="deleteCourse()"
+              type="button"
+              data-dismiss="modal"
+              class="btn btn-danger"
+            >Delete Course</button>
+          </div>
+        </div>
+      </div>
     </div>
+    <p v-if="courses.length == 0" class="my-5 text-center text-muted">No Results.</p>
   </div>
 </template>
 
@@ -80,26 +122,41 @@ export default {
   data() {
     return {
       more: true,
-      courses: []
+      courses: [],
+      courseIdSearch: "",
+      ownerIdSearch: "",
+      deleteId: ""
     };
   },
   methods: {
+    setDeleteId(courseId) {
+      this.deleteId = courseId;
+    },
     edit() {},
     add() {},
-    deleteCourse() {},
-    loadMore() {
-      this.updateId(30);
-      this.more = false;
-    },
-    pushToCoursePage(id) {
-      this.$router.push({ name: "course", params: { id } });
-    },
-    updateId(number) {
-      this.more = true;
+    deleteCourse() {
       db.collection("courses")
-        .where("owner_id", "==", this.user.uid)
+        .doc(this.deleteId)
+        .delete()
+        .then(() => {
+          this.courses = this.courses.filter(course => {
+            return course.id != this.deleteId;
+          });
+        })
+        .catch(function(error) {
+          console.error("Error removing document: ", error);
+        });
+    },
+    searchOwner() {
+      this.searchDb(this.ownerIdSearch);
+    },
+    searchDb(search) {
+      this.courseIdSearch = "";
+      this.ownerIdSearch = "";
+      this.courses = [];
+      db.collection("courses")
+        .where("owner_id", "==", search)
         .orderBy("date", "desc")
-        .limit(number)
         .get()
         .then(snapshot => {
           snapshot.forEach(doc => {
@@ -109,6 +166,23 @@ export default {
             this.courses.push(course);
           });
         });
+    },
+    searchForCourse() {
+      this.courses = [];
+      db.collection("courses")
+        .doc(this.courseIdSearch)
+        .get()
+        .then(doc => {
+          let course = doc.data();
+          course.id = doc.id;
+          course.timestamp = moment(doc.data().date.toDate()).format("ll");
+          this.courses.push(course);
+          this.courseIdSearch = "";
+          this.ownerIdSearch = "";
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   },
   computed: {
@@ -117,12 +191,15 @@ export default {
     }
   },
   created() {
-    this.updateId(10);
+    this.searchDb(this.user.uid);
   }
 };
 </script>
 
 <style scoped>
+i {
+  font-size: 3rem;
+}
 tbody tr {
   cursor: pointer;
 }
