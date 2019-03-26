@@ -9,7 +9,7 @@
         <p class="lead">Add, Update, and Delete Courses</p>
         <p
           mb-5
-        >Current User created courses are initially displayed but use Search Fields to find other courses.</p>
+        >Current User courses are initially displayed but use Search Fields to find other courses.</p>
         <div class="mt-5">
           <button @click.prevent="add" type="button" class="btn btn-lg btn-success">Add Course</button>
         </div>
