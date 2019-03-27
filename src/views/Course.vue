@@ -12,7 +12,7 @@
             type="button"
             v-for="(lecture, index) in course.lectures"
             :key="index"
-            @click="loadVideo(lecture.id, index)"
+            @click.prevent="loadVideo(lecture.id, index)"
             class="list-group-item my-2 btn btn-outline-primary"
           >
             <div class="d-flex align-item-start">
