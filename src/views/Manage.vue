@@ -140,8 +140,8 @@ export default {
      pushToCoursePage(id) {
       this.$router.push({ name: "course", params: { id } });
     },
-    edit(courseId) {
-      this.$router.push({ name: "edit", params: { courseId }});
+    edit(id) {
+      this.$router.push({ name: "edit", params: { id } });
     },
     add() {
       this.$router.push({ name: "add" });
