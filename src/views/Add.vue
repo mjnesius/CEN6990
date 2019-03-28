@@ -13,6 +13,7 @@
               placeholder="Course Title"
               maxlength="30"
               v-model="course.title"
+              autofocus
             >
           </div>
           <div class="form-group">
@@ -189,7 +190,6 @@ export default {
       ) {
         this.feedback = null;
         this.course.date = new Date();
-        console.log(this.course);
         db.collection("courses")
           .add(this.course)
           .then(() => {
@@ -202,6 +202,14 @@ export default {
         this.feedback = "You must enter values in all fields to add course.";
       }
     }
+  },
+  computed: {
+    user() {
+      return this.$store.state.user;
+    }
+  },
+  created() {
+    this.course.owner_id = this.user.uid;
   }
 };
 </script>
