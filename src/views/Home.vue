@@ -352,74 +352,76 @@
 
     <div class="Container mt-5">
       <h2 class="mb-5 text-left">Browse By Topic</h2>
-      <div class="card-deck m-1">
-        <div class="card">
-          <img
-            src="../assets/employer3.jpg"
-            class="card-img-top"
-            alt="Area for Topic1"
-          />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Software Development</h5>
-            <p class="card-text">
-              Web design encompasses many different skills and disciplines in
-              the production and maintenance of websites. The different areas of
-              web design include web graphic design; interface design;
-              authoring, including standardised code and proprietary software;
-              user experience design; and search engine optimization. Often many
-              individuals will work in teams covering different aspects of the
-              design process, although some designers will cover them all.
-            </p>
-            <a
-              href="/topic/0"
-              alt="Development"
-              class="btn btn-primary btn mt-auto"
-              >Start Course</a
-            >
+      <div class="carousel-inner1">
+        <div class="card-deck m-1">
+          <div class="card">
+            <img
+              src="../assets/employer3.jpg"
+              class="card-img-top"
+              alt="Area for Topic1"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="p1">Software Development</h5>
+              <p class="card-text">
+                websites production and maintenance skills
+                <br />
+                web graphic design included
+                <br />
+                code and proprietary software included
+                <br />
+              </p>
+              <a
+                href="/topic/0"
+                alt="Development"
+                class="btn btn-primary btn mt-auto"
+                >Find Course</a
+              >
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <img
-            src="../assets/workplace.jpg"
-            class="card-img-top"
-            alt="Area for Topic2"
-          />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Information Technology</h5>
-            <p class="card-text">
-              A network administrator is the person designated in an
-              organization whose responsibility includes maintaining computer
-              infrastructures with emphasis on networking. Responsibilities may
-              vary between organizations, but on-site servers, software-network
-              interactions as well as network integrity/resilience are the key
-              areas of focus.
-            </p>
-            <a href="/topic/1" alt="IT" class="btn btn-primary btn mt-auto"
-              >Start Course</a
-            >
+          <div class="card">
+            <img
+              src="../assets/workplace.jpg"
+              class="card-img-top"
+              alt="Area for Topic2"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="p1">Information Technology</h5>
+              <p class="card-text">
+                maintaining computer infrastructures with emphasis on networking
+                <br />
+                on-site servers and software-network
+                <br />
+                interactions as well as network integrity/resilience
+                <br />
+              </p>
+              <a href="/topic/1" alt="IT" class="btn btn-primary btn mt-auto"
+                >Find Course</a
+              >
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <img
-            src="../assets/adult-aged-blur-834863.jpg"
-            class="card-img-top"
-            alt="Area for Topic3"
-          />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">CyberSecurity</h5>
-            <p class="card-text">
-              Computer security, cybersecurity[1] or information technology
-              security (IT security) is the protection of computer systems from
-              theft or damage to their hardware, software or electronic data, as
-              well as from disruption or misdirection of the services they
-              provide.
-            </p>
-            <a
-              href="/topic/2"
-              alt="CyberSecurity"
-              class="btn btn-primary btn mt-auto"
-              >Start Course</a
-            >
+          <div class="card">
+            <img
+              src="../assets/adult-aged-blur-834863.jpg"
+              class="card-img-top"
+              alt="Area for Topic3"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="p1">CyberSecurity</h5>
+              <p class="card-text">
+                protection of computer systems from damage to their hardware
+                <br />
+                software or electronic data
+                <br />
+                keep from disruption of the services
+                <br />
+              </p>
+              <a
+                href="/topic/2"
+                alt="CyberSecurity"
+                class="btn btn-primary btn mt-auto"
+                >Find Course</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -475,6 +477,9 @@ tbody tr {
 
 .carousel-inner {
   background-color: #cc6666;
+}
+.carousel-inner1 {
+  background-color: #b6ada5;
 }
 
 .card:hover {
@@ -548,5 +553,11 @@ button:hover {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 0.5rem;
   background-color: #669999;
+}
+.p1 {
+  font-size: 20px;
+}
+.p2 {
+  font-size: 16px;
 }
 </style>
