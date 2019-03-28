@@ -23,7 +23,10 @@
               v-model="courseIdSearch"
             >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <button @click.prevent="searchDb(user.uid)" class="btn btn-outline-primary my-2 my-sm-0">Clear</button>
+            <button
+              @click.prevent="searchDb(user.uid)"
+              class="btn btn-outline-primary my-2 my-sm-0"
+            >Clear</button>
           </form>
         </div>
         <div class="d-flex justify-content-center">
@@ -36,7 +39,10 @@
               v-model="ownerIdSearch"
             >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <button @click.prevent="searchDb(user.uid)" class="btn btn-outline-primary my-2 my-sm-0">Clear</button>
+            <button
+              @click.prevent="searchDb(user.uid)"
+              class="btn btn-outline-primary my-2 my-sm-0"
+            >Clear</button>
           </form>
         </div>
       </div>
@@ -137,7 +143,7 @@ export default {
     setDeleteId(courseId) {
       this.deleteId = courseId;
     },
-     pushToCoursePage(id) {
+    pushToCoursePage(id) {
       this.$router.push({ name: "course", params: { id } });
     },
     edit(id) {
@@ -157,6 +163,23 @@ export default {
         })
         .catch(function(error) {
           console.error("Error removing document: ", error);
+        });
+      db.collection("comments")
+        .where("course", "==", this.deleteId)
+        .get()
+        .then(snapshot => {
+          snapshot.forEach(doc => {
+            let commentDeleteId = doc.id;
+            db.collection("comments")
+              .doc(commentDeleteId)
+              .delete()
+              .catch(function(error) {
+                console.error("Error removing document: ", error);
+              });
+          });
+        })
+        .catch(err => {
+          console.log(err);
         });
     },
     searchOwner() {
