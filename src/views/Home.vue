@@ -356,7 +356,7 @@
         <div class="card-deck m-1">
           <div class="card">
             <img
-              src="../assets/employer3.jpg"
+              src="../assets/Fotolia_112185258_Subscription_Monthly_M-479x237.jpg"
               class="card-img-top"
               alt="Area for Topic1"
             />
@@ -380,7 +380,7 @@
           </div>
           <div class="card">
             <img
-              src="../assets/workplace.jpg"
+              src="../assets/advocacy7.jpg"
               class="card-img-top"
               alt="Area for Topic2"
             />
@@ -401,7 +401,7 @@
           </div>
           <div class="card">
             <img
-              src="../assets/adult-aged-blur-834863.jpg"
+              src="../assets/cybersecurity-graphic.jpg"
               class="card-img-top"
               alt="Area for Topic3"
             />
