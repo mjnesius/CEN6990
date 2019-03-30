@@ -129,7 +129,7 @@
             </div>
             <button @click.prevent="addLecture()" type="button" class="btn btn-success">Add Lecture</button>
           </div>
-          <p v-if="feedback" class="text-center h5 my-3 text-danger">{{ feedback }}</p>
+          <p v-if="feedback" class="text-center h5 my-5 text-danger">{{ feedback }}</p>
           <button class="btn btn-lg btn-primary btn-block my-5">Save Edits</button>
         </form>
         <button @click.prevent="backToManage" class="btn btn-lg btn-success btn-block">Cancel</button>
