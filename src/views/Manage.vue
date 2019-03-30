@@ -23,7 +23,10 @@
               v-model="courseIdSearch"
             >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <button @click="searchDb(user.uid)" class="btn btn-outline-primary my-2 my-sm-0">Clear</button>
+            <button
+              @click.prevent="searchDb(user.uid)"
+              class="btn btn-outline-primary my-2 my-sm-0"
+            >Clear</button>
           </form>
         </div>
         <div class="d-flex justify-content-center">
@@ -36,19 +39,22 @@
               v-model="ownerIdSearch"
             >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <button @click="searchDb(user.uid)" class="btn btn-outline-primary my-2 my-sm-0">Clear</button>
+            <button
+              @click.prevent="searchDb(user.uid)"
+              class="btn btn-outline-primary my-2 my-sm-0"
+            >Clear</button>
           </form>
         </div>
       </div>
     </div>
-    <table class="table table-hover table-striped mb-5">
+    <table class="table table-striped mb-5">
       <thead>
         <tr class="table-primary text-bold">
           <th scope="col">Course ID</th>
           <th scope="col">Title</th>
           <th scope="col">Instructor</th>
           <th scope="col">Update</th>
-          <th scope="col">Modify</th>
+          <th scope="col">View and Modify</th>
         </tr>
       </thead>
       <tbody>
@@ -59,14 +65,19 @@
           <td>{{ course.timestamp }}</td>
           <td>
             <button
+              @click.prevent="pushToCoursePage(course.id)"
+              type="button"
+              class="btn btn-sm btn-primary py-1 px-3"
+            >View</button>
+            <button
               @click.prevent="edit(course.id)"
               type="button"
-              class="btn btn-sm btn-warning"
+              class="btn ml-1 btn-sm btn-warning py-1 px-3"
             >Edit</button>
             <button
               @click.prevent="setDeleteId(course.id)"
               type="button"
-              class="btn ml-1 btn-sm btn-danger"
+              class="btn ml-1 btn-sm btn-danger py-1"
               data-toggle="modal"
               data-target="#exampleModalCenter"
             >Delete</button>
@@ -132,8 +143,15 @@ export default {
     setDeleteId(courseId) {
       this.deleteId = courseId;
     },
-    edit() {},
-    add() {},
+    pushToCoursePage(id) {
+      this.$router.push({ name: "course", params: { id } });
+    },
+    edit(id) {
+      this.$router.push({ name: "edit", params: { id } });
+    },
+    add() {
+      this.$router.push({ name: "add" });
+    },
     deleteCourse() {
       db.collection("courses")
         .doc(this.deleteId)
@@ -145,6 +163,23 @@ export default {
         })
         .catch(function(error) {
           console.error("Error removing document: ", error);
+        });
+      db.collection("comments")
+        .where("course", "==", this.deleteId)
+        .get()
+        .then(snapshot => {
+          snapshot.forEach(doc => {
+            let commentDeleteId = doc.id;
+            db.collection("comments")
+              .doc(commentDeleteId)
+              .delete()
+              .catch(function(error) {
+                console.error("Error removing document: ", error);
+              });
+          });
+        })
+        .catch(err => {
+          console.log(err);
         });
     },
     searchOwner() {

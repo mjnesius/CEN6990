@@ -15,17 +15,21 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'home' }" exact>Home</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'about' }" exact>About</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'features' }" exact>Features</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'faq' }" exact>FAQs</router-link>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >Learn More</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <router-link class="dropdown-item" :to="{ name: 'about' }" exact>About</router-link>
+              <router-link class="dropdown-item" :to="{ name: 'features' }" exact>Features</router-link>
+              <router-link class="dropdown-item" :to="{ name: 'faq' }" exact>FAQs</router-link>
+            </div>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -106,7 +110,7 @@
             <router-link class="nav-link" :to="{ name: 'login', params: { id: 0 } }" exact>Login</router-link>
           </li>
           <li v-if="user" class="nav-item">
-            <a class="nav-link mx-3">{{ user.displayName }}</a>
+            <a class="nav-link">{{ user.displayName }}</a>
           </li>
           <li v-if="user" class="nav-item">
             <a class="nav-link logout" @click="logout">Logout</a>
@@ -123,15 +127,14 @@ import firebase from "firebase";
 export default {
   name: "Navbar",
   data() {
-    return {
-    };
+    return {};
   },
   computed: {
-    user () {
-      return this.$store.state.user
+    user() {
+      return this.$store.state.user;
     },
-    admin () {
-      return this.$store.state.admin
+    admin() {
+      return this.$store.state.admin;
     }
   },
   methods: {

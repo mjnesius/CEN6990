@@ -122,7 +122,7 @@ const router = new Router({
       }
     },
     {
-      path: "/edity",
+      path: "/edit/:id",
       name: "edit",
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/Edit.vue"),
