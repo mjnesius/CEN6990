@@ -1,56 +1,41 @@
 <template>
   <div class="about container">
-    <div class="jumbotron" style="background-color:transparent !important;">
+    <div
+      class="jumbotron"
+      style="position:relative; background-color:transparent !important;"
+    >
       <h1
         class="display-3"
         style="text-align: center; justify-content: center;"
       >
         UWF Empowers!
       </h1>
-      <div
-        id="inspirationCarousel"
-        class="carousel slide"
-        data-ride="carousel"
-        data-interval="5000"
+      <a
+        type="button"
+        class="btn btn-light btn-lg btn-primary pull-left"
+        href="Home"
+        role="button"
+        style="position:absolute;left:8%;  bottom:14%; z-index:50"
+        >Start your journey!</a
       >
-        <div class="carousel-inner mh-150">
-          <div class="carousel-item item active" width="auto">
-            <div class="carousel-content">
-              <h2 class="caro-h2">Your Dream, Our Mission</h2>
-            </div>
-            <img
-              class="d-block w-100 img-fluid img-responsive"
-              src="../assets/areyouready.svg"
-              alt="First slide"
-            />
-          </div>
-          <div class="carousel-item item">
-            <div class="carousel-content">
-              <h2 class="caro-h2">Take Charge, Reimagine</h2>
-            </div>
-            <img
-              class="d-block w-100 img-fluid img-responsive"
-              src="../assets/inspiring-1.svg"
-              alt="Second slide"
-            />
-          </div>
-          <div class="carousel-item item">
-            <div class="carousel-content">
-              <h2 class="caro-h2">Your Future, Starts Today</h2>
-            </div>
-            <img
-              class="d-block w-100 img-fluid img-responsive"
-              src="../assets/inspiring-4.svg"
-              alt="Third slide"
-            />
-          </div>
-        </div>
-        <div class="col-md-12 carousel-button">
-          <a class="btn btn-light btn-lg btn-primary" href="Home" role="button"
-            >Start your journey!</a
-          >
-        </div>
-      </div>
+      <vueper-slides
+        autoplay
+        slide-image-inside
+        :arrows="false"
+        fixed-height="250px"
+        :slide-ratio="1 / 2"
+        class="no-shadow"
+        :bullets-outside="true"
+      >
+        <vueper-slide
+          v-for="(ins, idx) in inspire"
+          :key="ins.id"
+          :class="{ active: idx == 0 }"
+          :title="ins.caption"
+          :style="{ 'background-image': 'url(' + ins.img + ')' }"
+        >
+        </vueper-slide>
+      </vueper-slides>
     </div>
     <div class="jumbotron" style="background-color:transparent !important;">
       <h1
@@ -88,7 +73,7 @@
             />
             <a href="/topic/1" alt="Meet our notable alumni">
               <div class="overlay">
-                <div class="overlay-text">Become and IT Professional</div>
+                <div class="overlay-text">Become an IT Professional</div>
               </div>
             </a>
           </div>
@@ -158,41 +143,40 @@
         >
           Testimonials
         </h3>
-      </div>
-      <div
-        id="inspirationCarousel"
-        class="carousel2 slide mb-1 mt-1"
-        data-ride="carousel"
-        data-interval="4000"
-        style="max-height: 550px; !important"
-      >
-        <div class="carousel2-inner">
-          <div
-            class="carousel-item item"
+        <vueper-slides
+          bullets-outside
+          autoplay
+          slide-image-inside
+          :arrows="false"
+          :slide-ratio="1 / 2"
+          class="no-shadow"
+        >
+          <vueper-slide
             v-for="(test, idx) in testimonials"
             :key="test.id"
             :class="{ active: idx == 0 }"
-            width="auto"
           >
-            <img
-              class="d-md-block img-fluid img-responsive"
-              :src="test.img"
-              :alt="test.name"
-              z-index="24"
-              style=" display: block; margin-left: auto;margin-right: auto; width: 50%;!important;"
-            />
-            <div
-              class="row carousel-caption d-md-block rounded"
-              style="box-sizing: border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: flex; text-align: center; justify-content: center;!important"
-            >
-              <div class="col-sm-12">
-                <h4>{{ test.blurb }}</h4>
-                <h5>-{{ test.name }}</h5>
-                <h6>{{ test.specialty }}</h6>
+            <div slot="slideContent">
+              <div
+                class="caption d-md-block rounded"
+                style="box-sizing: border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: inline-block; text-align: center; justify-content: center;width:100%!important"
+              >
+                <p style=" ">{{ test.blurb }}</p>
+                <p style="font-style: italic; !important">
+                  - {{ test.name }} {{ test.specialty }}
+                </p>
+              </div>
+              <div>
+                <img
+                  class="d-md-block img-fluid img-responsive"
+                  style="display: block;"
+                  :src="test.img"
+                  :alt="test.name"
+                />
               </div>
             </div>
-          </div>
-        </div>
+          </vueper-slide>
+        </vueper-slides>
       </div>
     </div>
     <div class="jumbotron" style="background-color:transparent !important;">
@@ -253,12 +237,6 @@
         class="row mt-6"
         style="margin-left:1px; margin-right:1px;margin-top:40px;"
       >
-        <!-- <div
-          class="btn-group btn-group-lg btn-group-justified mt-6"
-          role="group"
-          aria-label="..."
-          style="box-sizing:border-box; width: 100%"
-        >-->
         <div
           class="col-4 mt-6"
           style="margin-top:40px; text-align: center; justify-content: center;"
@@ -304,26 +282,20 @@
             </div></a
           >
         </div>
-
-        <!-- <a
-            class="btn btn-primary"
-            href="https://uwf.edu/alumni/get-involved/events-calendar/"
-          >Alumni Events</a>
-          <a
-            class="btn btn-primary"
-            href="https://uwf.edu/university-advancement/departments/development/give-now/donate/"
-          >Make a Gift</a>
-          <a
-            class="btn btn-primary"
-            href="https://issuu.com/universityofwestflorida/docs/connection_fall2018_issuu"
-          >Read Connection Magazine</a> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+// In your VueJS component.
+import { VueperSlides, VueperSlide } from "vueperslides";
+
+// Since v. 1.6.0, you need to include Vueper Slides CSS file for default styles.
+import "vueperslides/dist/vueperslides.css";
+
 export default {
+  components: { VueperSlides, VueperSlide },
   name: "About",
   data() {
     return {
@@ -351,6 +323,26 @@ export default {
             "My employer is reluctant to pay for training. Thanks to UWF Empowers free resource, I can learn anything!",
           img: require("../assets/testimonials-3.svg")
         }
+      ],
+      inspire: [
+        {
+          id: 0,
+          caption:
+            '<b style="display: inline-block; font-size: 1.5em;color: #ffffff;text-shadow: 1.3px 1.3px 6px #004C97; position: relative;  top: -5em; !important ">Your Dream, Our Mission </b>',
+          img: require("../assets/areyouready.svg")
+        },
+        {
+          id: 1,
+          caption:
+            '<span><b style="font-size: 1.5em;color: #ffffff;text-shadow: 1.3px 1.3px 6px #004C97; position: relative; top: -5em;">Take Charge, Reimagine</b></span>',
+          img: require("../assets/inspiring-1.svg")
+        },
+        {
+          id: 2,
+          caption:
+            '<b style="font-size: 1.5em;color: #ffffff;text-shadow: 1.3px 1.3px 6px #004C97; position: relative;  top: -5em;">Your Future Starts Today</b>',
+          img: require("../assets/inspiring-4.svg")
+        }
       ]
     };
   }
@@ -358,6 +350,16 @@ export default {
 </script>
 
 <style scoped>
+.caption {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
 .fas:hover,
 .far:hover,
 .icon-block:hover {
@@ -383,21 +385,12 @@ export default {
   position: relative;
 }
 
-.carousel {
-  max-height: 370px;
-  min-height: 250px;
-  overflow: hidden;
-}
-.carousel2,
 .item,
 .active {
   /*height: 50%;*/
   overflow: hidden;
 }
-.carousel2-inner {
-  height: 50%;
-  overflow: hidden;
-}
+
 .fill {
   width: 100%;
   height: 100%;
@@ -413,8 +406,13 @@ export default {
   height: auto;
   overflow: hidden;
 }
+@media screen and (max-width: 576) {
+  p {
+    font-size: 3vw;
+  }
+}
 
-@media screen and (max-width: 768) {
+@media screen and (max-width: 1200) {
   h1,
   .display-3 {
     font-size: 8vw;
@@ -429,7 +427,7 @@ export default {
     font-size: 6vw;
   }
   h4 {
-    font-size: 5vw;
+    font-size: 3vw;
   }
   .columnImg {
     flex: 50%;
@@ -438,67 +436,11 @@ export default {
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .columnImg {
     flex: 100%;
     max-width: 100%;
   }
-}
-
-@media (max-width: 368px) {
-  .carousel {
-    max-height: 150px;
-    min-height: 150px;
-    overflow: hidden;
-  }
-  .item img {
-    display: block;
-    width: auto;
-    height: auto;
-    max-height: 150px;
-    min-height: 150px;
-    overflow: hidden;
-  }
-  h1,
-  .display-3 {
-    font-size: 6vw;
-  }
-  h2 {
-    font-size: 5vw;
-  }
-  .caro-h2 {
-    font-size: 3vw;
-  }
-  h4,
-  h3 {
-    font-size: 2vw;
-  }
-  h5 {
-    font-size: 2vw;
-  }
-  h6 {
-    font-size: 2vw;
-  }
-
-  .carousel-caption {
-    font-size: 2vw;
-  }
-}
-
-.carousel-content {
-  position: absolute;
-  font-weight: bolder;
-  top: 5%;
-  left: 5%;
-  z-index: 20;
-  color: white;
-  text-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.6);
-}
-
-.carousel-button {
-  position: absolute;
-  bottom: 5%;
-  z-index: 22;
 }
 
 .btn-light {
@@ -548,7 +490,7 @@ export default {
   opacity: 0;
   transition: 0.5s ease;
   background-color: #004c97;
-  z-index: 23;
+  z-index: 20;
 }
 .overlay-text {
   color: white;
