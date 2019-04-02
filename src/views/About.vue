@@ -4,21 +4,27 @@
       class="jumbotron"
       style="position:relative; background-color:transparent !important;"
     >
-      <h1
+      <h3
         class="display-3"
-        style="text-align: center; justify-content: center;"
+        style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center;font-size: 4.7em;"
       >
         UWF Empowers!
-      </h1>
+      </h3>
+      <div id="inspirationTitle" style="text-align:right;">
+        <h3 id="inspirationTitleH3"></h3>
+      </div>
+
       <a
         type="button"
         class="btn btn-light btn-lg btn-primary pull-left"
         href="Home"
         role="button"
         style="position:absolute;left:8%;  bottom:14%; z-index:50"
-        >Start your journey!</a
+        >Get started!</a
       >
       <vueper-slides
+        @ready="updateHeading"
+        @slide="updateHeading"
         autoplay
         slide-image-inside
         :arrows="false"
@@ -26,11 +32,11 @@
         :slide-ratio="1 / 2"
         class="no-shadow"
         :bullets-outside="true"
+        style="text-align: left; justify-content: left; !important"
       >
         <vueper-slide
-          v-for="(ins, idx) in inspire"
-          :key="ins.id"
-          :class="{ active: idx == 0 }"
+          v-for="ins in inspire"
+          :key="ins.caption"
           :title="ins.caption"
           :style="{ 'background-image': 'url(' + ins.img + ')' }"
         >
@@ -38,18 +44,18 @@
       </vueper-slides>
     </div>
     <div class="jumbotron" style="background-color:transparent !important;">
-      <h1
+      <h3
         class="display-3"
-        style="text-align: center; justify-content: center;"
+        style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center;font-size: 4.7em;"
       >
         Start your IT journey!
-      </h1>
+      </h3>
       <p class="lead" style="text-align: center; justify-content: center;">
         Access world class coursework for free!
       </p>
       <hr class="my-4" />
-      <div class="rowImg">
-        <div class="columnImg">
+      <div class="rowImg row">
+        <div class="columnImg col-md-4">
           <div class="tile-container">
             <img
               src="../assets/skills.svg"
@@ -78,7 +84,7 @@
             </a>
           </div>
         </div>
-        <div class="columnImg">
+        <div class="columnImg col-md-4">
           <div class="tile-container">
             <a href="https://uwf.edu/ihire/" alt="iHire UWF" target="_self">
               <img
@@ -110,27 +116,31 @@
             </a>
           </div>
         </div>
-        <div class="columnImg">
-          <div class="tile-container">
-            <a href="../topic/2" alt="Security" target="_self">
-              <img
-                src="../assets/security-3.svg"
-                alt="Security"
-                style="width:100%"
-              />
-              <div class="overlay">
-                <div class="overlay-text">Become A Cybersecurity Expert</div>
-              </div>
-            </a>
-          </div>
-          <div class="tile-container">
-            <a href="../topic/0" alt="Software" target="_self">
-              <img src="../assets/se.svg" alt="Software" style="width:100%" />
-              <div class="overlay">
-                <div class="overlay-text">Develop Software</div>
-              </div>
-            </a>
-          </div>
+        <div class="columnImg col-md-4">
+          <row>
+            <div class="tile-container">
+              <a href="../topic/2" alt="Security" target="_self">
+                <img
+                  src="../assets/security-3.svg"
+                  alt="Security"
+                  style="width:100%"
+                />
+                <div class="overlay">
+                  <div class="overlay-text">Become A Cybersecurity Expert</div>
+                </div>
+              </a>
+            </div>
+          </row>
+          <row>
+            <div class="tile-container">
+              <a href="../topic/0" alt="Software" target="_self">
+                <img src="../assets/se.svg" alt="Software" style="width:100%" />
+                <div class="overlay">
+                  <div class="overlay-text">Develop Software</div>
+                </div>
+              </a>
+            </div>
+          </row>
         </div>
       </div>
     </div>
@@ -139,7 +149,7 @@
       <div class="jumbotron2-inside">
         <h3
           class="display-4"
-          style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center;"
+          style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center; font-size: 4.7em;"
         >
           Testimonials
         </h3>
@@ -180,31 +190,31 @@
       </div>
     </div>
     <div class="jumbotron" style="background-color:transparent !important;">
-      <h1
+      <h4
         class="display-3"
-        style="text-align: center; justify-content: center;"
+        style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center; font-size: 4.7em;"
       >
         UWF Alumni Association
-      </h1>
+      </h4>
       <div class="card" style="background-color:white !important">
         <h2
           class="card-header"
-          style="background-color:#004C97 color: #B6ADA5 !important"
+          style="background-color:#004C97 color: #B6ADA5; text-align: center !important"
         >
           Fostering a spirit of fellowship with and loyalty to the University
         </h2>
         <div class="row mt-3 mb-3" style="margin-left:1px; margin-right:1px; ">
-          <div class="col-sm-6">
-            <div style="height: 100">
+          <div class="col-lg-6 mb-3">
+            <div style="height: 100; margin: auto;">
               <img
                 class="img-fluid"
                 alt="Responsive image"
-                style="height: auto; width: auto; display: block;"
+                style="height: auto; width: 100%;margin: auto; display: block;"
                 src="../assets/team_03.jpg"
               />
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-lg-6">
             <div class="card mb-12" style="height: 100%;  display: block;">
               <h4
                 class="card-header"
@@ -297,6 +307,13 @@ import "vueperslides/dist/vueperslides.css";
 export default {
   components: { VueperSlides, VueperSlide },
   name: "About",
+  methods: {
+    updateHeading(eventName, params) {
+      document.getElementById(
+        "inspirationTitle"
+      ).innerHTML = params.currentSlide.title.replace("display:none;", "");
+    }
+  },
   data() {
     return {
       testimonials: [
@@ -328,19 +345,19 @@ export default {
         {
           id: 0,
           caption:
-            '<b style="display: inline-block; font-size: 1.5em;color: #ffffff;text-shadow: 1.3px 1.3px 6px #004C97; position: relative;  top: -5em; !important ">Your Dream, Our Mission </b>',
+            '<b style="display: inline-block; font-size: 1.7em;color: #ffffff;text-shadow: 1px 1px 12px #004C97; position: relative; z-index:31; bottom: -2em;left:-2em; display:none; !important ">Your Dream, Our Mission </b>',
           img: require("../assets/areyouready.svg")
         },
         {
           id: 1,
           caption:
-            '<span><b style="font-size: 1.5em;color: #ffffff;text-shadow: 1.3px 1.3px 6px #004C97; position: relative; top: -5em;">Take Charge, Reimagine</b></span>',
+            '<span><b style="font-size: 1.7em;color: #ffffff;text-shadow: 1px 1px 12px #004C97; position: relative; z-index:31; bottom: -2em;left:-2em; display:none; !important">Take Charge, Reimagine</b></span>',
           img: require("../assets/inspiring-1.svg")
         },
         {
           id: 2,
           caption:
-            '<b style="font-size: 1.5em;color: #ffffff;text-shadow: 1.3px 1.3px 6px #004C97; position: relative;  top: -5em;">Your Future Starts Today</b>',
+            '<b style="font-size: 1.7em;color: #ffffff;text-shadow: 1px 1px 12px #004C97; position: relative; z-index:31; bottom: -2em;left:-2em; display:none; !important">Your Future Starts Today</b>',
           img: require("../assets/inspiring-4.svg")
         }
       ]
