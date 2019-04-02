@@ -1,9 +1,19 @@
 import sinon from "sinon";
 import { mount } from "@vue/test-utils";
-import Topic from "@/views/Topic.vue";
-import Course from "@/views/Course.vue";
-import Signup from "@/views/Signup.vue";
-import Login from "@/views/Login.vue";
+import Home from "./views/Home.vue";
+import About from "./views/About.vue";
+import Profile from "./views/Profile.vue";
+import History from "./views/History.vue";
+import Add from "./views/Add.vue";
+import Edit from "./views/Edit.vue";
+import Manage from "./views/Manage.vue";
+import Statistics from "./views/Statistics.vue";
+import Features from "./views/Features.vue";
+import Faq from "./views/Faq.vue";
+import Topic from "./views/Topic.vue";
+import Course from "./views/Course.vue";
+import Signup from "./views/Signup.vue";
+import Login from "./views/Login.vue";
 // import flushPromises from "flush-promises";
 
 describe("Topic.vue", () => {
