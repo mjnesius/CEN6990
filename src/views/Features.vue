@@ -1,8 +1,55 @@
 <template>
   <div>
-    <h1 class="container">This is the Features Page</h1>
     <div class="jumbotron" style="background-color:transparent !important;">
       <div class="container">
+        <h3
+          class="mt-5 display-4"
+          style="text-align: center; justify-content: left;"
+        >
+          Topics
+        </h3>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container"></div>
+        </div>
+
+        <h3
+          class="mt-5 display-4"
+          style="text-align: center; justify-content: center;"
+        >
+          Courses
+        </h3>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container"></div>
+        </div>
+
+        <h3
+          class="mt-5 display-4"
+          style="text-align: center; justify-content: center;"
+        >
+          Instructors
+        </h3>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container"></div>
+        </div>
+
+        <h3
+          class="mt-5 display-4"
+          style="text-align: center; justify-content: center;"
+        >
+          Avantages of UWF Empowers
+        </h3>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <ul class="list-group">
+              <li class="list-group-item active">
+                Detailed class descriptions.
+              </li>
+              <li class="list-group-item">Control your learning experience.</li>
+              <li class="list-group-item">Learn at your pace.</li>
+              <li class="list-group-item">Detailed instructor profiles.</li>
+            </ul>
+          </div>
+        </div>
         <h3
           class="mt-5 display-4"
           style="text-align: center; justify-content: center;"
