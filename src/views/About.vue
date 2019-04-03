@@ -13,13 +13,13 @@
       <div id="inspirationTitle" style="text-align:right;">
         <h3 id="inspirationTitleH3"></h3>
       </div>
-
       <a
         type="button"
         class="btn btn-light btn-lg btn-primary pull-left"
         href="Home"
         role="button"
         style="position:absolute;left:8%;  bottom:14%; z-index:50"
+        @click="$router.push('home')"
         >Get started!</a
       >
       <vueper-slides
@@ -35,6 +35,7 @@
         style="text-align: left; justify-content: left; !important"
       >
         <vueper-slide
+          slide-content-outside-class="title"
           v-for="ins in inspire"
           :key="ins.caption"
           :title="ins.caption"
@@ -50,12 +51,12 @@
       >
         Start your IT journey!
       </h3>
-      <p class="lead" style="text-align: center; justify-content: center;">
+      <p style="text-align: center; font-size: 2em;justify-content: center;">
         Access world class coursework for free!
       </p>
       <hr class="my-4" />
-      <div class="rowImg row">
-        <div class="columnImg col-md-4">
+      <div class=" row">
+        <div class="col-md-4" style="padding: 4px 4px 4px 4px">
           <div class="tile-container">
             <img
               src="../assets/skills.svg"
@@ -77,16 +78,16 @@
               style="width:100%"
               target="_self"
             />
-            <a href="/topic/1" alt="Meet our notable alumni">
+            <a @click="$router.push('topic/1')">
               <div class="overlay">
                 <div class="overlay-text">Become an IT Professional</div>
               </div>
             </a>
           </div>
         </div>
-        <div class="columnImg col-md-4">
+        <div class="col-md-4" style="padding: 4px 4px 4px 4px">
           <div class="tile-container">
-            <a href="https://uwf.edu/ihire/" alt="iHire UWF" target="_self">
+            <a href="https://uwf.edu/ihire/" alt="iHire UWF" target="_blank">
               <img
                 src="../assets/employer1.svg"
                 alt="ihire project"
@@ -101,7 +102,7 @@
             <a
               href="https://uwf.edu/topscholars"
               alt="Get to Know UWF's Top&nbsp;Scholars"
-              target="_self"
+              target="_blank"
             >
               <img
                 src="../assets/testimonials-7.svg"
@@ -116,10 +117,10 @@
             </a>
           </div>
         </div>
-        <div class="columnImg col-md-4">
+        <div class="col-md-4" style="padding: 4px 4px 4px 4px">
           <row>
             <div class="tile-container">
-              <a href="../topic/2" alt="Security" target="_self">
+              <a @click="$router.push('topic/2')" alt="Security">
                 <img
                   src="../assets/security-3.svg"
                   alt="Security"
@@ -133,7 +134,7 @@
           </row>
           <row>
             <div class="tile-container">
-              <a href="../topic/0" alt="Software" target="_self">
+              <a @click="$router.push('topic/3')" alt="Software">
                 <img src="../assets/se.svg" alt="Software" style="width:100%" />
                 <div class="overlay">
                   <div class="overlay-text">Develop Software</div>
@@ -145,49 +146,47 @@
       </div>
     </div>
 
-    <div class="jumbotron2 mt-5 mb-5">
-      <div class="jumbotron2-inside">
-        <h3
-          class="display-4"
-          style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center; font-size: 4.7em;"
+    <div class="jumbotron" style="background-color:transparent !important;">
+      <h3
+        class="display-4"
+        style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center; font-size: 4.7em;"
+      >
+        Testimonials
+      </h3>
+      <vueper-slides
+        bullets-outside
+        autoplay
+        slide-image-inside
+        :arrows="false"
+        :slide-ratio="1 / 2"
+        class="no-shadow"
+      >
+        <vueper-slide
+          v-for="(test, idx) in testimonials"
+          :key="test.id"
+          :class="{ active: idx == 0 }"
         >
-          Testimonials
-        </h3>
-        <vueper-slides
-          bullets-outside
-          autoplay
-          slide-image-inside
-          :arrows="false"
-          :slide-ratio="1 / 2"
-          class="no-shadow"
-        >
-          <vueper-slide
-            v-for="(test, idx) in testimonials"
-            :key="test.id"
-            :class="{ active: idx == 0 }"
-          >
-            <div slot="slideContent">
-              <div
-                class="caption d-md-block rounded"
-                style="box-sizing: border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: inline-block; text-align: center; justify-content: center;width:100%!important"
-              >
-                <p style=" ">{{ test.blurb }}</p>
-                <p style="font-style: italic; !important">
-                  - {{ test.name }} {{ test.specialty }}
-                </p>
-              </div>
-              <div>
-                <img
-                  class="d-md-block img-fluid img-responsive"
-                  style="display: block;"
-                  :src="test.img"
-                  :alt="test.name"
-                />
-              </div>
+          <div slot="slideContent">
+            <div
+              class="slideCaption d-md-block rounded"
+              style="box-sizing: border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: inline-block; text-align: center; justify-content: center;width:100%!important"
+            >
+              <p style=" ">{{ test.blurb }}</p>
+              <p style="font-style: italic; !important">
+                - {{ test.name }} {{ test.specialty }}
+              </p>
             </div>
-          </vueper-slide>
-        </vueper-slides>
-      </div>
+            <div>
+              <img
+                class="d-md-block img-fluid img-responsive"
+                style="display: block;"
+                :src="test.img"
+                :alt="test.name"
+              />
+            </div>
+          </div>
+        </vueper-slide>
+      </vueper-slides>
     </div>
     <div class="jumbotron" style="background-color:transparent !important;">
       <h4
@@ -201,26 +200,24 @@
           class="card-header"
           style="background-color:#004C97 color: #B6ADA5; text-align: center !important"
         >
-          Fostering a spirit of fellowship with and loyalty to the University
+          Proud Sponsor of UWF-Empowers
         </h2>
         <div class="row mt-3 mb-3" style="margin-left:1px; margin-right:1px; ">
           <div class="col-lg-6 mb-3">
-            <div style="height: 100; margin: auto;">
-              <img
-                class="img-fluid"
-                alt="Responsive image"
-                style="height: auto; width: 100%;margin: auto; display: block;"
-                src="../assets/team_03.jpg"
-              />
-            </div>
+            <img
+              class="img-fluid"
+              alt="Responsive image"
+              style="height: auto; margin: auto; display: block;"
+              src="../assets/team_o3.svg"
+            />
           </div>
           <div class="col-lg-6">
-            <div class="card mb-12" style="height: 100%;  display: block;">
+            <div class="card mb-12" style="height: auto;  display: block;">
               <h4
                 class="card-header"
                 style="background-color:#8DC8E8 !important"
               >
-                80,000 Members Strong
+                Fostering a spirit of fellowship
               </h4>
               <div class="card-body">
                 <h5 class="card-text">
@@ -254,6 +251,7 @@
           <a
             href="https://uwf.edu/alumni/get-involved/events-calendar/"
             class="icon-block"
+            target="_blank"
             ><span style="font-size: 3em; color: #004C97; ">
               <i class="far fa-calendar-alt fa-2x"> </i>
             </span>
@@ -269,6 +267,7 @@
           <a
             href="https://uwf.edu/university-advancement/departments/development/give-now/donate/"
             class="icon-block"
+            target="_blank"
             ><span style="font-size: 3em; color: #007A33;">
               <i class="fas fa-gift fa-2x"></i>
             </span>
@@ -284,6 +283,7 @@
           <a
             href="https://issuu.com/universityofwestflorida/docs/connection_fall2018_issuu"
             class="icon-block"
+            target="_blank"
             ><span style="font-size: 3em; color: #004C97;">
               <i class="fas fa-book-reader fa-2x"></i>
             </span>
@@ -300,10 +300,8 @@
 <script>
 // In your VueJS component.
 import { VueperSlides, VueperSlide } from "vueperslides";
-
 // Since v. 1.6.0, you need to include Vueper Slides CSS file for default styles.
 import "vueperslides/dist/vueperslides.css";
-
 export default {
   components: { VueperSlides, VueperSlide },
   name: "About",
@@ -367,7 +365,11 @@ export default {
 </script>
 
 <style scoped>
-.caption {
+.jumbotron {
+  padding: 0.5rem 0.5rem; /* override bootstrap's padding*/
+}
+.slideCaption {
+  /* position testimonial carousel's floating caption*/
   position: absolute;
   top: 80%;
   left: 50%;
@@ -376,132 +378,30 @@ export default {
   color: white;
   font-weight: bold;
 }
-
 .fas:hover,
 .far:hover,
 .icon-block:hover {
   color: #ffb81c;
 }
-.jumbotron2 {
-  position: relative;
-}
-.jumbotron2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /*background-color: #8DC8E8 ;*/
-  background-size: cover;
-  image-rendering: pixelated;
-  filter: opacity(0.6);
-}
-.jumbotron2-inside {
-  /* This will make it stack on top of the ::before */
-  position: relative;
-}
-
-.item,
-.active {
-  /*height: 50%;*/
-  overflow: hidden;
-}
-
-.fill {
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-
-.item img {
-  width: auto;
-  height: auto;
-  overflow: hidden;
-}
-@media screen and (max-width: 576) {
-  p {
-    font-size: 3vw;
-  }
-}
-
-@media screen and (max-width: 1200) {
-  h1,
-  .display-3 {
-    font-size: 8vw;
-  }
-  h2 {
-    font-size: 7vw;
-  }
-  .caro-h2 {
-    font-size: 4vw;
-  }
-  h3 {
-    font-size: 6vw;
-  }
-  h4 {
-    font-size: 3vw;
-  }
-  .columnImg {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 768px) {
-  .columnImg {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
 
 .btn-light {
-  color: #009cde;
+  color: #ffffff;
   background-color: #009cde;
-  border-color: #97c800;
-  fill: #8dc8e8;
+  border-color: #004c97;
+  fill: #004c97;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  color: #97c800;
-  background-color: #003865;
-  border-color: #00abc8;
-  fill: #009cde;
+  color: #ffffff;
+  background-color: #8dc8e8;
 }
 
-.rowImg {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-/* Create 3 equal columns that sits next to each other */
-.columnImg {
-  flex: 33%;
-  max-width: 33%;
-  padding: 0 5px;
-}
-
-.columnImg img {
-  margin-top: 8px;
-  vertical-align: middle;
-}
-
+/* Start Your IT Journey styling */
 .overlay {
   position: absolute;
   top: 0;
-  padding: 0 5px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  vertical-align: middle;
   height: 100%;
   width: 100%;
   opacity: 0;
@@ -515,16 +415,18 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
+
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 24;
+  line-height: 1.2em;
 }
 .tile-container:hover .overlay {
   opacity: 0.9;
 }
 .tile-container {
+  margin-top: 8px;
   position: relative;
   width: 100%;
   z-index: 22;
