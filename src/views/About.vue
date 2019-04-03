@@ -65,7 +65,7 @@
               display="block"
               target="_self"
             />
-            <a href="Home" alt="Search the stacks at UWF Libraries">
+            <a @click="$router.push({ path: 'home' })">
               <div class="overlay">
                 <div class="overlay-text">Search our course library</div>
               </div>
