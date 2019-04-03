@@ -11,7 +11,13 @@
               100% online learning from our best instructors.
             </p>
             <div class="hero-btn mt-5">
-              <button class="btn custom-btn btn-info mr-4">Learn More</button>
+              <button
+                @click="$router.push('Features')"
+                button
+                class="btn custom-btn btn-info mr-4"
+              >
+                Learn More
+              </button>
             </div>
           </div>
         </div>
@@ -120,7 +126,7 @@
                       />
                     </div>
                     <div class="col-md-8">
-                      <div class="card-body">
+                      <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Web Development</h5>
                         <p class="card-text">
                           Learn how to design and create a website with our web
@@ -129,6 +135,9 @@
                           text, design in CSS, create a content strategy, and
                           analyze user experience design.
                         </p>
+                        <a href="#" class="btn btn-primary btn mt-auto"
+                          >Find Course</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -143,15 +152,18 @@
                       />
                     </div>
                     <div class="col-md-8">
-                      <div class="card-body">
+                      <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Become a Digital Marketer</h5>
                         <p class="card-text">
                           Use your analytical and tactical skills to help grow
                           and develop new opportunities for businesses as a
-                          digital marketer. From marketing plans and content
-                          strategy to lead generation and SEO, we through the
-                          best practices and principles of digital marketing.
+                          digital marketer.From marketing plans to content
+                          strategy we teach the best practices and principles of
+                          digital marketing.
                         </p>
+                        <a href="#" class="btn btn-primary btn mt-auto"
+                          >Find Course</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -166,7 +178,7 @@
                       />
                     </div>
                     <div class="col-md-8">
-                      <div class="card-body">
+                      <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Business</h5>
                         <p class="card-text">
                           Explore a wide range of business skills from project
@@ -175,6 +187,9 @@
                           development tutorials can help you learn SEO,
                           spreadsheets, word processing, and more.
                         </p>
+                        <a href="#" class="btn btn-primary btn mt-auto"
+                          >Find Course</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -193,16 +208,18 @@
                       />
                     </div>
                     <div class="col-md-8">
-                      <div class="card-body">
+                      <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Become a Manager</h5>
                         <p class="card-text">
                           As a manager, success is predicated on your ability to
-                          achieve goals working with your team. The good news is
-                          that management is a skill that can be learned. This
-                          path is designed to provide you with the key
-                          considerations, skills and competencies to help you
-                          become and succeed as a manager.
+                          achieve goals working with your team. This path is
+                          designed to provide you with the key considerations,
+                          skills and competencies to help you become and succeed
+                          as a manager.
                         </p>
+                        <a href="#" class="btn btn-primary btn mt-auto"
+                          >Find Course</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -217,14 +234,18 @@
                       />
                     </div>
                     <div class="col-md-8">
-                      <div class="card-body">
+                      <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Master 2D Animation</h5>
                         <p class="card-text">
                           2D animators create the illusion of motion and change
                           via analog and digital media. Beginning with the
                           foundations of animation, learn everything you need to
-                          know to get started in 2D animation.
+                          know to get started in 2D animation and make it your
+                          career.
                         </p>
+                        <a href="#" class="btn btn-primary btn mt-auto"
+                          >Find Course</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -239,7 +260,7 @@
                       />
                     </div>
                     <div class="col-md-8">
-                      <div class="card-body">
+                      <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Design</h5>
                         <p class="card-text">
                           Whether you want to design a logo, create ebooks, or
@@ -248,6 +269,9 @@
                           InDesign, explore typography, and learn the nuances of
                           designing for print.
                         </p>
+                        <a href="#" class="btn btn-primary btn mt-auto"
+                          >Find Course</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -266,7 +290,7 @@
                       />
                     </div>
                     <div class="col-md-8">
-                      <div class="card-body">
+                      <div class="card-body d-flex flex-column">
                         <h5 class="card-title">
                           Become an Agile Project Manager
                         </h5>
@@ -278,6 +302,9 @@
                           stories and agile charts to driving productive
                           meetings.
                         </p>
+                        <a href="#" class="btn btn-primary btn mt-auto"
+                          >Find Course</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -292,7 +319,7 @@
                       />
                     </div>
                     <div class="col-md-8">
-                      <div class="card-body">
+                      <div class="card-body d-flex flex-column">
                         <h5 class="card-title">
                           Become an IT Security Specialist
                         </h5>
@@ -304,6 +331,9 @@
                           data to the basics of cryptography and cybercrime
                           investigation and response.
                         </p>
+                        <a href="#" class="btn btn-primary btn mt-auto"
+                          >Find Course</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -318,14 +348,19 @@
                       />
                     </div>
                     <div class="col-md-8">
-                      <div class="card-body">
+                      <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Developer Training</h5>
                         <p class="card-text">
                           Our developer tutorials can help you learn to develop
                           and create mobile apps, work with PHP and MySQL
                           databases, get started with the statistical processing
-                          language R, and much more.
+                          language R, and much more. Our portfolio has over 280
+                          courses covering programming languages, best practices
+                          and management and deployment.
                         </p>
+                        <a href="#" class="btn btn-primary btn mt-auto"
+                          >Find Course</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -435,6 +470,101 @@
       </div>
       <br />
       <br />
+
+      <section id="team">
+        <div class="container my-3 py-5 text-center">
+          <div class="row mb-5">
+            <div class="col">
+              <h1>Our Professors In Spotlight</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    src="../assets/professor1.svg"
+                    alt=""
+                    class="img-fluid rounded-circle w-50 mb-3"
+                  />
+                  <h3>Prof. John Wright</h3>
+                  <h5>Director of the Center for Cybersecurity</h5>
+                  <p>
+                    Professor Wright has extensive expertise in cybersecurity
+                    education, research and workforce development and received
+                    several awards related to cybersecurity education and
+                    diversity.
+                  </p>
+                  <div class="d-flex flex-row justify-content-center"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    src="../assets/professor2.svg"
+                    alt=""
+                    class="img-fluid rounded-circle w-50 mb-3"
+                  />
+                  <h3>Prof. Carl Griffin</h3>
+                  <h5>Professor</h5>
+                  <p>
+                    Dr. Carl Griffin is a Professor in the Department of
+                    Computer Science and a Research Scientist at the Florida
+                    Institute for Artificial Intelligence. He teaches Computer
+                    Science courses and seminars at UWF and works on projects
+                    for AI.
+                  </p>
+                  <div class="d-flex flex-row justify-content-center"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    src="../assets/professor3.svg"
+                    alt=""
+                    class="img-fluid rounded-circle w-50 mb-3"
+                  />
+                  <h3>Dr. Susan Smith</h3>
+                  <h5>Associate Professor</h5>
+                  <p>
+                    Dr. Smith's research includes knowledge elicitation and
+                    representation, web services and service oriented
+                    architecture and computer science education in Robotics
+                    domain.
+                  </p>
+                  <div class="d-flex flex-row justify-content-center"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    src="../assets/professor4.svg"
+                    alt=""
+                    class="img-fluid rounded-circle w-50 mb-3"
+                  />
+                  <h3>Prof. William Jones</h3>
+                  <h5>Lecturer</h5>
+                  <p>
+                    Dr. William Jones, a Lecturer, has written in-depth books
+                    about algorithms, data structures and artificial
+                    intelligence.
+                  </p>
+                  <div class="d-flex flex-row justify-content-center"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -444,45 +574,6 @@ export default {};
 </script>
 
 <style scoped>
-.jumbotron {
-  position: absolute;
-  top: 80%;
-  left: 0%;
-  color: white;
-}
-
-.jumbotron h1 {
-  display: block;
-  font-weight: bold;
-  font-size: 50px;
-  color: white;
-  padding-left: 40px;
-  padding-top: 300px;
-}
-.jumbotron p {
-  color: white;
-  font-size: 20px;
-  padding-left: 40px;
-}
-
-tbody tr {
-  cursor: pointer;
-}
-
-.btn {
-  min-height: 40px;
-  min-width: 150px;
-  position: relative;
-}
-
-/* .carousel-inner {
-  background-color : #669999;
-}
-
-.card2 {
-  background-color : #cc6666;
-} */
-
 .carousel-inner {
   background-color: #cc6666;
 }
@@ -512,24 +603,6 @@ tbody tr {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.button {
-  padding: 15px 50px;
-  border: 0;
-  background: rgba(255, 253, 253, 0.767);
-  color: rgb(14, 1, 12);
-  cursor: pointer;
-  position: absolute;
-  top: 65%;
-  left: 12%;
-  -webkit-transform: translate(-10%, -10%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-button:hover {
-  background: rgb(209, 203, 203);
 }
 
 .item img {
@@ -567,5 +640,58 @@ button:hover {
 }
 .p2 {
   font-size: 16px;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+}
+
+h1 {
+  font-size: 36px;
+  color: #555;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+#team img {
+  margin-top: -50px;
+}
+
+#team i {
+  font-size: 26px;
+  color: #555;
+}
+
+#team p {
+  font-weight: 500;
+  color: #555;
+}
+
+#team .card {
+  border-radius: 0;
+  box-shadow: 5px 5px 15px #e74c3c;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+}
+
+#team .card:hover {
+  background: #e74c3c;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px #9e9e9e;
+}
+
+#team .card:hover h3,
+#team .card:hover i {
+  color: #fff;
 }
 </style>
