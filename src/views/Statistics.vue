@@ -22,9 +22,9 @@
       <tbody>
         <tr v-for="course in courses" :key="course.id">
           <td>{{ course.id }}</td>
-          <td>{{ course.title }}</td>
+          <td id="testCourseTitle">{{ course.title }}</td>
           <td>{{ course.instructor }}</td>
-          <td>{{ course.count }}</td>
+          <td id="testCourseCount">{{ course.count }}</td>
         </tr>
       </tbody>
     </table>

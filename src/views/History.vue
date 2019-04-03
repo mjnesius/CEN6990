@@ -19,8 +19,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr @click="pushToCoursePage(course.id)" v-for="course in historyList" :key="course.id">
-          <td>{{ course.title }}</td>
+        <tr
+          id="testCourseClick"
+          @click="pushToCoursePage(course.id)"
+          v-for="course in historyList"
+          :key="course.id"
+        >
+          <td id="testCourseTitle">{{ course.title }}</td>
           <td>{{ course.shortDescription }}</td>
           <td>{{ course.instructor }}</td>
         </tr>

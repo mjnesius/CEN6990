@@ -11,10 +11,15 @@
           mb-5
         >Current User courses are initially displayed but use Search Fields to find other courses.</p>
         <div class="mt-5">
-          <button @click.prevent="add" type="button" class="btn btn-lg btn-success">Add Course</button>
+          <button
+            id="testAddClick"
+            @click.prevent="add"
+            type="button"
+            class="btn btn-lg btn-success"
+          >Add Course</button>
         </div>
         <div class="d-flex justify-content-center">
-          <form @submit.prevent="searchForCourse" class="form-inline mt-5">
+          <form id="testSearchCourse" @submit.prevent="searchForCourse" class="form-inline mt-5">
             <input
               class="form-control form-control-lg mr-sm-2"
               type="search"
@@ -24,13 +29,14 @@
             >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             <button
+              id="testClear1"
               @click.prevent="searchDb(user.uid)"
               class="btn btn-outline-primary my-2 my-sm-0"
             >Clear</button>
           </form>
         </div>
         <div class="d-flex justify-content-center">
-          <form @submit.prevent="searchOwner" class="form-inline mt-4">
+          <form id="testSearchOwner" @submit.prevent="searchOwner" class="form-inline mt-4">
             <input
               class="form-control form-control-lg mr-sm-2"
               type="search"
@@ -40,6 +46,7 @@
             >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             <button
+              id="testClear2"
               @click.prevent="searchDb(user.uid)"
               class="btn btn-outline-primary my-2 my-sm-0"
             >Clear</button>
@@ -60,21 +67,24 @@
       <tbody>
         <tr v-for="course in courses" :key="course.id">
           <td>{{ course.id }}</td>
-          <td>{{ course.title }}</td>
+          <td id="testCourseTitle">{{ course.title }}</td>
           <td>{{ course.instructor }}</td>
           <td>{{ course.timestamp }}</td>
           <td>
             <button
+              id="testViewClick"
               @click.prevent="pushToCoursePage(course.id)"
               type="button"
               class="btn btn-sm btn-primary py-1 px-3"
             >View</button>
             <button
+              id="testEditClick"
               @click.prevent="edit(course.id)"
               type="button"
               class="btn ml-1 btn-sm btn-warning py-1 px-3"
             >Edit</button>
             <button
+              id="testDeleteClick"
               @click.prevent="setDeleteId(course.id)"
               type="button"
               class="btn ml-1 btn-sm btn-danger py-1"
