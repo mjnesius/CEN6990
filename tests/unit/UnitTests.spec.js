@@ -14,7 +14,6 @@ import Course from "@/views/Course.vue";
 import Signup from "@/views/Signup.vue";
 import Login from "@/views/Login.vue";
 import sinon from "sinon";
-// import flushPromises from "flush-promises";
 
 describe("Topic.vue", () => {
   const $route = {
@@ -116,33 +115,37 @@ describe("Course.vue", () => {
         } else {
           this.feedback = "You must enter a comment to add it";
         }
+      },
+      getCourses() {
+        this.course = {
+          title: "Test Title",
+          longDescription: "Test Long Description",
+          instructor: "Test Instructor",
+          instructorBio: "Test Instructor Bio",
+          lectures: [
+            {
+              title: "Test Lecture Title",
+              id: "789"
+            }
+          ]
+        };
+      },
+      upDateTrending() {},
+      upDateHistory() {},
+      listenToComments() {
+        this.comments = [
+          {
+            alias: "Test Alias",
+            date: "4 Apr 2019",
+            content: "Test Lecture Content"
+          }
+        ];
       }
     },
     computed: {
       firebaseUser() {
         return { uid: "1234" };
       }
-    },
-    created() {
-      this.course = {
-        title: "Test Title",
-        longDescription: "Test Long Description",
-        instructor: "Test Instructor",
-        instructorBio: "Test Instructor Bio",
-        lectures: [
-          {
-            title: "Test Lecture Title",
-            id: "789"
-          }
-        ]
-      };
-      this.comments = [
-        {
-          alias: "Test Alias",
-          date: "4 Apr 2019",
-          content: "Test Lecture Content"
-        }
-      ];
     }
   });
   const clickMethodStub = sinon.stub();
@@ -221,15 +224,17 @@ describe("Profile.vue", () => {
 
 describe("History.vue", () => {
   const wrapper = mount(History, {
-    created() {
-      this.historyList = [
-        {
-          title: "Test Title",
-          shortDescription: "Test Short Description",
-          instructor: "Test Instructor",
-          timestamp: "2 Apr 2019"
-        }
-      ];
+    methods: {
+      getHistoryList() {
+        this.historyList = [
+          {
+            title: "Test Title",
+            shortDescription: "Test Short Description",
+            instructor: "Test Instructor",
+            timestamp: "2 Apr 2019"
+          }
+        ];
+      }
     },
     computed: {
       user() {
@@ -265,15 +270,17 @@ describe("History.vue", () => {
 
 describe("Statistics.vue", () => {
   const wrapper = mount(Statistics, {
-    created() {
-      this.courses = [
-        {
-          id: "1234",
-          title: "Test Title",
-          instructor: "Test Instructor",
-          count: "2"
-        }
-      ];
+    methods: {
+      getTrending() {
+        this.courses = [
+          {
+            id: "1234",
+            title: "Test Title",
+            instructor: "Test Instructor",
+            count: "2"
+          }
+        ];
+      }
     }
   });
   it("renders Statistics", () => {
@@ -370,5 +377,178 @@ describe("Manage.vue", () => {
     wrapper.setMethods({ searchDb: clickMethodStub });
     wrapper.find("#testClear2").trigger("click");
     expect(clickMethodStub.called).toBe(true);
+  });
+});
+
+describe("Add.vue", () => {
+  const wrapper = mount(Add, {
+    computed: {
+      user() {
+        return { uid: "1234" };
+      }
+    },
+    methods: {
+      addCourse() {
+        if (
+          this.course.title &&
+          this.course.shortDescription &&
+          this.course.longDescription &&
+          this.course.instructor &&
+          this.course.instructorBio &&
+          this.course.lectures &&
+          this.course.owner_id
+        ) {
+          this.feedback = null;
+          this.course.date = new Date();
+        } else {
+          this.feedback = "You must enter values in all fields to add course.";
+        }
+      }
+    }
+  });
+  const clickMethodStub = sinon.stub();
+  it("renders Add", () => {
+    expect(wrapper.isVueInstance()).toBe(true);
+  });
+  it("renders Add title", () => {
+    let title = wrapper.find("h2");
+    expect(title.text()).toBe("Add Course");
+  });
+  it("displays add course error message if missing fields", () => {
+    wrapper.find("form#addCourse").trigger("submit");
+    const errorMessage = wrapper.find("#addCourseFeedback.text-danger");
+    expect(errorMessage.exists()).toBe(true);
+  });
+  it("binds course title", () => {
+    let title = wrapper.find("#testCourseTitle");
+    title.setValue("Test Title");
+    expect(wrapper.vm.course.title).toBe("Test Title");
+  });
+  it("click on Cancel calls backToManage()", () => {
+    wrapper.setMethods({ backToManage: clickMethodStub });
+    wrapper.find("#backToManage").trigger("click");
+    expect(clickMethodStub.called).toBe(true);
+  });
+  it("displays add lecture error message if missing fields", () => {
+    wrapper.find("#addLectureButton").trigger("click");
+    const errorMessage = wrapper.find("#addCourseFeedback.text-danger");
+    expect(errorMessage.text()).toBe(
+      "You must enter values to add another lecture."
+    );
+  });
+  it("adds lecture", () => {
+    let id = wrapper.find("#lectureId");
+    id.setValue("1234");
+    let lectureTitle = wrapper.find("#lectureTitle");
+    lectureTitle.setValue("Lecture Title");
+    wrapper.find("#addLectureButton").trigger("click");
+    expect(wrapper.vm.lecture).toEqual({});
+  });
+  it("deletes lecture", () => {
+    wrapper.find("#deleteButton").trigger("click");
+    expect(wrapper.find("#displayedVideoId").exists()).toBe(false);
+    expect(wrapper.find("#displayedLectureTitle").exists()).toBe(false);
+  });
+});
+
+describe("Edit.vue", () => {
+  const wrapper = mount(Edit, {
+    methods: {
+      getCourses() {
+        this.course = {
+          title: "Test Title",
+          shortDescription: "short description",
+          longDescription: "long description",
+          instructor: null,
+          instructorBio: "instructor bio",
+          lectures: [{ id: "abcde", title: "lecture" }],
+          owner_id: "12345"
+        };
+      },
+      editCourse() {
+        if (
+          this.course.title &&
+          this.course.shortDescription &&
+          this.course.longDescription &&
+          this.course.instructor &&
+          this.course.instructorBio &&
+          this.course.lectures &&
+          this.course.owner_id
+        ) {
+          this.feedback = null;
+        } else {
+          this.feedback = "You must enter values in all fields to add course.";
+        }
+      }
+    }
+  });
+  const clickMethodStub = sinon.stub();
+  it("renders Edit", () => {
+    expect(wrapper.isVueInstance()).toBe(true);
+  });
+  it("renders Edit title", () => {
+    let title = wrapper.find("h2");
+    expect(title.text()).toBe("Edit Course");
+  });
+  it("displays add course error message if missing fields", () => {
+    wrapper.find("form#editCourse").trigger("submit");
+    const errorMessage = wrapper.find("#editCourseFeedback.text-danger");
+    expect(errorMessage.exists()).toBe(true);
+  });
+  it("binds course title", () => {
+    expect(wrapper.vm.course.title).toBe("Test Title");
+  });
+  it("click on Cancel calls backToManage()", () => {
+    wrapper.setMethods({ backToManage: clickMethodStub });
+    wrapper.find("#backToManage").trigger("click");
+    expect(clickMethodStub.called).toBe(true);
+  });
+  it("displays add lecture error message if missing fields", () => {
+    wrapper.find("#addLectureButton").trigger("click");
+    const errorMessage = wrapper.find("#editCourseFeedback.text-danger");
+    expect(errorMessage.text()).toBe(
+      "You must enter values to add another lecture."
+    );
+  });
+  it("adds lecture", () => {
+    let id = wrapper.find("#lectureId");
+    id.setValue("1234");
+    let lectureTitle = wrapper.find("#lectureTitle");
+    lectureTitle.setValue("Lecture Title");
+    wrapper.find("#addLectureButton").trigger("click");
+    expect(wrapper.vm.lecture).toEqual({});
+  });
+  it("deletes lecture", () => {
+    wrapper.find("#deleteButton").trigger("click");
+    expect(wrapper.find("#displayedVideoId").exists()).toBe(false);
+    expect(wrapper.find("#displayedLectureTitle").exists()).toBe(false);
+  });
+});
+
+describe("About.vue", () => {
+  const wrapper = mount(About);
+  it("renders About", () => {
+    expect(wrapper.isVueInstance()).toBe(true);
+  });
+});
+
+describe("Faq.vue", () => {
+  const wrapper = mount(Faq);
+  it("renders Faq", () => {
+    expect(wrapper.isVueInstance()).toBe(true);
+  });
+});
+
+describe("Features.vue", () => {
+  const wrapper = mount(Features);
+  it("renders Features", () => {
+    expect(wrapper.isVueInstance()).toBe(true);
+  });
+});
+
+describe("Home.vue", () => {
+  const wrapper = mount(Home);
+  it("renders Home", () => {
+    expect(wrapper.isVueInstance()).toBe(true);
   });
 });

@@ -41,18 +41,23 @@ export default {
       courses: []
     };
   },
-  created() {
-    db.collection("trending")
-      .orderBy("count", "desc")
-      .limit(10)
-      .get()
-      .then(snapshot => {
-        snapshot.forEach(doc => {
-          let course = doc.data();
-          course.id = doc.id;
-          this.courses.push(course);
+  methods: {
+    getTrending() {
+      db.collection("trending")
+        .orderBy("count", "desc")
+        .limit(10)
+        .get()
+        .then(snapshot => {
+          snapshot.forEach(doc => {
+            let course = doc.data();
+            course.id = doc.id;
+            this.courses.push(course);
+          });
         });
-      });
+    }
+  },
+  created() {
+    this.getTrending();
   }
 };
 </script>
