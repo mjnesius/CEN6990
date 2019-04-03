@@ -475,7 +475,7 @@
         <div class="container my-3 py-5 text-center">
           <div class="row mb-5">
             <div class="col">
-              <h1>Our Professors In Spotlight</h1>
+              <h1>Our Instructors In Spotlight</h1>
             </div>
           </div>
           <div class="row">
