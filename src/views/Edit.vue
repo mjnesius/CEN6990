@@ -3,13 +3,13 @@
     <div class="row my-5">
       <div class="col-md-8 mx-auto my-5">
         <h2 class="text-center mb-5">Edit Course</h2>
-        <form @submit.prevent="editCourse">
+        <form id="editCourse" @submit.prevent="editCourse">
           <div class="form-group">
-            <label for="formGroupExampleInput">Course Title</label>
+            <label for="testCourseTitle">Course Title</label>
             <input
+              id="testCourseTitle"
               type="text"
               class="form-control form-control-lg w-50"
-              id="formGroupExampleInput"
               placeholder="Course Title"
               maxlength="30"
               v-model="course.title"
@@ -39,11 +39,11 @@
             ></textarea>
           </div>
           <div class="form-group">
-            <label for="formGroupExampleInput2">Instructor</label>
+            <label for="courseInstructor">Instructor</label>
             <input
+              id="courseInstructor"
               type="text"
               class="form-control form-control-lg"
-              id="formGroupExampleInput2"
               placeholder="Instructor"
               maxlength="20"
               v-model="course.instructor"
@@ -97,6 +97,7 @@
                 >
               </div>
               <button
+                id="deleteButton"
                 @click.prevent="deleteLecture(index)"
                 type="button"
                 class="btn btn-sm btn-danger"
@@ -108,6 +109,7 @@
             <div class="col-md-4">
               <label for="id">Video ID:</label>
               <input
+                id="lectureId"
                 type="text"
                 class="form-control form-control-lg"
                 name="id"
@@ -119,6 +121,7 @@
             <div class="col-md-4">
               <label for="title">Lecture Title:</label>
               <input
+                id="lectureTitle"
                 type="text"
                 class="form-control form-control-lg"
                 name="title"
@@ -127,12 +130,25 @@
                 placeholder="Lecture Title"
               >
             </div>
-            <button @click.prevent="addLecture()" type="button" class="btn btn-success">Add Lecture</button>
+            <button
+              id="addLectureButton"
+              @click.prevent="addLecture()"
+              type="button"
+              class="btn btn-success"
+            >Add Lecture</button>
           </div>
-          <p v-if="feedback" class="text-center h5 my-5 text-danger">{{ feedback }}</p>
+          <p
+            id="editCourseFeedback"
+            v-if="feedback"
+            class="text-center h5 my-5 text-danger"
+          >{{ feedback }}</p>
           <button class="btn btn-lg btn-primary btn-block my-5">Save Edits</button>
         </form>
-        <button @click.prevent="backToManage" class="btn btn-lg btn-success btn-block">Cancel</button>
+        <button
+          id="backToManage"
+          @click.prevent="backToManage"
+          class="btn btn-lg btn-success btn-block"
+        >Cancel</button>
       </div>
     </div>
   </div>
@@ -189,16 +205,19 @@ export default {
       } else {
         this.feedback = "You must enter values in all fields to edit course.";
       }
+    },
+    getCourses() {
+      db.collection("courses")
+        .doc(this.$route.params.id)
+        .get()
+        .then(doc => {
+          this.course = doc.data();
+          this.courseId = doc.id;
+        });
     }
   },
   created() {
-    db.collection("courses")
-      .doc(this.$route.params.id)
-      .get()
-      .then(doc => {
-        this.course = doc.data();
-        this.courseId = doc.id;
-      });
+    this.getCourses();
   }
 };
 </script>

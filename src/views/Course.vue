@@ -98,6 +98,92 @@ export default {
       } else {
         this.feedback = "You must enter a comment to add it";
       }
+    },
+    getCourses() {
+      db.collection("courses")
+        .doc(this.paramCourseId)
+        .get()
+        .then(doc => {
+          this.course = doc.data();
+          this.currentVideo = this.course.lectures[0].id;
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+    upDateTrending() {
+      let ref = db.collection("trending").doc(this.paramCourseId);
+      ref.get().then(doc => {
+        let newCount = 1;
+        if (doc.exists) {
+          newCount = doc.data().count + 1;
+        }
+        ref
+          .set({
+            title: this.course.title,
+            instructor: this.course.instructor,
+            count: newCount
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      });
+    },
+    upDateHistory() {
+      db.collection("users")
+        .where("user_id", "==", this.firebaseUser.uid)
+        .get()
+        .then(snapshot => {
+          snapshot.forEach(doc => {
+            this.user = doc.data();
+            this.userId = doc.id;
+            let historyList = doc.data().history;
+            if (!historyList) {
+              historyList = [];
+            } else {
+              historyList = historyList.filter(nextCourse => {
+                return nextCourse.id != this.paramCourseId;
+              });
+            }
+            if (historyList.length > 10) {
+              historyList.pop();
+            }
+            let newEntry = {
+              title: this.course.title,
+              shortDescription: this.course.shortDescription,
+              instructor: this.course.instructor,
+              id: this.paramCourseId
+            };
+            historyList.unshift(newEntry);
+            db.collection("users")
+              .doc(this.userId)
+              .update({
+                history: historyList
+              })
+              .catch(err => {
+                console.log(err);
+              });
+          });
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+    listenToComments() {
+      db.collection("comments")
+        .where("course", "==", this.paramCourseId)
+        .orderBy("date")
+        .onSnapshot(snapshot => {
+          snapshot.docChanges().forEach(change => {
+            if (change.type == "added") {
+              this.comments.unshift({
+                alias: change.doc.data().alias,
+                date: moment(change.doc.data().date.toDate()).format("ll"),
+                content: change.doc.data().content
+              });
+            }
+          });
+        });
     }
   },
   data() {
@@ -110,89 +196,15 @@ export default {
       comments: [],
       user: null,
       userId: null,
-      historyList: null
+      historyList: null,
+      paramCourseId: this.$route.params.id
     };
   },
   created() {
-    let paramCourseId = this.$route.params.id;
-    db.collection("courses")
-      .doc(paramCourseId)
-      .get()
-      .then(doc => {
-        this.course = doc.data();
-        this.currentVideo = this.course.lectures[0].id;
-      })
-      .catch(err => {
-        console.log(err);
-      });
-    let ref = db.collection("trending").doc(paramCourseId);
-    ref.get().then(doc => {
-      let newCount = 1;
-      if (doc.exists) {
-        newCount = doc.data().count + 1;
-      }
-      ref
-        .set({
-          title: this.course.title,
-          instructor: this.course.instructor,
-          count: newCount
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    });
-    db.collection("users")
-      .where("user_id", "==", this.firebaseUser.uid)
-      .get()
-      .then(snapshot => {
-        snapshot.forEach(doc => {
-          this.user = doc.data();
-          this.userId = doc.id;
-          let historyList = doc.data().history;
-          if (!historyList) {
-            historyList = [];
-          } else {
-            historyList = historyList.filter(nextCourse => {
-              return nextCourse.id != paramCourseId;
-            });
-          }
-          if (historyList.length > 10) {
-            historyList.pop();
-          }
-          let newEntry = {
-            title: this.course.title,
-            shortDescription: this.course.shortDescription,
-            instructor: this.course.instructor,
-            id: paramCourseId
-          };
-          historyList.unshift(newEntry);
-          db.collection("users")
-            .doc(this.userId)
-            .update({
-              history: historyList
-            })
-            .catch(err => {
-              console.log(err);
-            });
-        });
-      })
-      .catch(err => {
-        console.log(err);
-      });
-    db.collection("comments")
-      .where("course", "==", paramCourseId)
-      .orderBy("date")
-      .onSnapshot(snapshot => {
-        snapshot.docChanges().forEach(change => {
-          if (change.type == "added") {
-            this.comments.unshift({
-              alias: change.doc.data().alias,
-              date: moment(change.doc.data().date.toDate()).format("ll"),
-              content: change.doc.data().content
-            });
-          }
-        });
-      });
+    this.getCourses();
+    this.upDateTrending();
+    this.upDateHistory();
+    this.listenToComments();
   }
 };
 </script>

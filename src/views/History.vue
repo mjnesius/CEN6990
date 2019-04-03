@@ -19,8 +19,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr @click="pushToCoursePage(course.id)" v-for="course in historyList" :key="course.id">
-          <td>{{ course.title }}</td>
+        <tr
+          id="testCourseClick"
+          @click="pushToCoursePage(course.id)"
+          v-for="course in historyList"
+          :key="course.id"
+        >
+          <td id="testCourseTitle">{{ course.title }}</td>
           <td>{{ course.shortDescription }}</td>
           <td>{{ course.instructor }}</td>
         </tr>
@@ -46,6 +51,20 @@ export default {
   methods: {
     pushToCoursePage(id) {
       this.$router.push({ name: "course", params: { id } });
+    },
+    getHistoryList() {
+      db.collection("users")
+        .where("user_id", "==", this.user.uid)
+        .limit(10)
+        .get()
+        .then(snapshot => {
+          snapshot.forEach(doc => {
+            this.historyList = doc.data().history;
+          });
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   },
   computed: {
@@ -54,18 +73,7 @@ export default {
     }
   },
   created() {
-    db.collection("users")
-      .where("user_id", "==", this.user.uid)
-      .limit(10)
-      .get()
-      .then(snapshot => {
-        snapshot.forEach(doc => {
-          this.historyList = doc.data().history;
-        });
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    this.getHistoryList();
   }
 };
 </script>

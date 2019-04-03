@@ -22,9 +22,9 @@
       <tbody>
         <tr v-for="course in courses" :key="course.id">
           <td>{{ course.id }}</td>
-          <td>{{ course.title }}</td>
+          <td id="testCourseTitle">{{ course.title }}</td>
           <td>{{ course.instructor }}</td>
-          <td>{{ course.count }}</td>
+          <td id="testCourseCount">{{ course.count }}</td>
         </tr>
       </tbody>
     </table>
@@ -41,18 +41,23 @@ export default {
       courses: []
     };
   },
-  created() {
-    db.collection("trending")
-      .orderBy("count", "desc")
-      .limit(10)
-      .get()
-      .then(snapshot => {
-        snapshot.forEach(doc => {
-          let course = doc.data();
-          course.id = doc.id;
-          this.courses.push(course);
+  methods: {
+    getTrending() {
+      db.collection("trending")
+        .orderBy("count", "desc")
+        .limit(10)
+        .get()
+        .then(snapshot => {
+          snapshot.forEach(doc => {
+            let course = doc.data();
+            course.id = doc.id;
+            this.courses.push(course);
+          });
         });
-      });
+    }
+  },
+  created() {
+    this.getTrending();
   }
 };
 </script>

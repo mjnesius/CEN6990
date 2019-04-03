@@ -3,7 +3,7 @@
     <div class="row my-5">
       <div class="col-md-4 mx-auto my-5">
         <h2 class="text-center mb-5">Update Profile</h2>
-        <form @submit.prevent="updateEmail">
+        <form id="email" @submit.prevent="updateEmail">
           <div class="form-group mb-3">
             <label for="exampleInputEmail1">Current Email: {{ user.email }}</label>
             <input
@@ -17,12 +17,13 @@
           </div>
           <p
             v-if="emailFeedback"
+            id="emailFeedback"
             class="text-center h5 my-3"
             :class="[isEmailSuccess ? 'text-success' : 'text-danger']"
           >{{ emailFeedback }}</p>
           <button class="btn btn-lg btn-primary btn-block mb-5">Update Email</button>
         </form>
-        <form @submit.prevent="updatePassword">
+        <form  id="password" @submit.prevent="updatePassword">
           <div class="form-group mb-4">
             <label for="exampleInputPassword1" class="sr-only">Password</label>
             <input
@@ -35,6 +36,7 @@
           </div>
           <p
             v-if="passwordFeedback"
+            id="passwordFeedback"
             class="text-center h5 mb-3"
             :class="[isPasswordSuccess ? 'text-success' : 'text-danger']"
           >{{ passwordFeedback }}</p>

@@ -3,13 +3,13 @@
     <div class="row my-5">
       <div class="col-md-8 mx-auto my-5">
         <h2 class="text-center mb-5">Add Course</h2>
-        <form @submit.prevent="addCourse">
+        <form id="addCourse" @submit.prevent="addCourse">
           <div class="form-group">
-            <label for="formGroupExampleInput">Course Title</label>
+            <label for="testCourseTitle">Course Title</label>
             <input
               type="text"
               class="form-control form-control-lg w-50"
-              id="formGroupExampleInput"
+              id="testCourseTitle"
               placeholder="Course Title"
               maxlength="30"
               v-model="course.title"
@@ -91,6 +91,7 @@
               <div class="col-md-4">
                 <label for="id">Video ID:</label>
                 <input
+                  id="displayedVideoId"
                   type="text"
                   class="form-control"
                   name="id"
@@ -101,6 +102,7 @@
               <div class="col-md-4">
                 <label for="title">Lecture Title:</label>
                 <input
+                  id="displayedLectureTitle"
                   type="text"
                   class="form-control"
                   name="title"
@@ -109,6 +111,7 @@
                 >
               </div>
               <button
+                id="deleteButton"
                 @click.prevent="deleteLecture(index)"
                 type="button"
                 class="btn btn-sm btn-danger"
@@ -120,6 +123,7 @@
             <div class="col-md-4">
               <label for="id">Video ID:</label>
               <input
+                id="lectureId"
                 type="text"
                 class="form-control form-control-lg"
                 name="id"
@@ -131,6 +135,7 @@
             <div class="col-md-4">
               <label for="title">Lecture Title:</label>
               <input
+                id="lectureTitle"
                 type="text"
                 class="form-control form-control-lg"
                 name="title"
@@ -139,12 +144,25 @@
                 placeholder="Lecture Title"
               >
             </div>
-            <button @click="addLecture()" type="button" class="btn btn-success">Add Lecture</button>
+            <button
+              id="addLectureButton"
+              @click="addLecture()"
+              type="button"
+              class="btn btn-success"
+            >Add Lecture</button>
           </div>
-          <p v-if="feedback" class="text-center h5 my-5 text-danger">{{ feedback }}</p>
+          <p
+            id="addCourseFeedback"
+            v-if="feedback"
+            class="text-center h5 my-5 text-danger"
+          >{{ feedback }}</p>
           <button class="btn btn-lg btn-primary btn-block my-5">Add Course</button>
         </form>
-        <button @click.prevent="backToManage" class="btn btn-lg btn-success btn-block">Cancel</button>
+        <button
+          id="backToManage"
+          @click.prevent="backToManage"
+          class="btn btn-lg btn-success btn-block"
+        >Cancel</button>
       </div>
     </div>
   </div>
