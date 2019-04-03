@@ -134,7 +134,7 @@
           </row>
           <row>
             <div class="tile-container">
-              <a @click="$router.push('topic/3')" alt="Software">
+              <a @click="$router.push('topic/0')" alt="Software">
                 <img src="../assets/se.svg" alt="Software" style="width:100%" />
                 <div class="overlay">
                   <div class="overlay-text">Develop Software</div>
