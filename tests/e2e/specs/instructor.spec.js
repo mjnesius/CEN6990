@@ -120,6 +120,7 @@ describe("Instructor e2e", function() {
     cy.get(".modal-footer > .btn-danger")
       .scrollIntoView()
       .click();
+    cy.wait(1000);
     cy.get("#exampleModalCenterTitle").should("be.not.visible");
   });
 });
