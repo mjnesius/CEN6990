@@ -120,7 +120,7 @@
           </div>
           <div class="modal-body h3 text-center">This delete action will be final.</div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
+            <button id="cancelButton" type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
             <button
               @click="deleteCourse()"
               type="button"
