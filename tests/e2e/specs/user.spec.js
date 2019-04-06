@@ -83,6 +83,7 @@ describe("User e2e", function() {
     cy.wait(500);
     cy.get(":nth-child(2) > .dropdown > #navbarDropdown").click();
     cy.get('[href="/profile"]').click();
+    cy.wait(500);
     cy.get("#email > .form-group > label").should(
       "contain",
       "Current Email: somebody@cox.net"
