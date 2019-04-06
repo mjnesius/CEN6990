@@ -72,8 +72,9 @@ describe("User e2e", function() {
     cy.wait(500);
     cy.get(":nth-child(2) > #navbarDropdown").click();
     cy.get('.dropdown-menu > [href="/topic/0"]').click();
+    cy.wait(1000);
     cy.contains("Web Development").click();
-    cy.wait(500);
+    cy.wait(1000);
     cy.url().should("include", "2A3ih8CdmgsyChLk43Mp");
     cy.logoutUser();
   });
