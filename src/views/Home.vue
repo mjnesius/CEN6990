@@ -28,7 +28,7 @@
       </div>
 
       <div class="Container mt-5">
-        <h2 class="mb-5 text-left">Trending Courses</h2>
+        <h1 div class="container my-3 py-5 text-center">Trending Courses</h1>
         <div class="card-deck1 m-1">
           <div class="card">
             <img
@@ -105,7 +105,7 @@
       <br />
       <br />
       <div class="container">
-        <h2 class="mb-5 text-left">New Courses</h2>
+        <h1 div class="container my-3 py-5 text-center">New Courses</h1>
         <div
           id="carouselExampleIndicators"
           class="carousel slide"
@@ -308,9 +308,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="card mb-3">
+                <div class="card">
                   <div class="row no-gutters">
-                    <div class="col">
+                    <div class="col-md-4">
                       <img
                         src="../assets/accounts-applications-apps-267350.jpg"
                         class="card-img"
@@ -337,9 +337,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="card mb-3">
+                <div class="card">
                   <div class="row no-gutters">
-                    <div class="col">
+                    <div class="col-md-4">
                       <img
                         src="../assets/adults-analysis-banking-1451447.jpg"
                         class="card-img"
@@ -391,7 +391,7 @@
       <br />
 
       <div class="Container mt-5">
-        <h2 class="mb-5 text-left">Browse By Topic</h2>
+        <h1 div class="container my-3 py-5 text-center">Browse By Topic</h1>
         <div class="carousel-inner1">
           <div class="card-deck m-1">
             <div class="card">
@@ -631,8 +631,13 @@ export default {};
   bottom: 40px;
 }
 
-.carousel-control {
-  width: 4%;
+.carousel-control-prev {
+  width: 2%;
+  color: rgb(0, 0, 0);
+}
+
+.carousel-control-next {
+  width: 2%;
 }
 
 .card-deck1 {
