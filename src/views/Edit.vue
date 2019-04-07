@@ -142,7 +142,7 @@
             v-if="feedback"
             class="text-center h5 my-5 text-danger"
           >{{ feedback }}</p>
-          <button class="btn btn-lg btn-primary btn-block my-5">Save Edits</button>
+          <button id="saveEditsButton" class="btn btn-lg btn-primary btn-block my-5">Save Edits</button>
         </form>
         <button
           id="backToManage"

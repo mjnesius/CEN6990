@@ -17,22 +17,22 @@
             >
           </div>
           <div class="form-group">
-            <label for="formGroupExampleInput2">Short Description</label>
+            <label for="shortDescription">Short Description</label>
             <input
               type="text"
               class="form-control form-control-lg"
-              id="formGroupExampleInput2"
+              id="shortDescription"
               placeholder="Short Description"
               maxlength="80"
               v-model="course.shortDescription"
             >
           </div>
           <div class="form-group">
-            <label for="formGroupExampleInput">Long Description</label>
+            <label for="longDescription">Long Description</label>
             <textarea
               type="text"
               class="form-control form-control-lg"
-              id="formGroupExampleInput"
+              id="longDescription"
               placeholder="Long Description"
               maxlength="400"
               rows="4"
@@ -40,33 +40,33 @@
             ></textarea>
           </div>
           <div class="form-group">
-            <label for="formGroupExampleInput2">Instructor</label>
+            <label for="instructor">Instructor</label>
             <input
               type="text"
               class="form-control form-control-lg"
-              id="formGroupExampleInput2"
+              id="instructor"
               placeholder="Instructor"
               maxlength="20"
               v-model="course.instructor"
             >
           </div>
           <div class="form-group">
-            <label for="formGroupExampleInput2">Instructor ID</label>
+            <label for="instructorId">Instructor ID</label>
             <input
               type="text"
               class="form-control form-control-lg"
-              id="formGroupExampleInput2"
+              id="instructorId"
               placeholder="Instructor ID"
               maxlength="20"
               v-model="course.owner_id"
             >
           </div>
           <div class="form-group">
-            <label for="formGroupExampleInput">Instructor Bio</label>
+            <label for="instructorBio">Instructor Bio</label>
             <textarea
               type="text"
               class="form-control form-control-lg"
-              id="formGroupExampleInput"
+              id="instructorBio"
               placeholder="Instructor Bio"
               maxlength="300"
               rows="3"
@@ -102,7 +102,7 @@
               <div class="col-md-4">
                 <label for="title">Lecture Title:</label>
                 <input
-                  id="displayedLectureTitle"
+                  id="title"
                   type="text"
                   class="form-control"
                   name="title"
@@ -156,7 +156,7 @@
             v-if="feedback"
             class="text-center h5 my-5 text-danger"
           >{{ feedback }}</p>
-          <button class="btn btn-lg btn-primary btn-block my-5">Add Course</button>
+          <button id="addCourseButton" class="btn btn-lg btn-primary btn-block my-5">Add Course</button>
         </form>
         <button
           id="backToManage"

@@ -16,8 +16,13 @@
             class="list-group-item my-2 btn btn-outline-primary"
           >
             <div class="d-flex align-item-start">
-              <i v-if="index == currentIndex" class="fas fa-play-circle mr-3 h2"></i>
-              <i v-else class="far fa-play-circle mr-3 h2"></i>
+              <font-awesome-icon
+                icon="play-circle"
+                size="2x"
+                v-if="index == currentIndex"
+                class="mr-3"
+              />
+              <font-awesome-icon :icon="['far','play-circle']" size="2x" v-else class="mr-3"/>
               <strong class="text-left">{{ lecture.title }}</strong>
             </div>
           </button>
