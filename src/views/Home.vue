@@ -10,15 +10,14 @@
             <p class="lead">
               100% online learning from our best instructors.
             </p>
-            <div class="hero-btn mt-5">
-              <button
-                @click="$router.push('Features')"
-                button
-                class="btn custom-btn btn-info mr-4"
-              >
-                Learn More
-              </button>
-            </div>
+
+            <router-link
+              :to="{ name: 'features' }"
+              type="button"
+              class="btn btn-primary"
+              role="button"
+              >Learn More</router-link
+            >
           </div>
         </div>
         <div class="col-md-6">
@@ -411,11 +410,18 @@
                   code and proprietary software included
                   <br />
                 </p>
-                <a
+                <!-- <a
                   href="/topic/0"
                   alt="Development"
                   class="btn btn-primary btn mt-auto"
                   >Find Course</a
+                > -->
+                <router-link
+                  :to="{ name: 'Development' }"
+                  type="button"
+                  class="btn btn-primary btn mt-auto"
+                  role="button"
+                  >Find Course</router-link
                 >
               </div>
             </div>
@@ -475,7 +481,7 @@
         <div class="container my-3 py-5 text-center">
           <div class="row mb-5">
             <div class="col">
-              <h1>Our Instructors In Spotlight</h1>
+              <h1>UWF Empowers Instructors in the Spotlight</h1>
             </div>
           </div>
           <div class="row">
@@ -667,24 +673,24 @@ h3 {
 
 #team i {
   font-size: 26px;
-  color: #555;
+  color: rgb(24, 5, 5);
 }
 
 #team p {
   font-weight: 500;
-  color: #555;
+  color: rgb(3, 3, 3);
 }
 
 #team .card {
   border-radius: 0;
-  box-shadow: 5px 5px 15px #e74c3c;
+  box-shadow: 5px 5px 15px #272625;
   transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
 }
 
 #team .card:hover {
-  background: #e74c3c;
+  background: #586b9e;
   color: #fff;
   border-radius: 5px;
   box-shadow: 5px 5px 10px #9e9e9e;
