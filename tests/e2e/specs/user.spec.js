@@ -73,7 +73,7 @@ describe("User e2e", function() {
     cy.get(":nth-child(2) > #navbarDropdown").click();
     cy.get('.dropdown-menu > [href="/topic/0"]').click();
     cy.wait(1000);
-    cy.contains("Web Development").click();
+    cy.contains("Web Development: Zero to Hero").click();
     cy.wait(1000);
     cy.url().should("include", "2A3ih8CdmgsyChLk43Mp");
     cy.logoutUser();
@@ -105,7 +105,7 @@ describe("User e2e", function() {
     cy.get(":nth-child(2) > .dropdown > #navbarDropdown").click();
     cy.get('[href="/history"]').click();
     cy.url().should("include", "/history");
-    cy.contains("Web Development").click();
+    cy.contains("Web Development: Zero to Hero").click();
     cy.url().should("include", "2A3ih8CdmgsyChLk43Mp");
     cy.logoutUser();
   });
