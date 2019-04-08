@@ -59,7 +59,7 @@
         <div class="col-md-4" style="padding: 4px 4px 4px 4px">
           <div class="tile-container">
             <img
-              src="../assets/skills.svg"
+              src="../assets/skills-optimized.jpg"
               alt="Books_03"
               style="width:100%"
               display="block"
@@ -73,7 +73,7 @@
           </div>
           <div class="tile-container">
             <img
-              src="../assets/inspiring-3.svg"
+              src="../assets/inspiring-3-optimized.jpg"
               alt="portrait"
               style="width:100%"
               target="_self"
@@ -89,7 +89,7 @@
           <div class="tile-container">
             <a href="https://uwf.edu/ihire/" alt="iHire UWF" target="_blank">
               <img
-                src="../assets/employer1.svg"
+                src="../assets/employer1-optimized.jpg"
                 alt="ihire project"
                 style="width:100%"
               />
@@ -105,7 +105,7 @@
               target="_blank"
             >
               <img
-                src="../assets/testimonials-7.svg"
+                src="../assets/testimonials-7-optimized.jpg"
                 alt="Top Scholars"
                 style="width:100%"
               />
@@ -122,7 +122,7 @@
             <div class="tile-container">
               <a @click="$router.push('topic/2')" alt="Security">
                 <img
-                  src="../assets/security-3.svg"
+                  src="../assets/security-3-optimized.jpg"
                   alt="Security"
                   style="width:100%"
                 />
@@ -135,7 +135,11 @@
           <row>
             <div class="tile-container">
               <a @click="$router.push('topic/0')" alt="Software">
-                <img src="../assets/se.svg" alt="Software" style="width:100%" />
+                <img
+                  src="../assets/se-optimized.jpg"
+                  alt="Software"
+                  style="width:100%"
+                />
                 <div class="overlay">
                   <div class="overlay-text">Develop Software</div>
                 </div>
@@ -208,7 +212,7 @@
               class="img-fluid"
               alt="Responsive image"
               style="height: auto; margin: auto; display: block;"
-              src="../assets/team_o3.svg"
+              src="../assets/team_o3-optimized.jpg"
             />
           </div>
           <div class="col-lg-6">
@@ -253,7 +257,8 @@
             class="icon-block"
             target="_blank"
             ><span style="font-size: 3em; color: #004C97; ">
-              <i class="far fa-calendar-alt fa-2x"> </i>
+              <font-awesome-icon :icon="['far', 'fa-calendar-alt']" size="2x" />
+              <!--<i class="far fa-calendar-alt fa-2x"></i>-->
             </span>
             <div style="margin-top:20px;">
               <h4>Alumni Events</h4>
@@ -269,7 +274,8 @@
             class="icon-block"
             target="_blank"
             ><span style="font-size: 3em; color: #007A33;">
-              <i class="fas fa-gift fa-2x"></i>
+              <font-awesome-icon icon="fa-gift" size="2x" />
+              <!--<i class="fas fa-gift fa-2x"></i>-->
             </span>
             <div style="margin-top:20px;">
               <h4>Make a Gift</h4>
@@ -285,7 +291,8 @@
             class="icon-block"
             target="_blank"
             ><span style="font-size: 3em; color: #004C97;">
-              <i class="fas fa-book-reader fa-2x"></i>
+              <font-awesome-icon icon="fa-book-reader" size="2x" />
+              <!--<i class="fas fa-book-reader fa-2x"></i>-->
             </span>
             <div style="margin-top:20px;">
               <h4>Read Connection Magazine</h4>
@@ -344,19 +351,19 @@ export default {
           id: 0,
           caption:
             '<b style="display: inline-block; font-size: 1.7em;color: #ffffff;text-shadow: 1px 1px 12px #004C97; position: relative; z-index:31; bottom: -2em;left:-2em; display:none; !important ">Your Dream, Our Mission </b>',
-          img: require("../assets/areyouready.svg")
+          img: require("../assets/areyourready-optimized.jpg")
         },
         {
           id: 1,
           caption:
             '<span><b style="font-size: 1.7em;color: #ffffff;text-shadow: 1px 1px 12px #004C97; position: relative; z-index:31; bottom: -2em;left:-2em; display:none; !important">Take Charge, Reimagine</b></span>',
-          img: require("../assets/inspiring-1.svg")
+          img: require("../assets/inspiring-1-optimized.jpg")
         },
         {
           id: 2,
           caption:
             '<b style="font-size: 1.7em;color: #ffffff;text-shadow: 1px 1px 12px #004C97; position: relative; z-index:31; bottom: -2em;left:-2em; display:none; !important">Your Future Starts Today</b>',
-          img: require("../assets/inspiring-4.svg")
+          img: require("../assets/inspiring-4-optimized.jpg")
         }
       ]
     };
