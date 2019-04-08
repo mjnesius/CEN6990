@@ -18,10 +18,16 @@ export default {
   },
   data() {
     return {};
+  },
+  created() {
+    this.$store.commit('updateUser');
   }
 };
 </script>
 
 <style>
+body {
+  background-color: #f5f5f5;
+}
 </style>
 
