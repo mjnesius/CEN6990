@@ -257,7 +257,7 @@
             class="icon-block"
             target="_blank"
             ><span style="font-size: 3em; color: #004C97; ">
-              <font-awesome-icon :icon="['far', 'fa-calendar-alt']" size="2x" />
+              <font-awesome-icon :icon="['far', 'calendar-alt']" size="2x" />
               <!--<i class="far fa-calendar-alt fa-2x"></i>-->
             </span>
             <div style="margin-top:20px;">
@@ -274,7 +274,7 @@
             class="icon-block"
             target="_blank"
             ><span style="font-size: 3em; color: #007A33;">
-              <font-awesome-icon icon="fa-gift" size="2x" />
+              <font-awesome-icon icon="gift" size="2x" />
               <!--<i class="fas fa-gift fa-2x"></i>-->
             </span>
             <div style="margin-top:20px;">
@@ -291,7 +291,7 @@
             class="icon-block"
             target="_blank"
             ><span style="font-size: 3em; color: #004C97;">
-              <font-awesome-icon icon="fa-book-reader" size="2x" />
+              <font-awesome-icon icon="book-reader" size="2x" />
               <!--<i class="fas fa-book-reader fa-2x"></i>-->
             </span>
             <div style="margin-top:20px;">
