@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-fixed navbar-expand-md navbar-dark">
     <div class="container">
-      <router-link class="navbar-brand" :to="{ name: 'home' }">UWF Empowers</router-link>
+      <router-link class="navbar-brand mb-1" :to="{ name: 'home' }">UWF Empowers</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -15,14 +15,21 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'home' }" exact>Home</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'about' }" exact>About</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'features' }" exact>Features</router-link>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >Learn More</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <router-link class="dropdown-item" :to="{ name: 'about' }" exact>About</router-link>
+              <router-link class="dropdown-item" :to="{ name: 'features' }" exact>Features</router-link>
+              <router-link class="dropdown-item" :to="{ name: 'faq' }" exact>FAQs</router-link>
+            </div>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -50,7 +57,7 @@
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item dropdown">
+          <li v-if="admin" class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -103,7 +110,7 @@
             <router-link class="nav-link" :to="{ name: 'login', params: { id: 0 } }" exact>Login</router-link>
           </li>
           <li v-if="user" class="nav-item">
-            <a class="nav-link">{{ user.email }}</a>
+            <a class="nav-link">{{ user.displayName }}</a>
           </li>
           <li v-if="user" class="nav-item">
             <a class="nav-link logout" @click="logout">Logout</a>
@@ -120,18 +127,15 @@ import firebase from "firebase";
 export default {
   name: "Navbar",
   data() {
-    return {
-      user: null
-    };
+    return {};
   },
-  created() {
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        this.user = user;
-      } else {
-        this.user = null;
-      }
-    });
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+    admin() {
+      return this.$store.state.admin;
+    }
   },
   methods: {
     logout() {
@@ -147,7 +151,6 @@ export default {
 </script>
 
 <style scoped>
-
 li.nav-item {
   font-size: 1rem;
 }
@@ -157,11 +160,10 @@ li.nav-item {
 .logout {
   cursor: pointer;
 }
-.dropdown-item{
+.dropdown-item {
   font-size: 1rem;
 }
 nav {
-background-image: linear-gradient(rgb(14, 64, 105),#2196F3);
+  background-image: linear-gradient(rgb(14, 64, 105), #2196f3);
 }
-
 </style>

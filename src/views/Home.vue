@@ -4,109 +4,108 @@
       <div id="home-heading" class="jumbotron">
         <section class="dark-overlay">
           <h1 class="display-4">Get Ready to Learn!</h1>
-
           <p>Thousands of classes to fuel your creativity and career.</p>
-          <figure>
-            <button type="button">Get Started</button>
-          </figure>
+          <a
+            class="button btn-light btn-lg btn-primary"
+            href="About"
+            role="button"
+          >
+            Learn More
+          </a>
         </section>
       </div>
     </section>
-
     <hr />
 
     <div class="Container mt-5">
-      <h2 class="mb-5 text-left">Browse By Topic</h2>
-      <div class="card-deck">
-        <div class="card cardSet1 text">
-          <div class="card-body">
-            <img
-              src="../assets/employer3.jpg"
-              class="img-fluid"
-              alt="Area for Topic1"
-            />
-            <h3 class="card-title mt-2">Software Development</h3>
-            <p class="card-text mt-3">
-              >Web design encompasses many different skills and disciplines in
-              the production and maintenance of websites. The different areas of
-              web design include web graphic design; interface design;
-              authoring, including standardised code and proprietary software;
-              user experience design; and search engine optimization. Often many
-              individuals will work in teams covering different aspects of the
-              design process, although some designers will cover them all.
+      <h2 class="mb-5 text-left">Trending Courses</h2>
+      <div class="card-deck1 m-1">
+        <div class="card">
+          <img
+            src="../assets/adults-chairs-class-515166.jpg"
+            class="card-img-top"
+            alt="Trending Course1"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Computer Network</h5>
+            <p class="card-text">
+              System for connecting hardware, software, resource sharing and
+              information transmission of network with fully functional network
+              software by using communication equipment and lines to connect
+              multiple computer systems with different geographical locations
+              and functions independently.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
-              >Find A Course</a
-            >
+            <a href="#" class="btn btn-primary btn mt-auto">Find A Course</a>
           </div>
         </div>
-        <div class="card cardSet1 text">
-          <div class="card-body">
-            <img
-              src="../assets/workplace.jpg"
-              class="img-fluid"
-              alt="Area for Topic2"
-            />
-            <h3 class="card-title mt-2">Information Technology</h3>
-            <p class="card-text mt-3">
-              A network administrator is the person designated in an
-              organization whose responsibility includes maintaining computer
-              infrastructures with emphasis on networking. Responsibilities may
-              vary between organizations, but on-site servers, software-network
-              interactions as well as network integrity/resilience are the key
-              areas of focus.
+        <div class="card">
+          <img
+            src="../assets/employerShowcase.jpg"
+            class="card-img-top"
+            alt="Trending Course2"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Computer Composition</h5>
+            <p class="card-text">
+              Computer composition refers to the logical realization of the
+              system structure, including the composition of the data flow and
+              control flow within the machine and the logic design.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
-              >Find A Course</a
-            >
+            <a href="#" class="btn btn-primary btn mt-auto">Find A Course</a>
           </div>
         </div>
-        <div class="card cardSet1 text">
-          <div class="card-body">
-            <img
-              src="../assets/employer3.jpg"
-              class="img-fluid"
-              alt="Area for Topic3"
-            />
-            <h3 class="card-title mt-2">CyberSecurity</h3>
-            <p class="card-text mt-3">
-              Computer security, cybersecurity[1] or information technology
-              security (IT security) is the protection of computer systems from
-              theft or damage to their hardware, software or electronic data, as
-              well as from disruption or misdirection of the services they
-              provide.
+        <div class="card">
+          <img
+            src="../assets/boss-brainstorming-business-1093913.jpg"
+            class="card-img-top"
+            alt="Trending Course3"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Advanced programming language</h5>
+            <p class="card-text">
+              A programming language is a language used to write computer
+              programs. The basis of a language is a set of tokens and a set of
+              rules. The whole of the token string consisting of tokens
+              according to the rules is the language.
             </p>
-            <a href="#" class="btn btn-dark btn-sm float-right"
-              >Find A Course</a
-            >
+            <a href="#" class="btn btn-primary btn mt-auto">Find A Course</a>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="../assets/se.jpg"
+            class="card-img-top"
+            alt="Trending Course4"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Computer Graphics</h5>
+            <p class="card-text">
+              The main research content of computer graphics is to study how to
+              represent graphics in computers and the related principles and
+              algorithms for computing, processing and displaying graphics using
+              computers.
+            </p>
+            <a href="#" class="btn btn-primary btn mt-auto">Find A Course</a>
           </div>
         </div>
       </div>
     </div>
-    <br />
+    <hr />
 
     <br />
-
+    <br />
     <div class="container">
       <h2 class="mb-5 text-left">New Courses</h2>
       <div
         id="carouselExampleIndicators"
         class="carousel slide"
         data-ride="carousel"
+        data-interval="false"
       >
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="card-deck">
-              <div class="card mb-3">
+            <div class="card-deck m-1">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -125,16 +124,11 @@
                         design in CSS, create a content strategy, and analyze
                         user experience design.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card mb-3">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -153,16 +147,11 @@
                         lead generation and SEO, we through the best practices
                         and principles of digital marketing.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card mb-3">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -181,11 +170,6 @@
                         tutorials can help you learn SEO, spreadsheets, word
                         processing, and more.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -193,8 +177,8 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="card-deck">
-              <div class="card mb-3">
+            <div class="card-deck m-1">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -214,16 +198,11 @@
                         considerations, skills and competencies to help you
                         become and succeed as a manager.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card mb-3">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -241,16 +220,11 @@
                         foundations of animation, learn everything you need to
                         know to get started in 2D animation.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card mb-3">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -269,11 +243,6 @@
                         InDesign, explore typography, and learn the nuances of
                         designing for print.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -281,8 +250,8 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="card-deck">
-              <div class="card mb-3">
+            <div class="card-deck m-1">
+              <div class="card">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -303,18 +272,13 @@
                         motivating agile project teams, from developing user
                         stories and agile charts to driving productive meetings.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card mb-3">
                 <div class="row no-gutters">
-                  <div class="col-md-4">
+                  <div class="col">
                     <img
                       src="../assets/accounts-applications-apps-267350.jpg"
                       class="card-img"
@@ -334,18 +298,13 @@
                         basics of cryptography and cybercrime investigation and
                         response.
                       </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card mb-3">
                 <div class="row no-gutters">
-                  <div class="col-md-4">
+                  <div class="col">
                     <img
                       src="../assets/adults-analysis-banking-1451447.jpg"
                       class="card-img"
@@ -360,11 +319,6 @@
                         and create mobile apps, work with PHP and MySQL
                         databases, get started with the statistical processing
                         language R, and much more.
-                      </p>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Last updated 3 mins ago</small
-                        >
                       </p>
                     </div>
                   </div>
@@ -393,68 +347,83 @@
         </a>
       </div>
     </div>
-
     <hr />
     <br />
 
     <div class="Container mt-5">
-      <h2 class="mb-5 text-left">Trending Courses</h2>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-primary">
-              <div class="card-body">
-                <h5 class="card-title">Course 1</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
-              </div>
-            </div>
+      <h2 class="mb-5 text-left">Browse By Topic</h2>
+      <div class="card-deck m-1">
+        <div class="card">
+          <img
+            src="../assets/employer3.jpg"
+            class="card-img-top"
+            alt="Area for Topic1"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Software Development</h5>
+            <p class="card-text">
+              Web design encompasses many different skills and disciplines in
+              the production and maintenance of websites. The different areas of
+              web design include web graphic design; interface design;
+              authoring, including standardised code and proprietary software;
+              user experience design; and search engine optimization. Often many
+              individuals will work in teams covering different aspects of the
+              design process, although some designers will cover them all.
+            </p>
+            <a
+              href="/topic/0"
+              alt="Development"
+              class="btn btn-primary btn mt-auto"
+              >Start Course</a
+            >
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-warning">
-              <div class="card-body">
-                <h5 class="card-title">Course 2</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
-              </div>
-            </div>
+        <div class="card">
+          <img
+            src="../assets/workplace.jpg"
+            class="card-img-top"
+            alt="Area for Topic2"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Information Technology</h5>
+            <p class="card-text">
+              A network administrator is the person designated in an
+              organization whose responsibility includes maintaining computer
+              infrastructures with emphasis on networking. Responsibilities may
+              vary between organizations, but on-site servers, software-network
+              interactions as well as network integrity/resilience are the key
+              areas of focus.
+            </p>
+            <a href="/topic/1" alt="IT" class="btn btn-primary btn mt-auto"
+              >Start Course</a
+            >
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-success">
-              <div class="card-body">
-                <h5 class="card-title">Course 3</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card-deck">
-            <div class="card bg-danger">
-              <div class="card-body">
-                <h5 class="card-title">Course 4</h5>
-                <p class="card-text">Supporting text for topic description.</p>
-                <a href="#" class="btn btn-dark btn-sm float-right"
-                  >Learn more..</a
-                >
-              </div>
-            </div>
+        <div class="card">
+          <img
+            src="../assets/adult-aged-blur-834863.jpg"
+            class="card-img-top"
+            alt="Area for Topic3"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">CyberSecurity</h5>
+            <p class="card-text">
+              Computer security, cybersecurity[1] or information technology
+              security (IT security) is the protection of computer systems from
+              theft or damage to their hardware, software or electronic data, as
+              well as from disruption or misdirection of the services they
+              provide.
+            </p>
+            <a
+              href="/topic/2"
+              alt="CyberSecurity"
+              class="btn btn-primary btn mt-auto"
+              >Start Course</a
+            >
           </div>
         </div>
       </div>
     </div>
-
     <br />
     <br />
   </div>
@@ -490,6 +459,24 @@ tbody tr {
   cursor: pointer;
 }
 
+.btn {
+  min-height: 40px;
+  min-width: 150px;
+  position: relative;
+}
+
+/* .carousel-inner {
+  background-color : #669999;
+}
+
+.card2 {
+  background-color : #cc6666;
+} */
+
+.carousel-inner {
+  background-color: #cc6666;
+}
+
 .card:hover {
   -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
@@ -514,7 +501,7 @@ tbody tr {
   height: 100%;
 }
 
-button {
+.button {
   padding: 15px 50px;
   border: 0;
   background: rgba(255, 253, 253, 0.767);
@@ -522,7 +509,7 @@ button {
   cursor: pointer;
   position: absolute;
   top: 65%;
-  left: 10%;
+  left: 12%;
   -webkit-transform: translate(-10%, -10%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -550,5 +537,16 @@ button:hover {
 
 .carousel-indicator {
   bottom: 40px;
+}
+
+.carousel-control {
+  width: 4%;
+}
+
+.card-deck1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 0.5rem;
+  background-color: #669999;
 }
 </style>

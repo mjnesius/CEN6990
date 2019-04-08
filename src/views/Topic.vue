@@ -24,8 +24,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr @click="pushToCoursePage(course.id)" v-for="course in courses" :key="course.id">
-          <td>{{ course.title }}</td>
+        <tr id="testCourseClick" @click.prevent="pushToCoursePage(course.id)" v-for="course in courses" :key="course.id">
+          <td id="testCourseTitle">{{ course.title }}</td>
           <td>{{ course.shortDescription }}</td>
           <td>{{ course.instructor }}</td>
           <td>{{ course.timestamp }}</td>

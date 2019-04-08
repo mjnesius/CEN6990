@@ -1,45 +1,49 @@
 <template>
-  <div class="container">
+  <div class="container vh-100">
     <div class="row my-5">
-      <div class="col-md-4 mx-auto">
+      <div class="col-md-4 mx-auto my-5">
         <form @submit.prevent="signup">
-          <h2 class="text-center">Signup</h2>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+          <h2 class="text-center mb-4">Signup</h2>
+          <div class="form-group mb-4">
+            <label for="exampleInputEmail1" class="sr-only">Email address</label>
             <input
               type="email"
               v-model="email"
-              class="form-control"
+              class="form-control form-control-lg"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Enter email"
+              autofocus
             >
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
+          <div class="form-group mb-4">
+            <label for="exampleInputPassword1" class="sr-only">Password</label>
             <input
               type="password"
               v-model="password"
-              class="form-control"
+              class="form-control form-control-lg"
               id="exampleInputPassword1"
               placeholder="Password"
             >
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Alias</label>
+          <div class="form-group mb-4">
+            <label for="alias" class="sr-only">Alias</label>
             <input
               type="text"
               v-model="alias"
-              class="form-control"
-              id="exampleInputPassword1"
+              class="form-control form-control-lg"
+              id="alias"
               placeholder="Alias"
             >
           </div>
-          <p v-if="feedback" class="text-danger text-center">{{ feedback }}</p>
-          <div class="text-center">
-            <button class="btn btn-primary">Signup</button>
-          </div>
+          <p v-if="feedback" class="text-danger text-center h5 my-3">{{ feedback }}</p>
+          <button class="btn btn-lg btn-primary btn-block mb-5">Signup</button>
         </form>
+        <div v-if="fetchData" class="d-flex justify-content-center">
+          <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -59,12 +63,14 @@ export default {
       password: null,
       alias: null,
       feedback: null,
-      slug: null
+      slug: null,
+      fetchData: false
     };
   },
   methods: {
     signup() {
       if (this.alias && this.email && this.password) {
+        this.fetchData = true;
         this.feedback = null;
         this.slug = slugify(this.alias, {
           replacement: "-",
@@ -74,6 +80,7 @@ export default {
         let checkAlias = firebase.functions().httpsCallable("checkAlias");
         checkAlias({ slug: this.slug }).then(result => {
           if (!result.data.unique) {
+            this.fetchData = false;
             this.feedback = "This alias already exists";
           } else {
             firebase
@@ -86,11 +93,21 @@ export default {
                     alias: this.alias,
                     user_id: cred.user.uid
                   });
+                cred.user
+                  .updateProfile({
+                    displayName: this.alias
+                  })
+                  .catch(error => {
+                    console.log(error);
+                  });
               })
               .then(() => {
+                this.fetchData = false;
+                this.$store.commit("updateUser");
                 this.$router.push({ name: "home" });
               })
               .catch(err => {
+                this.fetchData = false;
                 this.feedback = err.message;
               });
           }
@@ -104,8 +121,4 @@ export default {
 </script>
 
 <style scoped>
-form {
-  min-height: 600px;
-}
 </style>
-
