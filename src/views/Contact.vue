@@ -26,7 +26,7 @@
         <h5 class="mb-4">
           <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
         </h5>
-        <img class="img-fluid w-75" src="../assets/undraw_contact_us_15o2.svg" alt>
+        <img class="img-fluid w-75 mb-sm-5" src="../assets/undraw_contact_us_15o2.svg" alt>
       </div>
       <div class="col-md-6">
         <form @submit.prevent="send">
@@ -93,21 +93,22 @@ export default {
     send() {
       if (this.name && this.email && this.message) {
         this.feedback = null;
-        this.confirmation = null;
         let contact = {
           name: this.name,
           email: this.email,
           message: this.message
         };
-        db.collection("contacts")
-          .add(contact)
-          .then(() => {
-            this.confirmation =
-              "Your questions and suggestions are important to us. We will respond within 48hrs";
-          })
-          .catch(err => {
-            console.log(err);
-          });
+        if (!this.confirmation) {
+          db.collection("contacts")
+            .add(contact)
+            .then(() => {
+              this.confirmation =
+                "Your questions and suggestions are important to us. We will respond within 48hrs";
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        }
       } else {
         this.feedback = "Please fill in all fields";
       }
