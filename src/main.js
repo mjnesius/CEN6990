@@ -16,6 +16,8 @@ import {
   faCalendarAlt
 } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import VueCarousel from "vue-carousel";
+Vue.use(VueCarousel);
 
 library.add(
   faPlayCircle,
