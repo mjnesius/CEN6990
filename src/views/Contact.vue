@@ -16,16 +16,11 @@
           <br>11100 University Pkwy bldg 32
           <br>Pensacola, FL 32514
         </h5>
+        <h5 class="mb-4">(850) 456-7890</h5>
         <h5 class="mb-4">
-          <abbr title="Phone">P</abbr>: (850) 456-7890
-        </h5>
-        <h5 class="mb-4">
-          <abbr title="Email">E</abbr>:
           <a href="mailto:uwfempowers@google.com">uwfempowers@google.com</a>
         </h5>
-        <h5 class="mb-4">
-          <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
-        </h5>
+        <h5 class="mb-4">Monday - Friday: 9:00 AM to 5:00 PM</h5>
         <img class="img-fluid w-75 mb-sm-5" src="../assets/undraw_contact_us_15o2.svg" alt>
       </div>
       <div class="col-md-6">
