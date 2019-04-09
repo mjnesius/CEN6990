@@ -19,7 +19,7 @@
           class="btn btn-light btn-lg btn-primary pull-left"
           href="Home"
           role="button"
-          style="position:absolute;left:8%;  bottom:14%; z-index:50"
+          style="position:absolute;left:8%;  bottom:27%; z-index:50"
           @click="$router.push('home')"
           >Get started!</a
         >
@@ -29,16 +29,11 @@
           :autoplay="true"
           class="mb-5"
         >
-          <slide
-            slide-content-outside-class="title"
-            v-for="ins in inspire"
-            :key="ins.caption"
-            :title="ins.caption"
-          >
-            <div>
-              <h5>
+          <slide v-for="ins in inspire" :key="ins.caption">
+            <div class="card shadow-none border-0 bg-transparent">
+              <h5 style="position:absolute;left:5%; bottom:83%;">
                 <b
-                  style="display: inline-block; font-size: 1.7em;color: #ffffff;text-shadow: 1px 1px 12px #004C97; position: relative; z-index:31; bottom: -2em;left:-2em; !important "
+                  style="display: inline-block; font-size: 1.7em;color: #ffffff;text-shadow: 1px 1px 12px #004C97;  !important "
                   >{{ ins.caption }}</b
                 >
               </h5>
@@ -172,7 +167,7 @@
           :autoplayTimeout="3000"
         >
           <slide v-for="test in testimonials" :key="test.id">
-            <div>
+            <div class="card shadow-none m-1 border-light mb-3 bg-transparent">
               <img
                 class="d-md-block img-fluid img-responsive"
                 style="display: block;"
@@ -181,10 +176,10 @@
               />
               <div
                 class="slideCaption d-md-block rounded"
-                style="box-sizing: border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: inline-block; text-align: center; justify-content: center;width:100%!important"
+                style="box-sizing: z-index: 40; border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: inline-block; text-align: center; justify-content: center;width:50%; min-width: 450px;!important"
               >
-                <p style=" ">{{ test.blurb }}</p>
-                <p style="font-style: italic; !important">
+                <p style="font-size: 1.7em; ">{{ test.blurb }}</p>
+                <p style="font-style: italic; font-size: 1.7em; !important">
                   - {{ test.name }} {{ test.specialty }}
                 </p>
               </div>
