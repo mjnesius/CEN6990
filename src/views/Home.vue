@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="container mb-5">
-      <div class="row">
+    <div class="container h-100">
+      <div class="row p-5 h-100  text-center justify-content-center align-items-center">
         <div class="col-md-6">
-          <h1 class="display-5">Thousands of classes to fuel your creativity and career</h1>
+          <h1 class="display-4">Thousands of classes to fuel your creativity and career</h1>
           <p class="lead">100% online learning from our best instructors.</p>
           <router-link
             :to="{ name: 'features' }"
@@ -13,9 +13,7 @@
           >Learn More</router-link>
         </div>
         <div class="col-md-6">
-          <div>
             <img class="img-fluid" src="../assets/drawing.svg" alt>
-          </div>
         </div>
       </div>
     </div>
@@ -128,19 +126,26 @@
         </div>
       </div>
     </div>
-    <section id="team">
-      <div class="container my-3 py-5 text-center">
-        <h1 class="mb-5 pb-4 text-center">UWF Empowers Instructors in the Spotlight</h1>
+    <section id="team" class="mb-5 text-center">
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col">
+            <div class="info-header mb-5">
+              <h1 class="text-primary pb-3">Instructors in the Spotlight</h1>
+              <p class="lead pb-3">Nationally recognized experts in their fields.</p>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-lg-3 col-md-6">
-            <div class="card mb-5">
+            <div class="card">
               <div class="card-body">
-                <img src="../assets/professor1.svg" alt class="img-fluid rounded-circle w-50 mb-3">
-                <h3>Prof. John Wright</h3>
-                <h5>Director of the Center for Cybersecurity</h5>
+                <img src="../assets/team_01.jpg" alt class="img-fluid rounded-circle w-50 mb-3">
+                <h3>Dr. John Wright</h3>
+                <h5 class="lead">Center for Cybersecurity</h5>
                 <p>
                   Professor Wright has extensive expertise in cybersecurity
-                  education, research and workforce development and received
+                  education, research, and workforce development and received
                   several awards related to cybersecurity education and
                   diversity.
                 </p>
@@ -150,28 +155,27 @@
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="card mb-5">
+            <div class="card">
               <div class="card-body">
-                <img src="../assets/professor2.svg" alt class="img-fluid rounded-circle w-50 mb-3">
+                <img src="../assets/team_02.jpg" alt class="img-fluid rounded-circle w-50 mb-3">
                 <h3>Dr. Carl Griffin</h3>
-                <h5>Professor</h5>
+                <h5 class="lead">Professor</h5>
                 <p>
                   Dr. Carl Griffin is a Professor in the Department of
                   Computer Science and a Research Scientist at the Florida
                   Institute for Artificial Intelligence. He teaches Computer
-                  Science courses and seminars at UWF and works on projects
-                  for AI.
+                  Science courses at UWF.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="card mb-5">
+            <div class="card">
               <div class="card-body">
-                <img src="../assets/professor3.svg" alt class="img-fluid rounded-circle w-50 mb-3">
+                <img src="../assets/team_03.jpg" alt class="img-fluid rounded-circle w-50 mb-3">
                 <h3>Dr. Susan Smith</h3>
-                <h5>Associate Professor</h5>
+                <h5 class="lead">Associate Professor</h5>
                 <p>
                   Dr. Smith's research includes knowledge elicitation and
                   representation, web services and service oriented
@@ -183,15 +187,15 @@
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="card mb-5">
+            <div class="card">
               <div class="card-body">
-                <img src="../assets/professor4.svg" alt class="img-fluid rounded-circle w-50 mb-3">
+                <img src="../assets/team_02.jpg" alt class="img-fluid rounded-circle w-50 mb-3">
                 <h3>Dr. William Jones</h3>
-                <h5>Lecturer</h5>
+                <h5 class="lead">Lecturer</h5>
                 <p>
-                  Dr. William Jones, a Lecturer, has written in-depth books
-                  about algorithms, data structures and artificial
-                  intelligence.
+                  Dr. William Jones, a Lecturer, has written award-winning books
+                  on computer algorithms, data structures, and artificial
+                  intelligence. He is also a popular conference speaker.
                 </p>
               </div>
             </div>
@@ -367,28 +371,17 @@ export default {
 </script>
 
 <style scoped>
+.info-header {
+  width: 50%;
+  margin: auto;
+  border-bottom: 1px solid #ddd;
+}
 #team img {
   margin-top: -50px;
 }
 
-#team .card {
-  border-radius: 0;
-  box-shadow: 5px 5px 15px #272625;
-  transition: all 0.3s ease-in;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-}
-
 #team .card:hover {
   background: #586b9e;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 5px 5px 10px #9e9e9e;
-}
-
-#team .card h3:hover,
-#team .card h5:hover,
-#team .card p:hover {
   color: #fff;
 }
 </style>
