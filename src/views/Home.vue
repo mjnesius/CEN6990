@@ -29,7 +29,12 @@
             <div class="card-body">
               <h5 class="card-title">{{card.title}}</h5>
               <p class="card-text">{{card.content}}</p>
-              <a href="#" class="btn btn-primary btn">Start Course</a>
+              <router-link
+                :to="{ name: 'course', params: { id: card.link } }"
+                type="button"
+                class="btn btn-primary"
+                role="button"
+              >Start Course</router-link>
             </div>
           </div>
         </slide>
@@ -46,7 +51,12 @@
             <div class="card-body">
               <h5 class="card-title">{{card.title}}</h5>
               <p class="card-text">{{card.content}}</p>
-              <a href="#" class="btn btn-primary btn">Start Course</a>
+              <router-link
+                :to="{ name: 'course', params: { id: card.link } }"
+                type="button"
+                class="btn btn-primary"
+                role="button"
+              >Start Course</router-link>
             </div>
           </div>
         </slide>
@@ -208,14 +218,16 @@ export default {
                 information transmission of network with fully functional
                 network software by using communication equipment and lines to
                 connect multiple computer systems with different geographical
-                locations and functions independently.`
+                locations and functions independently.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "employerShowcase.jpg",
           title: "Computer Composition",
           content: `Computer composition refers to the logical realization of the
                 system structure, including the composition of the data flow and
-                control flow within the machine and the logic design.`
+                control flow within the machine and the logic design.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "boss-brainstorming-business-1093913.jpg",
@@ -223,7 +235,8 @@ export default {
           content: `A programming language is a language used to write computer
                 programs. The basis of a language is a set of tokens and a set
                 of rules. The whole of the token string consisting of tokens
-                according to the rules is the language.`
+                according to the rules is the language.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "employerShowcase.jpg",
@@ -231,22 +244,26 @@ export default {
           content: `The main research content of computer graphics is to study how
                 to represent graphics in computers and the related principles
                 and algorithms for computing, processing and displaying graphics
-                using computers.`
+                using computers.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "team1.jpg",
           title: "title 5",
-          content: "some words and more words"
+          content: "some words and more words",
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "team1.jpg",
           title: "title 6",
-          content: "some words and more words"
+          content: "some words and more words",
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "team1.jpg",
           title: "title 5",
-          content: "some words and more words"
+          content: "some words and more words",
+          link: "ik59ShTQxHPYfrXBwSkR"
         }
       ],
       cards2: [
@@ -257,7 +274,8 @@ export default {
                           design tutorials. From hundreds of video courses,
                           choose the right one to help you embed video, format
                           text, design in CSS, create a content strategy, and
-                          analyze user experience design.`
+                          analyze user experience design.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "boss-brainstorming-business-1093913.jpg",
@@ -266,7 +284,8 @@ export default {
                           and develop new opportunities for businesses as a
                           digital marketer.From marketing plans to content
                           strategy we teach the best practices and principles of
-                          digital marketing.`
+                          digital marketing.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "adult-analyzing-boss-1080865.jpg",
@@ -275,7 +294,8 @@ export default {
                           management and negotiation to leadership skills and
                           online marketing strategy. Our professional
                           development tutorials can help you learn SEO,
-                          spreadsheets, word processing, and more.`
+                          spreadsheets, word processing, and more.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "blurred-background-coffee-cup-computer-908284.jpg",
@@ -284,7 +304,8 @@ export default {
                           achieve goals working with your team. This path is
                           designed to provide you with the key considerations,
                           skills and competencies to help you become and succeed
-                          as a manager.`
+                          as a manager.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "apple-class-conference-7102.jpg",
@@ -293,7 +314,8 @@ export default {
                           via analog and digital media. Beginning with the
                           foundations of animation, learn everything you need to
                           know to get started in 2D animation and make it your
-                          career.`
+                          career.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "book-business-business-woman-68761.jpg",
@@ -302,7 +324,8 @@ export default {
                           just learn how to use a Pen tool, our in-depth design
                           tutorials can help. Get to know Illustrator and
                           InDesign, explore typography, and learn the nuances of
-                          designing for print.`
+                          designing for print.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "achievement-adult-agreement-1153213.jpg",
@@ -312,7 +335,8 @@ export default {
                           will help you build a solid foundation in leading and
                           motivating agile project teams, from developing user
                           stories and agile charts to driving productive
-                          meetings.`
+                          meetings.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "accounts-applications-apps-267350.jpg",
@@ -322,7 +346,8 @@ export default {
                           Learn all the foundations of IT security: from
                           practical skills for securing hardware and network
                           data to the basics of cryptography and cybercrime
-                          investigation and response.`
+                          investigation and response.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "adults-analysis-banking-1451447.jpg",
@@ -332,7 +357,8 @@ export default {
                           databases, get started with the statistical processing
                           language R, and much more. Our portfolio has over 280
                           courses covering programming languages, best practices
-                          and management and deployment.`
+                          and management and deployment.`,
+          link: "ik59ShTQxHPYfrXBwSkR"
         }
       ]
     };
