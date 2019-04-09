@@ -189,7 +189,7 @@
           <div class="col-lg-3 col-md-6">
             <div class="card">
               <div class="card-body">
-                <img src="../assets/team_02.jpg" alt class="img-fluid rounded-circle w-50 mb-3">
+                <img src="../assets/team_04.jpg" alt class="img-fluid rounded-circle w-50 mb-3">
                 <h3>Dr. William Jones</h3>
                 <h5 class="lead">Lecturer</h5>
                 <p>
