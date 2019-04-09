@@ -63,7 +63,7 @@
           </div>
           <p v-if="feedback" class="text-danger text-center h5 my-3">{{ feedback }}</p>
           <p v-if="confirmation" class="text-success text-center h5 my-3">{{ confirmation }}</p>
-          <button class="btn btn-lg btn-primary btn-block mb-5">Send Message</button>
+          <button class="btn btn-lg btn-primary btn-block mt-4 mb-5">Send Message</button>
         </form>
       </div>
     </div>
