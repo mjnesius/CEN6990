@@ -43,7 +43,7 @@ service cloud.firestore {
         && isValidText(incomingData().name);
     }
     match /courses/{id} {
-      allow read: if isSignedIn(); 
+      allow read: if true; 
       allow write: if isAdmin();
     }
     match /trending/{id} {
