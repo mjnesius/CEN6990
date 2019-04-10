@@ -1,38 +1,52 @@
 <template>
   <div>
     <div class="container h-100">
-      <div class="row p-5 h-100  text-center justify-content-center align-items-center">
+      <div
+        class="row p-5 h-100  text-center justify-content-center align-items-center"
+      >
         <div class="col-md-6">
-          <h1 class="display-4">Thousands of classes to fuel your creativity and career</h1>
+          <h1 class="display-4">
+            Thousands of classes to fuel your creativity and career
+          </h1>
           <p class="lead">100% online learning from our best instructors.</p>
           <router-link
             :to="{ name: 'features' }"
             type="button"
             class="btn btn-primary btn-large"
             role="button"
-          >Learn More</router-link>
+            >Learn More</router-link
+          >
         </div>
         <div class="col-md-6">
-            <img class="img-fluid" src="../assets/drawing.svg" alt>
+          <img class="img-fluid" src="../assets/drawing.svg" alt />
         </div>
       </div>
     </div>
 
     <div class="container">
       <h1 class="mb-4">Trending Courses</h1>
-      <carousel :scrollPerPage="true" :perPageCustom="[[50, 1], [768, 3], [1024, 4]]" class="mb-3">
+      <carousel
+        :scrollPerPage="true"
+        :perPageCustom="[[50, 1], [768, 3], [1024, 4]]"
+        class="mb-3"
+      >
         <slide v-for="(card, i) in cards1" :key="i">
           <div class="card m-1">
-            <img :src="require(`@/assets/${card.image}`)" class="card-img-top" alt>
+            <img
+              :src="require(`@/assets/${card.image}`)"
+              class="card-img-top"
+              alt
+            />
             <div class="card-body">
-              <h5 class="card-title">{{card.title}}</h5>
-              <p class="card-text">{{card.content}}</p>
+              <h5 class="card-title">{{ card.title }}</h5>
+              <p class="card-text">{{ card.content }}</p>
               <router-link
                 :to="{ name: 'course', params: { id: card.link } }"
                 type="button"
                 class="btn btn-primary"
                 role="button"
-              >Start Course</router-link>
+                >Start Course</router-link
+              >
             </div>
           </div>
         </slide>
@@ -40,21 +54,30 @@
     </div>
 
     <div class="container">
-      <hr class="my-5">
+      <hr class="my-5" />
       <h1 class="mb-4">New Courses</h1>
-      <carousel :scrollPerPage="true" :perPageCustom="[[50, 1], [768, 3], [1024, 4]]" class="mb-5">
+      <carousel
+        :scrollPerPage="true"
+        :perPageCustom="[[50, 1], [768, 3], [1024, 4]]"
+        class="mb-5"
+      >
         <slide v-for="(card, i) in cards2" :key="i">
           <div class="card m-1">
-            <img :src="require(`@/assets/${card.image}`)" class="card-img-top" alt>
+            <img
+              :src="require(`@/assets/${card.image}`)"
+              class="card-img-top"
+              alt
+            />
             <div class="card-body">
-              <h5 class="card-title">{{card.title}}</h5>
-              <p class="card-text">{{card.content}}</p>
+              <h5 class="card-title">{{ card.title }}</h5>
+              <p class="card-text">{{ card.content }}</p>
               <router-link
                 :to="{ name: 'course', params: { id: card.link } }"
                 type="button"
                 class="btn btn-primary"
                 role="button"
-              >Start Course</router-link>
+                >Start Course</router-link
+              >
             </div>
           </div>
         </slide>
@@ -62,65 +85,76 @@
     </div>
 
     <div class="container">
-      <hr class="my-5">
+      <hr class="my-5" />
       <h1 class="mb-4">Browse By Topic</h1>
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-5">
             <img
-              src="../assets/Fotolia_112185258_Subscription_Monthly_M-479x237.jpg"
+              src="../assets/cyber1.jpg"
               class="card-img-top"
               alt="Area for Topic1"
-            >
+            />
             <div class="card-body d-flex flex-column">
               <h5 class="p1">Software Development</h5>
-              <p
-                class="card-text"
-              >Websites production and maintenance skills web graphic design included code and proprietary software included</p>
+              <p class="card-text">
+                Websites production and maintenance skills web graphic design
+                included code and proprietary software included
+              </p>
               <router-link
                 :to="{ name: 'topic', params: { id: 0 } }"
                 type="button"
                 class="btn btn-primary"
                 role="button"
-              >Find a Course</router-link>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-5">
-            <img src="../assets/advocacy7.jpg" class="card-img-top" alt="Area for Topic2">
-            <div class="card-body d-flex flex-column">
-              <h5 class="p1">Information Technology</h5>
-              <p
-                class="card-text"
-              >Maintaining computer infrastructures with emphasis on networking on-site servers and software-network interactions as well as network integrity/resilience</p>
-              <router-link
-                :to="{ name: 'topic', params: { id: 1 } }"
-                type="button"
-                class="btn btn-primary"
-                role="button"
-              >Find a Course</router-link>
+                >Find a Course</router-link
+              >
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card mb-5">
             <img
-              src="../assets/cybersecurity-graphic.jpg"
+              src="../assets/cyber.jpg"
+              class="card-img-top"
+              alt="Area for Topic2"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="p1">Information Technology</h5>
+              <p class="card-text">
+                Maintaining computer infrastructures with emphasis on networking
+                on-site servers and software-network interactions as well as
+                network integrity/resilience
+              </p>
+              <router-link
+                :to="{ name: 'topic', params: { id: 1 } }"
+                type="button"
+                class="btn btn-primary"
+                role="button"
+                >Find a Course</router-link
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-5">
+            <img
+              src="../assets/cyber2.jpg"
               class="card-img-top"
               alt="Area for Topic3"
-            >
+            />
             <div class="card-body d-flex flex-column">
               <h5 class="p1">CyberSecurity</h5>
-              <p
-                class="card-text"
-              >Protection of computer systems from damage to their hardware software or electronic data keep from disruption of the services</p>
+              <p class="card-text">
+                Protection of computer systems from damage to their hardware
+                software or electronic data keep from disruption of the services
+              </p>
               <router-link
                 :to="{ name: 'topic', params: { id: 2 } }"
                 type="button"
                 class="btn btn-primary"
                 role="button"
-              >Find a Course</router-link>
+                >Find a Course</router-link
+              >
             </div>
           </div>
         </div>
@@ -132,7 +166,9 @@
           <div class="col">
             <div class="info-header mb-5">
               <h1 class="text-primary pb-3">Instructors in the Spotlight</h1>
-              <p class="lead pb-3">Nationally recognized experts in their fields.</p>
+              <p class="lead pb-3">
+                Nationally recognized experts in their fields.
+              </p>
             </div>
           </div>
         </div>
@@ -140,7 +176,11 @@
           <div class="col-lg-3 col-md-6">
             <div class="card">
               <div class="card-body">
-                <img src="../assets/team_01.jpg" alt class="img-fluid rounded-circle w-50 mb-3">
+                <img
+                  src="../assets/team_01.jpg"
+                  alt
+                  class="img-fluid rounded-circle w-50 mb-3"
+                />
                 <h3>Dr. John Wright</h3>
                 <h5 class="lead">Center for Cybersecurity</h5>
                 <p>
@@ -157,14 +197,18 @@
           <div class="col-lg-3 col-md-6">
             <div class="card">
               <div class="card-body">
-                <img src="../assets/team_02.jpg" alt class="img-fluid rounded-circle w-50 mb-3">
+                <img
+                  src="../assets/team_02.jpg"
+                  alt
+                  class="img-fluid rounded-circle w-50 mb-3"
+                />
                 <h3>Dr. Carl Griffin</h3>
                 <h5 class="lead">Professor</h5>
                 <p>
-                  Dr. Carl Griffin is a Professor in the Department of
-                  Computer Science and a Research Scientist at the Florida
-                  Institute for Artificial Intelligence. He teaches Computer
-                  Science courses at UWF.
+                  Dr. Carl Griffin is a Professor in the Department of Computer
+                  Science and a Research Scientist at the Florida Institute for
+                  Artificial Intelligence. He teaches Computer Science courses
+                  at UWF.
                 </p>
               </div>
             </div>
@@ -173,14 +217,17 @@
           <div class="col-lg-3 col-md-6">
             <div class="card">
               <div class="card-body">
-                <img src="../assets/team_03.jpg" alt class="img-fluid rounded-circle w-50 mb-3">
+                <img
+                  src="../assets/team_03.jpg"
+                  alt
+                  class="img-fluid rounded-circle w-50 mb-3"
+                />
                 <h3>Dr. Susan Smith</h3>
                 <h5 class="lead">Associate Professor</h5>
                 <p>
                   Dr. Smith's research includes knowledge elicitation and
-                  representation, web services and service oriented
-                  architecture and computer science education in Robotics
-                  domain.
+                  representation, web services and service oriented architecture
+                  and computer science education in Robotics domain.
                 </p>
               </div>
             </div>
@@ -189,7 +236,11 @@
           <div class="col-lg-3 col-md-6">
             <div class="card">
               <div class="card-body">
-                <img src="../assets/team_04.jpg" alt class="img-fluid rounded-circle w-50 mb-3">
+                <img
+                  src="../assets/team_04.jpg"
+                  alt
+                  class="img-fluid rounded-circle w-50 mb-3"
+                />
                 <h3>Dr. William Jones</h3>
                 <h5 class="lead">Lecturer</h5>
                 <p>
