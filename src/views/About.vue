@@ -1,47 +1,30 @@
 <template>
   <div class="about container">
-    <div
-      class="jumbotron"
-      style="position:relative; background-color:transparent !important;"
-    >
+    <div>
       <h3
-        class="display-3"
+        class="display-3 text-center my-5"
         style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center;font-size: 4.7em;"
       >
         UWF Empowers!
       </h3>
-      <div class="container">
-        <div id="inspirationTitle" style="text-align:right;">
-          <h3 id="inspirationTitleH3"></h3>
-        </div>
-        <a
-          type="button"
-          class="btn btn-light btn-lg btn-primary pull-left"
-          href="Home"
-          role="button"
-          style="position:absolute;left:8%;  bottom:27%; z-index:50"
-          @click="$router.push('home')"
-          >Get started!</a
-        >
-        <carousel
-          :scrollPerPage="false"
-          :perPage="1"
-          :autoplay="true"
-          class="mb-5"
-        >
-          <slide v-for="ins in inspire" :key="ins.caption">
-            <div class="card shadow-none border-0 bg-transparent">
-              <h5 style="position:absolute;left:5%; bottom:83%;">
-                <b
-                  style="display: inline-block; font-size: 1.7em;color: #ffffff;text-shadow: 1px 1px 12px #004C97;  !important "
-                  >{{ ins.caption }}</b
-                >
-              </h5>
-              <img :src="ins.img" />
-            </div>
-          </slide>
-        </carousel>
-      </div>
+      <carousel
+        :scrollPerPage="false"
+        :perPage="1"
+        :autoplay="true"
+        class="mb-5"
+      >
+        <slide v-for="ins in inspire" :key="ins.caption">
+          <div class="card shadow-none border-0 bg-transparent">
+            <h3
+              style="position:absolute;left:5%; bottom:83%; color: #ffffff;text-shadow: 1px 1px 12px #004C97; !important"
+              class="text-white"
+            >
+              {{ ins.caption }}
+            </h3>
+            <img class="img-fluid" :src="ins.img" />
+          </div>
+        </slide>
+      </carousel>
     </div>
     <div class="jumbotron" style="background-color:transparent !important;">
       <h3
@@ -53,6 +36,14 @@
       <p style="text-align: center; font-size: 2em;justify-content: center;">
         Access world class coursework for free!
       </p>
+      <a
+        type="button"
+        class="btn btn-lg btn-primary mb-3 btn-block w-25 mx-auto"
+        href="Home"
+        role="button"
+        @click="$router.push('home')"
+        >Get started!
+      </a>
       <hr class="my-4" />
       <div class=" row">
         <div class="col-md-4" style="padding: 4px 4px 4px 4px">
@@ -379,19 +370,6 @@ export default {
 .far:hover,
 .icon-block:hover {
   color: #ffb81c;
-}
-
-.btn-light {
-  color: #ffffff;
-  background-color: #009cde;
-  border-color: #004c97;
-  fill: #004c97;
-}
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
-  color: #ffffff;
-  background-color: #8dc8e8;
 }
 
 /* Start Your IT Journey styling */
