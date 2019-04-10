@@ -13,6 +13,7 @@ import Faq from "./views/Faq.vue";
 import Topic from "./views/Topic.vue";
 import Course from "./views/Course.vue";
 import Signup from "./views/Signup.vue";
+import Contact from "./views/Contact.vue";
 import Login from "./views/Login.vue";
 import firebase from "firebase";
 import db from "@/firebase/init";
@@ -69,6 +70,12 @@ const router = new Router({
       name: "signup",
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/Signup.vue")
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Contact.vue")
     },
     {
       path: "/login",

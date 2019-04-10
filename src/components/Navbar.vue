@@ -29,6 +29,7 @@
               <router-link class="dropdown-item" :to="{ name: 'about' }" exact>About</router-link>
               <router-link class="dropdown-item" :to="{ name: 'features' }" exact>Features</router-link>
               <router-link class="dropdown-item" :to="{ name: 'faq' }" exact>FAQs</router-link>
+              <router-link class="dropdown-item" :to="{ name: 'contact' }" exact>Contact</router-link>
             </div>
           </li>
           <li class="nav-item dropdown">
