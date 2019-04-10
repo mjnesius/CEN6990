@@ -63,7 +63,7 @@
           </div>
           <p v-if="feedback" class="text-danger text-center h5 my-3">{{ feedback }}</p>
           <p v-if="confirmation" class="text-success text-center h5 my-3">{{ confirmation }}</p>
-          <button class="btn btn-lg btn-primary btn-block mt-4 mb-5">Send Message</button>
+          <button :class="{ disabled: isDisabled }" class="btn btn-lg btn-primary btn-block mt-4 mb-5">Send Message</button>
         </form>
       </div>
     </div>
@@ -81,13 +81,15 @@ export default {
       email: null,
       message: null,
       confirmation: null,
-      feedback: null
+      feedback: null,
+      isDisabled: false
     };
   },
   methods: {
     send() {
       if (this.name && this.email && this.message) {
         this.feedback = null;
+        this.isDisabled = true;
         let contact = {
           name: this.name,
           email: this.email,
