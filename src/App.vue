@@ -20,12 +20,11 @@ export default {
     return {};
   },
   created() {
-    this.$store.commit('updateUser');
+    this.$store.commit("updateUser");
   }
 };
 </script>
 
 <style>
-
 </style>
 
