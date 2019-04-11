@@ -323,13 +323,12 @@ export default {
       ],
       cards2: [
         {
-          image: "adults-business-coffee-1323592.jpg",
+          image: "business-commerce-communication-331788.jpg",
           title: "Web Development",
           content: `Learn how to design and create a website with our web
-                          design tutorials. From hundreds of video courses,
-                          choose the right one to help you embed video, format
-                          text, design in CSS, create a content strategy, and
-                          analyze user experience design.`,
+                          design tutorials，From hundreds of video courses,choose the right one
+                          to help you embed video, format text, design in CSS, 
+                          create a content strategy, and analyze user experience design.`,
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
