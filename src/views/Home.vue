@@ -267,7 +267,7 @@ export default {
     return {
       cards1: [
         {
-          image: "adults-chairs-class-515166.jpg",
+          image: "adults-chairs-class.jpg",
           title: "Computer Network",
           content: `System for connecting hardware, software, resource sharing and
                 information transmission of network with fully functional
@@ -275,7 +275,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "action-blur-close-up-735911.jpg",
+          image: "action-blur-close-up.jpg",
           title: "Computer Composition",
           content: `Computer composition is an act or mechanism to combine 
                    simple functions.refers to the logical realization of 
@@ -284,7 +284,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "1.jpg",
+          image: "T1.jpg",
           title: "Programming language",
           content: `A programming language is a language used to write computer
                 programs. The basis of a language is a set of tokens and a set
@@ -293,7 +293,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "art-artistic-attractive-990824.jpg",
+          image: "art-artistic-attractive.jpg",
           title: "Computer Graphics",
           content: `The main research content of computer graphics is to study how
                 to represent graphics in computers and the related principles
@@ -302,7 +302,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "chart-data-desk-590022.jpg",
+          image: "chart-data-desk.jpg",
           title: "Data Structure",
           content: `In computer science, a data structure is a particular way of organizing
            data in a computer so that it can be used efficiently. Data structures 
@@ -310,7 +310,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "calculating-calculator-economy-66862.jpg",
+          image: "calculating-calculator-economy.jpg",
           title: "Mathematical Logic",
           content: `Mathematical logic is a subfield of mathematics exploring the applications 
           of formal logic to mathematics. It bears close connections to metamathematics, 
@@ -318,7 +318,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "chips-circuit-board-computer-4316.jpg",
+          image: "chips-circuit-board-computer.jpg",
           title: "Analog Circuit",
           content: `Analogue electronics (or analog in American English) are electronic 
           systems with a continuously variable signal, in contrast to digital electronics 
@@ -328,7 +328,7 @@ export default {
       ],
       cards2: [
         {
-          image: "business-commerce-communication-331788.jpg",
+          image: "business-commerce-communication.jpg",
           title: "Web Development",
           content: `Learn how to design and create a website with our web
                           design tutorials，From hundreds of video courses,choose the right one
@@ -337,7 +337,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "boss-brainstorming-business-1093913.jpg",
+          image: "course2.jpg",
           title: "Become a Digital Marketer",
           content: `Use your analytical and tactical skills to help grow
                           and develop new opportunities for businesses as a
@@ -347,7 +347,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "adult-analyzing-boss-1080865.jpg",
+          image: "course3.jpg",
           title: "Business",
           content: `Explore a wide range of business skills from project
                           management and negotiation to leadership skills and
@@ -357,7 +357,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "blurred-background-coffee-cup-computer-908284.jpg",
+          image: "course4.jpg",
           title: "Become a Manager",
           content: `As a manager, success is predicated on your ability to
                           achieve goals working with your team. This path is
@@ -367,7 +367,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "apple-class-conference-7102.jpg",
+          image: "course5.jpg",
           title: "Master 2D Animation",
           content: `2D animators create the illusion of motion and change
                           via analog and digital media. Beginning with the
@@ -377,7 +377,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "book-business-business-woman-68761.jpg",
+          image: "course6.jpg",
           title: "Design",
           content: `Design can have different connotations of application,
                          Whether you want to design a logo or
@@ -388,7 +388,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "adults-collaborate-collaboration-1036641.jpg",
+          image: "course7.jpg",
           title: "Become an Agile Project Manager",
           content: `Deliver projects with the highest level of performance
                          as an agile project manager. This path
@@ -398,7 +398,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "cyber-security-cybersecurity-device-60504.jpg",
+          image: "course8.jpg",
           title: "Become an IT Security Specialist",
           content: `Learn the core concepts needed to secure your
                           organization's network as an IT security specialist.
@@ -408,7 +408,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "architecture-asphalt-berlin-417023.jpg",
+          image: "course9.jpg",
           title: "Developer Training",
           content: `Our developer tutorials can help you learn to develop
                           and create mobile apps, work with PHP and MySQL
