@@ -16,3 +16,30 @@ exports.checkAlias = functions.https.onCall((data, context) => {
       throw new functions.https.HttpsError("failed to connect");
     });
 });
+
+exports.countNameChanges = functions.firestore
+  .document("users/{slug}")
+  .onUpdate((change, context) => {
+    const data = change.after.data();
+    const previousData = change.before.data();
+
+    if (data.history == previousData.history) return null;
+
+    let ref = admin
+      .firestore()
+      .collection("trending")
+      .doc(data.history[0].id);
+    return ref.get().then(doc => {
+      let newCount = 1;
+      if (doc.exists) {
+        newCount = doc.data().count + 1;
+      }
+      ref
+        .set({
+          title: data.history[0].title,
+          instructor: data.history[0].instructor,
+          count: newCount
+        })
+        .catch(error => {});
+    });
+  });
