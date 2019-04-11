@@ -267,7 +267,7 @@ export default {
     return {
       cards1: [
         {
-          image: "adults-chairs-class.jpg",
+          image: "adults-chairs-class1.jpg",
           title: "Computer Network",
           content: `System for connecting hardware, software, resource sharing and
                 information transmission of network with fully functional
