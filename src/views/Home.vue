@@ -379,7 +379,8 @@ export default {
         {
           image: "book-business-business-woman-68761.jpg",
           title: "Design",
-          content: `Whether you want to design a logo, create ebooks, or
+          content: `Design can have different connotations of application,
+                         Whether you want to design a logo or
                           just learn how to use a Pen tool, our in-depth design
                           tutorials can help. Get to know Illustrator and
                           InDesign, explore typography, and learn the nuances of
@@ -387,36 +388,33 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "achievement-adult-agreement-1153213.jpg",
+          image: "adults-collaborate-collaboration-1036641.jpg",
           title: "Become an Agile Project Manager",
           content: `Deliver projects with the highest level of performance
-                          and quality as an agile project manager. This path
-                          will help you build a solid foundation in leading and
+                         as an agile project manager. This path
+                          will help you build a foundation in leading and
                           motivating agile project teams, from developing user
-                          stories and agile charts to driving productive
-                          meetings.`,
+                          stories and agile charts.`,
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "accounts-applications-apps-267350.jpg",
+          image: "cyber-security-cybersecurity-device-60504.jpg",
           title: "Become an IT Security Specialist",
           content: `Learn the core concepts needed to secure your
                           organization's network as an IT security specialist.
                           Learn all the foundations of IT security: from
                           practical skills for securing hardware and network
-                          data to the basics of cryptography and cybercrime
-                          investigation and response.`,
+                          data.`,
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "adults-analysis-banking-1451447.jpg",
+          image: "architecture-asphalt-berlin-417023.jpg",
           title: "Developer Training",
           content: `Our developer tutorials can help you learn to develop
                           and create mobile apps, work with PHP and MySQL
                           databases, get started with the statistical processing
-                          language R, and much more. Our portfolio has over 280
-                          courses covering programming languages, best practices
-                          and management and deployment.`,
+                          language R. Our portfolio has over 280
+                          courses covering programming languages.`,
           link: "ik59ShTQxHPYfrXBwSkR"
         }
       ]
