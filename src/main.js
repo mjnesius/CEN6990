@@ -2,7 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import firebase from "firebase";
+import firebase from "firebase/app";
 import "bootstrap";
 import "bootswatch/dist/materia/bootstrap.min.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
