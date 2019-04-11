@@ -1,48 +1,30 @@
 <template>
   <div class="about container">
-    <div
-      class="jumbotron"
-      style="position:relative; background-color:transparent !important;"
-    >
+    <div>
       <h3
-        class="display-3"
+        class="display-3 text-center my-5"
         style=" text-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.6); text-align: center; justify-content: center;font-size: 4.7em;"
       >
         UWF Empowers!
       </h3>
-      <div id="inspirationTitle" style="text-align:right;">
-        <h3 id="inspirationTitleH3"></h3>
-      </div>
-      <a
-        type="button"
-        class="btn btn-light btn-lg btn-primary pull-left"
-        href="Home"
-        role="button"
-        style="position:absolute;left:8%;  bottom:14%; z-index:50"
-        @click="$router.push('home')"
-        >Get started!</a
+      <carousel
+        :scrollPerPage="false"
+        :perPage="1"
+        :autoplay="true"
+        class="mb-5"
       >
-      <vueper-slides
-        @ready="updateHeading"
-        @slide="updateHeading"
-        autoplay
-        slide-image-inside
-        :arrows="false"
-        fixed-height="250px"
-        :slide-ratio="1 / 2"
-        class="no-shadow"
-        :bullets-outside="true"
-        style="text-align: left; justify-content: left; !important"
-      >
-        <vueper-slide
-          slide-content-outside-class="title"
-          v-for="ins in inspire"
-          :key="ins.caption"
-          :title="ins.caption"
-          :style="{ 'background-image': 'url(' + ins.img + ')' }"
-        >
-        </vueper-slide>
-      </vueper-slides>
+        <slide v-for="ins in inspire" :key="ins.caption">
+          <div class="card shadow-none border-0 bg-transparent">
+            <h3
+              style="position:absolute;left:5%; bottom:83%; color: #ffffff;text-shadow: 1px 1px 12px #004C97; !important"
+              class="text-white"
+            >
+              {{ ins.caption }}
+            </h3>
+            <img class="img-fluid" :src="ins.img" />
+          </div>
+        </slide>
+      </carousel>
     </div>
     <div class="jumbotron" style="background-color:transparent !important;">
       <h3
@@ -54,6 +36,14 @@
       <p style="text-align: center; font-size: 2em;justify-content: center;">
         Access world class coursework for free!
       </p>
+      <a
+        type="button"
+        class="btn btn-lg btn-primary mb-3 btn-block w-25 mx-auto"
+        href="Home"
+        role="button"
+        @click="$router.push('home')"
+        >Get started!
+      </a>
       <hr class="my-4" />
       <div class=" row">
         <div class="col-md-4" style="padding: 4px 4px 4px 4px">
@@ -157,40 +147,37 @@
       >
         Testimonials
       </h3>
-      <vueper-slides
-        bullets-outside
-        autoplay
-        slide-image-inside
-        :arrows="false"
-        :slide-ratio="1 / 2"
-        class="no-shadow"
+      <div
+        class="container"
+        style="text-align: center; justify-content: center; !important"
       >
-        <vueper-slide
-          v-for="(test, idx) in testimonials"
-          :key="test.id"
-          :class="{ active: idx == 0 }"
+        <carousel
+          :scrollPerPage="true"
+          :perPage="1"
+          :autoplay="true"
+          :autoplayTimeout="3000"
         >
-          <div slot="slideContent">
-            <div
-              class="slideCaption d-md-block rounded"
-              style="box-sizing: border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: inline-block; text-align: center; justify-content: center;width:100%!important"
-            >
-              <p style=" ">{{ test.blurb }}</p>
-              <p style="font-style: italic; !important">
-                - {{ test.name }} {{ test.specialty }}
-              </p>
-            </div>
-            <div>
+          <slide v-for="test in testimonials" :key="test.id">
+            <div class="card shadow-none m-1 border-light mb-3 bg-transparent">
               <img
                 class="d-md-block img-fluid img-responsive"
                 style="display: block;"
                 :src="test.img"
                 :alt="test.name"
               />
+              <div
+                class="slideCaption d-md-block rounded"
+                style="box-sizing: z-index: 40; border-box;padding: 5px;  background-color: rgba(0, 76, 151, 0.7); display: inline-block; text-align: center; justify-content: center;width:50%; min-width: 450px;!important"
+              >
+                <p style="font-size: 1.7em; ">{{ test.blurb }}</p>
+                <p style="font-style: italic; font-size: 1.7em; !important">
+                  - {{ test.name }} {{ test.specialty }}
+                </p>
+              </div>
             </div>
-          </div>
-        </vueper-slide>
-      </vueper-slides>
+          </slide>
+        </carousel>
+      </div>
     </div>
     <div class="jumbotron" style="background-color:transparent !important;">
       <h4
@@ -305,12 +292,9 @@
 </template>
 
 <script>
-// In your VueJS component.
-import { VueperSlides, VueperSlide } from "vueperslides";
-// Since v. 1.6.0, you need to include Vueper Slides CSS file for default styles.
-import "vueperslides/dist/vueperslides.css";
+import { Carousel, Slide } from "vue-carousel";
 export default {
-  components: { VueperSlides, VueperSlide },
+  components: { Carousel, Slide },
   name: "About",
   methods: {
     updateHeading(eventName, params) {
@@ -349,20 +333,17 @@ export default {
       inspire: [
         {
           id: 0,
-          caption:
-            '<b style="display: inline-block; font-size: 1.7em;color: #ffffff;text-shadow: 1px 1px 12px #004C97; position: relative; z-index:31; bottom: -2em;left:-2em; display:none; !important ">Your Dream, Our Mission </b>',
+          caption: "Your Dream, Our Mission",
           img: require("../assets/areyourready-optimized.jpg")
         },
         {
           id: 1,
-          caption:
-            '<span><b style="font-size: 1.7em;color: #ffffff;text-shadow: 1px 1px 12px #004C97; position: relative; z-index:31; bottom: -2em;left:-2em; display:none; !important">Take Charge, Reimagine</b></span>',
+          caption: "Take Charge, Reimagine",
           img: require("../assets/inspiring-1-optimized.jpg")
         },
         {
           id: 2,
-          caption:
-            '<b style="font-size: 1.7em;color: #ffffff;text-shadow: 1px 1px 12px #004C97; position: relative; z-index:31; bottom: -2em;left:-2em; display:none; !important">Your Future Starts Today</b>',
+          caption: "Your Future Starts Today",
           img: require("../assets/inspiring-4-optimized.jpg")
         }
       ]
@@ -389,19 +370,6 @@ export default {
 .far:hover,
 .icon-block:hover {
   color: #ffb81c;
-}
-
-.btn-light {
-  color: #ffffff;
-  background-color: #009cde;
-  border-color: #004c97;
-  fill: #004c97;
-}
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
-  color: #ffffff;
-  background-color: #8dc8e8;
 }
 
 /* Start Your IT Journey styling */
