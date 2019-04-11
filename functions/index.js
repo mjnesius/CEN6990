@@ -22,9 +22,6 @@ exports.countNameChanges = functions.firestore
   .onUpdate((change, context) => {
     const data = change.after.data();
     const previousData = change.before.data();
-
-    if (data.history == previousData.history) return null;
-
     let ref = admin
       .firestore()
       .collection("trending")
