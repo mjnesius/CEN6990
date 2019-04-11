@@ -323,7 +323,7 @@ export default {
       ],
       cards2: [
         {
-          image: "adults-business-coffee-1323592.jpg",
+          image: "course1.jpg",
           title: "Web Development",
           content: `Learn how to design and create a website with our web
                           design tutorials. From hundreds of video courses,
@@ -333,7 +333,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "boss-brainstorming-business-1093913.jpg",
+          image: "course2.jpg",
           title: "Become a Digital Marketer",
           content: `Use your analytical and tactical skills to help grow
                           and develop new opportunities for businesses as a
@@ -343,7 +343,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "adult-analyzing-boss-1080865.jpg",
+          image: "course3.jpg",
           title: "Business",
           content: `Explore a wide range of business skills from project
                           management and negotiation to leadership skills and
@@ -353,7 +353,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "blurred-background-coffee-cup-computer-908284.jpg",
+          image: "course4.jpg",
           title: "Become a Manager",
           content: `As a manager, success is predicated on your ability to
                           achieve goals working with your team. This path is
@@ -363,7 +363,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "apple-class-conference-7102.jpg",
+          image: "course5.jpg",
           title: "Master 2D Animation",
           content: `2D animators create the illusion of motion and change
                           via analog and digital media. Beginning with the
@@ -373,9 +373,10 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "book-business-business-woman-68761.jpg",
+          image: "course6.jpg",
           title: "Design",
-          content: `Whether you want to design a logo, create ebooks, or
+          content: `Whether you want to design a logo, create ebooks, 
+                          3D, Animation or
                           just learn how to use a Pen tool, our in-depth design
                           tutorials can help. Get to know Illustrator and
                           InDesign, explore typography, and learn the nuances of
