@@ -285,7 +285,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "boss-brainstorming-business-1093913.jpg",
+          image: "1.jpg",
           title: "Advanced programming language",
           content: `A programming language is a language used to write computer
                 programs. The basis of a language is a set of tokens and a set
@@ -294,7 +294,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "employerShowcase.jpg",
+          image: "2.jpg",
           title: "Computer Graphics",
           content: `The main research content of computer graphics is to study how
                 to represent graphics in computers and the related principles
@@ -303,7 +303,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "team1.jpg",
+          image: "3.jpg",
           title: "title 5",
           content: "some words and more words",
           link: "ik59ShTQxHPYfrXBwSkR"
