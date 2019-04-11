@@ -271,22 +271,21 @@ export default {
           title: "Computer Network",
           content: `System for connecting hardware, software, resource sharing and
                 information transmission of network with fully functional
-                network software by using communication equipment and lines to
-                connect multiple computer systems with different geographical
-                locations and functions independently.`,
+                network software by using communication equipment and multiple computer systems.`,
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "employerShowcase.jpg",
+          image: "action-blur-close-up-735911.jpg",
           title: "Computer Composition",
-          content: `Computer composition refers to the logical realization of the
-                system structure, including the composition of the data flow and
-                control flow within the machine and the logic design.`,
+          content: `Computer composition is an act or mechanism to combine 
+                   simple functions.refers to the logical realization of 
+                   the system structure,including the composition of the 
+                   data flow and control flow .`,
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
           image: "1.jpg",
-          title: "Advanced programming language",
+          title: "Programming language",
           content: `A programming language is a language used to write computer
                 programs. The basis of a language is a set of tokens and a set
                 of rules. The whole of the token string consisting of tokens
@@ -294,7 +293,7 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "2.jpg",
+          image: "art-artistic-attractive-990824.jpg",
           title: "Computer Graphics",
           content: `The main research content of computer graphics is to study how
                 to represent graphics in computers and the related principles
@@ -303,21 +302,27 @@ export default {
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "3.jpg",
-          title: "title 5",
-          content: "some words and more words",
+          image: "chart-data-desk-590022.jpg",
+          title: "Data Structure",
+          content: `In computer science, a data structure is a particular way of organizing
+           data in a computer so that it can be used efficiently. Data structures 
+           can implement one or more particular abstract data types (ADT).`,
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "team1.jpg",
-          title: "title 6",
-          content: "some words and more words",
+          image: "calculating-calculator-economy-66862.jpg",
+          title: "Mathematical Logic",
+          content: `Mathematical logic is a subfield of mathematics exploring the applications 
+          of formal logic to mathematics. It bears close connections to metamathematics, 
+          and foundations of mathematics. `,
           link: "ik59ShTQxHPYfrXBwSkR"
         },
         {
-          image: "team1.jpg",
-          title: "title 5",
-          content: "some words and more words",
+          image: "chips-circuit-board-computer-4316.jpg",
+          title: "Analog Circuit",
+          content: `Analogue electronics (or analog in American English) are electronic 
+          systems with a continuously variable signal, in contrast to digital electronics 
+          where signals usually take only two levels.  `,
           link: "ik59ShTQxHPYfrXBwSkR"
         }
       ],
