@@ -344,7 +344,7 @@ export default {
                           digital marketer.From marketing plans to content
                           strategy we teach the best practices and principles of
                           digital marketing.`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "83lrbnOtCOkYkEfHhFDC"
         },
         {
           image: "course3.jpg",
@@ -354,7 +354,7 @@ export default {
                           online marketing strategy. Our professional
                           development tutorials can help you learn SEO,
                           spreadsheets, word processing, and more.`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "n8wbTYgdEvcLdojzlfxx"
         },
         {
           image: "course4.jpg",
@@ -364,7 +364,7 @@ export default {
                           designed to provide you with the key considerations,
                           skills and competencies to help you become and succeed
                           as a manager.`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "IYIo8IPp2sw99ImNS5mx"
         },
         {
           image: "course5.jpg",
@@ -374,7 +374,7 @@ export default {
                           foundations of animation, learn everything you need to
                           know to get started in 2D animation and make it your
                           career.`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "0KUDWKANVsnQiSimEDkl"
         },
         {
           image: "course6.jpg",
@@ -385,7 +385,7 @@ export default {
                           tutorials can help. Get to know Illustrator and
                           InDesign, explore typography, and learn the nuances of
                           designing for print.`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "gLGPaWlYfkrbn9BwtJSy"
         },
         {
           image: "course7.jpg",
@@ -395,7 +395,7 @@ export default {
                           will help you build a foundation in leading and
                           motivating agile project teams, from developing user
                           stories and agile charts.`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "S5XOxFIKCYqmKdAnevQZ"
         },
         {
           image: "course8.jpg",
@@ -405,7 +405,7 @@ export default {
                           Learn all the foundations of IT security: from
                           practical skills for securing hardware and network
                           data.`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "DAXzDcPRFG7UDBQVbROI"
         },
         {
           image: "course9.jpg",
@@ -415,7 +415,7 @@ export default {
                           databases, get started with the statistical processing
                           language R. Our portfolio has over 280
                           courses covering programming languages.`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "Y9wqTuNZPC9w1euHS5LO"
         }
       ]
     };
