@@ -22,7 +22,7 @@ service cloud.firestore {
       return get(/databases/$(database)/documents/admin/$(request.auth.uid)).data.admin == true;
     }
 	function isValidText(text) {
-      return text is string && text.size() < 200;
+      return text is string && text.size() < 1000;
     }
 	
 

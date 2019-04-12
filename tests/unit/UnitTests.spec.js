@@ -2,6 +2,7 @@ import { mount } from "@vue/test-utils";
 import Topic from "@/views/Topic.vue";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
+import Contact from "@/views/Contact.vue";
 import Profile from "@/views/Profile.vue";
 import History from "@/views/History.vue";
 import Add from "@/views/Add.vue";
@@ -100,6 +101,41 @@ describe("Login.vue", () => {
   });
 });
 
+describe("Contact.vue", () => {
+  const wrapper = mount(Contact, {
+    methods: {
+      send() {
+        if (this.name && this.email && this.message) {
+          this.feedback = null;
+          this.isDisabled = true;
+          this.confirmation =
+            "Your questions and suggestions are important to us. We will respond within 48hrs";
+        } else {
+          this.feedback = "Please fill in all fields";
+        }
+      }
+    }
+  });
+  const clickMethodStub = sinon.stub();
+  it("renders Contact", () => {
+    expect(wrapper.isVueInstance()).toBe(true);
+  });
+  it("displays page title", () => {
+    let title = wrapper.find("h1");
+    expect(title.text()).toBe("Contact Us");
+  });
+  it("displays error message if missing fields", () => {
+    wrapper.find("form").trigger("submit");
+    const errorMessage = wrapper.find(".text-danger");
+    expect(errorMessage.exists()).toBe(true);
+  });
+  it("Send calls send()", () => {
+    wrapper.setMethods({ send: clickMethodStub });
+    wrapper.find("form").trigger("submit");
+    expect(clickMethodStub.called).toBe(true);
+  });
+});
+
 describe("Course.vue", () => {
   const $route = {
     params: {
@@ -160,7 +196,7 @@ describe("Course.vue", () => {
     let title = wrapper.find("h1");
     expect(title.text()).toBe("Test Title");
   });
-  it("renders courses titles", () => {
+  it("renders courses instructor", () => {
     let instructor = wrapper.find("h4");
     expect(instructor.text()).toBe("Instructor: Test Instructor");
   });

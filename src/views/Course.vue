@@ -69,7 +69,7 @@
 
 <script>
 import db from "@/firebase/init";
-import firebase from "firebase";
+import firebase from "firebase/app";
 import moment from "moment";
 
 export default {
@@ -115,24 +115,6 @@ export default {
         .catch(err => {
           console.log(err);
         });
-    },
-    upDateTrending() {
-      let ref = db.collection("trending").doc(this.paramCourseId);
-      ref.get().then(doc => {
-        let newCount = 1;
-        if (doc.exists) {
-          newCount = doc.data().count + 1;
-        }
-        ref
-          .set({
-            title: this.course.title,
-            instructor: this.course.instructor,
-            count: newCount
-          })
-          .catch(error => {
-            console.error(error);
-          });
-      });
     },
     upDateHistory() {
       db.collection("users")
@@ -207,7 +189,6 @@ export default {
   },
   created() {
     this.getCourses();
-    this.upDateTrending();
     this.upDateHistory();
     this.listenToComments();
   }

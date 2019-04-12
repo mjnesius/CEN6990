@@ -15,7 +15,7 @@ import Course from "./views/Course.vue";
 import Signup from "./views/Signup.vue";
 import Contact from "./views/Contact.vue";
 import Login from "./views/Login.vue";
-import firebase from "firebase";
+import firebase from "firebase/app";
 import db from "@/firebase/init";
 import store from "./store";
 
