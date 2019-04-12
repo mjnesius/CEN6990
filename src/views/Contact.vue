@@ -56,7 +56,7 @@
               class="form-control form-control-lg"
               id="message"
               placeholder="Message..."
-              maxlength="400"
+              maxlength="500"
               rows="4"
               v-model="message"
             ></textarea>

@@ -9,7 +9,6 @@
             class="d-none d-md-inline-block"
             src="../assets/uwf logo2.png"
             alt
-            height="60"
           />
           <h4 class="lead text-center mt-2 text-white">
             Copyright &copy; 2019

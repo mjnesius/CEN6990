@@ -111,7 +111,7 @@
             <router-link class="nav-link" :to="{ name: 'login', params: { id: 0 } }" exact>Login</router-link>
           </li>
           <li v-if="user" class="nav-item">
-            <a class="nav-link">{{ user.displayName }}</a>
+            <a class="nav-link displayName">{{ user.displayName }}</a>
           </li>
           <li v-if="user" class="nav-item">
             <a class="nav-link logout" @click="logout">Logout</a>
@@ -123,7 +123,7 @@
 </template>
 
 <script>
-import firebase from "firebase";
+import firebase from "firebase/app";
 
 export default {
   name: "Navbar",
@@ -152,6 +152,9 @@ export default {
 </script>
 
 <style scoped>
+.displayName:hover {
+  color: rgb(216, 216, 216) !important;
+}
 li.nav-item {
   font-size: 1rem;
 }
