@@ -21,10 +21,12 @@ service cloud.firestore {
 	function isAdmin() {
       return get(/databases/$(database)/documents/admin/$(request.auth.uid)).data.admin == true;
     }
-	function isValidText(text) {
+	function isValidLongString(text) {
       return text is string && text.size() < 1000;
     }
-	
+  function isValidShortString(text) {
+      return text is string && text.size() < 30;
+    }  
 
     match /admin/{id} {
       allow read: if isSignedIn();
@@ -32,15 +34,15 @@ service cloud.firestore {
     }
     match /comments/{id} {
       allow read: if isSignedIn(); 
-      allow write: if isValidText(incomingData().course) && isSignedIn()
+      allow write: if isValidShortString(incomingData().course) && isSignedIn()
         && incomingData().alias == userName() 
-        && isValidText(incomingData().content);
+        && isValidLongString(incomingData().content);
     }
     match /contacts/{id} {
       allow read: if false;
-      allow write: if isValidText(incomingData().email)
-        && isValidText(incomingData().message)
-        && isValidText(incomingData().name);
+      allow write: if isValidShortString(incomingData().email)
+        && isValidLongString(incomingData().message)
+        && isValidShortString(incomingData().name);
     }
     match /courses/{id} {
       allow read: if true; 
@@ -50,8 +52,8 @@ service cloud.firestore {
       allow read: if isSignedIn(); 
       allow write: if isSignedIn()
         && incomingData().count is int
-        && isValidText(incomingData().instructor)
-        && isValidText(incomingData().title);
+        && isValidShortString(incomingData().instructor)
+        && isValidShortString(incomingData().title);
     }
     match /users/{id} {
       allow read: if isSignedIn() && isOwner(); 
