@@ -38,7 +38,7 @@
                     class="when-opened"
                     style="float:right; font-size: 3em; color: #007A33;"
                   >
-                    <font-awesome-icon icon="chevron-down" />
+                    <font-awesome-icon icon="chevron-up" />
                     <!--<i class="fas fa-chevron-up"> </i>-->
                   </span>
                   <span
