@@ -11,54 +11,54 @@
         <div class="row text-center my-5">
           <div class="col">
             <img
-              class="img-fluid w-75 mb-sm-5"
-              style="width: auto; max-width: 550px; height: auto; max-height: 500px;"
+              class="img-fluid w-75 mb-sm-3"
+              style="width: auto; max-width: 550px; height: auto; max-height: 350px;"
               src="../assets/FAQ.jpg"
               alt
             />
           </div>
         </div>
-
-        <div class="accordion mt-4" id="accordionExample">
-          <div class="card" v-for="qa in qas" :key="qa.id">
-            <div
-              class="card-header bg-gradient-primary text-white"
-              :id="qa.heading"
-            >
-              <h2 class="mb-0 panel-title">
-                <a
-                  class="collapsed"
-                  aria-expanded="false"
-                  data-toggle="collapse"
-                  :data-target="qa.target"
-                  :aria-controls="qa.card"
-                >
-                  {{ qa.question }}
-                  <span
-                    class="when-opened"
-                    style="float:right; font-size: 3em; color: #007A33;"
+        <div class="row ">
+          <div class="accordion col" id="accordionExample">
+            <div class="card" v-for="qa in qas" :key="qa.id">
+              <div
+                class="card-header bg-gradient-primary text-white p-3"
+                :id="qa.heading"
+                style="position: relative; display: inline-block;"
+              >
+                <h2 class="mb-0 panel-title">
+                  <a
+                    class="collapsed"
+                    aria-expanded="false"
+                    data-toggle="collapse"
+                    :data-target="qa.target"
+                    :aria-controls="qa.card"
                   >
-                    <font-awesome-icon icon="chevron-up" />
-                    <!--<i class="fas fa-chevron-up"> </i>-->
-                  </span>
-                  <span
-                    class="when-closed"
-                    style="float:right; font-size: 3em; color: #007A33;"
-                    ><font-awesome-icon icon="chevron-down" />
-                    <!--i class="fas fa-chevron-down"></i>-->
-                  </span>
-                </a>
-              </h2>
-            </div>
+                    {{ qa.question }}
+                    <span
+                      class="when-opened"
+                      style="position: absolute; top: 0; right: 10px; font-size: 1.5em; color: #ffffff;"
+                    >
+                      <font-awesome-icon icon="chevron-up" />
+                    </span>
+                    <span
+                      class="when-closed"
+                      style="position: absolute; top: 0; right: 10px; font-size: 1.5em; color: #ffffff;"
+                      ><font-awesome-icon icon="chevron-down" />
+                    </span>
+                  </a>
+                </h2>
+              </div>
 
-            <div
-              :id="qa.card"
-              class="collapse col-sm-offset-1"
-              :aria-labelledby="qa.heading"
-              data-parent="#accordionExample"
-            >
-              <div class="card-body col-sm-offset-1">
-                <h3 style="margin-left: 35px">{{ qa.answer }}</h3>
+              <div
+                :id="qa.card"
+                class="collapse"
+                :aria-labelledby="qa.heading"
+                data-parent="#accordionExample"
+              >
+                <div class="card-body">
+                  <h3 style="margin-left: 35px">{{ qa.answer }}</h3>
+                </div>
               </div>
             </div>
           </div>
