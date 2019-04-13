@@ -1,89 +1,80 @@
 <template>
-  <div>
-    <div class="jumbotron" style="background-color:transparent !important;">
-      <div class="container">
-        <h3
-          class="mt-5 display-4"
-          style="text-align: center; justify-content: left;"
-        >
-          Topics
-        </h3>
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container"></div>
-        </div>
-
-        <h3
-          class="mt-5 display-4"
-          style="text-align: center; justify-content: center;"
-        >
-          Courses
-        </h3>
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container"></div>
-        </div>
-
-        <h3
-          class="mt-5 display-4"
-          style="text-align: center; justify-content: center;"
-        >
-          Instructors
-        </h3>
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container"></div>
-        </div>
-
-        <h3
-          class="mt-5 display-4"
-          style="text-align: center; justify-content: center;"
-        >
-          Avantages of UWF Empowers
-        </h3>
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-            <ul class="list-group">
-              <li class="list-group-item active">
-                Detailed class descriptions.
-              </li>
-              <li class="list-group-item">Control your learning experience.</li>
-              <li class="list-group-item">Learn at your pace.</li>
-              <li class="list-group-item">Detailed instructor profiles.</li>
-            </ul>
-          </div>
-        </div>
-        <h3
-          class="mt-5 display-4"
-          style="text-align: center; justify-content: center;"
-        >
-          Frequently Asked Questions
-        </h3>
-        <div class="accordion mt-4" id="accordionExample">
-          <div class="card" v-for="qa in qas" :key="qa.id">
-            <div class="card-header " :id="qa.heading">
-              <h5 class="mb-0">
-                <button
-                  class="btn btn-link"
-                  aria-expanded="false"
-                  type="button"
-                  data-toggle="collapse"
-                  :data-target="qa.target"
-                  :aria-controls="qa.card"
-                >
-                  {{ qa.question }}
-                </button>
-              </h5>
-            </div>
-
-            <div
-              :id="qa.card"
-              class="collapse col-sm-offset-1"
-              :aria-labelledby="qa.heading"
-              data-parent="#accordionExample"
-            >
-              <div class="card-body col-sm-offset-1">
-                <p style="margin-left: 35px">{{ qa.answer }}</p>
-              </div>
-            </div>
-          </div>
+  <div class="container">
+    <div class="row p-5 justify-content-center">
+      <div class="col-md-6">
+        <img class="img-fluid" src="../assets/undraw_Outer_space_drqu.svg" alt>
+      </div>
+      <div class="col-md-6 mt-3 text-center">
+        <h1 class="dispay-3 mt-5 mb-3 text-primary">Launch Your IT Career with UWF Empowers</h1>
+        <p class="lead">Learn from some of the nations top professors.</p>
+        <p>Study leading-edge technologies on your schedule.</p>
+      </div>
+    </div>
+    <div class="row my-5">
+      <div class="col-md-4 mb-5 text-center">
+        <font-awesome-icon icon="book-reader" class="text-primary" size="5x"/>
+        <h4 class="mt-3">Free Online Classes</h4>
+        <p>Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+      </div>
+      <div class="col-md-4 mb-5 text-center">
+        <font-awesome-icon icon="book-reader" class="text-primary" size="5x"/>
+        <h4 class="mt-3">Top Professors</h4>
+        <p>
+          Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.
+        </p>
+      </div>
+      <div class="col-md-4 mb-5 text-center">
+        <font-awesome-icon icon="book-reader" class="text-primary" size="5x"/>
+        <h4 class="mt-3">Leading-edge Technologies</h4>
+        <p>Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="col-md-6 align-self-center px-5">
+        <h3>Software Development</h3>
+        <p>
+          Viverra mauris in aliquam sem fringilla ut morbi. Curabitur gravida arcu ac tortor dignissim. Tortor dignissim convallis aenean et tortor at. Dui sapien eget mi proin sed libero. Ut tortor pretium viverra suspendisse potenti nullam. Sapien eget mi proin sed libero enim sed. Congue quisque egestas diam in.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="../assets/undraw_creative_team_r90h.svg" class="img-fluid" alt>
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <img src="../assets/undraw_monitor_iqpq.svg" class="img-fluid" alt>
+      </div>
+      <div class="col-md-6 align-self-center px-5">
+        <h3>Information Technology</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim ut sem viverra. Id interdum velit laoreet id donec ultrices tincidunt arcu. Imperdiet dui accumsan sit amet nulla facilisi. Diam maecenas sed enim ut sem viverra. Vel risus commodo viverra maecenas accumsan lacus. Euismod quis viverra nibh cras pulvinar. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.
+        </p>
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="col-md-6 align-self-center py-5">
+        <h3>CyberSecurity</h3>
+        <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim ut sem viverra. Id interdum velit laoreet id donec ultrices tincidunt arcu. Imperdiet dui accumsan sit amet nulla facilisi. Diam maecenas sed enim ut sem viverra. Vel risus commodo viverra maecenas accumsan lacus. Euismod quis viverra nibh cras pulvinar. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius. 
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="../assets/undraw_authentication_fsn5.svg" class="img-fluid" alt>
+      </div>
+    </div>
+    <div id="callToAction" class="row text-center mb-5 pb-5">
+      <div class="col">
+        <div class="container pt-5">
+          <h1>Are You Ready To Get Launch Your Career?</h1>
+          <p class="mb-4 lead d-none d-md-block">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim ut sem viverra. Id interdum velit laoreet id donec ultrices tincidunt arcu. Imperdiet dui accumsan sit amet nulla facilisi. Diam maecenas sed enim ut sem viverra. Vel risus commodo viverra maecenas accumsan lacus. Euismod quis viverra nibh cras pulvinar. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.
+          </p>
+          <router-link
+            :to="{ name: 'home' }"
+            type="button"
+            class="btn btn-primary btn-large"
+            role="button"
+          >Get Started</router-link>
         </div>
       </div>
     </div>
@@ -92,58 +83,12 @@
 
 <script>
 export default {
-  name: "Features",
-  data() {
-    return {
-      qas: [
-        {
-          question: "How much do courses cost?",
-          answer:
-            "Courses are free for both registered and unregeistered users!",
-          id: 1,
-          heading: "q1",
-          target: "#a1",
-          card: "a1"
-        },
-        {
-          question: "Do I need to be a UWF student?",
-          answer:
-            "No. Our mind blowing educational materials are free for the entire world.",
-          id: 2,
-          heading: "q2",
-          target: "#a2",
-          card: "a2"
-        },
-        {
-          question: "Am I able to earn certificates by completing coursework?",
-          answer:
-            "We are not offering certificates at this time. However, future releases will include integration with social networking sites like LinkedIn where you'll be able to post digital certificates of completion.",
-          id: 3,
-          heading: "q3",
-          target: "#a3",
-          card: "a3"
-        },
-        {
-          question: "How do I become an instructor for a course?",
-          answer:
-            "Currently, only official faculty with UWF are allowed to create course content for UWF Empowers. If that means you, then please contact the site admin to be granted an instructor user account.",
-          id: 4,
-          heading: "q4",
-          target: "#a4",
-          card: "a4"
-        },
-        {
-          question: "Why do you have so many questions?",
-          answer: "We are a very inquisitive people",
-          id: 5,
-          heading: "q5",
-          target: "#a5",
-          card: "a5"
-        }
-      ]
-    };
-  }
+  name: "Features"
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#callToAction {
+  background-color: rgb(243, 237, 237);
+}
+</style>
