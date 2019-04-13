@@ -9,7 +9,7 @@
         <slide v-for="ins in inspire" :key="ins.caption">
           <div class="card shadow-none border-0 bg-transparent">
             <h3
-              style="position:absolute;left:5%; bottom:83%; color: #ffffff;text-shadow: 1px 1px 12px #004C97; !important"
+              style="position:absolute;left:5%; bottom:75%; color: #ffffff;text-shadow: 1px 1px 12px #004C97; !important"
               class="text-white"
             >{{ ins.caption }}</h3>
             <img class="img-fluid" :src="ins.img">
