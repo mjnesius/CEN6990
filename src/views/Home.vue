@@ -84,12 +84,12 @@
       </carousel>
     </div>
 
-    <div class="container">
+    <div class="container mb-4">
       <hr class="my-5" />
       <h1 class="mb-4">Browse By Topic</h1>
       <div class="row">
         <div class="col-md-4">
-          <div class="card mb-5">
+          <div class="card mb-5 h-100">
             <img
               src="../assets/cyber1.jpg"
               class="card-img-top"
@@ -104,7 +104,7 @@
               <router-link
                 :to="{ name: 'topic', params: { id: 0 } }"
                 type="button"
-                class="btn btn-primary"
+                class="btn btn-primary mt-auto"
                 role="button"
                 >Find a Course</router-link
               >
@@ -112,7 +112,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card mb-5">
+          <div class="card mb-5 h-100">
             <img
               src="../assets/cyber.jpg"
               class="card-img-top"
@@ -128,7 +128,7 @@
               <router-link
                 :to="{ name: 'topic', params: { id: 1 } }"
                 type="button"
-                class="btn btn-primary"
+                class="btn btn-primary mt-auto"
                 role="button"
                 >Find a Course</router-link
               >
@@ -136,7 +136,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card mb-5">
+          <div class="card mb-5 h-100">
             <img
               src="../assets/cyber2.jpg"
               class="card-img-top"
@@ -151,7 +151,7 @@
               <router-link
                 :to="{ name: 'topic', params: { id: 2 } }"
                 type="button"
-                class="btn btn-primary"
+                class="btn btn-primary mt-auto"
                 role="button"
                 >Find a Course</router-link
               >
@@ -160,7 +160,7 @@
         </div>
       </div>
     </div>
-    <section id="team" class="mb-5 text-center">
+    <section id="team" class="mb-5 pt-5 text-center">
       <div class="container">
         <div class="row mb-3">
           <div class="col">
@@ -174,7 +174,7 @@
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-body">
                 <img
                   src="../assets/team_01.jpg"
@@ -195,7 +195,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-body">
                 <img
                   src="../assets/team_02.jpg"
@@ -215,7 +215,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-body">
                 <img
                   src="../assets/team_03.jpg"
@@ -234,7 +234,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-body">
                 <img
                   src="../assets/team_04.jpg"
@@ -424,11 +424,6 @@ export default {
 </script>
 
 <style scoped>
-.info-header {
-  width: 50%;
-  margin: auto;
-  border-bottom: 1px solid #ddd;
-}
 #team img {
   margin-top: -50px;
 }
