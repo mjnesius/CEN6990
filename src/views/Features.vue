@@ -11,19 +11,19 @@
       </div>
     </div>
     <div class="row my-5">
-      <div class="col-md-4 mb-5 text-center">
+      <div class="col-md-4 mb-5 text-center px-5">
         <font-awesome-icon icon="book-reader" class="text-primary" size="5x"/>
         <h4 class="mt-3">Free Online Classes</h4>
         <p>Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
       </div>
-      <div class="col-md-4 mb-5 text-center">
+      <div class="col-md-4 mb-5 text-center px-5">
         <font-awesome-icon icon="book-reader" class="text-primary" size="5x"/>
         <h4 class="mt-3">Top Professors</h4>
         <p>
           Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.
         </p>
       </div>
-      <div class="col-md-4 mb-5 text-center">
+      <div class="col-md-4 mb-5 text-center px-5">
         <font-awesome-icon icon="book-reader" class="text-primary" size="5x"/>
         <h4 class="mt-3">Leading-edge Technologies</h4>
         <p>Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
@@ -41,21 +41,21 @@
       </div>
     </div>
     <div class="row mb-5">
-      <div class="col-md-6">
+      <div class="col-md-6 order-last order-md-first">
         <img src="../assets/undraw_monitor_iqpq.svg" class="img-fluid" alt>
       </div>
-      <div class="col-md-6 align-self-center px-5">
+      <div class="col-md-6 align-self-center px-5 order-first order-md-last">
         <h3>Information Technology</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim ut sem viverra. Id interdum velit laoreet id donec ultrices tincidunt arcu. Imperdiet dui accumsan sit amet nulla facilisi. Diam maecenas sed enim ut sem viverra. Vel risus commodo viverra maecenas accumsan lacus. Euismod quis viverra nibh cras pulvinar. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit ultrices tincidunt arcu. Diam maecenas sed enim ut sem viverra. Vel risus commodo viverra maecenas accumsan lacus. Euismod quis viverra nibh cras pulvinar. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.
         </p>
       </div>
     </div>
     <div class="row mb-5">
-      <div class="col-md-6 align-self-center py-5">
+      <div class="col-md-6 align-self-center px-5">
         <h3>CyberSecurity</h3>
         <p>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim ut sem viverra. Id interdum velit laoreet id donec ultrices tincidunt arcu. Imperdiet dui accumsan sit amet nulla facilisi. Diam maecenas sed enim ut sem viverra. Vel risus commodo viverra maecenas accumsan lacus. Euismod quis viverra nibh cras pulvinar. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius. 
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet dui accumsan sit amet nulla facilisi. Diam maecenas sed enim ut sem viverra. Vel risus commodo viverra maecenas accumsan lacus. Euismod quis viverra nibh cras pulvinar. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius. 
         </p>
       </div>
       <div class="col-md-6">
@@ -66,8 +66,8 @@
       <div class="col">
         <div class="container pt-5">
           <h1>Are You Ready To Launch Your Career?</h1>
-          <p class="mb-4 lead d-none d-md-block">
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim ut sem viverra. Id interdum velit laoreet id donec ultrices tincidunt arcu. Imperdiet dui accumsan sit amet nulla facilisi. Diam maecenas sed enim ut sem viverra. Vel risus commodo viverra maecenas accumsan lacus. Euismod quis viverra nibh cras pulvinar. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.
+          <p class="mb-4 lead">
+           Lorem ipsum dolor sit amet tincidunt arcu.
           </p>
           <router-link
             :to="{ name: 'home' }"
