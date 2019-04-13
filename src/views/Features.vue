@@ -14,17 +14,17 @@
       <div class="col-md-4 mb-5 text-center px-5">
         <font-awesome-icon icon="laptop" class="text-primary" size="5x"/>
         <h4 class="mt-3">Free Online Classes</h4>
-        <p>Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+        <p>Free, as in no charge and no subscription. UWF Empowers offers professional-level instruction and certification preparation.</p>
       </div>
       <div class="col-md-4 mb-5 text-center px-5">
         <font-awesome-icon icon="school" class="text-primary" size="5x"/>
         <h4 class="mt-3">Top Professors</h4>
-        <p>Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+        <p>Recognized experts in their fields, our professors are also great teachers. Learn the latest from the best.</p>
       </div>
       <div class="col-md-4 mb-5 text-center px-5">
         <font-awesome-icon icon="code" class="text-primary" size="5x"/>
         <h4 class="mt-3">Leading-edge Technologies</h4>
-        <p>Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+        <p>From SecDevOps to Blockchain, UWF Empowers has the latest technologies taught by the industry experts.</p>
       </div>
     </div>
     <div class="row my-5">
