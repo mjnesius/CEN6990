@@ -59,7 +59,7 @@
               <span class="text-muted mr-5">{{ comment.date }}</span>
               <span class="text-muted lead">{{ comment.alias }}</span>
             </p>
-            <h5>{{ comment.content }}</h5>
+            <h5 class="text-muted">{{ comment.content }}</h5>
           </li>
         </ul>
       </div>
