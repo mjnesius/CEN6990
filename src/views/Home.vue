@@ -84,11 +84,11 @@
       </carousel>
     </div>
 
-    <div class="container mb-4">
+    <div class="container">
       <hr class="my-5" />
       <h1 class="mb-4">Browse By Topic</h1>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="card mb-5 h-100">
             <img
               src="../assets/cyber1.jpg"
@@ -111,7 +111,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="card mb-5 h-100">
             <img
               src="../assets/cyber.jpg"
@@ -135,7 +135,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="card mb-5 h-100">
             <img
               src="../assets/cyber2.jpg"

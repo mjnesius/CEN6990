@@ -31,7 +31,7 @@
         href="Home"
         role="button"
         @click="$router.push('home')"
-      >Get started!</a>
+      >Get started</a>
       <hr class="my-4">
       <div class="row">
         <div class="col-md-4" style="padding: 4px 4px 4px 4px">
