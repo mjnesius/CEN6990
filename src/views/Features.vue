@@ -12,19 +12,17 @@
     </div>
     <div class="row my-5">
       <div class="col-md-4 mb-5 text-center px-5">
-        <font-awesome-icon icon="book-reader" class="text-primary" size="5x"/>
+        <font-awesome-icon icon="laptop" class="text-primary" size="5x"/>
         <h4 class="mt-3">Free Online Classes</h4>
         <p>Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
       </div>
       <div class="col-md-4 mb-5 text-center px-5">
-        <font-awesome-icon icon="book-reader" class="text-primary" size="5x"/>
+        <font-awesome-icon icon="school" class="text-primary" size="5x"/>
         <h4 class="mt-3">Top Professors</h4>
-        <p>
-          Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.
-        </p>
+        <p>Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
       </div>
       <div class="col-md-4 mb-5 text-center px-5">
-        <font-awesome-icon icon="book-reader" class="text-primary" size="5x"/>
+        <font-awesome-icon icon="code" class="text-primary" size="5x"/>
         <h4 class="mt-3">Leading-edge Technologies</h4>
         <p>Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
       </div>
@@ -32,9 +30,7 @@
     <div class="row mb-5">
       <div class="col-md-6 align-self-center px-5">
         <h3>Software Development</h3>
-        <p>
-          Viverra mauris in aliquam sem fringilla ut morbi. Curabitur gravida arcu ac tortor dignissim. Tortor dignissim convallis aenean et tortor at. Dui sapien eget mi proin sed libero. Ut tortor pretium viverra suspendisse potenti nullam. Sapien eget mi proin sed libero enim sed. Congue quisque egestas diam in.
-        </p>
+        <p>Get access to a range of Software Development Courses like Java, .Net, Javascript, C#, Python, Vue, and Cypress, all designed by Industry Experts. UWF Empowers gives you a platform to do just that with our high-quality Mobile and Software Development courses. Enroll now!</p>
       </div>
       <div class="col-md-6">
         <img src="../assets/undraw_creative_team_r90h.svg" class="img-fluid" alt>
@@ -46,17 +42,13 @@
       </div>
       <div class="col-md-6 align-self-center px-5 order-first order-md-last">
         <h3>Information Technology</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit ultrices tincidunt arcu. Diam maecenas sed enim ut sem viverra. Vel risus commodo viverra maecenas accumsan lacus. Euismod quis viverra nibh cras pulvinar. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.
-        </p>
+        <p>Information moves a mile a minute, thanks to nonstop developments in technology. As the information technology industry grows, so do career and learning opportunities—and you’ve got to keep up! Get up to speed with our IT courses from top Professors.</p>
       </div>
     </div>
     <div class="row mb-5">
       <div class="col-md-6 align-self-center px-5">
         <h3>CyberSecurity</h3>
-        <p>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet dui accumsan sit amet nulla facilisi. Diam maecenas sed enim ut sem viverra. Vel risus commodo viverra maecenas accumsan lacus. Euismod quis viverra nibh cras pulvinar. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius. 
-        </p>
+        <p>Whether you want to keep yourself safe while browsing the internet or brush up on your penetration testing and network security analysis skills, UWF Empowers helps you take the right training. We offer a broad range of CyberSecurity courses taught by top-rated and approachable instructors.</p>
       </div>
       <div class="col-md-6">
         <img src="../assets/undraw_authentication_fsn5.svg" class="img-fluid" alt>
@@ -66,9 +58,7 @@
       <div class="col">
         <div class="container pt-5">
           <h1>Are You Ready To Launch Your Career?</h1>
-          <p class="mb-4 lead">
-           Lorem ipsum dolor sit amet tincidunt arcu.
-          </p>
+          <p class="mb-4 lead">Lorem ipsum dolor sit amet tincidunt arcu.</p>
           <router-link
             :to="{ name: 'home' }"
             type="button"
