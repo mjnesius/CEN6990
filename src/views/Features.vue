@@ -65,7 +65,7 @@
     <div id="callToAction" class="row text-center mb-5 pb-5">
       <div class="col">
         <div class="container pt-5">
-          <h1>Are You Ready To Get Launch Your Career?</h1>
+          <h1>Are You Ready To Launch Your Career?</h1>
           <p class="mb-4 lead d-none d-md-block">
            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim ut sem viverra. Id interdum velit laoreet id donec ultrices tincidunt arcu. Imperdiet dui accumsan sit amet nulla facilisi. Diam maecenas sed enim ut sem viverra. Vel risus commodo viverra maecenas accumsan lacus. Euismod quis viverra nibh cras pulvinar. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius.
           </p>
