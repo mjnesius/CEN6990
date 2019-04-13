@@ -27,7 +27,7 @@
         <p>Sodales ut etiam sit amet nisl purus. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
       </div>
     </div>
-    <div class="row mb-5">
+    <div class="row my-5">
       <div class="col-md-6 align-self-center px-5">
         <h3>Software Development</h3>
         <p>Get access to a range of Software Development Courses like Java, .Net, Javascript, C#, Python, Vue, and Cypress, all designed by Industry Experts. UWF Empowers gives you a platform to do just that with our high-quality Mobile and Software Development courses. Enroll now!</p>
