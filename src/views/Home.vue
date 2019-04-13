@@ -272,16 +272,16 @@ export default {
           content: `System for connecting hardware, software, resource sharing and
                 information transmission of network with fully functional
                 network software by using communication equipment and multiple computer systems.`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "aOVvI342VkNoHreQLX7Q"
         },
         {
           image: "action-blur-close-up.jpg",
           title: "Computer Composition",
           content: `Computer composition is an act or mechanism to combine 
-                   simple functions.refers to the logical realization of 
+                   simple functions.Refers to the logical realization of 
                    the system structure,including the composition of the 
-                   data flow and control flow .`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+                   data flow and control flow.`,
+          link: "fnRp8ZUVeMhO3x3iSdsb"
         },
         {
           image: "T1.jpg",
@@ -290,7 +290,7 @@ export default {
                 programs. The basis of a language is a set of tokens and a set
                 of rules. The whole of the token string consisting of tokens
                 according to the rules is the language.`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "uEiLsLvTu9M7hNwXze9W"
         },
         {
           image: "art-artistic-attractive.jpg",
@@ -299,7 +299,7 @@ export default {
                 to represent graphics in computers and the related principles
                 and algorithms for computing, processing and displaying graphics
                 using computers.`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "vvfcd2oxobbOmVsfWGER"
         },
         {
           image: "chart-data-desk.jpg",
@@ -307,7 +307,7 @@ export default {
           content: `In computer science, a data structure is a particular way of organizing
            data in a computer so that it can be used efficiently. Data structures 
            can implement one or more particular abstract data types (ADT).`,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "fTnle1f5502ysw5HOCXy"
         },
         {
           image: "calculating-calculator-economy.jpg",
@@ -315,7 +315,7 @@ export default {
           content: `Mathematical logic is a subfield of mathematics exploring the applications 
           of formal logic to mathematics. It bears close connections to metamathematics, 
           and foundations of mathematics. `,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "jZF3J1Pt2dKWcKii2oKh"
         },
         {
           image: "chips-circuit-board-computer.jpg",
@@ -323,7 +323,7 @@ export default {
           content: `Analogue electronics (or analog in American English) are electronic 
           systems with a continuously variable signal, in contrast to digital electronics 
           where signals usually take only two levels.  `,
-          link: "ik59ShTQxHPYfrXBwSkR"
+          link: "nhOwC5ZvEdLl91nbhA2p"
         }
       ],
       cards2: [
