@@ -35,9 +35,9 @@ service cloud.firestore {
     match /comments/{id} {
       allow read: if isSignedIn(); 
       allow create: if isValidShortString(incomingData().course) 
-      && isSignedIn()
-      && incomingData().alias == userName() 
-      && isValidLongString(incomingData().content);
+        && isSignedIn()
+        && incomingData().alias == userName() 
+        && isValidLongString(incomingData().content);
       allow update: if false;
       allow delete: if isAdmin();
     }
