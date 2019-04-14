@@ -9,7 +9,10 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faPlayCircle,
   faGift,
-  faBookReader
+  faBookReader,
+  faLaptop,
+  faSchool,
+  faCode
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faPlayCircle as faPlayCircleSolid,
@@ -24,7 +27,10 @@ library.add(
   faPlayCircleSolid,
   faCalendarAlt,
   faGift,
-  faBookReader
+  faBookReader,
+  faLaptop,
+  faSchool,
+  faCode
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
