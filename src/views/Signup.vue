@@ -86,18 +86,18 @@ export default {
               .auth()
               .createUserWithEmailAndPassword(this.email, this.password)
               .then(cred => {
-                db.collection("users")
-                  .doc(this.slug)
-                  .set({
-                    alias: this.alias,
-                    user_id: cred.user.uid
-                  });
                 cred.user
                   .updateProfile({
                     displayName: this.alias
                   })
                   .catch(error => {
                     console.log(error);
+                  });
+                db.collection("users")
+                  .doc(this.slug)
+                  .set({
+                    alias: this.alias,
+                    user_id: cred.user.uid
                   });
               })
               .then(() => {
