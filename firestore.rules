@@ -37,8 +37,7 @@ service cloud.firestore {
       allow create: if isValidShortString(incomingData().course) 
         && isSignedIn()
         && incomingData().alias == userName() 
-        && isValidLongString(incomingData().content)
-        && incomingData().date == Timestamp;
+        && isValidLongString(incomingData().content);
       allow update: if false;
       allow delete: if isAdmin();
     }
