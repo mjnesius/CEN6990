@@ -37,15 +37,18 @@ service cloud.firestore {
       allow create: if isValidShortString(incomingData().course) 
         && isSignedIn()
         && incomingData().alias == userName() 
-        && isValidLongString(incomingData().content);
+        && isValidLongString(incomingData().content)
+        && incomingData().date == Timestamp;
       allow update: if false;
       allow delete: if isAdmin();
     }
     match /contacts/{id} {
       allow read: if false;
-      allow write: if isValidShortString(incomingData().email)
+      allow create: if isValidShortString(incomingData().email)
         && isValidLongString(incomingData().message)
         && isValidShortString(incomingData().name);
+      allow update: if false;
+      allow delete: if false;
     }
     match /courses/{id} {
       allow read: if true; 
