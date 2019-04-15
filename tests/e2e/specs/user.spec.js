@@ -20,7 +20,15 @@ describe("User e2e", function() {
       .should("be.visible")
       .and("contain", "Please fill in all fields");
     cy.get("input:first").type("somebody@cox.net");
+    cy.get("#exampleInputPassword1").type("so");
+    cy.get("#alias").type("so");
+    cy.get(".btn").click();
+    cy.get(".text-danger")
+      .should("be.visible")
+      .and("contain", "Password should be at least 6 characters");
+    cy.get("#exampleInputPassword1").clear();
     cy.get("#exampleInputPassword1").type("somebody");
+    cy.get("#alias").clear();
     cy.get("#alias").type("somebody");
     cy.get(".btn").click();
     cy.get(".text-danger")
@@ -69,21 +77,18 @@ describe("User e2e", function() {
   });
   it("user can view course", () => {
     cy.loginUser();
-    cy.wait(500);
+    cy.wait(1000);
     cy.get(":nth-child(2) > #navbarDropdown").click();
     cy.get('.dropdown-menu > [href="/topic/0"]').click();
-    cy.wait(1000);
     cy.contains("Web Development: Zero to Hero").click();
-    cy.wait(1000);
     cy.url().should("include", "2A3ih8CdmgsyChLk43Mp");
     cy.logoutUser();
   });
   it("user can access profile", () => {
     cy.loginUser();
-    cy.wait(500);
+    cy.wait(1000);
     cy.get(":nth-child(2) > .dropdown > #navbarDropdown").click();
     cy.get('[href="/profile"]').click();
-    cy.wait(500);
     cy.get("#email > .form-group > label").should(
       "contain",
       "Current Email: somebody@cox.net"
@@ -101,17 +106,12 @@ describe("User e2e", function() {
   });
   it("user can view history", () => {
     cy.loginUser();
-    cy.wait(500);
+    cy.wait(1000);
     cy.get(":nth-child(2) > .dropdown > #navbarDropdown").click();
     cy.get('[href="/history"]').click();
     cy.url().should("include", "/history");
     cy.contains("Web Development: Zero to Hero").click();
     cy.url().should("include", "2A3ih8CdmgsyChLk43Mp");
     cy.logoutUser();
-  });
-  it("user can logout", () => {
-    cy.loginUser();
-    cy.logoutUser();
-    cy.url().should("include", "login");
   });
 });

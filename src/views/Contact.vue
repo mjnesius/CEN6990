@@ -50,20 +50,23 @@
             >
           </div>
           <div class="form-group">
-            <label for="longDescription">Message</label>
+            <label for="message">Message</label>
             <textarea
               type="text"
               class="form-control form-control-lg"
-              id="longDescription"
+              id="message"
               placeholder="Message..."
-              maxlength="400"
+              maxlength="500"
               rows="4"
               v-model="message"
             ></textarea>
           </div>
           <p v-if="feedback" class="text-danger text-center h5 my-3">{{ feedback }}</p>
           <p v-if="confirmation" class="text-success text-center h5 my-3">{{ confirmation }}</p>
-          <button :class="{ disabled: isDisabled }" class="btn btn-lg btn-primary btn-block mt-4 mb-5">Send Message</button>
+          <button
+            :class="{ disabled: isDisabled }"
+            class="btn btn-lg btn-primary btn-block mt-4 mb-5"
+          >Send Message</button>
         </form>
       </div>
     </div>
