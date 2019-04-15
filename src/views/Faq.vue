@@ -22,7 +22,7 @@
           <div class="accordion col" id="accordionExample">
             <div class="card" v-for="qa in qas" :key="qa.id">
               <div
-                class="card-header bg-gradient-primary text-white p-3"
+                class="card-header bg-transparent text-primary p-3"
                 :id="qa.heading"
                 style="position: relative; display: inline-block;"
               >
@@ -36,14 +36,14 @@
                   >
                     {{ qa.question }}
                     <span
-                      class="when-opened"
-                      style="position: absolute; top: 0; right: 10px; font-size: 1.5em; color: #ffffff;"
+                      class="when-opened text-primary"
+                      style="position: absolute; top: 0; right: 10px; font-size: 1.5em;"
                     >
                       <font-awesome-icon icon="chevron-up" />
                     </span>
                     <span
                       class="when-closed"
-                      style="position: absolute; top: 0; right: 10px; font-size: 1.5em; color: #ffffff;"
+                      style="position: absolute; top: 0; right: 10px; font-size: 1.5em;"
                       ><font-awesome-icon icon="chevron-down" />
                     </span>
                   </a>
@@ -77,7 +77,7 @@ export default {
         {
           question: "How much do courses cost?",
           answer:
-            "Courses are free for both registered and unregeistered users!",
+            "Courses are free for both registered and unregistered users!",
           id: 1,
           heading: "q1",
           target: "#a1",
