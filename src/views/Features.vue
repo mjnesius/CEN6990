@@ -97,7 +97,10 @@
       <div class="col">
         <div class="container pt-5">
           <h1>Are You Ready To Launch Your Career?</h1>
-          <p class="mb-4 lead">Lorem ipsum dolor sit amet tincidunt arcu.</p>
+          <p class="mb-4 lead">
+            Software Development, Information Technology, and
+            CyberSecurity...what are you waiting for?
+          </p>
           <router-link
             :to="{ name: 'home' }"
             type="button"
