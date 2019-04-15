@@ -10,9 +10,8 @@ import {
   faPlayCircle,
   faGift,
   faBookReader,
-  faLaptop,
-  faSchool,
-  faCode
+  faChevronUp,
+  faChevronDown
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faPlayCircle as faPlayCircleSolid,
@@ -20,6 +19,8 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import VueCarousel from "vue-carousel";
+// eslint-disable-next-line no-unused-vars
+import { uptime } from "os";
 Vue.use(VueCarousel);
 
 library.add(
@@ -28,9 +29,8 @@ library.add(
   faCalendarAlt,
   faGift,
   faBookReader,
-  faLaptop,
-  faSchool,
-  faCode
+  faChevronUp,
+  faChevronDown
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
