@@ -12,7 +12,9 @@ import {
   faBookReader,
   faLaptop,
   faSchool,
-  faCode
+  faCode,
+  faChevronUp,
+  faChevronDown
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faPlayCircle as faPlayCircleSolid,
@@ -30,7 +32,9 @@ library.add(
   faBookReader,
   faLaptop,
   faSchool,
-  faCode
+  faCode,
+  faChevronUp,
+  faChevronDown
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
