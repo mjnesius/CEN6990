@@ -26,7 +26,7 @@
                 :id="qa.heading"
                 style="position: relative; display: inline-block;"
               >
-                <h2 class="mb-0 panel-title">
+                <h4 class="mb-0 panel-title">
                   <a
                     class="collapsed"
                     aria-expanded="false"
@@ -47,7 +47,7 @@
                       ><font-awesome-icon icon="chevron-down" />
                     </span>
                   </a>
-                </h2>
+                </h4>
               </div>
 
               <div
@@ -57,7 +57,7 @@
                 data-parent="#accordionExample"
               >
                 <div class="card-body">
-                  <h3 style="margin-left: 35px">{{ qa.answer }}</h3>
+                  <h4 style="margin-left: 35px">{{ qa.answer }}</h4>
                 </div>
               </div>
             </div>
