@@ -10,6 +10,9 @@ import {
   faPlayCircle,
   faGift,
   faBookReader,
+  faLaptop,
+  faSchool,
+  faCode,
   faChevronUp,
   faChevronDown
 } from "@fortawesome/free-solid-svg-icons";
@@ -29,6 +32,9 @@ library.add(
   faCalendarAlt,
   faGift,
   faBookReader,
+  faLaptop,
+  faSchool,
+  faCode,
   faChevronUp,
   faChevronDown
 );
